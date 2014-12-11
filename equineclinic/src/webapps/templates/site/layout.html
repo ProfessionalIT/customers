@@ -1,0 +1,169 @@
+$def with (vars, content)
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br">
+<head>
+    <title>$content.title</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="language" content="pt-br">
+    <meta name="country" content="Brazil"/>
+    <meta name="copyright" content="Copyright (c) 2012 Equine Clinic - Clínica de Hipiatria. This site's design and html code is licensed under the terms of the GPLv3 or (at your option) any later version."/> 
+    <meta name="organization name" content="Equine Clinic - Clínica de Hipiatria em Viamão - RS." /> 
+    <meta name="author" content="professionalit.com.br - Sistemas, Sites, Aplicações Web e Mobile."/> 
+    <meta name="Description" content="$content.full_description" lang="pt-BR"/>
+    <meta name="Keywords" content="$content.keywords_tags" lang="pt-BR"/>
+    <meta name="rating" content="$content.keywords_tags"/>
+    <meta name="DC.title" content="equineclinic.com.br"/> 
+    <meta name="robots" content="ALL"/> 
+    <meta name="googlebot" content="all" /> 
+    <meta name="classification" content="hipiatria, clinica, cirurgia, fisioterapia, equino" /> 
+    <meta name="distribution" content="Global" /> 
+    <meta name="revisit-after" content="1 day" /> 
+    <meta name="google-site-verification" content="LaaXRjbgSYydCkGZx1WaVKjpnLBARLEnARoZWGgDR-8" />
+    <meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="alternate" type="application/rss+xml" title="Equine Clinic - Clínica de Hipiatria em Viamão - RS - RSS" href="$:vars['context_path']/rss" />
+    <link rel="shortcut icon" href="$:vars['context_path']/static/images/favicon.ico" type="image/x-icon" />
+    <link rel='index' title='Equine Clinic - Clínica de Hipiatria em Viamão - RS' href='http://www.equineclinic.com.br' /> 
+    <link rel="canonical" href="http://www.equineclinic.com.br" /> 
+    <link rel="author" title="ProfessionalIT - Sistemas, Sites, Aplicações Web e Mobile." href="/bio.html"> 
+    <link rel="copyright" title="Script license and terms of use" href="/jslibs/termsOfUse.html"> 
+    <link rel="home" title="Página Inicial da Equine Clinic - Clínica de Hipiatria em Viamão - RS" href="/"> 
+    <link rel="search" title="Pesquisa no site da Equine Clinic - Clínica de Hipiatria em Viamão - RS" href="/search/"> 
+    <link rel="bookmark" href="#index" title="Equine Clinic - Clínica de Hipiatria em Viamão - RS">
+    <link rel="stylesheet" href="$:vars['context_path']/static/css/style.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="$:vars['context_path']/static/css/jquery.lightbox-0.5.css" type="text/css" media="screen" />
+    <script type="text/javascript" src="$:vars['context_path']/static/javascript/jquery-1.4.2.js"></script>
+    <script type="text/javascript" src="$:vars['context_path']/static/javascript/jquery.lightbox-0.5.js"></script>
+    <script type="text/javascript" src="$:vars['context_path']/static/javascript/util.js"></script>
+    <script type="text/javascript">
+        jQuery(document).ready(function(){
+            var speed = 3000;
+            var run = setInterval('slideSwitch()', speed);
+            jQuery('#slideshow').hover(function(){
+                clearInterval(run);
+            },function(){
+                run = setInterval('slideSwitch()', speed);
+            }); 
+        });
+        function slideSwitch() {
+            jQuery('#slideshow .slide:last').after(jQuery('#slideshow .slide:first')); 
+        }
+    </script>
+    <script type="text/javascript">    
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-36380107-1']);
+          _gaq.push(['_trackPageview']);    
+          (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();    
+    </script>
+    <script type="text/javascript">var switchTo5x=true;</script>
+    <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+    <script type="text/javascript">stLight.options({publisher: "c5c86775-fcc0-47d3-acb5-f1267eec411f"});</script>
+    <script src="http://static.dudamobile.com/DM_redirect.js" type="text/javascript"></script>
+    <script type="text/javascript">DM_redirect("http://mobile.dudamobile.com/site/equineclinic");</script>
+</head>
+<body>
+    <div id="content">
+        <div id="header">
+            <div id="logo_panel">
+                <a href="$:vars['context_path']" title="Página inicial da Equine Clinic - Clínica de Hipiatria"><img src="$:vars['context_path']/static/images/logo_equine.png" alt="Logotipo da Equine Clinic - Clínica de Hipiatria" title="Equine Clinic - Clínica de Hipiatria"/></a>
+                <h1>Equine Clinic</h1>
+                <h2>Clínica de Hipiatria</h2>
+                <div id="share_panel">
+                    <!--span class='st_sharethis_hcount' displayText='ShareThis'></span-->
+                    <span class='st_facebook_hcount' displayText='Facebook'></span>
+                    <span class='st_twitter_hcount' displayText='Tweet'></span>
+                    <span class='st_linkedin_hcount' displayText='LinkedIn'></span>
+                    <span class='st_pinterest_hcount' displayText='Pinterest'></span>
+                    <span class='st_email_hcount' displayText='Email'></span>
+                </div>
+            </div>
+        </div>
+        <div id="channel_panel">
+            <div id="messages_home">
+                <span class="localization"><span class="localization_intro">Você está em:</span> $:vars['where_i_am'].</span>
+                <span class="welcome">Bem vindo a Equine Clinic - Cínica de Hipiatria.</span>
+            </div>
+            <form>
+                <div class="channel_item">
+                    <a href="https://www.facebook.com/henrique.d.noronha" title="Facebook da Equine Clinic - Clínica de Hipiatria."><img src="$:vars['context_path']/static/images/facebook_32.png" alt="Ícone do Facebook." title="Facebook da Equine Clinic - Clínica de Hipiatria."/></a>
+                    <span><a href="https://www.facebook.com/henrique.d.noronha" title="Facebook da Equine Clinic - Clínica de Hipiatria.">Facebook</a></span>
+                </div>
+                <div class="channel_item">
+                    <a href="http://www.twitter.com/EquineClinic" title="Twitter da Equine Clinic - Clínica de Hipiatria"><img src="$:vars['context_path']/static/images/twitter_32.png" alt="Ícone do twitter." title="Twitter da Equine Clinic - Clínica de Hipiatria."/></a>
+                    <span><a href="http://www.twitter.com/EquineClinic" title="Twitter da Equine Clinic - Clínica de Hipiatria">Twitter</a></span>
+                </div>
+                <div class="channel_item">
+                    <a href="http://www.youtube.com/user/Equineclinicvet" title="Youtube da Equine Clinic - Clínica de Hipiatria."><img src="$:vars['context_path']/static/images/youtube_32.png" alt="Ícone do Youtube." title="Youtube da Equine Clinic - Clínica de Hipiatria."/></a>
+                    <span><a href="http://www.youtube.com/user/Equineclinicvet" title="Youtube da Equine Clinic - Clínica de Hipiatria.">Vídeos</a></span>
+                </div>
+                <div class="channel_item">
+                    <a href="https://picasaweb.google.com/109366103394727165400" title="Albúm de fotos da Equine Clinic - Clínica de Hipiatria."><img src="$:vars['context_path']/static/images/picasa_32.png" alt="Ícone do Picasa" title="Albúm de fotos da Equine Clinic - Clínica de Hipiatria."/></a>
+                    <span><a href="https://picasaweb.google.com/109366103394727165400" title="Albúm de fotos da Equine Clinic - Clínica de Hipiatria.">Fotos</a></span>
+                </div>
+                <div class="channel_item">
+                    <a href="http://pt.scribd.com/EquineClinic" title="Documentos da Equine Clinic - Clínica de Hipiatria."><img src="$:vars['context_path']/static/images/scribd_32.png" alt="Ícone do Scribd" title="Documentos da Equine Clinic - Clínica de Hipiatria."/></a>
+                    <span><a href="http://pt.scribd.com/EquineClinic" title="Documentos da Equine Clinic - Clínica de Hipiatria.">Scribd</a></span>
+                </div>
+                <div class="channel_item">
+                    <a href="http://feeds.feedburner.com/EquineClinic" title="Feeds da Equine Clinic - Clínica de Hipiatria."><img src="$:vars['context_path']/static/images/rss_32.png" alt="Ícone do RSS" title="Feeds da Equine Clinic - Clínica de Hipiatria."/></a>
+                    <span><a href="http://feeds.feedburner.com/EquineClinic" title="Feeds da Equine Clinic - Clínica de Hipiatria.">RSS</a></span>
+                </div>                
+            </form>
+            <form style="margin:0px; margin-top:4px;" action="http://search.freefind.com/find.html" method="get" accept-charset="utf-8" target="_self">
+                <input type="hidden" name="si" value="61699227">
+                <input type="hidden" name="pid" value="r">
+                <input type="hidden" name="n" value="0">
+                <input type="hidden" name="_charset_" value="">
+                <input type="hidden" name="bcd" value="&#247;">
+                <input type="text" name="query" size="25" style="margin-top: 1px;margin-right: -13px;width: 150px;"> 
+                <input type="submit" value="buscar" style="margin-top: 1px;margin-right: 15px;width: 55px;height: 24px;">
+            </form>
+        </div>
+        <div id="inner_content">
+            <div id="left_panel">
+                $:content
+            </div>
+            <div id="right_panel">
+                <ul id="menu">
+                    <li><a href="$:vars['context_path']" id="menu_home" title="Página inicial do site.">Inicial</a></li>
+                    <li><a href="$:vars['context_path']/quem-somos" id="menu_empresa" title="Conheça a nossa empresa.">A Clínica</a></li>
+                    <li><a href="$:vars['context_path']/veterinarios" id="menu_veterinarios" title="Conheça os nossos profissionais.">Veterinários</a></li>
+                    <li><a href="$:vars['context_path']/servicos" id="menu_servico" title="Conheça os nossos serviços.">Serviços</a></li>
+                    <li><a href="$:vars['context_path']/noticias" id="menu_noticias" title="Últimas Notícias.">Notícias</a></li>
+                    <li><a href="$:vars['context_path']/eventos" id="menu_eventos" title="Eventos da Equine Clinic - Clínica de Hipiatria">Eventos</a></li>
+                    <li><a href="$:vars['context_path']/artigos" id="menu_artigos" title="Artigos Técnicos.">Artigos</a></li>
+                    <li><a href="$:vars['context_path']/pesquisas" id="menu_pesquisas" title="Pesquisas Técnicas que realizamos.">Pesquisas</a></li>
+                    <li><a href="$:vars['context_path']/clientes" id="menu_clientes" title="Nossos clientes, empresas e pessoas que acreditam em nosso trabalho.">Clientes</a></li>
+                    <li><a href="$:vars['context_path']/parceiros" id="menu_parceiros" title="Nossos Parceiros.">Parceiros</a></li>
+                    <li><a href="$:vars['context_path']/contatos" id="menu_contato" title="Formas de Contato.">Contatos</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="footer">
+        <p>Fones:  <a href="callto:5199711957">(51) 9971-1957</a> c/ Henrique Noronha ou  <a href="callto:5199181325">(51) 9918-1325</a> c/ Alexandre Monteverde</p>
+    </div>
+    <script type="text/javascript">
+        function onload() {
+            var itemMenu = document.getElementById("$:vars['active_menu']");
+            itemMenu.className = 'selected';
+        }
+        window.onload+=onload();
+    </script>
+    <script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'equineclinic'; // required: replace example with your forum shortname
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+    </script>
+</body>
+</html>

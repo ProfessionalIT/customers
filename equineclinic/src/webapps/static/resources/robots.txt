@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: http://www.equineclinic.com.br/static/resources/sitemap.xml

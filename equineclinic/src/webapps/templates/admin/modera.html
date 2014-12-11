@@ -1,0 +1,79 @@
+$def with (request_vars)
+
+<h2 class="form_title"><img src="$request_vars['pagination'].icon_file" class="icon_menu" alt="$request_vars['pagination'].table_name" title="$request_vars['pagination'].table_name" />$request_vars['pagination'].table_name</h2>
+<!--
+<form name="pesquisa" action="/admin/listar/$pagination.classe_name" method="POST">
+    <fieldset>
+        <legend class="alignLeft">Filtro de Registros:</legend>
+        $:form.render_css()
+    </fieldset>
+</form>
+-->
+<div class="painel">
+    <span class="show_message">$:request_vars['display_message']</span>
+    $if request_vars['filtro']:
+        <h2 class="margin05px"><span class="titulo">Listagem de Registros</span><span class="filtro">$request_vars['filtro']</span></h2>
+    $else:
+        <h2 class="margin05px"><span class="titulo">Listagem de Registros</span></h2>
+    <table cellspacing="0" cellpadding="0" id="list" style="margin-top: 15px;">
+        <thead>
+            <tr>
+                <th style="background-color: #D38CFF;color:black;font-weight:bold;">Filtros:</th>
+                <th style="background-color: #D38CFF;"><a href="/admin/listar/$request_vars['pagination'].classe_name">Todos</a></th>
+                <th style="background-color: #D38CFF;"><a href="/admin/listar/$request_vars['pagination'].classe_name?q=acao='A'">Approved</a></th>
+                <th style="background-color: #D38CFF;"><a href="/admin/listar/$request_vars['pagination'].classe_name?q=acao='R'">Refused</a></th>
+            </tr>
+        </thead>
+    </table>
+    <table cellspacing="0" cellpadding="0" id="list">
+        <thead>
+            <tr>
+                <th>Código</th>
+                $for colunm in request_vars['pagination'].exposed_attributes['colunms']:
+                    <th>$colunm</th>
+                <th colspan="2">Moderar</th>
+            </tr>
+        </thead>
+        <tbody>
+            $for record in request_vars['pagination'].records:
+            <tr>
+                $if request_vars['pagination'].classe_name != 'Log':
+                    <td><a href="/admin/editar/$request_vars['pagination'].classe_name/$record.id" title="Editar o Registro.">$record.id</a></td>
+                $else:
+                    <td>$record.id</td>
+                $for field in request_vars['pagination'].exposed_attributes['fields']:
+                    <td>$:record.get_field_value(field)</td>
+                $if record.acao:
+                    <td colspan="2">Registro moderado !.</td>
+                $else:
+                    <td><a href="/admin/moderate/approves/$record.id" title="Aprova o registro em Moderação.">Aprovar</a></td>
+                    <td><a href="/admin/moderate/refuse/$record.id" title="Rejeita o registro em Moderação.">Recusar</a></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div id="panel_records">
+$if request_vars['pagination'].prev_page:
+    <a href="/admin/listar/$request_vars['pagination'].classe_name?page=$request_vars['pagination'].prev_page&size=$request_vars['pagination'].pagesize&q=$request_vars['pagination'].query" title="Página Anterior."><img src="/static/images/back.png" alt="Página Anterior." title="Página Anterior." /></a>
+
+$if not request_vars['pagination'].prev_page and not request_vars['pagination'].next_page and request_vars['pagination'].total_records > 0:
+    <span>Mostrando de 1 à $request_vars['pagination'].record_counts registros.</span>
+$elif request_vars['pagination'].total_records == 0:
+    <span>Sem Registros.</span>
+$else:
+    $if (int(request_vars['pagination'].pagesize) + int(request_vars['pagination'].start)) > int(request_vars['pagination'].total_records):
+        <span>Mostrando registros de ${int(request_vars['pagination'].start) + 1} à ${int(request_vars['pagination'].total_records)}.</span>
+    $else:
+        <span>Mostrando registros de ${int(request_vars['pagination'].start) + 1} à ${int(request_vars['pagination'].pagesize) + int(request_vars['pagination'].start)} no total de $request_vars['pagination'].total_records registros.</span>
+
+$if request_vars['pagination'].next_page:
+    <a href="/admin/listar/$request_vars['pagination'].classe_name?page=$request_vars['pagination'].next_page&size=$request_vars['pagination'].pagesize&q=$request_vars['pagination'].query" title="Próxima Página."><img src="/static/images/forward.png" alt="Próxima Página." title="Próxima Página." /></a>
+</div>
+$if request_vars['pagination'].classe_name != 'Log' and request_vars['pagination'].classe_name != 'Usuario':
+    <div id="explantion_panel">
+        <h6>Detalhes:</h6>
+        <ul>
+            <li><strong>Status:</strong> <span class="status_waiting">Waiting</span> [ Aguardando Aprovação ]. <span class="status_approved">Approved</span> [ Alteração/Inclusão Aprovada ]. <span class="status_recused">Refused</span> [ Alteração/Inclusão Reprovada ].</li>
+            <li><strong>Moderação:</strong> Código da rotina da Aprovação, quando em branco registro não foi moderado ainda.</li>
+        </ul>
+    </div>

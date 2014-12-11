@@ -1,0 +1,25 @@
+$def with (_vars)
+
+<h1><img src="$:_vars['img_url']" class="icon_menu" />$:_vars['titulo']</h1>
+<div class="painel_form">
+    <span class="show_message">$:_vars['display_message']</span>
+    <h2><span class="titulo">Dados do Registro</span></h2>
+    <form action="$_vars['action']" method="$_vars['method']" name="operation_form" id="operation_form">
+        $:_vars['form'].render_css()
+    </form>
+</div>
+$if _vars['access_control']:
+    <div id="explantion_panel">
+        <h6>Detalhes:</h6>
+        <ul>
+            <li><strong>Editando: S</strong> [ Registro sendo editado por outro usuário ]. <strong>N</strong> [ Registro sem edição no momento ].</li>
+            <li><strong>Status: W</strong> [ Wait - Aguardando Aprovação ]. <strong>A</strong> [ Alteração/Inclusão Aprovada ]. <strong>R</strong> [ Alteração/Inclusão Reprovada ].</li>
+            <li><strong>Moderação:</strong> Código da rotina da Aprovação, quando em branco registro não foi moderado ainda.</li>
+        </ul>
+    </div>
+<script language="javascript" type="text/javascript">
+    jQuery(document).ready(function(){
+        set_buttons();
+    });
+</script>
+

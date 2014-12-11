@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: http://www.cavalgadadomar.art.br/static/resources/sitemap.xml

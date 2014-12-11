@@ -1,0 +1,60 @@
+$def with (publicacao)
+
+$var title:  Equine Clinic - Clínica de Hipiatria em Viamão - RS.
+$var full_description: Clínica de Hipiatria, com serviços de cirurgia e fisioterapia em Viamão - RS.
+$var keywords_tags: $:publicacao.titulo
+
+<h2>$:publicacao.titulo</h2>
+<span class="autoring_data">Data: $:publicacao.data_hora.strftime('%d/%m/%Y - %H:%M')</span><span class="autoring_autor">Por: $:publicacao.autor</span>
+$if publicacao.thumb_publicacao:
+    <img src="$:publicacao.thumb_publicacao" alt="Foto para $:publicacao.titulo" title="$:publicacao.titulo" />
+$:publicacao.completa
+
+<!-- Start the photo gallery -->
+$if publicacao.galeria:
+    $if publicacao.galeria.midia == 'F':
+        $if publicacao.galeria.tipo == 'P': 
+            $:publicacao.fotos_picasa:
+        $elif publicacao.galeria.tipo == 'F': 
+            $:publicacao.fotos_facebook:
+        $elif publicacao.galeria.tipo == 'S':
+            $for foto in publicacao.fotos_servidor:
+                <img src="$:foto" alt="" title="" />
+<!-- End the photo gallery -->
+<!-- Start the video gallery -->
+    $elif publicacao.galeria.midia == 'V':
+
+<!-- End the video gallery -->
+<!-- Start Shareaholic Sexy Bookmark HTML-->
+
+<div class="shr_class shareaholic-show-on-load"> </div>
+<!-- End Shareaholic Sexy Bookmark HTML -->
+<!-- Start Shareaholic Sexy Bookmark settings -->
+<script type="text/javascript">
+	var SHRSB_Settings = {"shr_class":{"src":"/static/shareaholic_sexybookmarks","link":"","service":"5,7,304,313,38,88,74","apikey":"0747414f47c2b684cf5480c36b2478689","localize":true,"shortener":"bitly","shortener_key":"","designer_toolTips":true,"tip_bg_color":"black","tip_text_color":"white","twitter_template":"jQuery{title} - jQuery{short_link} via @Shareaholic"}};
+	var SHRSB_Globals = {"perfoption":"1"};
+</script>
+<!-- End Shareaholic Sexy Bookmark settings -->
+<!-- Start Shareaholic Sexy Bookmark script -->
+<script type="text/javascript">
+	(function() {
+	var sb = document.createElement("script"); sb.type = "text/javascript";sb.async = true;
+	sb.src = ("https:" == document.location.protocol ? "https://dtym7iokkjlif.cloudfront.net" : "http://cdn.shareaholic.com") + "/media/js/jquery.shareaholic-publishers-sb.min.js";
+	var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(sb, s);
+	})();
+</script>
+<!-- End Shareaholic Sexy Bookmark script -->
+<div id="disqus_thread"> </div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'equineclinic'; // required: replace example with your forum shortname
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+<span class='go_back'><a href="javascript:history.back();" title="">[ Voltar ]</a></span>

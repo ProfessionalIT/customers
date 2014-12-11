@@ -1,0 +1,18 @@
+$def with (imagens)
+
+$var title:  Equine Clinic - Clínica de Hipiatria em Viamão - RS.
+$var full_description: Clínica de Hipiatria, com serviços de cirurgia e fisioterapia em Viamão - RS.
+$var keywords_tags: hipiatria, clinica, cirurgia, fisioterapia, equino
+
+<div id="slideshow">
+    $if imagens:
+        $for imagem in imagens:
+            <div class="slide">
+                <a href="$:imagem.link_banner" title="Detalhamento do serviço de $:imagem.titulo."><img src="/static/images/cavalo.png" alt="Imagem do serviço de $:imagem.titulo." title="Serviço de $:imagem.titulo." /></a>
+            </div>
+            <div class="slide">
+                <a href="$:imagem.link_banner" title="Detalhamento do serviço de $:imagem.titulo."><img src="$:imagem.foto_banner" alt="Imagem do serviço de $:imagem.titulo." title="Serviço de $:imagem.titulo." /></a>
+                <p>$:imagem.titulo</p>
+            </div>
+    
+</div>

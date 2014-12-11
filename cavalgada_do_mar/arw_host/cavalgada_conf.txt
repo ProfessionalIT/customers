@@ -1,0 +1,39 @@
+http://www.cavalgadadomar.art.br
+ID  Registro.br : ANBUR
+PWD Registor:br : QFDFMYURXJ
+
+cpanel_usr: cavalgad
+cpanel_pwd: Master11235813
+Usuário: cavalgad_user 
+pwd: Master11235813
+Banco de dados: cavalgad_bd
+
+webfaction:
+
+login: hnoronha
+senha: 909090
+
+
+====================== DADOS da Hospedagem atual =======================
+
+Dados FTP:
+FTP host: ftp.cavalgadadomar.art.br
+Host directory: /www/ para o conteúdo do site e /dados/ para banco de dados
+Usuário: cavalgadadomar
+Senha: cvgm2010
+ 
+O Painel de Controle pode ser acessado: http://painel.relatoriosoficiais.com.br/
+E-mail: atendimento87@relatoriosoficiais.com.br
+Senha: cvgm2010
+ 
+Administração do Site
+www.cavalgadadomar.art.br/adm
+Usuário: cavalgada
+Senha: cv852mar
+
+cavalgadadomarsite@gmail.com
+Master11235813
+
+[ e-mails ]
+contato@cavalgadadomar.art.br
+google@cavalgadadomar.art.br

@@ -1,0 +1,51 @@
+http://www.equineclinic.com.br
+
+ID  Registro.br : HENOR6
+PWD Registro.br : 909090
+
+webfaction:
+
+login: hnoronha
+senha: 909090
+
+cpanel_usr: equinecl    
+cpanel_pwd: Master11235813
+
+Banco de dados: equinecl_db
+Usuário: equinecl_usr
+pwd: Master11235813
+
+http://docs.webfaction.com/user-guide/email.html
+http://docs.webfaction.com/user-guide/email_clients/gmail.html
+http://docs.webfaction.com/software/
+
+
+
+[ e-mails ]
+michele@equineclinic.com.br
+    michele_equineclinic
+    Michele: 48527910
+
+henrique@equineclinic.com.br
+    henrique_equineclinic
+    Henrique: 97896410
+
+    Equineclinichipiatria@gmail.com
+    81412007
+
+fran@equineclinic.com.br
+    fran_equineclinic
+    Fran: Equine2013
+
+alexandre@equineclinic.com.br
+    alexandre_equineclinic
+    Alexandre: eumeduda
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,92 @@
+$def with ()
+
+$var title:  Equine Clinic - Clínica de Hipiatria em Viamão - RS - Dados de Contato.
+$var full_description: Clínica de Hipiatria, com serviços de cirurgia e fisioterapia em Viamão - RS.
+$var keywords_tags: contato, form, formulário de contato
+
+<h1>Contatos</h1>
+<form name="contato_form" id="contato_form" method="post" action="/contatos">
+<table id="table_contato" cellspacing="2" style="margin: 0px auto;width:50%;background-color: #eee;padding: 05px;" border="0">
+    <tr>
+        <th align="left"><label for="nome">Nome:</label></th>
+        <td align="left"><input name="nome" title="Informe o seu nome." type="text" id="nome" size="60" tabindex="1" /></td>
+    </tr>
+    <tr>
+        <th align="left"><label for="telefone">Telefone:</label></th>
+        <td align="left"><input name="telefone" title="Informe o seu telefone." type="text" id="telefone" size="20" tabindex="2" /></td>
+    </tr>
+    <tr>
+        <th align="left"><label for="estado">UF:</label></th>
+        <td align="left">
+        <select name="estado" id="estado" class="text" tabindex="3">
+            <option value="AC">AC</option>
+            <option value="AL">AL</option>
+            <option value="AP">AP</option>
+            <option value="AM">AM</option>
+            <option value="BA">BA</option>
+            <option value="CE">CE</option>
+            <option value="DF">DF</option>
+            <option value="ES">ES</option>
+            <option value="GO">GO</option>
+            <option value="MA">MA</option>
+            <option value="MT">MT</option>
+            <option value="MS">MS</option>
+            <option value="MG">MG</option>
+            <option value="PA">PA</option>
+            <option value="PB">PB</option>
+            <option value="PR">PR</option>
+            <option value="PE">PE</option>
+            <option value="PI">PI</option>
+            <option value="RJ">RJ</option>
+            <option value="RN">RN</option>
+            <option value="RS" selected="selected">RS</option>
+            <option value="RO">RO</option>
+            <option value="RR">RR</option>
+            <option value="SC">SC</option>
+            <option value="SP">SP</option>
+            <option value="SE">SE</option>
+            <option value="TO">TO</option>
+        </select>
+        </td>
+    </tr>
+    <tr>
+        <th align="left"><label for="cidade">Cidade:</label></th>
+        <td align="left"><input name="cidade" title="Informe a sua Cidade." type="text" id="cidade" size="30" tabindex="4" /></td>
+    </tr>
+    <tr>
+        <th align="left"><label for="bairro">Bairro:</label></th>
+        <td align="left"><input name="bairro" title="Informe o seu Bairro." type="text" id="bairro" size="30" tabindex="5" /></td>
+    </tr>
+    <tr>
+        <th align="left"><label for="email">E-mail:</label></th>
+        <td align="left"><input name="email" title="Informe o seu E-mail." type="text" id="email" size="60" tabindex="6" /></td>
+    </tr>
+    <tr>
+        <th align="left"><label for="assunto">Assunto:</label></th>
+        <td align="left"><input name="assunto" title="Informe o Assunto." type="text" id="assunto" size="60" tabindex="7" /></td>
+    </tr>
+    <tr>
+        <th align="left"><label for="texto">Mensagem:</label></th>
+        <td align="left"><textarea title="Inclua sua mensagem." rows="10" id="texto" name="texto" cols="63" tabindex="8" > </textarea></td>
+    </tr>
+    <tr>
+        <td colspan="2" align="center" id="captcha_panel">
+        	Código de verificação: <span id="txtCaptchaDiv" style="color:#F00"> </span>
+		    <input type="hidden" id="txtCaptcha" />
+		    <input type="text" name="txtInput" id="txtInput" size="30" tabindex="9" />
+        </td>
+    </tr>
+    <tr>
+        <th align="left"><label for="Enviar"> </label></th>
+        <td align="left"><input class="form_botao" type="submit" name="Enviar" value="Enviar" onclick="return valida_contato();" tabindex="10" /></td>
+    </tr>
+</table>
+</form>
+<br/>
+<div style="margin: 0px auto;">
+    <iframe width="425" height="220" frameborder="0" scrolling="no" style="margin-left: 300px;" marginheight="0" marginwidth="0" src="https://maps.google.com.br/maps?f=q&amp;source=s_q&amp;hl=pt-BR&amp;geocode=&amp;q=R.+Beco+dos+Soares,+n%C2%BA+3010,++Bairro+S%C3%A3o+Lucas,+Viam%C3%A3o,+RS&amp;aq=&amp;sll=-14.239424,-53.186502&amp;sspn=48.424929,79.013672&amp;ie=UTF8&amp;hq=&amp;hnear=Beco+do+Soares,+3010+-+Vila+Augusta,+Viam%C3%A3o+-+Rio+Grande+do+Sul,+94450-550&amp;t=m&amp;z=14&amp;ll=-30.069369,-51.0757&amp;output=embed"> </iframe><br /><small><a href="https://maps.google.com.br/maps?f=q&amp;source=embed&amp;hl=pt-BR&amp;geocode=&amp;q=R.+Beco+dos+Soares,+n%C2%BA+3010,++Bairro+S%C3%A3o+Lucas,+Viam%C3%A3o,+RS&amp;aq=&amp;sll=-14.239424,-53.186502&amp;sspn=48.424929,79.013672&amp;ie=UTF8&amp;hq=&amp;hnear=Beco+do+Soares,+3010+-+Vila+Augusta,+Viam%C3%A3o+-+Rio+Grande+do+Sul,+94450-550&amp;t=m&amp;z=14&amp;ll=-30.069369,-51.0757" style="color:#0000FF;text-align:left;margin-left: 300px;">Exibir mapa ampliado</a></small>
+</div>
+<script type="text/javascript">
+	function onload() { generateCode(); }
+    window.onload+=onload();
+</script>

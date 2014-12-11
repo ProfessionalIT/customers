@@ -1,0 +1,35 @@
+$def with (tipo_publicacao, titulo, publicacoes)
+
+$var title:  Equine Clinic - Clínica de Hipiatria em Viamão - RS.
+$var full_description: Clínica de Hipiatria, com serviços de cirurgia e fisioterapia em Viamão - RS.
+$var keywords_tags: $:titulo
+
+<h1>$:titulo</h1>
+    $if publicacoes:
+        $for record in publicacoes.records:
+            $if record.thumb_publicacao:
+                <img src="$:record.thumb_publicacao" alt="Foto para $:record.titulo" title="$:record.titulo" />
+            <h2>$:record.titulo</h2>
+            <span class="autoring_data">Data: $:record.data_hora.strftime('%d/%m/%Y - %H:%M')</span><span class="autoring_autor">Por: $:record.autor</span><span class="autoring_autor"><a href="http://www.equineclinic.com.br/$:tipo_publicacao/$:record.slug/#disqus_thread">Comentários</a>.</span>
+            $:record.intro <a href="/$:tipo_publicacao/$:record.slug" class="link_publicacao" title="Link para a publicação $:record.titulo completa.">[ Ler mais ]</a>
+            
+    $else:
+        <p>Sem registros.</p>
+
+<div id="panel_records">
+$if publicacoes.prev_page:
+    <a href="/$publicacoes.classe_name?page=$publicacoes.prev_page&size=$publicacoes.pagesize&q=$publicacoes.query" title="Página Anterior."><img src="/static/images/back.png" alt="Página Anterior." title="Página Anterior." /></a>
+
+$if not publicacoes.prev_page and not publicacoes.next_page and publicacoes.total_records > 0:
+    <span>Mostrando de 1 à $publicacoes.record_counts registros.</span>
+$elif publicacoes.total_records == 0:
+    <span>Sem Registros.</span>
+$else:
+    $if (int(publicacoes.pagesize) + int(publicacoes.start)) > int(publicacoes.total_records):
+        <span>Mostrando registros de ${int(publicacoes.start) + 1} à ${int(publicacoes.total_records)}.</span>
+    $else:
+        <span>Mostrando registros de ${int(publicacoes.start) + 1} à ${int(publicacoes.pagesize) + int(publicacoes.start)} no total de $publicacoes.total_records registros.</span>
+
+$if publicacoes.next_page:
+    <a href="/$publicacoes.classe_name?page=$publicacoes.next_page&size=$publicacoes.pagesize&q=$publicacoes.query" title="Próxima Página."><img src="/static/images/forward.png" alt="Próxima Página." title="Próxima Página." /></a>
+</div>

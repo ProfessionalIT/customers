@@ -1,0 +1,56 @@
+$def with ()
+
+$var title:  Fundação Cultural Cavalgada do Mar em Porto Alegre - RS. - Dados de Contato.
+$var full_description: Fundação Cultural Cavalgada do Mar em Porto Alegre - RS.
+$var keywords_tags: contato, form, formulário de contato
+
+<div style="float: left; display: inline; width: 745px; margin-bottom: 15px;">
+<h3>Fale Conosco</h3>
+<p style="margin-left: 20px; font-size: 14px; text-indent: 40px; text-align: justify; margin-top: 10px; width: 90%;">Endereço: Rua do Santuário, 211</p>
+<p style="margin-left: 20px; font-size: 14px; text-indent: 40px; text-align: justify; margin-top: 10px; width: 90%;">Bairro: Vila Nova</p>
+<p style="margin-left: 20px; font-size: 14px; text-indent: 40px; text-align: justify; margin-top: 10px; width: 90%;">Cidade: Porto Alegre/RS</p>
+<p style="margin-left: 20px; font-size: 14px; text-indent: 40px; text-align: justify; margin-top: 10px; width: 90%;">CEP: 91712-701</p>
+<p style="margin-left: 20px; font-size: 14px; text-indent: 40px; text-align: justify; margin-top: 10px; width: 90%;">E-mail: contato@cavalgadadomar.art.br</p>
+<p style="margin-left: 20px; font-size: 14px; text-indent: 40px; text-align: justify; margin-top: 10px; width: 90%;">Gostaria de tirar uma dúvida? Fazer uma crítica ou dar uma sugestão? Enviar um depoimento ou foto? Preencha o formulário abaixo e fale conosco.</p>
+
+<form name="contato_form" id="contato_form" method="post" action="/fale-conosco">
+<table id="table_contato" cellspacing="2" style="margin: 0px auto;width:80%;background-color: #eee;padding: 05px;margin-top: 10px; margin-bottom:10px;" border="0">
+    <tr>
+        <th align="left"><label for="nome">Nome:</label></th>
+        <td align="left"><input name="nome" title="Informe o seu nome." type="text" id="nome" size="60" tabindex="1" /></td>
+    </tr>
+    <tr>
+        <th align="left"><label for="telefone">Telefone:</label></th>
+        <td align="left"><input name="telefone" title="Informe o seu telefone." type="text" id="telefone" size="20" tabindex="2" /></td>
+    </tr>
+    <tr>
+        <th align="left"><label for="email">E-mail:</label></th>
+        <td align="left"><input name="email" title="Informe o seu E-mail." type="text" id="email" size="60" tabindex="6" /></td>
+    </tr>
+    <tr>
+        <th align="left"><label for="assunto">Assunto:</label></th>
+        <td align="left"><input name="assunto" title="Informe o Assunto." type="text" id="assunto" size="60" tabindex="7" /></td>
+    </tr>
+    <tr>
+        <th align="left"><label for="texto">Mensagem:</label></th>
+        <td align="left"><textarea title="Inclua sua mensagem." rows="10" id="texto" name="texto" cols="63" tabindex="8" > </textarea></td>
+    </tr>
+    <tr>
+        <td colspan="2" align="center" id="captcha_panel">
+        	Código de verificação: <span id="txtCaptchaDiv" style="color:#F00"> </span>
+		    <input type="hidden" id="txtCaptcha" />
+		    <input type="text" name="txtInput" id="txtInput" size="30" tabindex="9" />
+        </td>
+    </tr>
+    <tr>
+        <th align="left"><label for="Enviar"> </label></th>
+        <td align="left"><input class="form_botao" type="submit" name="Enviar" value="Enviar" onclick="return valida_contato();" tabindex="10" /></td>
+    </tr>
+</table>
+</form>
+</div>
+<div style="float: right; display: inline; width: 275px; text-align: center; margin-bottom: 15px;"><img style="margin-bottom: 10px;" title="Fale Conosco." src="../../../static/images/faleconosco1.jpg" alt="Fale Conosco." /> <img style="margin-bottom: 10px;" title="Fale Conosco." src="../../../static/images/faleconosco2.jpg" alt="Fale Conosco." /></div>
+<script type="text/javascript">
+	function onload() { generateCode(); }
+    window.onload+=onload();
+</script>

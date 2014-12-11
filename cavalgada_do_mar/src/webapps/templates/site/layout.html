@@ -1,0 +1,389 @@
+$def with (vars, content)
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br">
+<head>
+    <title>$content.title</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="language" content="pt-br">
+    <meta name="country" content="Brazil"/>
+    <meta name="copyright" content="Copyright (c) 2013 Fundação Cultural Cavalgada do Mar. This site's design and html code is licensed under the terms of the GPLv3 or (at your option) any later version."/> 
+    <meta name="organization name" content="Fundação Cultural Cavalgada do Mar em Porto Alegre - RS." /> 
+    <meta name="author" content="professionalit.com.br - Sistemas, Sites, Aplicações Web e Mobile."/> 
+    <meta name="Description" content="$content.full_description" lang="pt-BR"/>
+    <meta name="Keywords" content="$content.keywords_tags" lang="pt-BR"/>
+    <meta name="rating" content="$content.keywords_tags"/>
+    <meta name="DC.title" content="cavalgadadomar.art.br"/> 
+    <meta name="robots" content="ALL"/> 
+    <meta name="googlebot" content="all" /> 
+    <meta name="classification" content="fundação, cavalgada, cavalgada do mar" /> 
+    <meta name="distribution" content="Global" /> 
+    <meta name="revisit-after" content="1 day" /> 
+    <!--meta name="google-site-verification" content="LaaXRjbgSYydCkGZx1WaVKjpnLBARLEnARoZWGgDR-8" /-->
+    <meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE" />
+    <link rel="alternate" type="application/rss+xml" title="Fundação Cultural Cavalgada do Mar em Porto Alegre - RS - RSS" href="$:vars['context_path']/rss" />
+    <link rel="shortcut icon" href="$:vars['context_path']/static/images/favicon.ico" type="image/x-icon" />
+    <link rel='index' title='Fundação Cultural Cavalgada do Mar em Porto Alegre - RS' href='http://www.cavalgadadomar.art.br' /> 
+    <link rel="canonical" href="http://www.cavalgadadomar.art.br" /> 
+    <link rel="author" title="ProfessionalIT - Sistemas, Sites, Aplicações Web e Mobile." href="/bio.html"> 
+    <link rel="copyright" title="Script license and terms of use" href="/jslibs/termsOfUse.html"> 
+    <link rel="home" title="Página Inicial da Fundação Cultural Cavalgada do Mar em Porto Alegre - RS" href="/"> 
+    <link rel="search" title="Pesquisa no site da Fundação Cultural Cavalgada do Mar em Porto Alegre - RS" href="/search/"> 
+    <link rel="bookmark" href="$:vars['context_path']/index" title="Fundação Cultural Cavalgada do Mar em Porto Alegre - RS">
+    <link rel="stylesheet" href="$:vars['context_path']/static/css/style.css" type="text/css" media="screen" />
+    <script type="text/javascript" src="$:vars['context_path']/static/javascript/jquery-1.4.2.js"></script>
+    <script type="text/javascript" src="$:vars['context_path']/static/javascript/jquery.cycle.all.js"></script>
+    <script type="text/javascript" src="$:vars['context_path']/static/javascript/actions.js"></script>
+    <script type="text/javascript" src="$:vars['context_path']/static/javascript/util.js"></script>
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-38214850-1']);
+      _gaq.push(['_trackPageview']);
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+</head>
+<body>
+    <!-- START of freefind onpage results html -->
+    <!-- position these div's right after your body tag -->
+    <!--  FreeFind on-page results divs  -->
+    <div id="ffresult_win"   style=" z-index:1; padding: 20px 0 16px 0; margin:0px; width:538px; height:728px; border:none; display:none; position:absolute; top:0px; left:0px;">
+        <div  id="ffresult_bar" onmousedown="ffresults.drag(event,false)"  style="cursor: move; z-index:5; position:absolute; top:0px; left:0px; background-color:maroon; padding:0; text-align: right; width:100%; height:20px; display:block;  border:solid; border-width: 1px; border-bottom: 0px; border-color:maroon;">
+        <a  id="ffrclose" style="z-index:6; font-family: arial, verdana, sans-serif; font-size:8pt; color:white; " href="javascript:ffresults.hide()">Close window [X]</a>&nbsp;&nbsp;&nbsp;
+        </div>
+        <div  id="ffresult_2" style="z-index:7; position: relative; height: 100%; background-color:white;  display:block;">
+        <div  id="ffresult_cvr" style="z-index:0; position:absolute; top:0px; left:0px; display:block; width:100%; height:100%;">
+        </div>
+        <iframe  id="ffresult_ifr" name="ffresult_frame"  style="z-index:1; position:absolute; top:0px; left:0px; border:solid; border-width: 0px 1px 0px 1px; border-color:gray;" src="" width="100%" height="100%" scrolling="auto" frameborder="0">
+        </iframe>
+        </div>
+        <div  id="ffresult_btm" style=" position:absolute; bottom:-1; left:0px; border:solid; border-color:gray; border-width: 1px; border-top: 0px; display: block; z-index:18; background-color:#d0d0d0; width:100%; height:16px; " >
+            <div  id="ffresult_sbx" onmousedown="ffresults.drag(event,true);" style="cursor: se-resize; float:right; border:none; border-color:gray; border-width: 0px; width:16px; height:16px; "><img  style="" id="ffresult_szimg" height=16 width=16 border=0 src="" alt=""></div>
+        </div>
+    </div>
+    <!--  FreeFind on-page results handler  -->
+    <script type="text/javascript">
+    <!--
+    var ffresults = {
+        // copyright 2008 - 2013 FreeFind.com - authorized for use with the FreeFind service only
+        // Start of config settings
+        autoPos : true,			// automatic initial window position / size. 
+        // if autoPos if false, the following four numbers are used as initial window position and size
+        initialX : 78,			// left position (pixels)
+        initialY : 66,			// right position (pixels)
+        initialH : 395,			// height of window
+        initialW : 622,			// width of window
+        // choose a number for z-index that is high enough so the results window appears above other windows on your page
+        initialZ : 10000000,    // initial z-index of the results window        
+        // the following value controls the color of the window's drag bar (top area of window)        
+        barColor : 'navy',
+        // end of config settings
+        element : undefined,
+        cover : undefined,
+        mouseDownX : 0,
+        mouseDownY : 0,
+        objectX : 0,
+        objectY : 0,
+        objectH : 0,
+        objectW : 0,
+        ipos : false,
+        resize : false,        
+        sizeImageUrl : 'http://search.freefind.com/img/rsize.gif',
+        selectFunc : undefined,
+        selectState : undefined,
+        mozSelect : undefined,
+        noSelect : function()        {
+            var obj = document.body;
+            ffresults.selectFunc = obj.onselectstart;
+            ffresults.selectState = obj.unselectable;
+            ffresults.mozSelect = obj.style.MozUserSelect;
+            obj.onselectstart = function(){ return false; };
+            obj.unselectable = 'on';
+            obj.style.MozUserSelect = 'none';
+        },
+        restoreSelect : function()
+        {
+            var obj = document.body;
+            obj.onselectstart = ffresults.selectFunc;
+            obj.unselectable = ffresults.selectState;
+            obj.style.MozUserSelect = ffresults.mozSelect;
+        },
+        drag : function (e,size)
+        {
+            if(!document.getElementById) return;
+            
+            if(!e) e = window.event;
+            var targ = e.target || e.srcElement;
+            ffresults.resize = size;
+            if(targ.id != 'ffresult_bar' && targ.id != 'ffresult_szimg') return true;
+            ffresults.noSelect();
+
+            ffresults.element = document.getElementById('ffresult_win');
+            ffresults.objectX = parseInt(ffresults.element.style.left,10);
+            ffresults.objectY = parseInt(ffresults.element.style.top,10);
+            ffresults.objectH = parseInt(ffresults.element.style.height,10);
+            ffresults.objectW = parseInt(ffresults.element.style.width,10);
+
+            ffresults.cover = document.getElementById('ffresult_cvr');
+            ffresults.cover.style.zIndex = '40';
+            ffresults.mouseDownX = e.clientX;
+            ffresults.mouseDownY = e.clientY;
+            if(e.preventDefault) e.preventDefault();
+            e.returnValue = false;
+            e.cancelBubble = true;
+            ffresults.attach(document,"mouseup",ffresults.drop);
+            ffresults.attach(document,"mousemove",ffresults.move);
+        },
+        attach : function(to,eventname,func)
+        {
+            if(to.addEventListener) 
+                to.addEventListener(eventname,func,false);
+            else
+                to.attachEvent("on" + eventname,func);
+        },
+        detach : function(to,eventname,func)
+        {
+            if(to.removeEventListener) 
+                to.removeEventListener(eventname,func,false);
+            else
+                to.detachEvent("on" + eventname,func);
+        },
+        drop : function(e)
+        {
+            ffresults.detach(document,"mouseup",ffresults.drop);
+            ffresults.detach(document,"mousemove",ffresults.move);
+            ffresults.cover.style.zIndex = 0;	
+            ffresults.element = null;
+            ffresults.restoreSelect();
+        },
+        move: function(e)
+        {
+           if(!e) e = window.event;
+
+           e.returnValue = false;
+           e.cancelBubble = true;
+           if(e.preventDefault) e.preventDefault();
+
+            var x = e.clientX;
+            var y = e.clientY; 
+
+            if(ffresults.resize)
+            {
+                var winW = ffresults.objectW + x - ffresults.mouseDownX;
+                var winH = ffresults.objectH + y - ffresults.mouseDownY;
+                
+                if(winH < 128) winH = 128;
+                if(winW < 128) winW = 128;
+
+                ffresults.element.style.width = winW + "px";
+                ffresults.element.style.height = winH + "px";
+            }
+            else
+            {
+                var left = ffresults.objectX + x - ffresults.mouseDownX;
+                var top = ffresults.objectY + y - ffresults.mouseDownY;
+
+                ffresults.element.style.left = left + "px";
+                ffresults.element.style.top = top + "px";
+            }
+        },
+        hide : function()
+        {
+            var rStyle = document.getElementById('ffresult_win').style;
+            rStyle.display = "none";
+            rStyle.zIndex = 0;
+            var ifr = document.getElementById('ffresult_ifr');
+            if(ifr) ifr.src="";
+            var szImg = document.getElementById('ffresult_szimg');
+            if(szImg) szImg.src = "";
+
+        },
+        show : function(num)
+        {
+            if(!document.getElementById) return;
+
+            var searchForm = document.getElementById('ffresult_sbox'+num);
+            var idxLink = document.getElementById('ffresult_idx'+num);
+            var smpLink = document.getElementById('ffresult_smp'+num);
+            var advLink = document.getElementById('ffresult_adv'+num);
+
+            if(searchForm) searchForm.target = 'ffresult_frame';
+            if(idxLink) idxLink.target = 'ffresult_frame';
+            if(smpLink) smpLink.target = 'ffresult_frame';
+            if(advLink) advLink.target = 'ffresult_frame';
+
+            var rDiv = document.getElementById('ffresult_win');
+
+            if(!ffresults.ipos)
+            {
+                if(ffresults.autoPos)
+                {
+                    ffresults.computePos(rDiv); 
+                }
+                else
+                {
+                    rDiv.style.top = ffresults.initialY + 'px';
+                    rDiv.style.left = ffresults.initialX + 'px';
+                    rDiv.style.width = ffresults.initialW + 'px';
+                    rDiv.style.height = (ffresults.initialH - 36) + 'px';	
+                }
+                ffresults.ipos = true;
+            }
+            var szImg = document.getElementById('ffresult_szimg');
+            if(szImg) szImg.src = ffresults.sizeImageUrl;
+
+            var dragBar = document.getElementById('ffresult_bar');
+            if(dragBar) 
+            {
+                dragBar.style.backgroundColor = ffresults.barColor;
+                dragBar.style.borderColor = ffresults.barColor;
+            }
+
+            rDiv.style.zIndex = ffresults.initialZ;
+            rDiv.style.display = "block";
+        },
+        computePos : function(rDiv)
+        {
+            var view = ffresults.viewSize();
+            var w = parseInt(view.width * 0.75,10);
+            var h = parseInt(view.height * 0.75,10);
+            if(w < 220) w = 220;
+            if(h < 220) h = 220;
+            var left = parseInt((view.width - w ) / 2,10);
+            var top = parseInt((view.height - (h + 36)) / 2,10);
+            if(left < 0) left = 0;
+            if(top < 0) top = 0;
+            rDiv.style.top = (top + view.scrollY) + 'px';
+            rDiv.style.left =  (left + view.scrollX) + 'px';
+            rDiv.style.width =  w + 'px';
+            rDiv.style.height =  h + 'px';
+        },
+        viewSize : function()
+        {   
+            var w = 0;
+            var h = 0;
+            var sx = 0;
+            var sy = 0;
+
+            if(window.innerWidth)	
+            {  // non-ie
+               w = window.innerWidth;
+               h = window.innerHeight;
+               sx = window.pageXOffset;
+               sy = window.pageYOffset;
+            }
+            else
+            {
+                var elem;
+                if(document.documentElement && document.documentElement.clientWidth != 0)
+                {   // ie strict
+                    elem = document.documentElement;
+                }
+                else
+                {	// ie quirks
+                    elem = document.body;
+                }
+                w = elem.clientWidth;
+                h = elem.clientHeight;
+                sx = elem.scrollLeft;
+                sy = elem.scrollTop;
+            }
+            return {width: w,height: h, scrollX: sx, scrollY: sy};
+        }
+    };
+    //-->
+    </script>
+    <!-- END of freefind onpage results html -->
+    <div id="page">
+        <div id="top">
+            <a href="$:vars['context_path']/" title="Página Inicial da Fundação Cavalgada do Mar.">Fundação Cavalgada do Mar</a>
+            <div id="social"><a href="https://www.facebook.com/henrique.d.noronha" title="Facebook da Fundação Cultural Cavalgada do Mar."><img src="$:vars['context_path']/static/images/facebook_32.png" alt="Icone do Facebook." title="Facebook da Fundação Cultural Cavalgado do Mar." /></a> <a href="http://feeds.feedburner.com/cavalgadadomar" title="Canal RSS da Fundação Cultural Cavalgada do Mar."><img src="$:vars['context_path']/static/images/rss_32.png" alt="Icone do RSS." title="Canal RSS da Fundação Cultural Cavalgado do Mar." /></a></div>
+        </div>
+        <div id="menu_panel">
+            <style></style>
+            <ul class="menu">
+                <li><a href="$:vars['context_path']" id="menu_home" title="Página Inicial da Cavalgada do Mar.">Inicial</a></li>
+                <li>
+                    <a href="$:vars['context_path']/" title="Conheça a Fundação.">A Fundação</a>
+                    <ul>
+                        <li><a href="$:vars['context_path']/quem-somos"       id="menu_quem_somos" title="Conheça a Fundação Cavalgada do Mar.">Quem Somos</a></li>
+                        <li><a href="$:vars['context_path']/historico"        id="menu_historico" title="A Hisporia da Fundação Cavalgada do Mar.">Histórico</a></li>
+                        <li><a href="$:vars['context_path']/projetos-sociais" id="menu_projetos_sociais" title="Nossos projetos sociais.">Projetos Sociais</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="$:vars['context_path']/" title="">A Cavalgada do Mar</a>
+                    <ul>
+                        <li><a href="$:vars['context_path']/percurso"   id="menu_percurso"   title="O Percurso da Cavalgada do Mar.">Percurso</a></li>
+                        <li><a href="$:vars['context_path']/atividades" id="menu_atividades" title="As atividades durante a Cavalgada do Mar.">Atividades</a></li>
+                        <li><a href="$:vars['context_path']/comenda"    id="menu_comenda"    title="Comenda e Comendadores.">Comenda e Comendadores</a></li>
+                        <li><a href="$:vars['context_path']/premiacoes" id="menu_premiacoes" title="As Premiações e os Premiados.">Premiações</a></li>
+                        <li><a href="$:vars['context_path']/dicas"      id="menu_dicas"      title="Dicas para melhor aproveitar sua cavalgada.">Dicas para a sua cavalgada</a></li>
+                        <li><a href="$:vars['context_path']/albuns"     id="menu_albuns"     title="Albúm de fotos e vídeos da Cavalgada do Mar">Galerias</a></li>
+                        <li><a href="$:vars['context_path']/noticias"   id="menu_noticias"   title="Últimas Noticias da Cavalgada o Mar.">Notícias</a></li>
+                        <li><a href="$:vars['context_path']/boletins"   id="menu_boletins"   title="Boletins Diários da Cavalgada o Mar.">Boletins Diários</a></li>
+                    </ul>
+                </li>
+                <li><a href="$:vars['context_path']/depoimentos"    id="menu_depoimentos"    title="Depoímentos de participantes.">Depoimentos</a></li>
+                <li><a href="$:vars['context_path']/patrocinadores" id="menu_patrocinadores" title="Nossos parceiros, apoiadores e patrocinadores.">Apoiadores e Patrocinadores</a></li>
+                <li><a href="$:vars['context_path']/inscricao"      id="menu_inscricao"      title="Como fazer a sua inscrição.">Inscrição</a></li>
+                <li style="border: 0;"><a href="$:vars['context_path']/fale-conosco"   id="menu_fale_conosco" title="Fale Conosco, deixe o seu recado.">Fale Conosco</a></li>
+            </ul>
+        </div>
+        <div class="sep_bar"></div>
+        <div id="slide">
+            $if vars['banners']:
+                $for banner in vars['banners']:
+                    <img src="$:banner.foto_banner" alt="Foto do Banner" title="$:banner.titulo" />
+            $else:
+                <img src="$:vars['context_path']/static/images/slideshow_imgs/slide01.jpg" alt="" title="" />
+                <img src="$:vars['context_path']/static/images/slideshow_imgs/slide02.jpg" alt="" title="" />
+                <img src="$:vars['context_path']/static/images/slideshow_imgs/slide03.jpg" alt="" title="" />
+                <img src="$:vars['context_path']/static/images/slideshow_imgs/slide04.jpg" alt="" title="" />
+                <img src="$:vars['context_path']/static/images/slideshow_imgs/slide05.jpg" alt="" title="" />
+                <img src="$:vars['context_path']/static/images/slideshow_imgs/slide06.jpg" alt="" title="" />
+                <img src="$:vars['context_path']/static/images/slideshow_imgs/slide07.jpg" alt="" title="" />
+                <img src="$:vars['context_path']/static/images/slideshow_imgs/slide08.jpg" alt="" title="" />
+        </div>
+        <div class="sep_bar"></div>
+        <div id="search_bar">
+            <!--input type="text" id="search" size="50" /> <button type="submit">Pesquisar</button-->
+            <!-- start of freefind search box html -->
+            <table cellpadding=0 cellspacing=0 border=0 style="float:right;width:450px;margin-right:10px;" >
+            <tr>
+                <td  style="font-family: Arial, Helvetica, sans-serif; font-size: 7.5pt;">
+                    <center><table width="90%" cellpadding=0 cellspacing=0 border=0>
+                    <tr style="font-family: Arial, Helvetica, sans-serif; font-size: 7.5pt;">
+                        <td  style="font-family: Arial, Helvetica, sans-serif; font-size: 7.5pt;" align=left ><a id="ffresult_idx1" onclick="ffresults.show(1);" href="http://search.freefind.com/siteindex.html?si=86863208&amp;sbv=j1">Index do Site</a></td>
+                        <td  style="font-family: Arial, Helvetica, sans-serif; font-size: 7.5pt;" align=center><a id="ffresult_smp1" onclick="ffresults.show(1);" href="http://search.freefind.com/find.html?si=86863208&amp;m=0&amp;p=0&amp;sbv=j1">Mapa do Site</a></td>
+                        <td  style="font-family: Arial, Helvetica, sans-serif; font-size: 7.5pt;" align=right><a id="ffresult_adv1" onclick="ffresults.show(1);" href="http://search.freefind.com/find.html?si=86863208&amp;pid=a&amp;sbv=j1">Avançada</a></td>
+                    </tr>
+                    </table></center>
+                    <form  id="ffresult_sbox1" style="margin:0px; margin-top:4px;" action="http://search.freefind.com/find.html" method="get" accept-charset="utf-8" onsubmit="ffresults.show(1);">
+                    <input type="hidden" name="si" value="86863208" />
+                    <input type="hidden" name="pid" value="r" />
+                    <input type="hidden" name="n" value="0" />
+                    <input type="hidden" name="_charset_" value="" />
+                    <input type="hidden" name="bcd" value="&#247;" />
+                    <input type="hidden" name="sbv" value="j1" />
+                    <input type="text" name="query" size="15" style="width: 309px;" /> 
+                    <input type="submit" value="Busca" style="margin-right: 10px; margin-left: 5px; width: 100px; height: 25px;" />
+                    </form>
+                </td>
+            </tr>
+            </table>
+            <!-- end of freefind search box html -->
+        </div>
+        <div id="content">
+            <div id="loading"></div>
+            $:content
+        </div>
+        <div id="footer">
+            <p>2013 - Fundação Cultural Cavalgada do Mar - Todos os direitos reservados.</p>
+            <p>Este site foi produzido pela empresa <a href="http://www.professionalit.com.br" title="Sistemas, sites, aplicações web e aplicações mobile.">ProfessionalIT - Soluções em Tecnologia Ltda</a>.</p>
+        </div>        
+    </div>
+</body>
+</html>
