@@ -19,27 +19,26 @@ http://docs.webfaction.com/user-guide/email.html
 http://docs.webfaction.com/user-guide/email_clients/gmail.html
 http://docs.webfaction.com/software/
 
-
-
-[ e-mails ]
-michele@equineclinic.com.br
-    michele_equineclinic
-    Michele: 48527910
-
-henrique@equineclinic.com.br
-    henrique_equineclinic
-    Henrique: 97896410
-
-    Equineclinichipiatria@gmail.com
+Equineclinichipiatria@gmail.com
     81412007
 
-fran@equineclinic.com.br
-    fran_equineclinic
-    Fran: Equine2013
+[ e-mails ]
 
-alexandre@equineclinic.com.br
-    alexandre_equineclinic
-    Alexandre: eumeduda
+    michele@equineclinic.com.br
+    user: michele_equineclinic
+    senha: 48527910
+
+    henrique@equineclinic.com.br
+    user: henrique_equineclinic
+    senha: 97896410
+
+    fran@equineclinic.com.br
+    user: fran_equineclinic
+    senha: Equine2013
+
+    alexandre@equineclinic.com.br
+    user: alexandre_equineclinic
+    senha: eumeduda
 
 
 
