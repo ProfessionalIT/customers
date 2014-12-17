@@ -1,0 +1,20 @@
+$def with (conteudo)
+
+<h2 class="form_title">Login</h2>
+<form action="/admin/login/" method="post">
+    <span class="required">$:conteudo</span>
+    <table id="login_table_fields">
+        <tr>
+            <td><label>Nome:</label></td>
+            <td><input type="text" name="username" size="60"/></td>
+        </tr>
+        <tr>
+            <td><label>Senha:</label></td>
+            <td><input type="password" name="password" size="60"/></td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+            <td><input type="submit" value="Login" /></td>
+        </tr>
+    </table>
+</form>
