@@ -4,7 +4,7 @@ DBN='mysql'
 HOST='localhost'
 DB='cavalgad_bd'
 USER='cavalgad_user'
-MODE='fastcgi'    # mod_python, fastcgi, mod_wsgi
+MODE='mod_wsgi'    # mod_python, fastcgi, mod_wsgi
 ENV='production' # production or development
 PWD='Master11235813'
 # Generic configuration website variables
