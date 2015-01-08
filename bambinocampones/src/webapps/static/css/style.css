@@ -4,6 +4,7 @@ body { background:#00a539; font-family:'Comic Sans MS', Trebuchet MS, Arial;marg
 #logo { width:486px; height:100px; margin:31px 0 0 0; padding:0px; float:left; background:url(/static/images/logo.png) no-repeat; }
 #logo h1 { font-family:'Comic Sans MS', Tahoma; font-size:46px; color:transparent; text-indent: -10000px; overflow: hidden; font-weight:bold; line-height:50px; margin:0px; padding:0px; }
 #logo h1 a {  }
+#logo #cntdwn { color: White; margin-top: 60px; display: block; width: 671px; background-color: rgb(255, 39, 0); padding: 5px 10px; font-size: 16px;}
 #menu_panel { margin:0px auto; width: 1003px; }
 #menu_list { background: url(/static/images/menu_superior.png) no-repeat; margin:0px auto; width:1003px; height:67px; list-style: none; padding: 0px; }
 #menu_list li { display: block; float: left; font-weight: bold; width:auto; height:28px; margin:0px; width: 120px;}

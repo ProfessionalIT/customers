@@ -44,7 +44,21 @@ $def with (render_vars, content)
 <body>
     <div id="headWrap">
         <div id="headpanel">
-            <div id="logo"><h1>Bambino Camponês</h1></div>
+            <div id="logo">
+				<h1>Bambino Camponês</h1>
+			<script language="JavaScript">
+				TargetDate = "02/03/2015 8:00 AM";
+				BackColor = "";
+				ForeColor = "White";
+				CountActive = true;
+				CountStepper = -1;
+				LeadingZero = true;
+				DisplayFormat = "Faltam %%D%% Dias, %%H%% Horas, %%M%% Minutos, %%S%% Segundos para o Aniversário da Bambino Camponês.";
+				FinishMessage = "Parabéns Bambino Camponês !";
+			</script>
+			<script language="JavaScript" src="http://scripts.hashemian.com/js/countdown.js"></script>
+			</div>
+            
         </div>
     </div>
     <div id="contentWrap">
@@ -83,7 +97,7 @@ $def with (render_vars, content)
             </ul>
             <ul id="sub_menu_list_galeria" class="sub_menu">
                 <span>Galerias: </span>
-                <li class="sub_menu_item"><a href="/galerias-fotos"  title="Galerias de fotos.">Galeria de Fotos</a></li>
+                <li class="sub_menu_item"><a href="/galerias-fotos"  title="Galerias de fotos." onclick="return validaMenuAcesso();">Galeria de Fotos</a></li>
                 <li class="sub_menu_item"><a href="/galerias-videos" title="Galerias de vídeos.">Galeria de Vídeos</a></li>
             </ul>
             <ul id="sub_menu_list_servicos" class="sub_menu">

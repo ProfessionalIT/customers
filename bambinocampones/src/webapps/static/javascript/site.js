@@ -39,3 +39,19 @@ function restore_menu(){
     hide_sub_menus();
     restore_default_menu_color();    
 }
+function validaMenuAcesso(){
+	retorno = false;
+	valor = 'bambino2015';
+	var validation = prompt("Informe a senha de acesso:");
+    if (validation != null) {
+        if (validation == valor){
+			retorno = true;
+		} else {
+			alert("Senha inválida !.");
+		}
+    } else {
+		alert("Senha Não infomada !.");
+	}
+	return retorno;
+	
+}
