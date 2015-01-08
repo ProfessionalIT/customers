@@ -1,0 +1,147 @@
+body { background:#00a539; font-family:'Comic Sans MS', Trebuchet MS, Arial;margin:0px; padding:0px; }
+#headWrap { width:100%; height:290px; margin:0px; padding:0px; float:left; background:url(/static/images/headBg.png) repeat-x; }
+#headpanel { width:934px; height:290px; margin:0 auto; padding:0px; }
+#logo { width:486px; height:100px; margin:31px 0 0 0; padding:0px; float:left; background:url(/static/images/logo.png) no-repeat; }
+#logo h1 { font-family:'Comic Sans MS', Tahoma; font-size:46px; color:transparent; text-indent: -10000px; overflow: hidden; font-weight:bold; line-height:50px; margin:0px; padding:0px; }
+#logo h1 a {  }
+#menu_panel { margin:0px auto; width: 1003px; }
+#menu_list { background: url(/static/images/menu_superior.png) no-repeat; margin:0px auto; width:1003px; height:67px; list-style: none; padding: 0px; }
+#menu_list li { display: block; float: left; font-weight: bold; width:auto; height:28px; margin:0px; width: 120px;}
+#menu_list li a {width:auto; height:28px; margin:0px; padding:0px; font-family:'Comic Sans MS', Trebuchet MS, Arial; font-size:20px; color:white;
+line-height:20px; font-weight:bold; text-decoration:none; }
+#menu_list li a:hover { color: red; }
+#sub_menu_list_escola, #sub_menu_list_secretaria, #sub_menu_list_mural, #sub_menu_list_galeria, #sub_menu_list_servicos, #sub_menu_list_contato, #sub_menu_list_downloads { list-style: none; display:none; }
+#menu_list li.menu_item { margin-top: 10px; }
+#menu_list li #menu_inicial { margin-left: 50px; }
+#menu_list li #menu_escola { margin-left: 50px; }
+#menu_list li #menu_secretaria { margin-left: 29px; }
+#menu_list li #menu_mural { margin-left: 53px; }
+#menu_list li #menu_galerias { margin-left: 43px; }
+#menu_list li #menu_servicos { margin-left: 43px; }
+#menu_list li #menu_contato { margin-left: 47px; }
+#menu_list li #menu_downloads { margin-left: 36px; }
+ul.sub_menu { text-align: center; margin: 0px auto; margin-left: 20px; height:20px; text-align: center; width: 983px; list-style: none; padding: 0px; margin-bottom: 10px;}
+ul.sub_menu li { display: block; float: left; font-weight: bold; width:auto; height:28px; margin:0px; padding: 0px 5px; }
+.sub_menu span { color: red; float: left; font-family:'Comic Sans MS', Trebuchet MS, Arial; font-size:18px; }
+.sub_menu_item a { color: green; font-family:'Comic Sans MS', Trebuchet MS, Arial; font-size:18px; padding: 05px 05px 10px 05px; text-decoration: none; font-weight: bold;}
+.sub_menu_item a:hover { color: blue; }
+#contentWrap { width:100%; margin:0px; padding:0px 0px 10px 0px; float:left; background-color: #FFFBA7; /* background: #FFFBA7 url(/static/images/aniversario.png) no-repeat center center; */ }
+#contentPanel { height: 100%; min-height: 520px; width:934px; margin:0 auto; padding:3px 0 0px 0; clear: both;}
+#leftPanel { width:259px; margin:0px; padding:0 0 34px 0; float:left; height: 100%; min-height:920px; border-right:#c6d09d dashed 1px; }
+#leftPanel .toplinks { width:205px; margin:0px; padding: 0px; float:left; }
+#leftPanel .toplinks h2 { width:224px; margin:0px; padding:0px; float:left; font-family:'Comic Sans MS', Trebuchet MS, Arial; font-size:22px; color:#000000; line-height:24px; font-weight:bold; }
+#leftPanel .toplinks h3 { width:224px; margin:0px 0 10px 0; padding:0px;  float:left; font-family:'Comic Sans MS', Trebuchet MS, Arial; font-size:14px; color:#005b7f; line-height:16px; font-weight:bold; }
+#leftPanel .toplinks p { width:224px; margin:10px 0 0 0; padding:0px; float:left; font-family:'Comic Sans MS', Trebuchet MS, Arial; font-size:14px; color:#252525; line-height:16px; }
+#leftPanel .toplinks ul { width:224px; margin:8px 0 0 0; padding:0px; float:left; display:block; }
+#leftPanel .toplinks ul li { width:224px; margin:0px; padding:0px; float:left; display:block; }
+#leftPanel .toplinks ul li a { width:205px; height:19px; margin:0px; padding:0 0 0 19px; float:left; font-family:'Comic Sans MS', Trebuchet MS, Arial; font-size:14px; color:#363636; line-height:16px; text-decoration:none; border-bottom:#c6d09d solid 1px; background:url(/static/images/lisstyle.jpg) no-repeat 0 -18px; }
+#leftPanel .toplinks ul li a:hover { color:#c46706; background:#FFFFFF url(/static/images/lisstyle.jpg) no-repeat; }
+#leftPanel .toplinks ul li a.bottom { width:205px; height:19px; margin:0px; padding:0 0 0 19px; float:left; font-family:'Comic Sans MS', Trebuchet MS, Arial; font-size:14px; color:#363636; line-height:16px; text-decoration:none; border-bottom:0px; background:url(/static/images/lisstyle.jpg) no-repeat 0 -18px; }
+#leftPanel .toplinks ul li a.bottom:hover{color:#c46706; background:#FFFFFF url(/static/images/lisstyle.jpg) no-repeat}
+#projectsPanel { width:230px; margin:20px 0 0 0; padding:0px; float:left; }
+#projectsPanel h2 { width:224px; margin:0px; padding:0px; float:left; font-family:'Comic Sans MS', Trebuchet MS, Arial; font-size:21px; color:#000000; line-height:24px; font-weight:bold; margin-top: 5px;}
+#projectsPanel h3 { width:224px; margin:5px 0 15px 0; padding:0px; float:left; font-family:'Comic Sans MS', Trebuchet MS, Arial; font-size:14px; color:#005b7f; line-height:16px; font-weight:bold; }
+#projectsPanel h5 { display:table; float: left; margin:3px 0px 10px 0px !important; padding:0px; text-align:center; width:100%; }
+#projectsPanel .pic1 { width:105px; height:83px; margin:10px 0 0 0; padding:0px; float:left; background:url(/static/images/pic1.jpg) no-repeat; }
+#projectsPanel .pic2 { width:105px; height:83px; margin:10px 0 0 0; padding:0px; float:left; background:url(/static/images/pic2.jpg) no-repeat; }
+#projectsPanel .blank { width:24px; height:10px; margin:10px 0 0 0; padding:0px; float:left; }
+#projectsPanel a.button { width:55px; height:16px; margin:7px 0 0 0; float: right; clear: both; margin-left:5px; padding:0px; font-family:'Comic Sans MS', Trebuchet MS, Arial; font-size:10px; color:#000000; line-height:14px; text-align:center; text-decoration:none; border:#bdbcbd solid 1px; background:#FFFFFF; }
+#projectsPanel a.button:hover { background:#CCCCCC; }
+#projectsPanel ul.lista_downloads { float:left; list-style: square; }
+#projectsPanel ul.lista_downloads a { text-decoration: none; color:blue; }
+#projectsPanel ul.lista_downloads a:hover { text-decoration: underline; color:green; }
+#sidebar { width: 672px; float:right; }
+#sidebar #sidebar_top { width: 100%; display:block; clear: both;}
+#sidebar #sidebar_top #painel_infraestrutura { height: 100%; }
+#sidebar #sidebar_top #painel_infraestrutura h2 { margin:0px; padding:0px; padding-left: 10px; font-family:'Comic Sans MS', Trebuchet MS, Arial; font-size:22px; color:#000; line-height:24px; font-weight:bold; width: 100%; }
+#sidebar #sidebar_top #painel_infraestrutura h3 { width:324px; margin:5px 0 0px 0; padding:0px 0px 0px 10px;  float:left; font-family:'Comic Sans MS', Trebuchet MS, Arial; font-size:14px; color:#005b7f; line-height:16px; font-weight:bold; }
+#sidebar #sidebar_top #painel_infraestrutura #painel_slider {padding:40px 0px 0px 0px;width:620px;position:relative;z-index:1;}
+#sidebar #sidebar_top #painel_infraestrutura #page_Home { background-color: white; padding: 7px; width: 649px; margin: 15px 0px 0px 10px;}
+#sidebar #sidebar_top #painel_infraestrutura #slider { position:relative;width:100%;height:396px;z-index:88;overflow:hidden; padding-left: 30px;}
+.nivoSlider a.nivo-imageLink {position:absolute;top:0px;left:0px;width:100%;height:100%;border:0;padding:0;margin:0;z-index:60;display:none}
+.nivo-slice {display:block;position:absolute;z-index:50;height:100%}
+.nivo-controlNav {position:absolute;z-index:99;right:40px;bottom:20px}
+.nivo-controlNav a {position:relative;z-index:99;cursor:pointer;text-indent:-5000px;width:22px;height:22px;float:left;margin-left:8px;background:url(/static/images/buttons.png) right 0 no-repeat}
+.nivo-controlNav a.active, .nivo-controlNav a:hover {background-position:left}
+#sidebar #sidebar_bottom { width: 100%; height: 100%; min-height: 500px; padding-top: 10px; display:block;}
+#middlePanel { width:368px; height: 100%; min-height: 480px; margin:0px; padding:0 0 10px 10px; float:left; border-right:#c6d09d dashed 1px; }
+#middlePanel .top { width:350px; margin:0px; padding:0 0 0 3px; float:left; }
+#middlePanel .top h2 { width:350px; margin:0px; padding:0px; float:left; font-family:'Comic Sans MS', Trebuchet MS, Arial; font-size:22px; color:#000000; line-height:24px; font-weight:bold; }
+#middlePanel .top h3 { width:350px; margin:5px 0 0 0; padding:0px; float:left; font-family:'Comic Sans MS', Trebuchet MS, Arial; font-size:14px; color:#005b7f; line-height:16px; font-weight:bold; }
+#middlePanel .top p { width:350px; margin:16px 0 0 0; padding:0px; float:left; font-family:'Comic Sans MS', Trebuchet MS, Arial; font-size:14px; color:#363636; line-height:16px; }
+#middlePanel .top p span { color:#c46706; font-weight:bold; }
+#middlePanel .top a.button { width:75px; height:16px; margin:10px 0 0 0; padding:0px; float:left; font-family:'Comic Sans MS', Trebuchet MS, Arial; font-size:10px; color:#000000; line-height:14px; text-align:center; text-decoration:none; border:#bdbcbd solid 1px; background:#FFFFFF; }
+#middlePanel .top a.button:hover { background:#CCCCCC; }
+#middlePanel #avisosPanel #widget_avisos { background: transparent; background-image:url(/static/images/avisos_bg.png); background-repeat:no-repeat; float: left; height: 185px; margin: 10px 0px 0px 7px; min-width: 335px; overflow: hidden; padding: 0px; position: relative; width: 335px; *list-style: none;}
+#middlePanel #avisosPanel #widget_avisos li { color: white;  clear: left; height: 100%; margin: 30px 0px 10px 30px !important; overflow: hidden; padding-bottom: 1em; position: relative; top: 0; width: 85%;}
+#rigtPanel { width:238px; margin:0px; padding:0 0 0 20px; float:left; height: 100%; }
+#rigtPanel .bottom { width:358px; margin:10px 0 0 0; padding:0px; float:left; }
+#rigtPanel .bottom h2 { width:350px; margin:0px; padding:0 0 0 3px; float:left; font-family:'Comic Sans MS', Trebuchet MS, Arial; font-size:21px; color:#000000; line-height:29px; font-weight:bold; }
+#rigtPanel .bottom h3 { width:350px; margin:12px 0 0 0; padding:0 0 0 3px; float:left; font-family:'Comic Sans MS', Trebuchet MS, Arial; font-size:14px; color:#005b7f; line-height:16px; font-weight:bold; }
+#rigtPanel .bottom .pic3 { width:358px; height:109px; margin:19px 0 0 0; padding:0px; float:left; background:url(/static/images/pic3.jpg) no-repeat; }
+#rigtPanel .bottom ul { width:349px; margin:16px 0 0 0; padding:0px; float:left; display:block; }
+#rigtPanel .bottom ul li { width:249px; margin:0px; padding:0px; float:left; display:block; }
+#rigtPanel .bottom ul li a { width:205px; height:24px; margin:0px; padding:0 0 0 15px; float:left; font-family:'Comic Sans MS', Trebuchet MS, Arial; font-size:14px; color:#1e2316; line-height:20px; text-decoration:none; border-bottom:#8bb5a2 dashed 1px; background:url(/static/images/liststyle.jpg) no-repeat; }
+#rigtPanel .bottom ul li a:hover { color:#c46706; background:url(/static/images/liststyle.jpg) no-repeat 0 -24px; }
+#rigtPanel .bottom ul li a.bottom { width:205px; height:24px; margin:0px; padding:0 0 0 15px; float:left; font-family:'Comic Sans MS', Trebuchet MS, Arial; font-size:14px; color:#1e2316; line-height:20px; text-decoration:none; border-bottom:0px; background:url(/static/images/liststyle.jpg) no-repeat; }
+#rigtPanel .bottom ul li a.bottom:hover { color:#c46706; background:url(/static/images/liststyle.jpg) no-repeat 0 -24px; }
+#rigtPanel .services { width:218px; margin:0px; padding:0px; float:left; }
+#rigtPanel .services h2 { width:218px; margin:0px; padding:0px; float:left; font-family:'Comic Sans MS', Trebuchet MS, Arial; font-size:22px; color:#000; line-height:24px; font-weight:bold; }
+#rigtPanel .services h3 { width:224px; margin:5px 0 0 0; padding:0px; float:left; font-family:'Comic Sans MS', Trebuchet MS, Arial; font-size:14px; color:#005b7f; line-height:16px; font-weight:bold; }
+#rigtPanel .services ul { width:218px; margin:23px 0 0 0; padding:0px; float:left; display:block; }
+#rigtPanel .services ul li { width:218px; margin:0px; padding:0 0 23px 0; float:left; display:block; }
+#rigtPanel .services ul li .cal { width:45px; height:44px; margin:0px; padding:15px 0 0 0; float:left; font-family:'Comic Sans MS', Trebuchet MS, Arial; font-size:24px; color:#3bb000; line-height:24px; text-align:center; background:url(/static/images/calendar.jpg) no-repeat; }
+#rigtPanel .services ul li .cal span { width:45px; float:left; padding:0px; font-family:'Comic Sans MS', Trebuchet MS, Arial; font-size:11px; color:#FFFFFF; text-align:center; font-weight:bold; margin:0px; }
+#rigtPanel .services ul li h2 { width:164px; margin:0px; padding:0 0 0 7px; float:left; font-family:'Comic Sans MS', Trebuchet MS, Arial; font-size:14px; color:#4f790a; line-height:16px; font-weight:bold; }
+#rigtPanel .services ul li p { width:165px; margin:5px 0 0 0; padding:0 0 0 7px; float:left; font-family:'Comic Sans MS', Trebuchet MS, Arial; font-size:14px; color:#252525; line-height:16px; text-indent:20px; background:url(/static/images/star.jpg) no-repeat 7px 0; }
+#rigtPanel .services ul li a { width:218px; margin:14px 0 0 0; padding:0px; float:left; font-family:'Comic Sans MS', Trebuchet MS, Arial; font-size:11px; font-weight:bold; color:#c46706; line-height:15px; }
+#rigtPanel .services ul li a:hover { text-decoration:none; }
+#rigtPanel .services ul li .author { width:186px; height:21px; margin:14px 0 0 0; padding:0 0 0 32px; float:left; font-family:'Comic Sans MS', Trebuchet MS, Arial; font-size:11px; color:#343434; line-height:20px; background:#fefde7 url(/static/images/author.jpg) no-repeat 10px 0; }
+#rigtPanel .services ul li .author span { font-weight:bold; }
+#rigtPanel .contacts { width:200px; margin:16px 0 0 0; padding:0px; float:left; }
+#rigtPanel .contacts h2 { width:200px; margin:0px; padding:0 0 3px 0; float:left; font-family:'Comic Sans MS', Trebuchet MS, Arial; font-size:21px; color:#000000; line-height:24px; font-weight:bold; }
+#rigtPanel .contacts input { width:191px; height:17px; margin:7px 0 0 0; padding:3px 0 0 9px; float:left; font-family:'Comic Sans MS', Trebuchet MS, Arial; font-size:10px; color:#363636; border:0px; background:#f3efc0; }
+#rigtPanel .contacts textarea { width:191px; height:58px; margin:7px 0 0 0; padding:3px 0 0 9px; float:left; font-family:'Comic Sans MS', Trebuchet MS, Arial; font-size:10px; color:#363636; border:0px; background:#f3efc0; }
+#rigtPanel .contacts a { width:55px; height:16px; margin:10px 0 0 0; margin-left:5px; padding:0px; float:left; font-family:'Comic Sans MS', Trebuchet MS, Arial; font-size:10px; color:#000000; line-height:14px; text-align:center; text-decoration:none; border:#bdbcbd solid 1px; background:#FFFFFF; }
+#rigtPanel .contacts a:hover { background:#cccccc; }
+#footWrap { width:100%; margin:0px; padding:0 0 26px 0; float:left; }
+#footPanel { width:934px; margin:0 auto; padding:0px; padding-top: 20px; height: 80px; }
+#footNav { width:934px; margin:20px 0 0 0; padding:0px; float:left; }
+#footNav ul { width:700px; margin:0 auto; padding:0px; display:block; }
+#footNav ul li { width:auto; margin:0px; padding:0px; float:left; display:block; }
+#footNav ul li .blank { width:auto; margin:3px 0 0 0; padding:0 10px 0 10px; float:left; font-family:'Comic Sans MS', Trebuchet MS, Arial; font-size:24px; color:#e5df85; line-height:16px; font-weight:bold; }
+#footNav ul li a { font-family:'Comic Sans MS', Trebuchet MS, Arial; font-size:20px; color:#e5df85; line-height:16px; font-weight:bold; text-decoration:none; margin:0px; padding:0px; }
+#footNav ul li a:hover { text-decoration:underline; }
+#footPanel p { width:934px; margin:12px 0 0 0; padding:0px; float:left; font-family:'Comic Sans MS', Trebuchet MS, Arial; font-size:18px; color:#fffcd5; line-height:15px; font-weight:bold; text-align:center; }
+#footPanel p a { color:#e5df85; text-decoration:none; }
+#footPanel p a:hover { text-decoration:underline; }
+#validation { width:934px; margin:10px 0 0 0; padding:0px; float:left; }
+#validation ul { width:143px; margin:0 auto; padding:0px; display:block; }
+#validation ul li { width:auto; margin:0px; padding:0px; float:left; display:block; }
+#validation ul li .blank { width:7px; height:10px; margin:0px; padding:0px; float:left; }
+#validation ul li a { width:64px; height:23px; margin:0px; padding:0 3px 0 0; float:left; font-family:'Comic Sans MS', Trebuchet MS, Arial; font-size:11px; color:#100703; font-weight:bold; line-height:23px; text-align:center; text-decoration:none; background:url(/static/images/validationBg.jpg) no-repeat; }
+#contentPanel #content_page h2 { width:100%; margin:0px; margin-bottom: 20px; padding:0px; float:left; font-family:'Comic Sans MS', Trebuchet MS, Arial; font-size:22px; color:#000000; line-height:24px; font-weight:bold; display:block;}
+#contentPanel #content_page p { margin:16px 0 0 0; padding:0px; float:left; font-family:'Comic Sans MS', Trebuchet MS, Arial; font-size:14px; color:#363636; line-height:16px; text-align: justify; text-indent: 40px; }
+#contentPanel #content_page h4 { margin-left: 20px; }
+#contentPanel #content_page h5 { margin-left: 20px; font-weight: bold; }
+#contentPanel #content_page #galerias_panel { display:block; height: 230px; margin:0px auto; text-align:center; width:635px; }
+div.photo_box { display:table; float:left; height:100px; margin: 02px 03px; width:127px; }
+div.photo_box img { background-color: white; border: 01px solid #ccc; padding: 03px; }
+div.photo_box_float { display:block; float:lefta; margin: 0px auto; height:93px; width:127px; }
+div.photo_box_float img { background-color: white; border: 01px solid #ccc; float:left; height:85px; padding: 03px; width:113px; }
+#contentPanel #content_page #photo_panel { display:block; height: 200px; margin:0px auto; text-align:center; width:665px; }
+#contentPanel #content_page #photo_panel div.box_message { display:table; margin-top:5px; text-align:center; width:665px; }
+#contentPanel #content_page #table_equipe { float:left; margin:0px auto; text-align:center; }
+#contentPanel #content_page #table_equipe img.photo_box { background-color: #fff; border: 1px solid #ccc; padding: 03px; }
+#contentPanel #content_page div.musicas_panel { float: left; height: 100%; width: 300px; margin: 3px; }
+#contentPanel #content_page div.musicas_panel img { float: left; }
+#contentPanel #content_page div.musicas_panel h4 { display:block; float:left; margin:5px 0px; padding: 0px; width:100%; }
+#contentPanel #content_page div.musicas_panel ul { float:left; list-style:none; margin:0px; padding:0px; }
+#contentPanel #content_page ul.desenho_pintar_lista { float: left; list-style: none; margin-left: 50px;}
+#contentPanel #content_page ul.desenho_pintar_lista li { display:inline; }
+#contentPanel #content_page div.contato { margin: 0px auto; text-align: left; width: 640px; }
+#contentPanel #content_page div.contato input { float: left; }
+#contentPanel #content_page div.contato textarea { float: left; }
+#contentPanel #content_page div.contato button { float: left; clear: both; margin-top: 10px; }
+#contentPanel #content_page div.contato span { float: left; width: 100%; margin: 5px; display: block; }
+.red { color: orange; font-weight: bold; float: left; }

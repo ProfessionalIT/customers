@@ -1,0 +1,5 @@
+RewriteEngine On 
+RewriteBase / 
+RewriteRule ^(site\.fcgi/.*)$ - [L]
+RewriteRule ^(static/.*)$ - [L]
+RewriteRule ^(.*)$ site.fcgi/$1 [L]
