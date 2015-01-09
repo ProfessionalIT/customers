@@ -9,11 +9,11 @@ $var keywords_tags: venda de imóveis, locações de imóveis, apartamentos, cas
     <h2>Músicas</h2>
     $for f in folders:
         <div class="musicas_panel">
-            <img src="/static/musicas/$f['folder']/folder.jpg" alt="Capa do Albúm: $f['folder']" title="Albúm: $f['folder']" />
+            <img src="http://media.bambinocampones.com.br/musicas/$f['folder']/folder.jpg" alt="Capa do Albúm: $f['folder']" title="Albúm: $f['folder']" />
             <h4>Albúm: $f['folder']</h4>
             <ul>
                 $for arquivo in f['arquivos_folder']:
-                    <li><a href="/static/musicas/$f['folder']/$arquivo" title="Albúm: $f['folder'] - Música: $arquivo." target="_blank">$arquivo</a></li>
+                    <li><a href="http://media.bambinocampones.com.br/musicas/$f['folder']/$arquivo" title="Albúm: $f['folder'] - Música: $arquivo." target="_blank">$arquivo</a></li>
             </ul>
         </div>
 </div>
