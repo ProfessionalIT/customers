@@ -889,31 +889,31 @@ def login(login, senha):
 def get_exposed_managed_tables():
     values = []
     values.append({'model_table': 'Usuario',
-                   'icon_file': '/static/images/Usuario.png',
+                   'icon_file': 'http://media.bambinocampones.com.br/images/Usuario.png',
                    'class_name': 'Usuários'})
     values.append({'model_table': 'Pagina',
-                   'icon_file': '/static/images/Pagina.png',
+                   'icon_file': 'http://media.bambinocampones.com.br/images/Pagina.png',
                    'class_name': 'Páginas'})
     values.append({'model_table': 'Proprietario',
-                   'icon_file': '/static/images/Proprietario.png',
+                   'icon_file': 'http://media.bambinocampones.com.br/images/Proprietario.png',
                    'class_name': 'Proprietários'})
     values.append({'model_table': 'Agenciador',
-                   'icon_file': '/static/images/Agenciador.png',
+                   'icon_file': 'http://media.bambinocampones.com.br/images/Agenciador.png',
                    'class_name': 'Agênciadores'})
     values.append({'model_table': 'Corretor',
-                   'icon_file': '/static/images/Corretor.png',
+                   'icon_file': 'http://media.bambinocampones.com.br/images/Corretor.png',
                    'class_name': 'Corretores'})
     values.append({'model_table': 'OrigemImovel',
-                   'icon_file': '/static/images/OrigemImovel.png',
+                   'icon_file': 'http://media.bambinocampones.com.br/images/OrigemImovel.png',
                    'class_name': 'Origens Imóveis'})
     values.append({'model_table': 'TipoImovel',
-                   'icon_file': '/static/images/TipoImovel.png',
+                   'icon_file': 'http://media.bambinocampones.com.br/images/TipoImovel.png',
                    'class_name': 'Tipos Imóveis'})
     values.append({'model_table': 'Imovel',
-                   'icon_file': '/static/images/Imovel.png',
+                   'icon_file': 'http://media.bambinocampones.com.br/images/Imovel.png',
                    'class_name': 'Imóveis'})
     values.append({'model_table': 'Necessidade',
-                   'icon_file': '/static/images/Necessidade.png',
+                   'icon_file': 'http://media.bambinocampones.com.br/images/Necessidade.png',
                    'class_name': 'Necessidades'})
     return values
 

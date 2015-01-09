@@ -312,12 +312,12 @@ def localizacao():
 
 
 def download_musicas():
-    music_path = os.path.abspath(rootpath + '/static/musicas')
+    music_path = os.path.abspath('http://media.bambinocampones.com.br/musicas')
     albuns_folder = os.listdir(music_path)
     folders = []
     for folder in albuns_folder:
         arquivos_folder = [f for f in
-            os.listdir(rootpath + '/static/musicas/' + folder)
+            os.listdir('http://media.bambinocampones.com.br/musicas/' + folder)
             if f.endswith('.mp3')]
         arquivos_folder.sort()
         inner_folder = {'folder': folder, 'arquivos_folder': arquivos_folder}

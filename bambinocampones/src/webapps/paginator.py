@@ -22,7 +22,7 @@ class Paginator:
                      (self.page * self.pagesize)
         self.table_name = str(classe.get_list_title())
         self.classe_name = str(classe.get_class_name())
-        self.icon_file = '/static/images/%s.png' % self.classe_name
+        self.icon_file = 'http://media.bambinocampones.com.br/images/%s.png' % self.classe_name
         self.exposed_attributes = classe.exposed_list_properties()
         self.order = order or classe.get_default_field_order()
         self.records = model.latest_records(classe,
@@ -53,7 +53,7 @@ class PaginatorSearch:
                      (self.page * self.pagesize)
         self.table_name = str(classe.get_list_title())
         self.classe_name = str(classe.get_class_name())
-        self.icon_file = '/static/images/%s.png' % self.classe_name
+        self.icon_file = 'http://media.bambinocampones.com.br/images/%s.png' % self.classe_name
         self.exposed_attributes = classe.exposed_list_properties()
         self.order = order or classe.get_default_field_order()
         self.query = build_query(form.d)
