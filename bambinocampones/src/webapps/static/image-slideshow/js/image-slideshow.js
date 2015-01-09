@@ -39,7 +39,7 @@ Owner of DHTMLgoodies.com
     {
         if(document.all)e = event;
         var id = this.id;
-        this.getElementsByTagName('IMG')[0].src = '/static/image-slideshow/images/' + this.id + '_over.gif';
+        this.getElementsByTagName('IMG')[0].src = 'http://media.bambinocampones.com.br/image-slideshow/images/' + this.id + '_over.gif';
         if(this.id=='arrow_right'){
             slideSpeedMultiply = Math.floor((e.clientX - this.offsetLeft) / 5);
             slideSpeed = -1*slideSpeedMultiply;
@@ -55,7 +55,7 @@ Owner of DHTMLgoodies.com
     function releaseSlide()
     {
         var id = this.id;
-        this.getElementsByTagName('IMG')[0].src = '/static/image-slideshow/images/' + this.id + '.gif';
+        this.getElementsByTagName('IMG')[0].src = 'http://media.bambinocampones.com.br/image-slideshow/images/' + this.id + '.gif';
         slideSpeed=0;
     }
 
