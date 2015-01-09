@@ -39,7 +39,7 @@ $def with (form, filtro, pagination, display_message)
 </div>
 <div id="panel_records">
 $if pagination.prev_page:
-    <a href="/admin/listar/$pagination.classe_name?page=$pagination.prev_page&size=$pagination.pagesize&q=$pagination.query" title="Página Anterior."><img src="/static/images/back.png" alt="Página Anterior." title="Página Anterior." /></a>
+    <a href="/admin/listar/$pagination.classe_name?page=$pagination.prev_page&size=$pagination.pagesize&q=$pagination.query" title="Página Anterior."><img src="http://media.bambinocampones.com.br/images/back.png" alt="Página Anterior." title="Página Anterior." /></a>
 
 $if not pagination.prev_page and not pagination.next_page and pagination.total_records > 0:
     <span>Mostrando de 1 à $pagination.record_counts registros.</span>
@@ -52,5 +52,5 @@ $else:
         <span>Mostrando registros de ${int(pagination.start) + 1} à ${int(pagination.pagesize) + int(pagination.start)} no total de $pagination.total_records registros.</span>
 
 $if pagination.next_page:
-    <a href="/admin/listar/$pagination.classe_name?page=$pagination.next_page&size=$pagination.pagesize&q=$pagination.query" title="Próxima Página."><img src="/static/images/forward.png" alt="Próxima Página." title="Próxima Página." /></a>
+    <a href="/admin/listar/$pagination.classe_name?page=$pagination.next_page&size=$pagination.pagesize&q=$pagination.query" title="Próxima Página."><img src="http://media.bambinocampones.com.br/images/forward.png" alt="Próxima Página." title="Próxima Página." /></a>
 </div>
