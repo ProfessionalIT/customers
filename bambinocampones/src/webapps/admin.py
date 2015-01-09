@@ -110,7 +110,7 @@ class EntityInsert():
         display_message = web.cookies().get('display_message')
         web.setcookie('display_message', '')
         return render.layout(render.form(frm,
-                                         '/static/images/%s.png' % param,
+                                         'http://media.bambinocampones.com.br/images/%s.png' % param,
                                          titulo='Incluir %s' % \
                                         getattr(model, param).get_form_title(),
                                          verbo='incluir',
@@ -128,7 +128,7 @@ class EntityInsert():
             except ExistValueException, (instance):
                 frm.note = str(instance.parameter)
                 return render.form(frm,
-                                   '/static/images/%s.png' % param,
+                                   'http://media.bambinocampones.com.br/images/%s.png' % param,
                                    titulo='Incluir %s' % param,
                                    verbo='incluir',
                                    display_message='',
@@ -158,7 +158,7 @@ class EntityInsert():
                     raise web.seeother('/listar/%s' % param)
         else:
             return render.layout(render.form(frm,
-                                             '/static/images/%s.png' % param,
+                                             'http://media.bambinocampones.com.br/images/%s.png' % param,
                                              titulo='Incluir %s' % \
                                        getattr(model, param).get_form_title(),
                                              verbo='incluir',
@@ -194,7 +194,7 @@ class EntityEdit():
                                             'endereco_ip': web.ctx.ip,
                                             'menu': None})
             return render.layout(render.form_update(frm,
-                                                    '/static/images/%s.png' % \
+                                                    'http://media.bambinocampones.com.br/images/%s.png' % \
                                                     param,
                                                     entry.id,
                                                     recursos,
@@ -208,7 +208,7 @@ class EntityEdit():
             frm = getattr(forms, 'get%sForm' % param)()
             frm.fill(entry)
         return render.layout(render.form(frm,
-                                         '/static/images/%s.png' % param,
+                                         'http://media.bambinocampones.com.br/images/%s.png' % param,
                                          titulo='Alterar %s' % \
                                         getattr(model, param).get_form_title(),
                                          verbo='editar',
@@ -224,7 +224,7 @@ class EntityEdit():
         if not frm.validates():
             msg = 'Alterar %s' % getattr(model, param).get_form_title()
             return render.layout(render.form(frm,
-                                             '/static/images/%s.png' % param,
+                                             'http://media.bambinocampones.com.br/images/%s.png' % param,
                                              titulo=msg,
                                              verbo='editar',
                                              estilo='table'))
