@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="744.09448819"
+   height="1052.3622047"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.1 r9760"
+   sodipodi:docname="barra_lateral.svg">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.6779624"
+     inkscape:cx="309.28579"
+     inkscape:cy="641.5778"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1280"
+     inkscape:window-height="743"
+     inkscape:window-x="0"
+     inkscape:window-y="26"
+     inkscape:window-maximized="1"
+     showguides="true"
+     inkscape:guide-bbox="true" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       id="g4095"
+       inkscape:export-filename="/home/leandro/projects/svn/professionalit/customers/enveloprint/src/enveloprint/static/images/banner_lateral.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"
+       transform="matrix(1.1119286,0,0,1.0192391,-41.271217,5.2598146)">
+      <rect
+         transform="matrix(-0.68329697,-0.73014057,-0.99973835,-0.02287421,0,0)"
+         style="fill:#008000;fill-opacity:1;stroke:none"
+         id="rect2987"
+         width="301.11542"
+         height="39.184818"
+         x="-689.40277"
+         y="102.3655" />
+      <g
+         transform="translate(1.7350158,0.86750789)"
+         id="g4085">
+        <flowRoot
+           xml:space="preserve"
+           id="flowRoot3757"
+           style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#1a1a1a;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+           transform="matrix(0.71621958,0.77641711,-0.76011968,0.73202849,368.45496,-31.652839)"><flowRegion
+             id="flowRegion3759"><rect
+               id="rect3761"
+               width="379.10095"
+               height="75.473183"
+               x="91.955833"
+               y="351.4158"
+               style="fill:#1a1a1a" /></flowRegion><flowPara
+             id="flowPara3763"
+             style="font-size:13px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:100%;writing-mode:lr-tb;text-anchor:start;fill:#1a1a1a;font-family:Arial;-inkscape-font-specification:Arial Bold">Indústra Pioneira de Envelopes no RS</flowPara></flowRoot>        <flowRoot
+           transform="matrix(0.71621958,0.77641711,-0.76011968,0.73202849,370.18998,-30.785331)"
+           style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+           id="flowRoot4057"
+           xml:space="preserve"><flowRegion
+             id="flowRegion4059"><rect
+               y="351.4158"
+               x="91.955833"
+               height="75.473183"
+               width="379.10095"
+               id="rect4061" /></flowRegion><flowPara
+             style="font-size:13px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:100%;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;font-family:Arial;-inkscape-font-specification:Arial Bold"
+             id="flowPara4063">Indústra Pioneira de Envelopes no RS</flowPara></flowRoot>      </g>
+    </g>
+  </g>
+</svg>

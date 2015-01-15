@@ -1,0 +1,81 @@
+ HOME
+
+             Página Inicial do site.
+
+            OB:
+
+             O Slide Show carrega do banco de dados da tabela fotos_site:
+                ID - tipo (slide-show) - image_url - titulo - descricao - ativa (sim) - data_inclusao
+                
+             A área de cabeçalho exibe foto da tabela fotos_site:
+                ID - tipo (cabeçalho) - image_url - titulo - descricao - ativa(sim) - data_inclusao
+
+       EMPRESA
+
+               A Enveloprint
+
+                   Página contando a história da Enveloprint, sua missão e filosofia.Seria interessante colocar 
+                   algumas fotos da história da empresa e também do parque fabril, ou seja, dos equipamentos utilizados.
+                   
+               Fornecedores
+
+                   Página apresentando os principais fornecedores da empresa. 
+                   Deverá apresentar os logotipos dos fornecedores.
+
+            OB: Página estática sem banco de dados, gerênciada pelo ADMIN.
+       
+      CURIOSIDADES
+              
+              Página apresentando dicas e curiosidades sobre os produtos/segmento de atuação da Enveloprint.
+
+            OB:
+              Carrega do banco de dados da tabela curiosidades:
+              ID - titulo - detalhamento
+
+      PRODUTOS 
+
+              Página apresentando os produtos por categoria, como por exemplo, 
+              Cateira, Saco, Blister, Dupla Face, Bobinas e etc.
+              Nesta página terá um link para o download do catálogo de produtos em PDF com as respectivas 
+              referências dos produtos. 
+              
+            OB: 
+              Exibe a lista de categorias de produtos que ao clicar entra na listagem de produtos da categoria clicada.
+              Carrega do banco de dados da tabela categorias_produto:
+              ID - icone - nome
+              
+              Ao detalhar exibe a listagem de produtos da categoria, carrega do banco de dados os produtos da 
+              categoria == categoria_id, dados da tabela produtos:
+              ID - icone - nome
+              
+              Ao detalhar o produto exibe:
+              ID - icone - nome - descricao_completa - fotos - videos - link para documentacao em PDF.
+              
+      REPRESENTANTES
+
+             Página apresentando informações sobre como se tornar representante da Enveloprint.
+             
+             OB: Página estática sem banco de dados, gerênciada pelo ADMIN.
+
+      CONTATO
+
+             Página apresentando um formulário no estilo SAC(Serviço de Atendimento ao Consumidor), 
+             apresentando um Mapa de Localização da empresa e 
+             também pontos de referência.
+
+            OB: Página estática sem banco de dados, gerênciada pelo ADMIN.
+
+      TRABALHE CONOSCO
+
+             Página apresentando as oportunidades em aberto e 
+             também um formulário para envio de currículo.
+
+            OB: Página estática sem banco de dados, gerênciada pelo ADMIN.
+
+      ORÇAMENTO
+               
+            Página apresentando um formulário para o preenchimento de uma solicitação de orçamento 
+            que será enviado por e-mail.
+            Basicamente dados de contato do cliente, e uma lista de itens com referências e quantidades.
+       
+       OB: Exige a programação para validar a existência da referência 
