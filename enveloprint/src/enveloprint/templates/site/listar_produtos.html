@@ -1,0 +1,31 @@
+$def with (pagination)
+
+$var title: Enveloprint - Soluções Personalizadas em Envelopes.
+$var full_description: Indústria de fabricação de envelopes.
+$var keywords_tags: produtos, portifólio, catálogo
+
+<h3>Categorias de Produto</h3>
+<ul id="lista_produtos">
+$for record in pagination.records:
+    <li>
+        <a href="/detalhar/CategoriaProduto/$:record.slug" class="titulo_noticia" title="Link para a notícia $:record.nome completa."><img src=" $:record.icone" alt="Imagem da Categoria de Produto $:record.nome." title="$:record.nome." class="thumb_noticia" /></a>
+        <a href="/detalhar/CategoriaProduto/$:record.slug" class="titulo_noticia" title="Link para a notícia $:record.nome completa.">$:record.nome</a>
+    </li>
+</ul>
+<div id="panel_records">
+$if pagination.prev_page:
+    <a href="/listar/$pagination.classe_name?page=$pagination.prev_page&size=$pagination.pagesize&q=$pagination.query" title="Página Anterior."><img src="/static/images/back.png" alt="Página Anterior." title="Página Anterior." class="noborder" /></a>
+
+$if not pagination.prev_page and not pagination.next_page and pagination.total_records > 0:
+    <span>Mostrando de 1 à $pagination.record_counts registros.</span>
+$elif pagination.total_records == 0:
+    <span>Sem Registros.</span>
+$else:
+    $if (int(pagination.pagesize) + int(pagination.start)) > int(pagination.total_records):
+        <span>Mostrando registros de ${int(pagination.start) + 1} à ${int(pagination.total_records)}.</span>
+    $else:
+        <span>Mostrando registros de ${int(pagination.start) + 1} à ${int(pagination.pagesize) + int(pagination.start)} no total de $pagination.total_records registros.</span>
+
+$if pagination.next_page:
+    <a href="/listar/$pagination.classe_name?page=$pagination.next_page&size=$pagination.pagesize&q=$pagination.query" title="Próxima Página."><img src="/static/images/forward.png" alt="Próxima Página." title="Próxima Página." class="noborder" /></a>
+</div>

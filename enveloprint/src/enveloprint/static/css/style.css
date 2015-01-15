@@ -1,0 +1,73 @@
+@charset "utf-8";
+/* CSS Document of Site 
+ * Author: Leandro Severino - ProfessionalIT
+ * Created in 2011-06-09 */
+/* Generic Styles Elements */
+* { margin: 0px; padding: 0px; font-family: 'Arial';}
+/*body { background-color: #A0E7A2; background-image:url('/static/images/fundo.png'); background-repeat:repeat-x; background-position:left bottom; padding-top: 05px; padding-bottom: 10px; }*/
+body { background-color: #333333; padding-top: 05px; padding-bottom: 10px; }
+/* body { background-color: #eee; } */
+img { border: none; }
+#header { display:table; background: url('/static/images/papela.jpg') no-repeat left top; border: 05px solid white; border-bottom: 0px; margin: 0px auto; max-height: 220px; min-height: 220px; width: 1200px; }
+#header img { background-color: transparent; padding-top: 04%; padding-left: 02%; }
+#header #barra_lateral { background-color: transparent; background: url('/static/images/banner_lateral.png') no-repeat 100% 0%; float:right; height:225px; padding: 0px; width:40%; z-index: 10px; }
+#content { display:table; height: 100%; margin: 0px auto; width: 1200px; background-color: #fff; border: 05px solid white; border-top: 0px; }
+#sidebar { display:table; color: white; font-weight: bold; float: left; height: 100%; min-height: 550px; width: 18%; background-color: #009240; padding-bottom: 10px; }
+#menu { background-color: #009240; padding: 10px; }
+#messenger_panel a { background-color: transparent; }
+#explain_msn { background-color: transparent; display:block; font-weight:bold; font-size:18px; color:#fff; text-align:center; margin: 0px auto; margin-bottom:05px; width:125px; }
+#menu li { background-color: #009240; height: 32px; list-style: none; padding: 0px; }
+#menu li a { background-color: #009240; color: white; font-size: 16px; font-variant: small-caps; font-weight: bold;text-decoration: none; vertical-align: super; }
+#menu li a:hover { color: #90EE90; text-decoration: underline; }
+#menu li a.selected { color: #ccc; }
+#menu li img { background-color: transparent; }
+#page { display:table; height: 100%; min-height: 550px; text-align: left; width: 82%; background-color: #fff; }
+#page h1 { font-size: 20px; background-color: #fff; padding: 10px; text-decoration: underline;}
+#page h1 span { background-color: #fff; padding-left: 50px; }
+#page img { background-color: transparent; text-align: center; }
+#page h3 { padding: 10px; text-decoration:underline; font-size:18px; font-weight: bold; text-align:left; display:table; background-color:white; }
+#page h4 { padding-left: 20px; display:inline; background-color:white; color:#4D4D4D; font-weight:bold; font-size:16px; }
+#page #pagina p { background-color: white; display: table; font-size: 16px; margin-bottom: 0; padding: 05px 50px; text-align: justify; text-indent: 40px; }
+#page #lista_produtos { background-color: white; display: table; list-style: none outside none; margin: 0 auto; padding-left: 20px; width: 70%; }
+#page #lista_produtos li { background-color: white;     display: table; float: left; height: 200px; text-align: center; width: 160px; }
+#page #lista_produtos li a { color: black; text-decoration: none; font-size: 14px; font-weight: bold; }
+#page #panel_records { margin: 0px auto; background-color: white; text-align: center; }
+#page #panel_records span { background-color: white; font-size: 14px; font-weight: bold; }
+#page #localization_panel { text-align: center; }
+#page #localization_panel h4 { display: block; font-size: 18px; margin-top: 10px; }
+#page #localization_panel li { list-style: none; }
+#page #localization_panel table { margin: 0px auto; }
+#page #panel_curiosidades p { text-indent: 40px; }
+#page #table_produtos tr, th, td { text-align: center; }
+#page #table_produtos caption { border: 02px solid black; font-weight: bold; margin-bottom: 10px; margin-top: 05px; padding: 10px 02px; }
+#footer { clear: both; color: #fff; display: table; text-align: center; margin: 0px auto; margin-top: 05px; width: 1200px; padding-top: 05px; }
+#footer p { font-size: 14px; font-weight: bold; }
+.bold_style { font-weight: bold; }
+.call_panels { background-color:transparent; text-align:center; width: 100%; }
+.agradecimento_panel { display:block; font-weight:bold; font-size:18px; margin:0px auto; margin-top:250px; text-align:center; }
+.span_details_phone { background-color:transparent; color:yellow; display:block; font-weight:bold; font-size:18px; }
+.imgs_phone { background-color:transparent; border: none; margin: 0px auto; margin-top: 20px; }
+.no_background { background-color: transparent; }
+.indent_40 { text-indent: 40px !important; }
+.txt_response { background-color: #ccc; border: 01px solid black; display:block; height: 20px; width: 90px; }
+.txt_response_large { background-color: #eee; border: 01px solid black; display:block; height: 20px; width: 300px;  }
+/* SLIDESHOW */
+div.wrap { background-color: transparent; margin: 0px auto; text-align: left; width: 693px; }
+div#top div#nav { float:left; clear:both; width:693px; height:52px; margin:22px 0 0; background-color: transparent; background:url url(/static/images/nav-bg.png) 0 0 no-repeat; }
+div#top div#nav ul { float:left; width:700px; height:52px; list-style-type:none; background-color: transparent; }
+div#nav ul li { float:left; height:52px; background-color: transparent; }
+div#nav ul li a { border: 0px; background-color: transparent; height:52px; display:block; line-height:52px; text-indent:-9999px; }
+div#slide_content { background-color: white; float: left; height: 330px; margin: 0px auto; padding:0px auto; text-align:center; width: 100%; }
+div#video-slide_content { height:688px; margin:-1px 0 0; }
+div#slide_content div.wrap { height:330px; background-color: transparent; background:url(/static/images/header-bg.png) 50% 0 no-repeat; }
+div#slide_content div#slide-holder { z-index:40; width:692px; height:326px; /*height:369px;*/ position:relative; background-color: #eee; border: 01px solid #ccc; }
+div#slide_content div#slide-holder div#slide-runner { top:9px; left:9px; width:673px; height:310px; overflow:hidden; position:absolute; }
+div#slide_content div#slide-holder img { margin: 0px; display:none; position:absolute; }
+div#slide_content div#slide-holder div#slide-controls { left:0; bottom:1px; width:673px; height:46px; display:none; position:absolute; background:url(/static/images/slide-bg.png) 0 0; }
+div#slide_content div#slide-holder div#slide-controls p.text { float:left; color:#fff; display:inline; font-size:10px; line-height:16px; margin:15px 0 0 20px; background-color: transparent; text-transform:uppercase; padding: 05px 0px 0px 0px; }
+div#slide_content div#slide-holder div#slide-controls p#slide-nav { float:right; height:24px; display:inline; background-color: transparent; margin:11px 15px 0 0; padding: 0px; width: 205px; }
+div#slide_content div#slide-holder div#slide-controls p#slide-nav a { float:left; width:24px; height:24px; display:inline; font-size:11px; margin:0 5px 0 0; line-height:24px; font-weight:bold; text-align:center; text-decoration:none; background-position:0 0; background-repeat:no-repeat; color: #ccc; }
+div#slide_content div#slide-holder div#slide-controls p#slide-nav a.on { background-position:0 -24px; }
+div#slide_content .text { background-color: transparent; }
+div#slide_content div#slide-holder div#slide-controls p#slide-nav a{background-color: transparent;background-image:url(/static/images/silde-nav.png); }
+div#nav ul li a{background:url(/static/images/nav.png) no-repeat;}

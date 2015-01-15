@@ -1,0 +1,69 @@
+$def with (action, method, form)
+
+$var title: Enveloprint - Soluções Personalizadas em Envelopes - Orçamento.
+$var full_description: Indústria de fabricação de envelopes.
+$var keywords_tags: orçamento, pedido, formulário de pedido
+
+<h3>Dados do Orçamento</h3>
+
+<div id="localization_panel">
+    <form action="$action" method="$method" onsubmit="validate_fields();">
+        <table cellspacing="0" border="1" style="width:70%;">
+            <tr><td class="label_name"><span class="label_required">*</span>$:form.razao_social.description</td><td>$:form.razao_social.render()</td></tr>
+            <tr><td class="label_name"><span class="label_required">*</span>$:form.cnpj.description</td><td>$:form.cnpj.render()</td></tr>
+            <tr><td class="label_name"><span class="label_required">*</span>$:form.telefone.description</td><td>$:form.telefone.render()</td></tr>
+            <tr><td class="label_name"><span class="label_required">*</span>$:form.email.description</td><td>$:form.email.render()</td></tr>
+            <tr><td colspan="2" class="bold_style" style="background-color: #eee;margin-top:10px;height:30px;">Produtos</td></tr>
+            <tr align="center">
+                <td align="center" colspan="2">
+                    <table>
+                        <tr><td align="center" class="bold_style">Código</td><td align="center" class="bold_style">Nome</td><td align="center" class="bold_style">Embalagem</td><td align="center" class="bold_style">Quantidade</td></tr>
+                        <tr><td>01 - $:form.cod_01.render()</td><td><span id="nome_produto_01" class="txt_response_large"></span></td><td><span id="embalagem_produto_01" class="txt_response"></span></td><td>$:form.qtde_01.render()</td></tr>
+                        <tr><td>02 - $:form.cod_02.render()</td><td><span id="nome_produto_02" class="txt_response_large"></span></td><td><span id="embalagem_produto_02" class="txt_response"></span></td><td>$:form.qtde_02.render()</td></tr>
+                        <tr><td>03 - $:form.cod_03.render()</td><td><span id="nome_produto_03" class="txt_response_large"></span></td><td><span id="embalagem_produto_03" class="txt_response"></span></td><td>$:form.qtde_03.render()</td></tr>
+                        <tr><td>04 - $:form.cod_04.render()</td><td><span id="nome_produto_04" class="txt_response_large"></span></td><td><span id="embalagem_produto_04" class="txt_response"></span></td><td>$:form.qtde_04.render()</td></tr>
+                        <tr><td>05 - $:form.cod_05.render()</td><td><span id="nome_produto_05" class="txt_response_large"></span></td><td><span id="embalagem_produto_05" class="txt_response"></span></td><td>$:form.qtde_05.render()</td></tr>
+                        <tr><td>06 - $:form.cod_06.render()</td><td><span id="nome_produto_06" class="txt_response_large"></span></td><td><span id="embalagem_produto_06" class="txt_response"></span></td><td>$:form.qtde_06.render()</td></tr>
+                        <tr><td>07 - $:form.cod_07.render()</td><td><span id="nome_produto_07" class="txt_response_large"></span></td><td><span id="embalagem_produto_07" class="txt_response"></span></td><td>$:form.qtde_07.render()</td></tr>
+                        <tr><td>08 - $:form.cod_08.render()</td><td><span id="nome_produto_08" class="txt_response_large"></span></td><td><span id="embalagem_produto_08" class="txt_response"></span></td><td>$:form.qtde_08.render()</td></tr>
+                        <tr><td>09 - $:form.cod_09.render()</td><td><span id="nome_produto_09" class="txt_response_large"></span></td><td><span id="embalagem_produto_09" class="txt_response"></span></td><td>$:form.qtde_09.render()</td></tr>
+                        <tr><td>10 - $:form.cod_10.render()</td><td><span id="nome_produto_10" class="txt_response_large"></span></td><td><span id="embalagem_produto_10" class="txt_response"></span></td><td>$:form.qtde_10.render()</td></tr>
+                        <tr><td>11 - $:form.cod_11.render()</td><td><span id="nome_produto_11" class="txt_response_large"></span></td><td><span id="embalagem_produto_11" class="txt_response"></span></td><td>$:form.qtde_11.render()</td></tr>
+                        <tr><td>12 - $:form.cod_12.render()</td><td><span id="nome_produto_12" class="txt_response_large"></span></td><td><span id="embalagem_produto_12" class="txt_response"></span></td><td>$:form.qtde_12.render()</td></tr>
+                        <tr><td>13 - $:form.cod_13.render()</td><td><span id="nome_produto_13" class="txt_response_large"></span></td><td><span id="embalagem_produto_13" class="txt_response"></span></td><td>$:form.qtde_13.render()</td></tr>
+                        <tr><td>14 - $:form.cod_14.render()</td><td><span id="nome_produto_14" class="txt_response_large"></span></td><td><span id="embalagem_produto_14" class="txt_response"></span></td><td>$:form.qtde_14.render()</td></tr>
+                        <tr><td>15 - $:form.cod_15.render()</td><td><span id="nome_produto_15" class="txt_response_large"></span></td><td><span id="embalagem_produto_15" class="txt_response"></span></td><td>$:form.qtde_15.render()</td></tr>
+                        <tr><td>16 - $:form.cod_16.render()</td><td><span id="nome_produto_16" class="txt_response_large"></span></td><td><span id="embalagem_produto_16" class="txt_response"></span></td><td>$:form.qtde_16.render()</td></tr>
+                        <tr><td>17 - $:form.cod_17.render()</td><td><span id="nome_produto_17" class="txt_response_large"></span></td><td><span id="embalagem_produto_17" class="txt_response"></span></td><td>$:form.qtde_17.render()</td></tr>
+                        <tr><td>18 - $:form.cod_18.render()</td><td><span id="nome_produto_18" class="txt_response_large"></span></td><td><span id="embalagem_produto_18" class="txt_response"></span></td><td>$:form.qtde_18.render()</td></tr>
+                        <tr><td>19 - $:form.cod_19.render()</td><td><span id="nome_produto_19" class="txt_response_large"></span></td><td><span id="embalagem_produto_19" class="txt_response"></span></td><td>$:form.qtde_19.render()</td></tr>
+                        <tr><td>20 - $:form.cod_20.render()</td><td><span id="nome_produto_20" class="txt_response_large"></span></td><td><span id="embalagem_produto_20" class="txt_response"></span></td><td>$:form.qtde_20.render()</td></tr>
+                        <tr><td>21 - $:form.cod_21.render()</td><td><span id="nome_produto_21" class="txt_response_large"></span></td><td><span id="embalagem_produto_21" class="txt_response"></span></td><td>$:form.qtde_21.render()</td></tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <button type="submit" id="salvar_button" name="salvar_button">Enviar</button>
+    </form>
+</div>
+<script type="text/javascript">
+    function validate_cnpj(obj) {
+        alert("CNPJ inválido !");
+    }
+    function ajax_get_data(obj) {
+        alert("Buscando o código : " + obj.value);
+    }
+    function validate_fields(){
+        return false;
+    }
+    function only_integer(obj) {
+        if (isNumeric(obj.value)) {
+            return true;
+        } else {
+            return false;
+        }
+    } 
+    function only_float(obj) {
+        return true;
+    }
+</script>

@@ -1,0 +1,29 @@
+$def with (action, method, form)
+
+$var title: Enveloprint - Soluções Personalizadas em Envelopes - Contato.
+$var full_description: Indústria de fabricação de envelopes.
+$var keywords_tags: contato, telefones, localização, pontos de referência
+
+<h3>Dados de Contato</h3>
+
+<div id="localization_panel">
+    <iframe width="640" height="480" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com.br/maps?f=q&amp;source=s_q&amp;hl=pt-BR&amp;geocode=&amp;q=Rua+Bernardino+Silveira+Amorim,+n%C2%BA.+961%2F971,+Bairro+Sarandi,+Porto+Alegre,+RS,+Brasil&amp;aq=&amp;sll=-14.239424,-53.186502&amp;sspn=41.378709,79.013672&amp;ie=UTF8&amp;hq=&amp;hnear=Av.+Bernardino+Silveira+Amorim,+961+-+Sarandi,+Porto+Alegre+-+Rio+Grande+do+Sul,+91140-410&amp;ll=-29.988616,-51.109943&amp;spn=0.035683,0.054932&amp;z=14&amp;iwloc=A&amp;output=embed"></iframe><br /><small><a href="http://maps.google.com.br/maps?f=q&amp;source=embed&amp;hl=pt-BR&amp;geocode=&amp;q=Rua+Bernardino+Silveira+Amorim,+n%C2%BA.+961%2F971,+Bairro+Sarandi,+Porto+Alegre,+RS,+Brasil&amp;aq=&amp;sll=-14.239424,-53.186502&amp;sspn=41.378709,79.013672&amp;ie=UTF8&amp;hq=&amp;hnear=Av.+Bernardino+Silveira+Amorim,+961+-+Sarandi,+Porto+Alegre+-+Rio+Grande+do+Sul,+91140-410&amp;ll=-29.988616,-51.109943&amp;spn=0.035683,0.054932&amp;z=14&amp;iwloc=A" style="color:#0000FF;text-align:left">Exibir mapa ampliado</a></small>
+    <h4>Endereço:</h4>
+    <span>Av. Bernardino Silveira Amorim, 961/971 - Sarandi - Porto Alegre - RS - Brasil, CEP: 91140-410</span>
+    <h4>Pontos de Referência:</h4>
+    <span>Próxima a FIERGS e o Porto Seco.</span>
+    <h4>Telefones:</h4>
+    <span>(51) 3364-9607 - (51) 3365-1166 - (51) 3364-9600</span>
+    <h4>E-mails:</h4>
+    <ul>
+        <li><span class="bold_style">Comercial: </span><span>comercial@enveloprint.com.br</span></li>
+        <li><span class="bold_style">Vendas: </span><span>vendas@enveloprint.com.br</span></li>
+        <li><span class="bold_style">Finânceiro: </span><span>financeiro@enveloprint.com.br</span></li>
+        <li><span class="bold_style">RH: </span><span>rh@enveloprint.com.br</span></li>
+        <li><span class="bold_style">Administrativo: </span><span>administrativo@enveloprint.com.br</span></li>
+    </ul>
+    <h4>Deixe o seu recardo:</h4>
+    <form action="$action" method="$method">
+        $:form.render()
+    </form>
+</div>

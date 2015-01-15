@@ -1,0 +1,7 @@
+indexes:
+
+- kind: FotoSite
+  properties:
+  - name: ativo
+  - name: tipo
+  - name: data_inclusao

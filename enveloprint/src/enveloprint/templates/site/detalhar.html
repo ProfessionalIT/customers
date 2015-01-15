@@ -1,0 +1,50 @@
+$def with (nome, produtos)
+
+$var title: Enveloprint - Soluções Personalizadas em Envelopes - Produtos da Categoria: $:nome.
+$var full_description: Indústria de fabricação de envelopes.
+$var keywords_tags: produtos, listagem, $:nome
+
+<style type="text/css">
+    #painel_visualizacao { margin: 0px auto;margin-top: 20px;height:310px;width:673px;background-color:#eee;border:01px solid #ccc; }
+    #painel_visualizacao_container { margin: 0px auto; width:673px;text-align:right;margin-top: 05px; }
+    #painel_visualizacao_buttons_panel { margin:0px auto;width:673px;float:left;margin-bottom:10px; }
+    .buttons_numbers { text-align:center; font-size: 14px; font-weight: bold;background-color: #ccc;height: 18px;width:20px;border:01px solid #000;float:left;margin-right:03px;padding:02px 02px 0px; }
+    #table_produtos { margin:0px auto;margin-top:20px;width:70%;border-style:thin; }
+</style>
+
+<h3>$:nome</h3>
+<div id="painel_visualizacao"><img src="" alt="" title="" id="img_obj" /></div>
+<div id="painel_visualizacao_container">
+    <div id="painel_visualizacao_buttons_panel">
+        <div id="icon_01" class="buttons_numbers" rel="" onclick="show_picture_from_icon(this);">1</div>
+        <div id="icon_02" class="buttons_numbers" rel="" onclick="show_picture_from_icon(this);">2</div>
+        <div id="icon_03" class="buttons_numbers" rel="" onclick="show_picture_from_icon(this);">3</div>
+        <div id="icon_04" class="buttons_numbers" rel="" onclick="show_picture_from_icon(this);">4</div>
+        <div id="icon_05" class="buttons_numbers" rel="" onclick="show_picture_from_icon(this);">5</div>
+    </div>
+</div>
+<table id="table_produtos" border="1">
+    <tr><th></th><th>COD.</th><th>REFERÊNCIA</th><th>FORMATO</th><th>GRAMATURA</th><th>COR</th><th>UNDIDADES P/ EMBALAGEM</th></tr>
+    $for produto in produtos:
+        <tr><td><input type="radio" name="produto_radio" id="$:produto.codigo" value="$:produto.foto_produto_01|$:produto.foto_produto_02|$:produto.foto_produto_03|$:produto.foto_produto_04|$:produto.foto_produto_05" onclick="set_picture_panel(this);"/></td><td>$:produto.codigo</td><td>$:produto.referencia</td><td>$:produto.formato</td><td>$:produto.gramatura</td><td style="background-color:$:produto.cor;border:01px solid #000;"></td><td>$:produto.unidade_embalagem unidades por $:produto.tipo_embalagem</td></tr>
+</table>
+
+<script type="text/javascript">
+    function set_picture_panel(obj){
+        str_pictures = obj.value;
+        pictures = str_pictures.split("|");
+        div_picture_01 = document.getElementById("icon_01");
+        div_picture_01.rel = pictures[0];
+        div_picture_02 = document.getElementById("icon_02");
+        div_picture_02.rel = pictures[1];
+        div_picture_03 = document.getElementById("icon_03");
+        div_picture_03.rel = pictures[2];
+        div_picture_04 = document.getElementById("icon_04");
+        div_picture_04.rel = pictures[3];
+        div_picture_05 = document.getElementById("icon_05");
+        div_picture_05.rel = pictures[4];
+        document.getElementById("img_obj").src = pictures[0];
+    }
+    function show_picture_from_icon(icon){ document.getElementById("img_obj").src = icon.rel; }
+    jQuery(document).ready(function(){ jQuery('#$:produtos[0].codigo').click(); })
+</script>
