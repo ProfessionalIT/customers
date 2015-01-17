@@ -33,6 +33,77 @@ def form (titulo, action, method, form, verbo, display_message):
 
 form = CompiledTemplate(form, 'templates/admin/form.html')
 
+def lista (form, filtro, pagination, display_message):
+    __lineoffset__ = -3
+    loop = ForLoop()
+    self = TemplateResult(); extend_ = self.extend
+    extend_([u'\n'])
+    extend_([u'<h2 class="form_title"><img src="', escape_(pagination.icon_file, True), u'" class="icon_menu" alt="', escape_(pagination.table_name, True), u'" title="', escape_(pagination.table_name, True), u'" />', escape_(pagination.table_name, True), u'</h2>\n'])
+    extend_([u'<form name="pesquisa" action="/admin/listar/', escape_(pagination.classe_name, True), u'" method="POST">\n'])
+    extend_([u'    <fieldset>\n'])
+    extend_([u'        <legend class="alignLeft">Filtro de Registros:</legend>\n'])
+    extend_([u'        ', escape_(form.render_css(), False), u'\n'])
+    extend_([u'    </fieldset>\n'])
+    extend_([u'</form>\n'])
+    extend_([u'<div class="painel">\n'])
+    extend_([u'    <span class="show_message">', escape_(display_message, False), u'</span>\n'])
+    if filtro:
+        extend_(['    ', u'<h2 class="margin05px"><span class="titulo">Listagem de Registros</span><span class="filtro">', escape_(filtro, True), u'</span></h2>\n'])
+    else:
+        extend_(['    ', u'<h2 class="margin05px"><span class="titulo">Listagem de Registros</span></h2>\n'])
+    extend_([u'    <p id="painel_new_record"><span class="button"><a href="/admin/inserir/', escape_(pagination.classe_name, True), u'" title="Incluir novo registro.">Incluir Registo</a></span></p>\n'])
+    extend_([u'    <table cellspacing="0" cellpadding="0" id="list">\n'])
+    extend_([u'        <thead>\n'])
+    extend_([u'            <tr>\n'])
+    extend_([u'                <th>C\xf3digo</th>\n'])
+    for colunm in loop.setup(pagination.exposed_attributes['colunms']):
+        extend_(['                ', u'<th>', escape_(colunm, True), u'</th>\n'])
+    extend_([u'            </tr>\n'])
+    extend_([u'        </thead>\n'])
+    extend_([u'        <tbody>\n'])
+    for record in loop.setup(pagination.records):
+        extend_(['            ', u'<tr>\n'])
+        extend_(['            ', u'    <td><a href="/admin/editar/', escape_(pagination.classe_name, True), u'/', escape_(record.key().id(), True), u'" title="Editar o Registro.">', escape_(record.key().id(), True), u'</a></td>\n'])
+        for field in loop.setup(pagination.exposed_attributes['fields']):
+            extend_(['                ', u'<td>', escape_(record.get_field_value(field), False), u'</td>\n'])
+        extend_(['            ', u'</tr>\n'])
+    extend_([u'        </tbody>\n'])
+    extend_([u'    </table>\n'])
+    extend_([u'</div>\n'])
+    extend_([u'<div id="panel_records">\n'])
+    if pagination.prev_page:
+        extend_([u'<a href="/admin/listar/', escape_(pagination.classe_name, True), u'?page=', escape_(pagination.prev_page, True), u'&size=', escape_(pagination.pagesize, True), u'&q=', escape_(pagination.query, True), u'" title="P\xe1gina Anterior."><img src="/static/images/back.png" alt="P\xe1gina Anterior." title="P\xe1gina Anterior." /></a>\n'])
+        extend_([u'\n'])
+    if not pagination.prev_page and not pagination.next_page and pagination.total_records > 0:
+        extend_([u'<span>Mostrando de 1 \xe0 ', escape_(pagination.record_counts, True), u' registros.</span>\n'])
+    elif pagination.total_records == 0:
+        extend_([u'<span>Sem Registros.</span>\n'])
+    else:
+        if (int(pagination.pagesize) + int(pagination.start)) > int(pagination.total_records):
+            extend_([u'<span>Mostrando registros de ', escape_((int(pagination.start) + 1), True), u' \xe0 ', escape_((int(pagination.total_records)), True), u'.</span>\n'])
+        else:
+            extend_([u'<span>Mostrando registros de ', escape_((int(pagination.start) + 1), True), u' \xe0 ', escape_((int(pagination.pagesize) + int(pagination.start)), True), u' no total de ', escape_(pagination.total_records, True), u' registros.</span>\n'])
+            extend_([u'\n'])
+    if pagination.next_page:
+        extend_([u'<a href="/admin/listar/', escape_(pagination.classe_name, True), u'?page=', escape_(pagination.next_page, True), u'&size=', escape_(pagination.pagesize, True), u'&q=', escape_(pagination.query, True), u'" title="Pr\xf3xima P\xe1gina."><img src="/static/images/forward.png" alt="Pr\xf3xima P\xe1gina." title="Pr\xf3xima P\xe1gina." /></a>\n'])
+    extend_([u'</div>\n'])
+
+    return self
+
+lista = CompiledTemplate(lista, 'templates/admin/lista.html')
+
+def index_admin():
+    __lineoffset__ = -4
+    loop = ForLoop()
+    self = TemplateResult(); extend_ = self.extend
+    extend_([u'<DIV id="innerWindow" align="center">\n'])
+    extend_([u'    <img src="/static/images/novoLogotipo.png" alt="Imagem de Background." title="Imagem de Background." align="center" class="img_main_page" />\n'])
+    extend_([u'</DIV>\n'])
+
+    return self
+
+index_admin = CompiledTemplate(index_admin, 'templates/admin/index_admin.html')
+
 def admin (content):
     __lineoffset__ = -3
     loop = ForLoop()
@@ -121,75 +192,4 @@ def admin (content):
     return self
 
 admin = CompiledTemplate(admin, 'templates/admin/admin.html')
-
-def lista (form, filtro, pagination, display_message):
-    __lineoffset__ = -3
-    loop = ForLoop()
-    self = TemplateResult(); extend_ = self.extend
-    extend_([u'\n'])
-    extend_([u'<h2 class="form_title"><img src="', escape_(pagination.icon_file, True), u'" class="icon_menu" alt="', escape_(pagination.table_name, True), u'" title="', escape_(pagination.table_name, True), u'" />', escape_(pagination.table_name, True), u'</h2>\n'])
-    extend_([u'<form name="pesquisa" action="/admin/listar/', escape_(pagination.classe_name, True), u'" method="POST">\n'])
-    extend_([u'    <fieldset>\n'])
-    extend_([u'        <legend class="alignLeft">Filtro de Registros:</legend>\n'])
-    extend_([u'        ', escape_(form.render_css(), False), u'\n'])
-    extend_([u'    </fieldset>\n'])
-    extend_([u'</form>\n'])
-    extend_([u'<div class="painel">\n'])
-    extend_([u'    <span class="show_message">', escape_(display_message, False), u'</span>\n'])
-    if filtro:
-        extend_(['    ', u'<h2 class="margin05px"><span class="titulo">Listagem de Registros</span><span class="filtro">', escape_(filtro, True), u'</span></h2>\n'])
-    else:
-        extend_(['    ', u'<h2 class="margin05px"><span class="titulo">Listagem de Registros</span></h2>\n'])
-    extend_([u'    <p id="painel_new_record"><span class="button"><a href="/admin/inserir/', escape_(pagination.classe_name, True), u'" title="Incluir novo registro.">Incluir Registo</a></span></p>\n'])
-    extend_([u'    <table cellspacing="0" cellpadding="0" id="list">\n'])
-    extend_([u'        <thead>\n'])
-    extend_([u'            <tr>\n'])
-    extend_([u'                <th>C\xf3digo</th>\n'])
-    for colunm in loop.setup(pagination.exposed_attributes['colunms']):
-        extend_(['                ', u'<th>', escape_(colunm, True), u'</th>\n'])
-    extend_([u'            </tr>\n'])
-    extend_([u'        </thead>\n'])
-    extend_([u'        <tbody>\n'])
-    for record in loop.setup(pagination.records):
-        extend_(['            ', u'<tr>\n'])
-        extend_(['            ', u'    <td><a href="/admin/editar/', escape_(pagination.classe_name, True), u'/', escape_(record.key().id(), True), u'" title="Editar o Registro.">', escape_(record.key().id(), True), u'</a></td>\n'])
-        for field in loop.setup(pagination.exposed_attributes['fields']):
-            extend_(['                ', u'<td>', escape_(record.get_field_value(field), False), u'</td>\n'])
-        extend_(['            ', u'</tr>\n'])
-    extend_([u'        </tbody>\n'])
-    extend_([u'    </table>\n'])
-    extend_([u'</div>\n'])
-    extend_([u'<div id="panel_records">\n'])
-    if pagination.prev_page:
-        extend_([u'<a href="/admin/listar/', escape_(pagination.classe_name, True), u'?page=', escape_(pagination.prev_page, True), u'&size=', escape_(pagination.pagesize, True), u'&q=', escape_(pagination.query, True), u'" title="P\xe1gina Anterior."><img src="/static/images/back.png" alt="P\xe1gina Anterior." title="P\xe1gina Anterior." /></a>\n'])
-        extend_([u'\n'])
-    if not pagination.prev_page and not pagination.next_page and pagination.total_records > 0:
-        extend_([u'<span>Mostrando de 1 \xe0 ', escape_(pagination.record_counts, True), u' registros.</span>\n'])
-    elif pagination.total_records == 0:
-        extend_([u'<span>Sem Registros.</span>\n'])
-    else:
-        if (int(pagination.pagesize) + int(pagination.start)) > int(pagination.total_records):
-            extend_([u'<span>Mostrando registros de ', escape_((int(pagination.start) + 1), True), u' \xe0 ', escape_((int(pagination.total_records)), True), u'.</span>\n'])
-        else:
-            extend_([u'<span>Mostrando registros de ', escape_((int(pagination.start) + 1), True), u' \xe0 ', escape_((int(pagination.pagesize) + int(pagination.start)), True), u' no total de ', escape_(pagination.total_records, True), u' registros.</span>\n'])
-            extend_([u'\n'])
-    if pagination.next_page:
-        extend_([u'<a href="/admin/listar/', escape_(pagination.classe_name, True), u'?page=', escape_(pagination.next_page, True), u'&size=', escape_(pagination.pagesize, True), u'&q=', escape_(pagination.query, True), u'" title="Pr\xf3xima P\xe1gina."><img src="/static/images/forward.png" alt="Pr\xf3xima P\xe1gina." title="Pr\xf3xima P\xe1gina." /></a>\n'])
-    extend_([u'</div>\n'])
-
-    return self
-
-lista = CompiledTemplate(lista, 'templates/admin/lista.html')
-
-def index_admin():
-    __lineoffset__ = -4
-    loop = ForLoop()
-    self = TemplateResult(); extend_ = self.extend
-    extend_([u'<DIV id="innerWindow" align="center">\n'])
-    extend_([u'    <img src="/static/images/novoLogotipo.png" alt="Imagem de Background." title="Imagem de Background." align="center" class="img_main_page" />\n'])
-    extend_([u'</DIV>\n'])
-
-    return self
-
-index_admin = CompiledTemplate(index_admin, 'templates/admin/index_admin.html')
 
