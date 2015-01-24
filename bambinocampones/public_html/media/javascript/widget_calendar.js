@@ -17,25 +17,22 @@ function maxDays(mm, yyyy){
 function getEventByMonthYear(par_month, par_year){
     // F-Festa; E-Evento;
     if (par_month==0){
-        var arrEventos = new Array('1/01/2013;N;Feriado Universal.',
-                                   '2/01/2013;R;Recesso Fim de Ano.',
-                                   '3/01/2013;R;Recesso Fim de Ano.',
-                                   '6/01/2013;E;Volta as aulas.');
+        var arrEventos = new Array('5/01/2015;E;Volta as aulas.');
         return arrEventos;
     } else if (par_month==1){
-        var arrEventos = new Array('03/02/2012;F;Aniversário da Escola', '17/02/2012;F;Baile de Carnaval', '20/02/2012;P;(Ponte)', '21/02/2012;N;Carnaval');
+        var arrEventos = new Array('02/02/2015;F;Nossa Senhora dos Navegantes','03/02/2015;F;Aniversário da Escola', '17/02/2015;N;Carnaval');
         return arrEventos;
     } else if (par_month==2){
-        var arrEventos = new Array('11/3/2014;E;Aula de Capoeira','12/3/2014;E;Aula de Fandango','13/3/2014;E;Aula de Ballet','14/3/2014;E;Aula de Educação Física', '29/3/2013;F;Paixão de Cristo');
+        var arrEventos = new Array('06/3/2015;E;Reunião com os Pais');
         return arrEventos;
     } else if (par_month==3){
-        var arrEventos = new Array('06/04/2012;N;Paixão de Cristo', '21/04/2012;N;Tiradentes');
+        var arrEventos = new Array('03/04/2015;N;Sexta-Feira da Paixão', '05/04/2015;N;Páscoa', '21/04/2015;N;Tiradentes');
         return arrEventos;
     } else if (par_month==4){
-        var arrEventos = new Array('01/05/2014;N;Dia do Trabalho', '11/05/2012;E;Homenagem as Mães');
+        var arrEventos = new Array('01/05/2015;N;Dia do Trabalhor', '10/05/2015;E;Dia das Mães');
         return arrEventos;
     } else if (par_month==5){
-        var arrEventos = new Array('07/06/2012;N;Corpus Christi', '22/06/2012;F;Festa Junina');
+        var arrEventos = new Array('04/06/2015;N;Corpus Christi', '26/06/2015;F;Festa Junina');
         return arrEventos;
     } else if (par_month==6){
         var arrEventos = new Array();
