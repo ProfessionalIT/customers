@@ -1,5 +1,6 @@
-<ifmodule mod_deflate.c="">
-   <filesmatch .(.jpg|.gif|.png|.tiff|.ico|js|css)$="">
-      SetOutputFilter DEFLATE
-   </filesmatch>
-</ifmodule>
+RewriteEngine On 
+RewriteBase / 
+RewriteRule ^media - [L,NC]
+RewriteRule ^(site\.fcgi/.*)$ - [L]
+RewriteRule ^(static/.*)$ - [L]
+RewriteRule ^(.*)$ site.fcgi/$1 [L]
