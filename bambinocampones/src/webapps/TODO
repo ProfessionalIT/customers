@@ -1,5 +1,9 @@
 TODO
 
+GERAL: 
+
+    Implementar o admin do Django na vers�o 1.7.
+
 No template:
 
     Só mostrar o texto usuário: e o link de log-off se existir um usuário logado.
