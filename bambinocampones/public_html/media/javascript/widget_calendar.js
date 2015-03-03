@@ -23,7 +23,7 @@ function getEventByMonthYear(par_month, par_year){
         var arrEventos = new Array('02/02/2015;F;Nossa Senhora dos Navegantes','03/02/2015;F;Aniversário da Escola', '16/02/2015;P;Ponte Carnaval', '17/02/2015;N;Carnaval');
         return arrEventos;
     } else if (par_month==2){
-        var arrEventos = new Array('06/3/2015;E;Reunião com os Pais');
+        var arrEventos = new Array('06/3/2015;E;Reunião com os Pais', '13/3/2015;E;Reunião com os Pais');
         return arrEventos;
     } else if (par_month==3){
         var arrEventos = new Array('03/04/2015;N;Sexta-Feira da Paixão', '05/04/2015;N;Páscoa', '21/04/2015;N;Tiradentes');
