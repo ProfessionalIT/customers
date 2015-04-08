@@ -1,0 +1,24 @@
+$def with (promocoes)
+
+$var title:  Persianas Paludo - Persianas e Cortinas em Porto Alegre e grande Porto Alegre - RS
+$var full_description: Venda e manutenção de persianas e cortinas em Porto Alegre e grande Porto Alegre - RS
+$var keywords_tags: persianas, cortinas, manutenção, vendas de persianas, colocação de persianas, manutenção de persianas
+
+<h1 id="galeria_title"><span>Galeria</span></h1>
+<div id="slide_show">
+    <script type="text/javascript" language="JavaScript" src="/static/javascript/pwaslide.js"></script>
+</div>
+<div id="bottom_panel">
+    <div id="promotion_panel" class="panels">
+        <h2>Promoções</h2>
+        $if promocoes:
+            <ul id="promocoes_list">
+            $for promocao in promocoes:
+                <li class="promocao_item">$:promocao.conteudo</li>
+            </ul>
+        $else:
+            <p><br/>Parcelamos nos cartões <strong>VISA</strong> e <strong>MASTER</strong> sem juros ! e desconto no pagamento à vista !.</p>
+    </div>
+    <div id="instalation_panel" class="panels"><a href="/contato" title="Instalação Gratuíta"><img src="/static/images/instalacao.gif" alt="Banner da Instalação." title="Instalação gratuíta." /></a></div>
+    <div id="quote_panel" class="panels"><a href="/contato" title="Orçamento Gratuíto"><img src="/static/images/orcamento.gif" alt="Banner do Orçamento." title="Orçamento gratuíto." /></a></div>
+</div>

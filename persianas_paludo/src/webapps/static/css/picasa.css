@@ -1,0 +1,24 @@
+img.photo_obj { width: 575px; height: 400px; margin: 0px auto; margin-bottom: 10px; display: block; background-color: #eee; padding: 04px; border: 01px solid #ccc;}
+#photo_descr { width: 570px; margin: 0px auto; text-align: center; margin-bottom: 20px; color: blue; }
+#photo_container { width: 710px; margin: 0px auto; }
+#photo_panel { width: 575px; float: left; }
+#photo_list { height: 410px; max-height: 410px; width: 125px; float: right; overflow:scroll; overflow-x: hidden; text-align:left; padding: 0px;}
+#photo_list #picasaGallery { list-style: none; float: left; text-align:left; padding: 0px; margin-top: -5px;}
+#photo_list #picasaGallery li { display: block; text-align:left; float: left; }
+#photo_list #picasaGallery li img { border: none; }
+.picasaGalleryItem { border: 1px solid silver; margin: 5px; padding: 2px; float: left; }
+.photo_icon { display: inline; list-style: none; float: left; margin: 03px; }
+#products_panel { border: 01px solid gray;width:930px;margin:0px auto;height:680px;margin-top:20px; }
+#products_panel p { color: black !important; }
+#products_selector { float:left; display:block; width:180px; height:670px; }
+#products_list { list-style:none; background-color:#ccc; padding-top:10px; height:730px; }
+#products_list li.titulo_1 { padding-left: 10px; font-weight:bold; margin-bottom:10px; font-size:20px; }
+#products_list li.titulo_1a { padding-left: 10px; background-color:white; color:black; }
+#products_list li.titulo_2 { padding-left: 10px; font-weight:bold; margin-bottom:10px; margin-top:20px; font-size:20px; }
+#products_list li.item { padding-left: 10px; }
+#products_list a.item { font-weight:bold; text-decoration:none; font-size:14px; color:blue; }
+#products_list a.selected { font-weight:bold; text-decoration:none; font-size:14px; }
+#products_show { float:left; display:block; width:750px; height:740px; background-color:white; }
+#products_show h3 { margin-left: 20px; margin-bottom: 05px; margin-top: 20px; }
+#products_show p { padding: 10px 30px; text-align:justify; text-indent:40px; color: black !important; }
+#products_show h4 { margin-left: 20px; margin-bottom: 05px; }

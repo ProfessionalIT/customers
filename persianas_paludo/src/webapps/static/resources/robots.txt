@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: http://www.persianaspaludo.com.br/static/resources/sitemap.xml

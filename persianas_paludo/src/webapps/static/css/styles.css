@@ -1,0 +1,56 @@
+    /*
+* CSS styles of Persianas Paludo
+*/
+* { margin: 0px; padding: 0px; font-family: arial}
+body { background: #7b7b7b url(/static/images/bg2.jpg) top left no-repeat; }
+#page { margin-bottom: 30px;}
+#main { margin: 0px auto; margin-top: 30px; width: 960px; height: 100%; min-height: 1100px; } 
+#main #header { height: 230px; width: 100%; background: url(/static/images/bg_header.png) top right no-repeat;}
+#main #header #header_top { height: 200px; width: 100%; }
+#main #header #header_top #header_top_left { float: left; height: 200px; width: 400px; }
+#main #header #header_top #header_top_right { float: right; height: 200px; text-align: right; width: 560px; }
+#main #header #header_top #header_top_right #header_top_right_top { height: 65px; padding-right: 30px; padding-top: 10px; }
+#main #header #header_top #header_top_right #hearder_top_right_middle { height: 65px; padding-right: 30px; padding-top: 5px; }
+#main #header #header_top #header_top_right #hearder_top_right_middle span { color: white; font-weight: bold; font-size: 26px; margin-left: 10px; }
+#main #header #header_top #header_top_right #hearder_top_right_bottom { height: 10px; padding-right: 30px; padding-top: 20px; }
+#main #header #header_top #header_top_right #hearder_top_right_bottom input { margin-left: 05px; }
+#main #header #header_bottom { background: #000 url(/static/images/bg_menu.png) top left no-repeat; height: 30px; width: 100%;  }
+#main #header ul.menu { list-style: none; text-align: center; padding-top: 05px;}
+#main #header ul.menu li { display: inline; padding-left: 10px; }
+#main #header ul.menu li a { color: white; font-weight: bold; text-transform: uppercase; text-decoration: none; }
+#main #header ul.menu li a:hover { color: orange; }
+#main #header ul.menu li a.active { color: orange; }
+#main #content { background: url(/static/images/bg_content.png) top left repeat-y; width: 100%; height: 100%; min-height:1000px; padding-top: 10px; }
+#main #content h1 { color: #fff; font-weight: bold; margin-left: 20px; height: 50px; }
+#main #content h1 span { float: left; text-indent: -9000px; }
+#main #content h2 { font-weight: bold; margin-left: 20px; margin-top: 10px; }
+#main #content p { font-size: 18px; width: 80%; margin:0px auto; text-align: justify; text-indent: 40px; padding: 10px; color: #000; font-weight: bold; }
+#main #content p img { margin: 0px auto; margin-left: 50px; }
+#main #content #galeria_title { background: url(/static/images/galeria_title.png) no-repeat top left; }
+#main #content #empresa_title { background: url(/static/images/empresa_title.png) no-repeat top left; }
+#main #content #nossos_produtos_title { background: url(/static/images/nossos_produtos_title.png) no-repeat top left; }
+#main #content #manutencao_title { background: url(/static/images/manutencao_title.png) no-repeat top left; }
+#main #content #contato_title { background: url(/static/images/contato_title.png) no-repeat top left; }
+#main #content #slide_show { border: 0px solid #eee; background-color: #000; margin: 0px auto; margin-top: 10px; width: 640px; padding:10px; text-align:center; color:white; font-weight: bold; font-size: 13px; }
+#main #content #painel_contato { margin: 0px auto; height: 100%; min-height: 350px; width: 400px; padding: 20px 0px; }
+#main #content #painel_contato p { font-size: 16px;  }
+#main #content #painel_contato label { font-weight: bold; float: left; width: 398px;}
+#main #content #painel_contato input { margin-top: 05px; margin-bottom: 10px; float: right; width: 300px;}
+#main #content #painel_contato textarea { margin-top: 05px; margin-bottom: 10px; float: right; width: 300px;}
+#main #content #painel_contato input[type="submit"] { margin-top: 10px; width: 120px; float: right; clear: left; margin-bottom: 20px; display: block;}
+#main #content #bottom_panel { margin-top: 60px; width: 100%; height: 240px; text-align: center; }
+#main #content #bottom_panel div.panels { margin: 0px auto; margin-left: 15px; margin-right: 15px; margin-top: 20px; display: block; float: left; width: 270px; height: 200px; padding:0px;}
+#main #content #bottom_panel div.panels h2 { margin-top: 10px; }
+#main #content #bottom_panel div.panels p { margin-top: 15px; padding: 05px 15px; }
+#main #content #bottom_panel div.panels img { background-color: white; border: 0px; margin: 0px; padding: 0px; }
+#main #content #bottom_panel #promotion_panel { background-color: white; margin-left: 40px; }
+#main #content #bottom_panel #promotion_panel #promocoes_list { list-style: none; }
+#main #content #bottom_panel #promotion_panel #promocoes_list li.promocao_item p { font-size: 16px; }
+#main #footer { background: url(/static/images/bg_footer.png) top right no-repeat; height: 130px; text-align:center; width: 100%; padding-top: 0px; }
+#main #footer p { color: white; }
+#main #footer ul.menu { background: #000 url(/static/images/bg_menu.png) top right no-repeat; height: 25px; list-style: none; margin-bottom: 05px; padding-top: 05px; text-align: center; }
+#main #footer ul.menu li { display: inline; padding-left: 10px; }
+#main #footer ul.menu li a { color: white; font-weight: bold; text-transform: uppercase; text-decoration: none; }
+#main #footer ul.menu li a:hover { color: orange; }
+#main #footer p a { color: #eee; font-weight: bold; text-decoration:none; margin-top: 5px; display:block;}
+#main #footer p a:hover { color: orange; }
