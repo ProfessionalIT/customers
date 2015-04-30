@@ -10,6 +10,9 @@ bambinocampones@bol.com.br
 bambinocamponesite@gmail.com
 Master12131415
 
+ssh -o PubKeyAuthentication=no -l bambino2015 web477.webfaction.com
+ssh bambino2015@web477.webfaction.com
+pwd: Master11235813
 
 
                                ID                           Album

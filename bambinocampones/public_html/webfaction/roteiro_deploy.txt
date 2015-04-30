@@ -1,0 +1,36 @@
+Roteiro de Deploy na Webfaction:
+
+1) Realizar o login em my.webfaction.com e criar a infra necessária:
+   
+    -> Em DOMAINS/WEBSITES:
+
+		A) Domains:
+			Adicionar o Domain Principal (example.com www.example.com)
+			e o Domain media (media.example.com)
+		
+		B) Em Applications:
+			1) Criar uma App Static Only (no .htaccess) com o nome de media.
+			2) Criar uma App mod_wsgi 4.2.8/Python 2.7
+		
+		C) Em Website:
+		
+			1) Criar um website com o nome de media apontando para o 
+			subdominio media e para a app media. ((media.example.com)
+			2) Criar um website com o nome website com o nome do login, por exemplo "bambino2015",
+			apontando para o Domain Principal (example.com www.example.com)
+			e para a app website.
+
+
+2) Subir os arquivos do site via FTP:
+    A) Subir os arquivos da pasta media. (Por exemplo, /home/bambino2015/webapps/media)
+    B) Subir os arquivos da app para a pasta website. (Por exemplo, /home/bambino2015/webapps/website/htdocs)
+	C) Subir os arquivos da pasta webfaction, substituindo os existentes:
+	
+		- configuration.py
+		- index.py
+		- .htaccess
+		- database
+
+3) Se logar via SSH e dar permissão de execução ao arquivo index.py
+
+

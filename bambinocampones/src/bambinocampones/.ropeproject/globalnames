@@ -1,0 +1,10 @@
+€}q(Uwebsite]U>website.migrations.0003_auto__del_field_galeria_foi_importante]qU	MigrationqaUwebsite.models]q(UMaterialEscolarqU
+DepoimentoqUMenuqU	ProfessorqUGaleriaq	U
+Publicacaoq
+U	ParametroqUGaleriaResourceqURecomendacaoqU
+CalendarioqUPaginaqUCardapioqUServicoqUConteudoDownloadqeUbambinocampones.urls]qUurlpatternsqaUwebsite.tests]qU
+SimpleTestqaUmanage]Uwebsite.admin]Uwebsite.migrations.0001_initial]qhaUdatetime]q(U	timedeltaqUMAXYEARqUdateqUdatetime_CAPIqUtzinfoqUtimeqUMINYEARqUdatetimeq eUwebsite.views]q!(Uempresaq"Uindexq#eUbambinocampones]Uwebsite.migrations]Ubambinocampones.settings]q$(UMANAGERSq%U	DATABASESq&USITE_IDq'UROOT_URLCONFq(ULANGUAGE_CODEq)UUSE_I18Nq*U
+SECRET_KEYq+UMIDDLEWARE_CLASSESq,USESSION_SERIALIZERq-USTATIC_ROOTq.U	TIME_ZONEq/UTEMPLATE_LOADERSq0UWSGI_APPLICATIONq1UALLOWED_HOSTSq2UTEMPLATE_DIRSq3UPROJECT_ROOTq4ULOGGINGq5USTATICFILES_FINDERSq6U
+STATIC_URLq7UUSE_L10Nq8UDEBUGq9UUSE_TZq:UINSTALLED_APPSq;U
+MEDIA_ROOTq<USTATICFILES_DIRSq=UADMINSq>UTEMPLATE_DEBUGq?U	MEDIA_URLq@eUbambinocampones.wsgi]qAUapplicationqBaUshutil]qC(UcopyfileqDUignore_patternsqEUcopytreeqFUget_archive_formatsqGUcopyfileobjqHUregister_archive_formatqIUcopymodeqJUmake_archiveqKUmoveqLUunregister_archive_formatqMUrmtreeqNUErrorqOUcopyqPU	ExecErrorqQUcopy2qRUSpecialFileErrorqSUcopystatqTUWindowsErrorqUeUos]qV(Upopen4qWUexecleqXUpopen3qYUSEEK_CURqZUspawnlpq[Uexeclpq\Uenvironq]Uspawnvpq^Uspawnlq_Uexecvpq`UmakedirsqaUlinesepqbUP_WAITqcUspawnvqdUspawnveqeUexecvpeqfUunsetenvqgUSEEK_SETqhUgetenvqiUpopen2qjUwalkqkUspawnleqlUexeclqmUnameqnUSEEK_ENDqoUspawnlpeqpU	P_NOWAITOqqUP_NOWAITqrU
+removedirsqsUrenamesqtUspawnvpequUexeclpeqveUwebsite.urls]qwhaU>website.migrations.0002_auto__add_field_galeria_foi_importante]qxhau.
