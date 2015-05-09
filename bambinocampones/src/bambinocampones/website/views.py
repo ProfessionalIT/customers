@@ -7,3 +7,7 @@ def index(request):
 
 def empresa(request):
     return HttpResponse("Empresa e Filosofia")
+
+
+def historia(request):
+    return HttpResponse("Historia da Empresa")

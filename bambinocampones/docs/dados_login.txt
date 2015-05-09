@@ -2,7 +2,7 @@
 cpanel url:   cpanel.bambinocampones.com.br
 ftp url:   ftp.bambinocampones.com.br
 login: bambino
-pwd:   Master12131415 
+pwd:   Master$11235813
 
 saletebrancher@bol.com.br
 bambinocampones@bol.com.br

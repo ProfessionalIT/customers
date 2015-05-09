@@ -41,9 +41,7 @@ class Usuario(object):
     def get_form_title(self):
         return "Usuário"
 
-    def leandro(self):
-        
-    @classmethod
+    classmethod
     def get_default_field_order(self):
         return "login"
 
