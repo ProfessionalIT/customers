@@ -1,7 +1,7 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 # Database Connection variables
-DBN = 'postgres'
+DBN = 'sqlite'
 HOST = 'localhost'
 DB = 'luis_website'
 USER = 'luis'

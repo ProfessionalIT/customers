@@ -1,0 +1,6 @@
+Microsoft Windows [versÆo 6.1.7601]
+Copyright (c) 2009 Microsoft Corporation. Todos os direitos reservados.
+
+(webpy) C:\Users\Leandro Severino\Documents\dev\sources\customers\bambinocampones\src\webapps>
+
+(webpy) C:\Users\Leandro Severino\Documents\dev\sources\customers\bambinocampones\src\webapps>Deseja finalizar o arquivo em lotes (S/N)? 
