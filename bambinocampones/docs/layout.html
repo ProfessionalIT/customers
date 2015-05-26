@@ -3,6 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <title>Novo Layout da Bambino</title>
+    <style type="text/css">
+        * {
+            margin: 0px;
+            padding: 0px;
+            font-size: 1em;
+            font-family: 'Arial';
+        }
+        header, main, footer, div {
+            width: 100%;
+            min-width: 320px;
+            height: 100%;
+            min-height: 480px;
+            display: block;
+        }
+        body {
+            background-color: #ccc;
+        }
+        header { 
+            background-color: orange;
+        }
+        main { 
+            background-color: blue;
+        }
+        footer { 
+            background-color: green;
+        }
+        #left_panel {
+            background-color: white; 
+        }
+        #center_panel {
+            background-color: gray; 
+        }
+        #right_panel {
+            background-color: navy; 
+        }
+        @media only screen and (min-width: 320px) {
+            #header, #main {
+                width: 100%;
+                display: block;
+            }
+
+        }
+    </style>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
 </head>
 <body>
     <header>
@@ -18,34 +69,58 @@
                 <li><a href="" title="">Menu6</a></li>
             </ul>
         </nav> 
+        <div id="social_and_search">
+            <input type="search" placeholder="Pesquisar no site" />
+            <a href="" title="">Facebook</a>
+            <a href="" title="">Twitter</a>
+            <a href="" title="">Youtube</a>
+            <a href="" title="">Instangram</a>
+        </div
     </header>
     <main>
         <div id="content">
             <div id="left_panel">
-                <!-- Calendario -->
-                <!-- Responsabilidade Social -->
-                <!-- Depoímentos -->
+                <!-- Calendario 
+                    Colocar um calendário HTML5 com os eventos destacados e com uma legenda mais legal.
+                -->
                 <!-- Lista de Material -->
-                <!-- Galeria -->
-                <!-- Material de Apoio -->
-                <!-- Downloados --> 
+                <!-- Dicas 
+                    Uma lista de dicas que ficam rodando como se fossem notícias num SlideShow.
+                -->
+                <!-- Galeria de Fotos e Vídeos 
+                    Uma mini galeria/thums (apenas um icone grande) para fotos.
+                    Uma mini galeria/thums (apenas um icone grande) para videos.
+                -->
+                <!-- Material de Apoio
+                    Lista de material de apoio por tipo, com um ícone e um destaque por tipo.
+                -->
+                <!-- Downloads --> 
             </div>
             <div id="center_panel">
-                <!-- Bannerss -->
-                <!-- Quadro Negro -->
-                <!-- Dicas -->
-                <!-- Nossa Escola -->
+                <!-- Banners
+                     Aqui deve ir o mural de Avisos(o quadro negro), com os recados escritos em letra cursiva e formato de Giz.
+                     e abaixo o SlideShow ! (Conheça nossas instalações).
+                -->
+                <!-- Notícias 
+                Listagem de Notícias com ferramentas de compartilhamento Social.
+                --> 
             </div>
             <div id="right_panel">
                 <!-- Cardápios -->
+                <!-- Nossa Escola -->
                 <!-- Nossos Serviços -->
-                <!-- Nossos Álbuns --> 
+                <!-- Responsabilidade Social -->
+                <!-- Depoímentos -->
             </div>
         </div>
     </main>
     <footer>
         <div id="copyright">
-            <p>Dados de Copyright</p>
+            <p>Todos os direitos reservados à Escola de Educação Infantil - Bambino Camponês.</p>
+            <p>Endereço: Rua Irmão Florêncio, nº 151 - Bairro Harmonia - Canoas - RS - Brasil</p>
+            <p>CEP: 92310-490</p>
+            <p>Telefone: (51) 3031-3240</p>
+            <p>Desenvolvido por: <a href="http://www.maxigenios.com.br" title="Maxigênios - Genialidade em Soluções Tecnológicas.">Maxigênios - Genialidade em Soluções Tecnológicas.</a>
         </div>
     </footer>
 </body>
