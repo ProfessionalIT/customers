@@ -1,7 +1,7 @@
 [ Atividades para implementar no site da Bambino ]
 
     A - Reformular o layout do site.
-    
+
         - O layout do site deve ser reformulado para ser responsivo.
         - Deve atender a smartphones, tablets e celulares.
         - Deve ser mais limpo, mais objetivo, com cores mais leves,
@@ -17,28 +17,28 @@
 
     C - Migrar as fotos do Google para dentro do site.
         - Criar mecanismo de album de fotos no site, com botões de compartilhamento.
-    
+
     D - Acesso restrito online aos pais na parte das fotos do site, através de senha.
-    
+
     E - Implementar a área de "Diário Online".
         - Diário online é a agenda semanal da escola.
-    
+
     F - Implementar um formulário de "Depoimentos" no site.
         - Rever a rotina de depoímentos, colocando um formulário para envio de depoímentos.
-    
+
     G - Implementar a publicação de notícias no site que publica "automaticamente" no Facebook.
-    
+
     H - Implementar uma área de "Bibliografia Recomendada" por faixa etária.
         - Com imagem, briefing e faixa-etária.
-    
+
     I - Re-estruturar a parte de Slide-Show do site, seguindo o exemplo do Yahoo.
         - Com foto, miniatura e texto de detalhamento.
-    
+
     J - Integração com Facebook, Picasa e youtube
         - Colocar botões de compartilhamento, número de visitantes e painel de amigos.
-    
+
     K - Monitoramento Online - Vamos ver isso para o ano que vem.
-    
+
     L - Venda de Fotos em Alta Qualidade pelo site, ver orçamento de loja virtual.
-    
+
     M - Em localização, colocar a linha de ônibus que passa por lá.
