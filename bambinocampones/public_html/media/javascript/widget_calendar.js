@@ -35,37 +35,31 @@ function getEventByMonthYear(par_month, par_year){
         var arrEventos = new Array('04/06/2015;N;Corpus Christi', '26/06/2015;F;Festa Junina');
         return arrEventos;
     } else if (par_month==6){
-        var arrEventos = new Array();
+        var arrEventos = new Array('20/07/2015;E;Dia do Amigo', '26/07/2015;E;Dia dos Avós');
         return arrEventos;
     } else if (par_month==7){
-        var arrEventos = new Array('10/8/2012;E;Homenagem aos Pais');
+        var arrEventos = new Array('09/8/2015;E;Dia dos Pais');
         return arrEventos;
     } else if (par_month==8){
-        var arrEventos = new Array('07/9/2012;N;Independência do Brasil', '20/9/2012;N;Revolução Farroupilha', '21/9/2012;P;(Ponte)');
+        var arrEventos = new Array('07/9/2015;N;Independência do Brasil', '20/9/2015;N;Revolução Farroupilha');
         return arrEventos;
     } else if (par_month==9){
-        var arrEventos = new Array('12/10/2012;N;Nossa Sra Aparecida');
+        var arrEventos = new Array('12/10/2015;N;Dia das crianças', '15/10/2015;N;Dia do Professor');
         return arrEventos;
     } else if (par_month==10){
-        var arrEventos = new Array('03/11/2013;E;Format. Dança Gaúcha', '29/11/2013;E;Formatura Jardim B');
+        var arrEventos = new Array('02/11/2015;N;Finados', '15/11/2015;N;Proclamação da República', '20/11/2015;E;Dia da Consciência Negra');
         return arrEventos;
     } else if (par_month==11){
-        var arrEventos = new Array('03/12/2014;E;Apresentação de Ballet - 19:00 hs.',
-                                   '11/12/2014;E;Apresentação de Capoeira - 19:00 hs.',
-                                   '12/12/2014;E;Encerramento do Ano e Chegada do Papai Noel - 15:00 hs.',
-                                   '15/12/2014;R;Recesso Fim de Ano.',
-                                   '16/12/2014;R;Recesso Fim de Ano.',
-                                   '17/12/2014;R;Recesso Fim de Ano.',
-                                   '18/12/2014;R;Recesso Fim de Ano.',
-                                   '19/12/2014;R;Recesso Fim de Ano.',
-                                   '22/12/2014;R;Recesso Fim de Ano.',
-                                   '23/12/2014;R;Recesso Fim de Ano.',
-                                   '24/12/2014;R;Recesso Fim de Ano.',
-                                   '26/12/2014;R;Recesso Fim de Ano.',
-                                   '29/12/2014;R;Recesso Fim de Ano.',
-                                   '30/12/2014;R;Recesso Fim de Ano.',
-                                   '31/12/2014;R;Recesso Fim de Ano.',
-                                   '25/12/2014;N;Feriado de Natal.');
+        var arrEventos = new Array('04/12/2015;E;Formatura Jardim Nível II.',
+                                   '21/12/2015;R;Recesso Fim de Ano.',
+                                   '22/12/2015;R;Recesso Fim de Ano.',
+                                   '23/12/2015;R;Recesso Fim de Ano.',
+                                   '24/12/2015;R;Recesso Fim de Ano.',
+                                   '28/12/2015;R;Recesso Fim de Ano.',
+                                   '29/12/2015;R;Recesso Fim de Ano.',
+                                   '30/12/2015;R;Recesso Fim de Ano.',
+                                   '31/12/2015;R;Recesso Fim de Ano.',
+                                   '25/12/2015;N;Feriado de Natal.');
         return arrEventos;
     } else {
         var arrEventos = new Array();

@@ -35,6 +35,7 @@ class Usuario(object):
 
     @classmethod
     def get_list_title(self):
+        print self
         return "Listagem de Usuários"
 
     @classmethod
