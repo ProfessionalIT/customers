@@ -10,5 +10,13 @@ author: bootply.com
 
 body {
   padding-top: 70px;
-  font-family: "Trebuchet MS"
+  font-family: 'Comic Sans MS', 'Trebuchet MS', Arial;
+
+}
+
+.bg_white {
+    background-color: white;
+}
+.margin_left_adjusts {
+    margin-left: -0.5em;
 }
