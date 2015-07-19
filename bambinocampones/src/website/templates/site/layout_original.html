@@ -1,0 +1,550 @@
+$def with (vars, content)
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br">
+    <head>
+        <title>$content.title</title>
+        <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+        <meta name="generator" content="Geany 0.20" />
+        <meta name="language" content="pt-br"/>
+        <meta name="country" content="Brazil"/>
+        <meta name="copyright" content="Copyright (c) 2013 Fênix Artes Gráficas - Convites, impressos e impressão digital em Canoas/RS. This site's design and html code is licensed under the terms of the GPLv3 or (at your option) any later version."/>
+        <meta name="organization name" content="Fênix Artes Gráficas - Convites, impressos e impressão digital em Canoas/RS." />
+        <meta name="author" content="professionalit.com.br - Sistemas, Sites, Aplicações Web e Mobile."/>
+        <meta name="Description" content="$content.full_description" lang="pt-BR"/>
+        <meta name="Keywords" content="$content.keywords_tags" lang="pt-BR"/>
+        <meta name="rating" content="$content.keywords_tags"/>
+        <meta name="robots" content="ALL"/>
+        <meta name="googlebot" content="all" />
+        <meta name="distribution" content="Global" />
+        <meta name="revisit-after" content="1 day" />
+        <meta name="google-site-verification" content="4_aezKu-nJBhNjQuEwJczVKct2D97hZVEacKZxtdPLU" />
+        <meta name="msvalidate.01" content="EAF3E41475E7C437B96E2013C6A9B043" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="shortcut icon" href="$:vars['static_url']images/favicon.ico" type="image/x-icon" />
+        <link rel='index' title='Fênix Artes Gráficas - Convites, impressos e impressão digital em Canoas/RS.' href='http://www.fenixgrafica.com.br' />
+        <link rel="canonical" href="http://www.fenixgrafica.com.br" />
+        <link rel="author" title="ProfessionalIT - Sistemas, Sites, Aplicações Web e Mobile." href="/bio.html" />
+        <link rel="copyright" title="Script license and terms of use" href="/jslibs/termsOfUse.html" />
+        <link rel="home" title="Fênix Artes Gráficas - Convites, impressos e impressão digital em Canoas/RS." href="/" />
+        <link rel="search" title="Pesquisa no site da Fênix Artes Gráficas - Convites, impressos e impressão digital em Canoas/RS." href="/search/" />
+        <link rel="bookmark" href="#index" title="Fênix Artes Gráficas - Convites, impressos e impressão digital em Canoas/RS." />
+        <link rel="stylesheet" href="$:vars['static_url']css/estilo.css" type="text/css" media="screen" />
+        <link rel="stylesheet" type="text/css" media="screen" href="$:vars['static_url']css/galeria.css" />
+        <script type="text/javascript">var _siteRoot='layout.html',_root='layout.html';</script>
+        <script type="text/javascript" src="$:vars['static_url']javascript/jquery-1.3.2.min.js"></script>
+        <script type="text/javascript" src="$:vars['static_url']javascript/jquery.easing.1.3.js"></script>
+        <script type="text/javascript" src="$:vars['static_url']javascript/scripts.js"></script>
+        <script type="text/javascript" src="$:vars['static_url']javascript/util.js"></script>
+    </head>
+    <body>
+        <!-- START of freefind onpage results html -->
+        <!-- position these div's right after your body tag -->
+        <!--  FreeFind on-page results divs  -->
+        <div id="ffresult_win"   style=" z-index:1; padding: 20px 0 16px 0; margin:0px; width:538px; height:728px; border:none; display:none; position:absolute; top:0px; left:0px;">
+            <div  id="ffresult_bar" onmousedown="ffresults.drag(event,false)"  style="cursor: move; z-index:5; position:absolute; top:0px; left:0px; background-color:maroon; padding:0; text-align: right; width:100%; height:20px; display:block;  border:solid; border-width: 1px; border-bottom: 0px; border-color:maroon;">
+            <a  id="ffrclose" style="z-index:6; font-family: arial, verdana, sans-serif; font-size:8pt; color:white; " href="javascript:ffresults.hide()">Close window [X]</a>&nbsp;&nbsp;&nbsp;
+            </div>
+            <div  id="ffresult_2" style="z-index:7; position: relative; height: 100%; background-color:white;  display:block;">
+            <div  id="ffresult_cvr" style="z-index:0; position:absolute; top:0px; left:0px; display:block; width:100%; height:100%;">
+            </div>
+            <iframe  id="ffresult_ifr" name="ffresult_frame"  style="z-index:1; position:absolute; top:0px; left:0px; border:solid; border-width: 0px 1px 0px 1px; border-color:gray;" src="" width="100%" height="100%" scrolling="auto" frameborder="0">
+            </iframe>
+            </div>
+            <div  id="ffresult_btm" style=" position:absolute; bottom:-1; left:0px; border:solid; border-color:gray; border-width: 1px; border-top: 0px; display: block; z-index:18; background-color:#d0d0d0; width:100%; height:16px; " >
+                <div  id="ffresult_sbx" onmousedown="ffresults.drag(event,true);" style="cursor: se-resize; float:right; border:none; border-color:gray; border-width: 0px; width:16px; height:16px; "><img  style="" id="ffresult_szimg" height=16 width=16 border=0 src="" alt=""></div>
+            </div>
+        </div>
+        <!--  FreeFind on-page results handler  -->
+        <script type="text/javascript">
+        <!--
+        var ffresults = {
+            // copyright 2008 - 2013 FreeFind.com - authorized for use with the FreeFind service only
+            // Start of config settings
+            autoPos : true, // automatic initial window position / size. 
+            // if autoPos if false, the following four numbers are used as initial window position and size
+            initialX : 78,          // left position (pixels)
+            initialY : 66,          // right position (pixels)
+            initialH : 395,         // height of window
+            initialW : 622,         // width of window
+            // choose a number for z-index that is high enough so the results window appears above other windows on your page
+            initialZ : 10000000,    // initial z-index of the results window
+            // the following value controls the color of the window's drag bar (top area of window)
+            barColor : 'navy',
+            // end of config settings
+            element : undefined,
+            cover : undefined,
+            mouseDownX : 0,
+            mouseDownY : 0,
+            objectX : 0,
+            objectY : 0,
+            objectH : 0,
+            objectW : 0,
+            ipos : false,
+            resize : false,
+            sizeImageUrl : 'http://search.freefind.com/img/rsize.gif',
+            selectFunc : undefined,
+            selectState : undefined,
+            mozSelect : undefined,
+            noSelect : function()
+            {
+                var obj = document.body;
+                ffresults.selectFunc = obj.onselectstart;
+                ffresults.selectState = obj.unselectable;
+                ffresults.mozSelect = obj.style.MozUserSelect;
+                obj.onselectstart = function(){ return false; };
+                obj.unselectable = 'on';
+                obj.style.MozUserSelect = 'none';
+            },
+            restoreSelect : function()
+            {
+                var obj = document.body;
+                obj.onselectstart = ffresults.selectFunc;
+                obj.unselectable = ffresults.selectState;
+                obj.style.MozUserSelect = ffresults.mozSelect;
+            },
+            drag : function (e,size)
+            {
+                if(!document.getElementById) return;
+                if(!e) e = window.event;
+                var targ = e.target || e.srcElement;
+                ffresults.resize = size;
+                if(targ.id != 'ffresult_bar' && targ.id != 'ffresult_szimg') return true;
+                ffresults.noSelect();
+                ffresults.element = document.getElementById('ffresult_win');
+                ffresults.objectX = parseInt(ffresults.element.style.left,10);
+                ffresults.objectY = parseInt(ffresults.element.style.top,10);
+                ffresults.objectH = parseInt(ffresults.element.style.height,10);
+                ffresults.objectW = parseInt(ffresults.element.style.width,10);
+                ffresults.cover = document.getElementById('ffresult_cvr');
+                ffresults.cover.style.zIndex = '40';
+                ffresults.mouseDownX = e.clientX;
+                ffresults.mouseDownY = e.clientY;
+                if(e.preventDefault) e.preventDefault();
+                e.returnValue = false;
+                e.cancelBubble = true;
+                ffresults.attach(document,"mouseup",ffresults.drop);
+                ffresults.attach(document,"mousemove",ffresults.move);
+            },
+            attach : function(to,eventname,func)
+            {
+                if(to.addEventListener) 
+                    to.addEventListener(eventname,func,false);
+                else
+                    to.attachEvent("on" + eventname,func);
+            },
+            detach : function(to,eventname,func)
+            {
+                if(to.removeEventListener) 
+                    to.removeEventListener(eventname,func,false);
+                else
+                    to.detachEvent("on" + eventname,func);
+            },
+            drop : function(e)
+            {
+                ffresults.detach(document,"mouseup",ffresults.drop);
+                ffresults.detach(document,"mousemove",ffresults.move);
+                ffresults.cover.style.zIndex = 0;   
+                ffresults.element = null;
+                ffresults.restoreSelect();
+            },
+            move: function(e)
+            {
+               if(!e) e = window.event;
+
+               e.returnValue = false;
+               e.cancelBubble = true;
+               if(e.preventDefault) e.preventDefault();
+                var x = e.clientX;
+                var y = e.clientY; 
+                if(ffresults.resize)
+                {
+                    var winW = ffresults.objectW + x - ffresults.mouseDownX;
+                    var winH = ffresults.objectH + y - ffresults.mouseDownY;
+                    if(winH < 128) winH = 128;
+                    if(winW < 128) winW = 128;
+                    ffresults.element.style.width = winW + "px";
+                    ffresults.element.style.height = winH + "px";
+                }
+                else
+                {
+                    var left = ffresults.objectX + x - ffresults.mouseDownX;
+                    var top = ffresults.objectY + y - ffresults.mouseDownY;
+                    ffresults.element.style.left = left + "px";
+                    ffresults.element.style.top = top + "px";
+                }
+            },
+            hide : function()
+            {
+                var rStyle = document.getElementById('ffresult_win').style;
+                rStyle.display = "none";
+                rStyle.zIndex = 0;
+                var ifr = document.getElementById('ffresult_ifr');
+                if(ifr) ifr.src="";
+                var szImg = document.getElementById('ffresult_szimg');
+                if(szImg) szImg.src = "";
+            },
+            show : function(num)
+            {
+                if(!document.getElementById) return;
+                var searchForm = document.getElementById('ffresult_sbox'+num);
+                var idxLink = document.getElementById('ffresult_idx'+num);
+                var smpLink = document.getElementById('ffresult_smp'+num);
+                var advLink = document.getElementById('ffresult_adv'+num);
+                if(searchForm) searchForm.target = 'ffresult_frame';
+                if(idxLink) idxLink.target = 'ffresult_frame';
+                if(smpLink) smpLink.target = 'ffresult_frame';
+                if(advLink) advLink.target = 'ffresult_frame';
+                var rDiv = document.getElementById('ffresult_win');
+                if(!ffresults.ipos)
+                {
+                    if(ffresults.autoPos)
+                    {
+                        ffresults.computePos(rDiv); 
+                    }
+                    else
+                    {
+                        rDiv.style.top = ffresults.initialY + 'px';
+                        rDiv.style.left = ffresults.initialX + 'px';
+                        rDiv.style.width = ffresults.initialW + 'px';
+                        rDiv.style.height = (ffresults.initialH - 36) + 'px';   
+                    }
+                    ffresults.ipos = true;
+                }
+                var szImg = document.getElementById('ffresult_szimg');
+                if(szImg) szImg.src = ffresults.sizeImageUrl;
+                var dragBar = document.getElementById('ffresult_bar');
+                if(dragBar) 
+                {
+                    dragBar.style.backgroundColor = ffresults.barColor;
+                    dragBar.style.borderColor = ffresults.barColor;
+                }
+                rDiv.style.zIndex = ffresults.initialZ;
+                rDiv.style.display = "block";
+            },
+            computePos : function(rDiv)
+            {
+                var view = ffresults.viewSize();
+                var w = parseInt(view.width * 0.75,10);
+                var h = parseInt(view.height * 0.75,10);
+                if(w < 220) w = 220;
+                if(h < 220) h = 220;
+                var left = parseInt((view.width - w ) / 2,10);
+                var top = parseInt((view.height - (h + 36)) / 2,10);
+                if(left < 0) left = 0;
+                if(top < 0) top = 0;
+                rDiv.style.top = (top + view.scrollY) + 'px';
+                rDiv.style.left =  (left + view.scrollX) + 'px';
+                rDiv.style.width =  w + 'px';
+                rDiv.style.height =  h + 'px';
+            },
+            viewSize : function()
+            {   
+                var w = 0;
+                var h = 0;
+                var sx = 0;
+                var sy = 0;
+                if(window.innerWidth)
+                {  // non-ie
+                   w = window.innerWidth;
+                   h = window.innerHeight;
+                   sx = window.pageXOffset;
+                   sy = window.pageYOffset;
+                }
+                else
+                {
+                    var elem;
+                    if(document.documentElement && document.documentElement.clientWidth != 0)
+                    {   // ie strict
+                        elem = document.documentElement;
+                    }
+                    else
+                    {   // ie quirks
+                        elem = document.body;
+                    }
+                    w = elem.clientWidth;
+                    h = elem.clientHeight;
+                    sx = elem.scrollLeft;
+                    sy = elem.scrollTop;
+                }
+                return {width: w,height: h, scrollX: sx, scrollY: sy};
+            }
+        };
+        //-->
+        </script>
+        <!-- END of freefind onpage results html -->
+        <div class="all">
+            <div class="header">
+                <div class="header-left">
+                    <a href="http://www.fenixgrafica.com"
+                       title="Fênix Artes Gráficas - Convites, impressos e impressão digital em Canoas/RS.">
+                       <img src="$:vars['static_url']images/logo-fenix.png"
+                            class="logo"
+                            alt="Logotipo da Fênix Artes Gráficas - Convites, impressos e impressão digital em Canoas/RS."
+                            title="Fênix Artes Gráficas - Convites, impressos e impressão digital em Canoas/RS." />
+                    </a>
+                    <div class="infos">
+                        <div class="itens-box">
+                            <p class="item1">(51)</p>
+                            <p class="item2">3472-9155</p>
+                            <p class="item3">fenix@fenixgrafica.com</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="banner">
+                    <div id="slide_content">
+                        <div class="wrap">
+                            <div id="slide-holder">
+                                <div id="slide-runner">
+                                    $for foto in vars['banners_topo']:
+                                        <a href="" title="">
+                                            <img id="slide-img-$loop.index"
+                                                 src="$:foto.foto_banner"
+                                                 class="slide"
+                                                 alt="Banner de Produtos."/>
+                                        </a>
+                                    <div id="slide-controls">
+                                        <p id="slide-client" class="text">
+                                            <strong class="no_background">Produto: </strong>
+                                            <span class="no_background"> </span>
+                                        </p>
+                                        <p id="slide-desc" class="text"> </p>
+                                        <p id="slide-nav"> </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <script type="text/javascript">
+                                if(!window.slider) var slider={};slider.data=[$:vars['fotos_desc']];
+                            </script>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bar">
+                <div class="left"> </div>
+                <ul class="menu">
+                    <li>
+                        <a href="$:vars['context_path']"
+                           class="menulink"
+                           id="menu_home"
+                           title="Página Inicial Fênix Artes Gráficas - Convites, impressos e impressão digital em Canoas/RS.">Inicial</a>
+                    </li>
+                    <li>
+                        <a href="$:vars['context_path']/empresa"
+                           class="menulink"
+                           id="menu_empresa"
+                           title="Conheça a Nossa empresa.">Empresa</a>
+                    </li>
+                    <li>
+                        <a href="$:vars['context_path']/servicos"
+                           class="menulink"
+                           id="menu_servicos"
+                           title="Nossos serviços">Serviços</a>
+                    </li>
+                    <li>
+                        <a href="$:vars['context_path']/portifolio"
+                           class="menulink"
+                           id="menu_portifolio"
+                           title="Nosso portifólio">Portifólio</a>
+                    </li>
+                    <li>
+                        <a href="$:vars['context_path']/orcamento"
+                           class="menulink"
+                           id="menu_orcamento"
+                           title="Formulário de Orçamento">Orçamento</a>
+                    </li>
+                    <li>
+                        <a href="$:vars['context_path']/localizacao"
+                           class="menulink"
+                           id="menu_localizacao"
+                           title="Mapa de Localização e Pontos de Referência.">Localização</a>
+                    </li>
+                    <li>
+                        <a href="$:vars['context_path']/contato"
+                           class="menulink"
+                           id="menu_contato"
+                           title="Formulário de Contato">Contato</a>
+                    </li>
+                </ul>
+                <div class="right"></div>
+            </div>
+            <div class="cont-left">
+                <div class="noticias">
+                    <img src="$:vars['context_path']/static/images/banner_lateral_olho.png" alt="Banner do Olho."/>
+                    <!--
+                    <h3>Novidades</h3>
+                    <p><a href="$:vars['context_path']/convites" title="">Novos modelos de convite.</a></p>
+                    <p><a href="$:vars['context_path']/convites" title="">12/08/2012 - Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</a></p>
+                    <p><a href="$:vars['context_path']/convites" title="">12/08/2012 - Sed do eiusmod tempor incididunt ut labore et dolore magna.</a></p>
+                    <p><a href="$:vars['context_path']/convites" title="">12/08/2012 - Lorem ipsum it amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</a></p>
+                    <p><a href="#" onclick="return get_page_content('convites');">Teste</a></p>
+                    -->
+                </div>
+                <div class="box">
+                    <h3>Cadastre seu e-mail</h3>
+                    <p class="content">Receba as novidades e <strong>nossas promoções</strong> no seu e-mail.</p>
+                    <p>
+                    <form id="inscrever_form"
+                          action="/inscrever"
+                          method="post">
+                        <input type="text"
+                               id="email"
+                               name="email"
+                               class="inputTxt" />
+                        <input type="submit"
+                               class="inputOk"
+                               value="OK" />
+                    </form>
+                    </p>
+                </div>
+                <div class="box">
+                    <h3>Pesquisa</h3>
+                    <!-- start of freefind search box html -->
+                    <table cellpadding=0 cellspacing=0 border=0 >
+                    <tr>
+                        <td colspan=2 style="font-family: Arial, Helvetica, sans-serif; font-size: 7.5pt;">
+                            <form  id="ffresult_sbox0"
+                                   style="margin:0px; margin-top:4px;"
+                                   action="http://search.freefind.com/find.html"
+                                   method="get"
+                                   accept-charset="utf-8"
+                                   onsubmit="ffresults.show(0);">
+                                <input type="hidden" name="si" value="20196702" />
+                                <input type="hidden" name="pid" value="r" />
+                                <input type="hidden" name="n" value="0" />
+                                <input type="hidden" name="_charset_" value="" />
+                                <input type="hidden" name="bcd" value="&#247;" />
+                                <input type="hidden" name="sbv" value="j1" />
+                                <input type="text" name="query" class="inputTxt" />
+                                <input type="submit" class="inputOk" value="Q">
+                            </form>
+                        </td>
+                    </tr>
+                    <!--tr>
+                        <td style="text-align:left; font-family: Arial, Helvetica, sans-serif;  font-size: 7.5pt; padding-top:4px;">
+                            <a style="text-decoration:none; color:gray;" href="http://www.freefind.com"  
+                            onmouseover="this.style.textDecoration='underline'" 
+                            onmouseout="this.style.textDecoration='none'" >site search by
+                            <span style="color: #606060;">freefind</span></a>
+                        </td>
+                        <td style="text-align:right; font-family: Arial, Helvetica, sans-serif; font-size: 7.5pt; padding-top:4px;">
+                            <a id="ffresult_adv0" onclick="ffresults.show(0);" href="http://search.freefind.com/find.html?si=20196702&amp;pid=a&amp;sbv=j1">advanced</a>
+                        </td>
+                    </tr-->
+                    </table>
+                    <!-- end of freefind search box html -->
+                </div>
+                <div class="box">
+                    <h3>Convites</h3>
+                    <p>Somos especialistas em impressão de convites.</p>
+                    <!-- Conteudo das Dicas -->
+                    <a href="https://plus.google.com/u/4/photos/108010290429468273452/albums/5868352633786589313/5868352634266391778?partnerid=gplp0&pid=5868352634266391778&oid=108010290429468273452"
+                       title="convites"
+                       tagert="_blank">
+                        <img src="https://lh3.googleusercontent.com/-Fr72UPTC84Q/UXCati8Kq_I/AAAAAAAAALs/ZX9mUF8LdlE/s125-no/convite_08_thumb.png" alt="convite"
+                             title="Convites Impressos pela Gráfica Fênix."
+                             style="margin:0px auto;display:block;margin-top:15px;padding: 3px; background-color: white; border: 01px solid #ccc;margin-bottom: 5px;"/>
+                    </a>
+                    <span style="display:block;text-align:center;font-weight:bold;">(Clique para Visualizar)</span>
+                </div>
+            </div>
+            <div class="conteudo" id="conteudo_panel">
+                $:content
+            </div>
+            <div class="footer">
+                <div class="footer-left"></div>
+                <div id="logo-footer" style="float:left; width: 50%;">
+                    <a href="http://www.fenixgrafica.com"
+                       title="Fênix Artes Gráficas - Convites, impressos e impressão digital em Canoas/RS.">
+                       <img src="$:vars['static_url']images/logo-fenix.png"
+                            class="logo"
+                            alt="Logotipo da Fênix Artes Gráficas - Convites, impressos e impressão digital em Canoas/RS."
+                            title="Fênix Artes Gráficas - Convites, impressos e impressão digital em Canoas/RS." />
+                    </a>
+                </div>
+                <h4>Mapa do site:</h4>
+                <ul class="menu_footer">
+                    <li>
+                        <a href="$:vars['context_path']"
+                           class="menulink"
+                           id="menu_home_ft"
+                           title="Página Inicial Fênix Artes Gráficas - Convites, impressos e impressão digital em Canoas/RS.">Inicial</a>
+                    </li>
+                    <li>
+                        <a href="$:vars['context_path']/empresa"
+                           class="menulink"
+                           id="menu_empresa_ft"
+                           title="Conheça a Nossa empresa.">Empresa</a>
+                    </li>
+                    <li>
+                        <a href="$:vars['context_path']/servicos"
+                           class="menulink"
+                           id="menu_servicos_ft"
+                           title="Nossos serviços">Serviços</a>
+                    </li>
+                    <li>
+                        <a href="$:vars['context_path']/portifolio"
+                           class="menulink"
+                           id="menu_portifolio_ft"
+                           title="Nosso portifólio">Portifólio</a>
+                    </li>
+                    <li>
+                        <a href="$:vars['context_path']/orcamento"
+                           class="menulink"
+                           id="menu_orcamento_ft"
+                           title="Formulário de Orçamento">Orçamento</a>
+                    </li>
+                    <li>
+                        <a href="$:vars['context_path']/localizacao"
+                           class="menulink"
+                           id="menu_localizacao_ft"
+                           title="Mapa de Localização e Pontos de Referência.">Localização</a>
+                    </li>
+                    <li>
+                        <a href="$:vars['context_path']/contato"
+                           class="menulink"
+                           id="menu_contato_ft"
+                           title="Formulário de Contato">Contato</a>
+                    </li>
+                </ul>
+                <p class="cite">"Responsabilidade e comprometimento em todos os trabalhos realizados."</p>
+                <div id="channels-footer">
+                    <a href="http://www.facebook.com/grafica.fenix.rs" title="Página da Gráfica Fênix no Facebook.">
+                        <img src="/static/images/facebook_32.png"
+                             alt="ícone do facebook."
+                             title="Visite nossa página no facebook." /></a>
+                    <a href="https://twitter.com/GraficaFenixRS" title="Nossa página o Twiiter.">
+                        <img src="/static/images/twitter_32.png"
+                             alt="ícone do twitter."
+                             title="Nossa conta no twitter." /></a>
+                    <a href="$:vars['context_path']/rss" title="Mantenha-se informado com as últimas notícias da Gráfica F">
+                        <img src="/static/images/rss_32.png"
+                             alt="ícone do RSS."
+                             title="Assine nossos feeds e receba as últimas novidades da Gráfica Fênix." /></a>
+                </div>
+                <div class="footer-right">
+                    <p>Fênix Gráfica 2013 - Todos os direitos reservados.</p>
+                    <p>Fone: (51) 3472-9155</p>
+                    <p>Endereço: Rua das Allamandas nº 37 - Bairro 5 Colônias - Cep: 92320-250 - Canoas - RS</p>
+                    <p>
+                        <a href="http://www.professionalit.com.br"
+                           title="Desenvolvimento de Sites, Sistemas, Aplicações Web e Aplicações Mobile - Canoas/RS.">Desenvolvido por ProfessionalIT - Soluções em Tecnologia Ltda.</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript">
+            jQuery(document).ready(function(){
+                jQuery('.boxgrid.caption').hover(function(){
+                    jQuery(".cover", this).stop().animate({top:'135px'},{queue:false,duration:160});
+                }, function() {
+                    jQuery(".cover", this).stop().animate({top:'207px'},{queue:false,duration:160});
+                });
+                var itemMenu = document.getElementById("$:vars['active_menu']");
+                var itemMenuFooter = document.getElementById("$:vars['active_menu']" + "_ft");
+                itemMenu.className = 'menulink selected';
+                itemMenuFooter.className = 'menulink selected_ft';
+            });
+        </script>
+    </body>
+</html>

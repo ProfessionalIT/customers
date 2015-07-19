@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: http://www.fenixgrafica.com/static/resources/sitemap.xml

@@ -1,0 +1,173 @@
+/*
+Bootstrap 3.1 overrides from http://bootply.com
+
+This CSS code should follow the 'bootstrap.css'
+in your HTML file.
+
+license: MIT
+author: bootply.com
+*/
+
+body {
+  padding-top: 70px;
+  font-family: 'Comic Sans MS', 'Trebuchet MS', Arial;
+  background: url('/static/images/fundo2.jpg') no-repeat;
+  background-size: cover;
+}
+
+/* customizations of navbar */
+.navbar {
+    background-color: #619FCC;
+    color: white;
+    font-weight: bold;
+}
+
+.navbar-brand {
+    color: white !important;
+}
+
+.navbar-nav {
+    font-size: 16px;
+}
+
+.dropdown-toggle {
+    color: white !important;
+}
+
+.menu_escola {
+    background-color: #B12923;
+}
+
+.menu_secretaria {
+    background-color: #009B3C;
+}
+
+.menu_mural {
+    background-color: #3063A4;
+}
+
+.menu_servicos {
+    background-color: #E77817;
+}
+
+.menu_downloads {
+    background-color: #FDDC00;
+}
+
+.menu_contato {
+    background-color: #E8669C;
+}
+
+/* end customizations of navbar */
+
+.logotipo {
+    width: 100%;
+}
+
+.margin_top_30 {
+    margin-top: 30px;
+}
+
+.margin_top_20 {
+    margin-top: 20px;
+}
+
+.margin_right_10 {
+    margin-right: 10px;
+}
+
+.title_shadow {
+    font-weight: bold;
+    text-shadow: 2px 2px #eee;
+}
+
+.mural_icon {
+    margin-top: -22px;
+    margin-right: 10px;
+}
+
+.slide_panel {
+    margin: 0px auto;
+    text-align: center;
+}
+
+.slide_panel img {
+    margin: 5px 0px auto;
+    width:100%;
+}
+
+.historia { 
+    text-indent: 50px;
+    text-align: justify;
+}
+
+.historia p {
+    margin-top: 05px;
+}
+
+.selo {
+    text-align: center;
+}
+
+.panel-heading {
+    font-weight: bold !important;
+}
+
+.footer_panel {
+    background-color: #B12923;
+    color:#000 !important
+}
+.footer_area {
+    padding: 20px 0px;
+}
+.text-muted {
+    color: white !important;
+    font-weight: bold;
+}
+.bg_white {
+    background-color: white;
+}
+.margin_left_adjusts {
+    margin-left: -0.5em;
+}
+@media screen and (max-width: 520px) {
+    .copyright {
+        font-size: 9px;
+    }
+}
+.logo_area {
+    margin-top: 20px;
+
+}
+
+.paragraf p {
+    text-align: justify;
+    text-indent: 40px;
+    padding: 5px 20px;
+}
+
+.news_thumb {
+    margin: 0px auto;
+    display: block;
+    padding: 3px;
+}
+
+p.lead { text-indent: 0px !important; }
+
+@media screen and (min-width: 1024px) and (max-width: 1200px){
+    .logo_area {
+        margin-top: 5%;
+        margin-bottom: 5%;
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px){
+    .logo_area {
+        margin-top: 15%;
+        margin-bottom: 5%;
+    }
+}
+@media screen and (min-width: 200px) and (max-width: 767px){
+    .social_bar {
+        margin-top: 2%;
+    }
+}

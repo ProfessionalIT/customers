@@ -1,0 +1,29 @@
+$def with (produtos)
+
+$var title:  Fênix Artes Gráficas - Convites, impressos e impressão digital em Canoas/RS.
+$var full_description: Convites, impressos e impressão digital em Canoas/RS.
+$var keywords_tags: Convites, impressos digitais, convites, cartões de visita, agenda, livros, sacolas, revistas, folders, panfletos, embalagens, calendários de mesa, caderno executivo, risque e rabisque, matériais de escritório, folhas A4, folhas A3
+
+<h1 class="index">Bem vindo à Gráfica Fênix</h1>
+<p class="index">Somos uma empresa especializada em <strong>Impressão Digital</strong> e <strong>Impressão OFF-Set</strong>.</p>
+<div class="produtos">
+    <h3>Portifólio</h3>
+    <div id="wrap">
+        <ul class="sliderbox_products">
+            $for produto in produtos:
+                <li class="boxgrid caption">
+                    <img src="$:produto.url_recurso"
+                         alt="Imagem do ícone da $:produto.titulo."
+                         title="$:produto.palavras_chaves na Gráfica Fênix."/>
+                    <div class="cover boxcaption">
+                        <h3 class="item_title">$:produto.titulo</h3>
+                        <p>
+                            $:produto.descricao_resumida
+                            <a href="$:produto.slug"title="Mais Detalhes sobre $:produto.titulo."
+                               class="item_more">Ver mais</a>
+                        </p>
+                    </div>
+                </li>
+        </ul>
+    </div>
+</div>

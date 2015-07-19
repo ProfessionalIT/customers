@@ -1,0 +1,282 @@
+$def with (vars, content)
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br">
+    <head>
+        <title>$content.title | Nova Versão | MODELO</title>
+        <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+        <meta name="generator" content="Geany 0.20" />
+        <meta name="language" content="pt-br"/>
+        <meta name="country" content="Brazil"/>
+        <meta name="copyright" content="Copyright (c) 2012 Rede SOS Turbo. This site's design and html code is licensed under the terms of the GPLv3 or (at your option) any later version."/>
+        <meta name="organization name" content="Rede SOS Turbo - Turbinamento de automóveis e turbinamento industrial em Porto Alegre/RS" />
+        <meta name="author" content="professionalit.com.br - Sistemas, Sites, Aplicações Web e Mobile."/>
+        <meta name="Description" content="$content.full_description" lang="pt-BR"/>
+        <meta name="Keywords" content="$content.keywords_tags" lang="pt-BR"/>
+        <meta name="rating" content="$content.keywords_tags"/>
+        <meta name="DC.title" content="redesosturbo.com.br"/>
+        <meta name="robots" content="ALL"/>
+        <meta name="googlebot" content="all" />
+        <meta name="classification" content="turbo, automoveis, caminhonetes" />
+        <meta name="distribution" content="Global" />
+        <meta name="revisit-after" content="1 day" />
+        <link rel="shortcut icon" href="$:vars['context_path']/static/images/favicon.ico" type="image/x-icon" />
+        <link rel='index' title='Rede SOS Turbo - Turbinamento de automóveis e turbinamento industrial em Porto Alegre/RS.' href='http://www.redesosturbo.com.br'></link>
+        <link rel="canonical" href="http://www.redesosturbo.com.br"></link>
+        <link rel="author" title="ProfessionalIT - Sistemas, Sites, Aplicações Web e Mobile." href="/bio.html"></link>
+        <link rel="copyright" title="Script license and terms of use" href="/jslibs/termsOfUse.html"></link>
+        <link rel="home" title="Rede SOS Turbo - Turbinamento de automóveis e turbinamento industrial em Porto Alegre/RS" href="/"></link>
+        <link rel="search" title="Pesquisa no site da Rede SOS Turbo - Turbinamento de automóveis e turbinamento industrial em Porto Alegre/RS." href="/search/"></link>
+        <link rel="bookmark" href="#index" title="Rede SOS Turbo - Turbinamento de automóveis e turbinamento industrial em Porto Alegre/RS."></link>
+        <link rel="stylesheet" href="$:vars['context_path']/static/css/style.css" type="text/css" media="screen" />
+        <script type="text/javascript" src="$:vars['context_path']/static/javascript/jquery-1.2.6.min.js"></script>
+        <script type="text/javascript" src="$:vars['context_path']/static/javascript/util.js"></script>
+        <script type="text/javascript"src="$:vars['context_path']/static/javascript/AC_RunActiveContent.js" ></script>
+    </head>
+    <body>
+        <div id="page">
+            <div id="top_panel">
+                <div id="top">
+                    <a href="$:vars['context_path']" title="Rede SOS Turbo - Turbinamento de automóveis e turbinamento industrial em Porto Alegre/RS."><img src="$:vars['context_path']/static/images/logo.png" id="img_logotipo" alt="Logotipo da Rede SOS Turbo." title="Rede SOS Turbo - Turbinamento de automóveis e turbinamento industrial em Porto Alegre/RS." height="195px" width="325px" /></a>
+                    <div id="header_message">
+                        EVOLUÇÃO É NOSSA MARCA
+                    </div>
+                </div>
+                <div id="message_product"></div>
+                <div id="products_panel">
+                    <script type="text/javascript">
+                        var sliderwidth = "980px"
+                        var sliderheight = "112px"
+                        var slidespeed = 2
+                        slidebgcolor = ""
+                        var leftrightslide = new Array()
+                        var finalslide = '5'
+                        leftrightslide[1] = '<a href="$:vars['context_path']/produto/kit-para-turbinamento" title="Kit para turbinamento."><img src="$:vars['context_path']/static/images/001.jpg" title="Kit para turbinamento." alt="Kit para turbinamento."/></a>'
+                        leftrightslide[2] = '<a href="$:vars['context_path']/produto/juntas-para-turbo" title="Juntas para turbo."><img src="$:vars['context_path']/static/images/002.jpg" title="Juntas para turbo." alt="Juntas para turbo." /></a>'
+                        leftrightslide[3] = '<a href="$:vars['context_path']/produto/manometros" title="Manômetros"><img src="$:vars['context_path']/static/images/003.jpg" title="Manômetros" alt="Manômetros" /></a>'
+                        leftrightslide[4] = '<a href="$:vars['context_path']/produto/mangueiras-para-turbos-e-intercoolers" title="Mangueiras para turbos e intercoolers."><img src="$:vars['context_path']/static/images/004.jpg" title="Mangueiras para turbos e intercoolers." alt="Mangueiras para turbos e intercoolers." /></a>'
+                        leftrightslide[5] = '<a href="$:vars['context_path']/produto/turbos-remanufaturados" title="Turbos remanufaturados."><img src="$:vars['context_path']/static/images/005.jpg" title="Turbos remanufaturados." alt="Turbos remanufaturados." /></a>'
+                        leftrightslide[6] = '<a href="$:vars['context_path']/produto/turbos-novos-para-diversas-linhas" title="Turbos novos para diversas linhas."><img src="$:vars['context_path']/static/images/006.jpg" title="Turbos novos para diversas linhas." alt="Turbos novos para diversas linhas." /></a>'
+                        leftrightslide[7] = '<a href="$:vars['context_path']/produto/pecas-para-remanufaturas" title="Peças para remanufaturas."><img src="$:vars['context_path']/static/images/007.jpg" title="Peças para remanufaturas." alt="Peças para remanufaturas." /></a>'
+                        leftrightslide[8] = '<a href="$:vars['context_path']/produto/kit-para-reparo" title="Kit para reparo."><img src="$:vars['context_path']/static/images/008.jpg" title="Kit para reparo." alt="Kit para reparo." /></a>'
+                        leftrightslide[9] = '<a href="$:vars['context_path']/servico/remanufatura-de-turbos" title="Remanufatura de turbos."><img src="$:vars['context_path']/static/images/009.jpg" title="Remanufatura de turbos." alt="Remanufatura de turbos." /></a>'
+                        leftrightslide[10] = '<a href="$:vars['context_path']/servico/remanufatura-de-turbos" title="Remanufatura de turbos."><img src="$:vars['context_path']/static/images/010.jpg" title="Remanufatura de turbos." alt="Remanufatura de turbos." /></a>'
+                        leftrightslide[11] = '<a href="$:vars['context_path']/servico/remanufatura-de-turbos" title="Remanufatura de turbos."><img src="$:vars['context_path']/static/images/011.jpg" title="Remanufatura de turbos." alt="Remanufatura de turbos." /></a>'
+                        leftrightslide[12] = '<a href="$:vars['context_path']/servico/remanufatura-de-turbos" title="Remanufatura de turbos."><img src="$:vars['context_path']/static/images/012.jpg" title="Remanufatura de turbos." alt="Remanufatura de turbos." /></a>'
+                        leftrightslide[13] = '<a href="$:vars['context_path']/servico/remanufatura-de-turbos" title="Remanufatura de turbos."><img src="$:vars['context_path']/static/images/013.jpg" title="Remanufatura de turbos." alt="Remanufatura de turbos." /></a>'
+                        leftrightslide[14] = '<a href="$:vars['context_path']/servico/remanufatura-de-turbos" title="Remanufatura de turbos."><img src="$:vars['context_path']/static/images/014.jpg" title="Remanufatura de turbos." alt="Remanufatura de turbos." /></a>'
+                        var imagegap = " "
+                        var slideshowgap = 10
+                        var copyspeed = slidespeed
+                        leftrightslide = '<nobr>' + leftrightslide.join(imagegap) + '</nobr>'
+                        var iedom = document.all || document.getElementById
+                        if (iedom)
+                            document.write('<span id="temp" style="visibility:hidden;position:absolute;top:-100px;left:-9000px">' + leftrightslide + '</span>')
+                        var actualwidth = ''
+                        var cross_slide, ns_slide
+                        function fillup() {
+                            if (iedom) {
+                                cross_slide = document.getElementById ? document.getElementById("test2") : document.all.test2
+                                cross_slide2 = document.getElementById ? document.getElementById("test3") : document.all.test3
+                                cross_slide.innerHTML = cross_slide2.innerHTML = leftrightslide
+                                actualwidth = document.all ? cross_slide.offsetWidth : document.getElementById("temp").offsetWidth
+                                cross_slide2.style.left = actualwidth + slideshowgap + "px"
+                            } else if (document.layers) {
+                                ns_slide = document.ns_slidemenu.document.ns_slidemenu2
+                                ns_slide2 = document.ns_slidemenu.document.ns_slidemenu3
+                                ns_slide.document.write(leftrightslide)
+                                ns_slide.document.close()
+                                actualwidth = ns_slide.document.width
+                                ns_slide2.left = actualwidth + slideshowgap
+                                ns_slide2.document.write(leftrightslide)
+                                ns_slide2.document.close()
+                            }
+                            lefttime = setInterval("slideleft()", 50)
+                        }
+                        window.onload = fillup
+                        function slideleft() {
+                            if (iedom) {
+                                if (parseInt(cross_slide.style.left) > (actualwidth * (-1) + 8))
+                                    cross_slide.style.left = parseInt(cross_slide.style.left) - copyspeed + "px"
+                                else
+                                    cross_slide.style.left = parseInt(cross_slide2.style.left) + actualwidth + slideshowgap + "px"
+                                if (parseInt(cross_slide2.style.left) > (actualwidth * (-1) + 8))
+                                    cross_slide2.style.left = parseInt(cross_slide2.style.left) - copyspeed + "px"
+                                else
+                                    cross_slide2.style.left = parseInt(cross_slide.style.left) + actualwidth + slideshowgap + "px"
+                            } else if (document.layers) {
+                                if (ns_slide.left > (actualwidth * (-1) + 8))
+                                    ns_slide.left -= copyspeed
+                                else
+                                    ns_slide.left = ns_slide2.left + actualwidth + slideshowgap
+
+                                if (ns_slide2.left > (actualwidth * (-1) + 8))
+                                    ns_slide2.left -= copyspeed
+                                else
+                                    ns_slide2.left = ns_slide.left + actualwidth + slideshowgap
+                            }
+                        }
+                        if (iedom || document.layers) {
+                            with (document) {
+                                document.write('<table border="0" cellspacing="0" cellpadding="0"><td>')
+                                if (iedom) {
+                                    write('<div style="position:relative;width:' + sliderwidth + ';height:' + sliderheight + ';overflow:hidden">')
+                                    write('<div style="position:absolute;width:' + sliderwidth + ';height:' + sliderheight + ';background-color:' + slidebgcolor + '" onMouseover="copyspeed=0" onMouseout="copyspeed=slidespeed">')
+                                    write('<div id="test2" style="position:absolute;left:0px;top:0px"></div>')
+                                    write('<div id="test3" style="position:absolute;left:-1000px;top:0px"></div>')
+                                    write('</div></div>')
+                                } else if (document.layers) {
+                                    write('<ilayer width=' + sliderwidth + ' height=' + sliderheight + ' name="ns_slidemenu" bgColor=' + slidebgcolor + '>')
+                                    write('<layer name="ns_slidemenu2" left=0 top=0 onMouseover="copyspeed=0" onMouseout="copyspeed=slidespeed"></layer>')
+                                    write('<layer name="ns_slidemenu3" left=0 top=0 onMouseover="copyspeed=0" onMouseout="copyspeed=slidespeed"></layer>')
+                                    write('</ilayer>')
+                                }
+                                document.write('</td></table>')
+                            }
+                        }
+                    </script>
+                </div>
+            </div>
+            <div id="menu_panel">
+                <!-- Begin widget_menu -->
+                <div id="menu">
+                    <ul id="menu_container">
+                        $:vars['menu_itens']
+                    </ul>
+                </div>
+                <!-- End widget_menu -->
+                <!--div id="menu">
+                    <ul id="menu_list">
+                        <li>
+                            <a href="$:vars['context_path']" title="Bem vindo a Rede SOS Turbo."><img src="$:vars['context_path']/static/images/menu_home.png" onmouseover="this.src='$:vars['context_path']/static/images/menu_home_over.png'" onmouseout="this.src='$:vars['context_path']/static/images/menu_home.png'"/></a>
+                        </li>
+                        <li>
+                            <a href="$:vars['context_path']/empresa" title="Conheça a Nossa Empresa."><img src="$:vars['context_path']/static/images/menu_empresa.png" onmouseover="this.src='$:vars['context_path']/static/images/menu_empresa_over.png'" onmouseout="this.src='$:vars['context_path']/static/images/menu_empresa.png'"/></a>
+                        </li>
+                        <li>
+                            <a href="$:vars['context_path']/produtos" title="Nossa linha de produtos."><img src="$:vars['context_path']/static/images/menu_produtos.png" onmouseover="this.src='$:vars['context_path']/static/images/menu_produtos_over.png'" onmouseout="this.src='$:vars['context_path']/static/images/menu_produtos.png'" /></a>
+                        </li>
+                        <li>
+                            <a href="$:vars['context_path']/servicos" title="Nossa linha de serviços."><img src="$:vars['context_path']/static/images/menu_servicos.png" onmouseover="this.src='$:vars['context_path']/static/images/menu_servicos_over.png'" onmouseout="this.src='$:vars['context_path']/static/images/menu_servicos.png'" /></a>
+                        </li>
+                        <li>
+                            <a href="$:vars['context_path']/dicas" title="Dicas sobre o nosso segmento."><img src="$:vars['context_path']/static/images/menu_dicas.png" onmouseover="this.src='$:vars['context_path']/static/images/menu_dicas_over.png'" onmouseout="this.src='$:vars['context_path']/static/images/menu_dicas.png'" /></a>
+                        </li>
+                        <li>
+                            <a href="$:vars['context_path']/galerias" title="Galerias de fotos e vídeos."><img src="$:vars['context_path']/static/images/menu_fotos.png" onmouseover="this.src='$:vars['context_path']/static/images/menu_fotos_over.png'" onmouseout="this.src='$:vars['context_path']/static/images/menu_fotos.png'" /></a>
+                        </li>
+                        <li>
+                            <a href="$:vars['context_path']/contato" title="Entre em contato conosco."><img src="$:vars['context_path']/static/images/menu_contato.png" onmouseover="this.src='$:vars['context_path']/static/images/menu_contato_over.png'" onmouseout="this.src='$:vars['context_path']/static/images/menu_contato.png'" /></a>
+                        </li>
+                    </ul>
+                </div-->
+            </div>
+            <div id="middle_panel">
+                <div id="middle">
+                    <span class="search_field">
+                        <input type="text" size="30" />&nbsp;<button>Buscar</button>
+                    </span>
+                    <h1 class="welcome">Bem vindo à Rede <span style="color:red;">SOS</span> Turbo.</h1>
+                    <div id="left">
+                        $:content
+                    </div>
+                    <div id="right">
+                        <img src="$:vars['context_path']/static/images/banner_eco.jpg" style="margin: 0px auto;background-color: white; padding: 04px;border:01px solid #ccc;margin-top: 20px;"/>
+                        <img src="$:vars['context_path']/static/images/daily.jpg" style="margin: 0px auto;background-color: white; padding: 04px;border:01px solid #ccc;margin-top: 10px;margin-left: 10px;"/>
+                        <div class="destaqs">
+                            <h2>Informativo</h2>
+                            <p>
+                                Assine o nosso informativo e mantenha-se informado com as últimas novidades da nossa empresa.&nbsp;&nbsp;<a href="$:vars['context_path']/informe-rede-sos-turbo" title=""><strong>Cadastre-se</strong></a>
+                            </p>
+                        </div>
+                        <div class="destaqs">
+                            <h2>Suporte</h2>
+                            <p>
+                                Nossa equipe está a sua diposição para melhor atênde-lo.
+                            </p>
+                            <p>
+                                <strong>Ligue: (51) 3021.8484</strong>
+                            </p>
+                        </div>
+                        <div class="destaqs" style="height: 180px;">
+                            <h2>Vagas em aberto</h2>
+                            <p>
+                                Não há vagas em aberto no momento.
+                            </p>
+                            <p>
+                                Envie o seu curriculo através do nosso formulário de cadastro de currículos.
+                            </p>
+                            <p>
+                                <a href="$:vars['context_path']/trabalhe-conosco"><strong>Cadastre-se</strong></a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="bottom_panel">
+                <div id="bottom">
+                    <p>
+                        Rede SOS Turbo 2012 - Todos os direitos reservados.
+                    </p>
+                    <p>
+                        Rua Augusto Severo, nº 652 - Bairro São João - Porto Alegre - RS - CEP: 90.240-480 - Fone: (51) 3021.8484
+                    </p>
+                    <table id="footer_table" cellpadding="5" cellspacing="5">
+                        <tbody>
+                            <tr>
+                                <th>Empresa</th>
+                                <th>Produtos</th>
+                                <th>Serviços</th>
+                                <th>Dicas</th>
+                                <th>Fotos/Vídeos</th>
+                                <th>Contato</th>
+                            </tr>
+                            <tr>
+                                <td><a href="$:vars['context_path']/empresa" title="Conheça a Nossa Empresa.">Conheça a nossa empresa</a></td>
+                                <td><a href="$:vars['context_path']/produto/kit-para-turbinamento" title="Kits para Turbinamento.">Kits para Turbinamento</a></td>
+                                <td><a href="$:vars['context_path']/servico/remanufatura-de-turbos" title="Remanufatura de turbos.">Remanufatura de turbos</a></td>
+                                <td><a href="$:vars['context_path']/dicas" title="Dicas">Dicas</a></td>
+                                <td><a href="$:vars['context_path']/galerias" title="Galerias de Fotos e Vídeos.">Fotos/Vídeos</a></td>
+                                <td><a href="$:vars['context_path']/contato" title="Entre em Contato.">Entre em Contato</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="$:vars['context_path']/responsabilidade-ambiental" title="Responsabilidade Ambiental">Responsabilidade Ambiental</a></td>
+                                <td><a href="$:vars['context_path']/produto/juntas-para-turbo" title="Juntas para Turbo">Juntas para Turbo</a></td>
+                                <td colspan="3"><a href="$:vars['context_path']/servico/instalacao-de-turbos" title="Instalação de Turbos">Instalação de Turbos</a></td>
+                                <td><a href="$:vars['context_path']/informe-rede-sos-turbo" title="Informe Rede SOS Turbo">Informe Rede SOS Turbo</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="$:vars['context_path']/trabalhe-conosco" title="Trabalhe Conosco">Trabalhe Conosco</a></td>
+                                <td><a href="$:vars['context_path']/produto/manometros" title="Manômetros">Manômetros</a></td>
+                                <td colspan="3"><a href="$:vars['context_path']/servico/turbinamento-de-caminhonetes-e-caminhoes" title="Turbinamento de Caminhonetes e Caminhões">Turbinamento de Caminhonetes e Caminhões</a></td>
+                                <td><a href="$:vars['context_path']/suporte-rede-sos" title="Suporte Rede SOS Turbo">Suporte Rede SOS Turbo</a></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td><a href="$:vars['context_path']/produto/mangueiras-para-turbos-e-intercoolers" title="Mangueiras para Turbos e Intercoolers">Mangueiras para Turbos e Intercoolers</a></td>
+                                <td colspan="5"><a href="$:vars['context_path']/servico/returbinamento-de-caminhonetes-importadas" title="Returbinamento de Caminhonetes importadas">Returbinamento de Caminhonetes importadas</a></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td><a href="$:vars['context_path']/produto/turbos-remanufaturados" title="Turbos remanufaturados">Turbos remanufaturados</a></td>
+                                <td colspan="5"><a href="$:vars['context_path']/servico/testes-de-intercooler" title="Testes de Intercooler">Testes de Intercooler</a></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td colspan="5"><a href="$:vars['context_path']/produto/turbos-novos-para-diversas-linhas" title="Turbos novos para diversas linhas">Turbos novos para diversas linhas</a></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td colspan="5"><a href="$:vars['context_path']/produto/pecas-para-remanutaturas" title="Peças para remanufaturas">Peças para remanufaturas</a></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td colspan="5"><a href="$:vars['context_path']/produto/kit-para-reparo" title="Kit para reparo">Kit para reparo</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

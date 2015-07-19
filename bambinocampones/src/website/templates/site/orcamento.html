@@ -1,0 +1,248 @@
+$def with (form)
+
+
+$var title:  Fênix Artes Gráficas - Convites, impressos e impressão digital em Canoas/RS.
+$var full_description: Convites, impressos e impressão digital em Canoas/RS.
+$var keywords_tags: Orçamento de produtos e serviços.
+
+<div id="content_page">
+    <h1>Orçamento</h1>
+    <p class="orcamento">Faça sua solicitação de orçamento e entraremos em contato com você:</p>
+    <form name="orcamento"
+          id="orcamento"
+          action="/orcamento"
+          enctype="multipart/form-data"
+          method="post">
+        <fieldset class="orcamento">
+            <legend class="orcamento">Dados Gerais</legend>
+            <label class="orcamento">
+                <span class="required">*</span>$:form.razao_social_nome.description
+            </label>
+            $:form.razao_social_nome.render()
+            <br class="clear" />
+            <label class="orcamento">
+                <span class="required">*</span>$:form.cnpj_cpf.description
+            </label>
+            $:form.cnpj_cpf.render()
+            <br class="clear" />
+            <label class="orcamento">
+                <span class="required">*</span>$:form.telefone.description
+            </label>
+            $:form.telefone.render()
+            <br class="clear" />
+            <label class="orcamento">
+                <span class="required">*</span>$:form.mail_orcamento.description
+            </label>
+            $:form.mail_orcamento.render()
+        </fieldset>
+        <fieldset class="orcamento">
+            <legend class="orcamento">Dados Produto</legend>
+            <label class="orcamento">
+                <span class="required">*</span>$:form.produto.description
+            </label>
+            $:form.produto.render()
+            $:form.outro_produto.render()
+            <br class="clear" />
+            <label class="orcamento">Formato (em cm):</label>
+            <span class="orcamento">
+                <span class="required">*</span>$:form.formato_aberto.description</span>
+            $:form.formato_aberto.render()
+            <span class="orcamento">
+                <span class="required">*</span>$:form.formato_fechado.description</span>
+            $:form.formato_fechado.render()
+            <br class="clear" />
+            <label class="orcamento">
+                <span class="required">*</span>$:form.quantidade.description
+            </label>
+            $:form.quantidade.render()
+            <br class="clear" />
+            <label class="orcamento">
+                <span class="required">*</span>$:form.tipo_papel.description
+            </label>
+            $:form.tipo_papel.render()
+            <br class="clear" />
+            <label class="orcamento">
+                <span class="required">*</span>$:form.cores.description
+            </label>
+            $:form.cores.render()
+            <br class="clear" />
+            <label class="orcamento">
+                <span class="required">*</span>$:form.gramatura.description
+            </label>
+            $:form.gramatura.render()
+        </fieldset>
+        <fieldset class="orcamento_destaque">
+            <legend class="orcamento">Revista/Livros/Catálogos/Manuais</legend>
+            <h4 class="orcamento">Dados da Capa:</h4>
+            <label class="orcamento">$:form.capa.description</label>
+            $:form.capa.render()
+            <label class="orcamento">$:form.formato_capa.description</label>
+            $:form.formato_capa.render()
+            <br class="clear" />
+            <label class="orcamento">$:form.papel_capa.description</label>
+            $:form.papel_capa.render()
+            <label class="orcamento">$:form.gramatura_capa.description</label>
+            $:form.gramatura_capa.render()
+            <br class="clear" />
+            <label class="orcamento">$:form.cores_capa.description</label>
+            $:form.cores_capa.render()
+            <label class="orcamento">$:form.orelha_capa.description</label>
+            $:form.orelha_capa.render()
+            <br class="clear" />
+            <h4 class="orcamento">Dados do Miolo:</h4>
+            <label class="orcamento">$:form.miolo.description</label>
+            $:form.miolo.render()
+            <label class="orcamento">$:form.formato_miolo.description</label>
+            $:form.formato_miolo.render()
+            <br class="clear" />
+            <label class="orcamento">$:form.papel_miolo.description</label>
+            $:form.papel_miolo.render()
+            <label class="orcamento">$:form.gramatura_miolo.description</label>
+            $:form.gramatura_miolo.render()
+            <br class="clear" />
+            <label class="orcamento">$:form.cores_miolo.description</label>
+            $:form.cores_miolo.render()
+            <label class="orcamento">$:form.quantidade_pagina_miolo.description</label>
+            $:form.quantidade_pagina_miolo.render()
+        </fieldset>
+        <fieldset class="orcamento">
+            <legend class="orcamento">Acabamento</legend>
+            <table class="orcamento" border="0">
+                <tbody>
+                    <tr>
+                        <td>
+                            $:form.plastificacao_fosca_acabamento.render() $:form.plastificacao_fosca_acabamento.description
+                        </td>
+                        <td>
+                            $:form.numeracao_acabamento.render() $:form.numeracao_acabamento.description
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            $:form.plastificacao_brilho_acabamento.render() $:form.plastificacao_brilho_acabamento.description
+                        </td>
+                        <td>
+                            $:form.colagem_capa_acabamento.render() $:form.colagem_capa_acabamento.description
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            $:form.plastificacao_bopp_fosca_acabamento.render() $:form.plastificacao_bopp_fosca_acabamento.description
+                        </td>
+                        <td class="orcamento">
+                            $:form.dobras_acabamento.render() $:form.dobras_acabamento.description
+                            <span style="margin-left: 15px;">$:form.numero_dobras_acabamento.description</span>
+                            $:form.numero_dobras_acabamento.render()
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            $:form.plastificacao_bopp_brilho_acabamento.render() $:form.plastificacao_bopp_brilho_acabamento.description
+                        </td>
+                        <td>
+                            $:form.encardenacao_acabamento.render() $:form.encardenacao_acabamento.description
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            $:form.verniz_uv_localizado_acabamento.render() $:form.verniz_uv_localizado_acabamento.description
+                        </td>
+                        <td>
+                            $:form.wiro_acabamento.render() $:form.wiro_acabamento.description
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            $:form.verniz_total_acabamento.render() $:form.verniz_total_acabamento.description
+                        </td>
+                        <td>
+                            $:form.aspiral_acabamento.render() $:form.aspiral_acabamento.description
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td>
+                            $:form.hot_melt_acabamento.render() $:form.hot_melt_acabamento.description
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </fieldset>
+        <fieldset class="orcamento_center">
+            <legend class="orcamento">Arte e Prova Digital</legend>
+            <table style="margin:0px auto;">
+                <tr>
+                    <td>
+                        $:form.sem_arte.render() $:form.sem_arte.description&nbsp;&nbsp;&nbsp;
+                    </td>
+                    <td>
+                        $:form.com_arte.render() $:form.com_arte.description&nbsp;&nbsp;&nbsp;
+                    </td>
+                    <td>
+                        $:form.tipo_arte.render()
+                    </td>
+                    <td>
+                        $:form.arquivo_arte.render()
+                    </td>
+                </tr>
+                <tr><td colspan="4"> </td></tr>
+                <tr><td colspan="4"> </td></tr>
+                <tr><td colspan="4"> </td></tr>
+                <tr style="text-align:left;">
+                    <td colspan="2">
+                        $:form.com_prova_digital.render() &nbsp; $:form.com_prova_digital.description
+                    </td>
+                    <td colspan="2">
+                        $:form.sem_prova_digital.render() &nbsp; $:form.sem_prova_digital.description
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+        <fieldset class="orcamento">
+            <legend class="orcamento">Prazos/Entrega/Pagamento</legend>
+            <label class="orcamento">$:form.prazo_de_entrega.description</label>
+            $:form.prazo_de_entrega.render()
+            <label class="orcamento">$:form.forma_de_entrega.description</label>
+            $:form.forma_de_entrega.render()
+            <br class="clear" />
+            <label class="orcamento">$:form.forma_pagamento.description</label>
+            $:form.forma_pagamento.render()
+        </fieldset>
+        <fieldset class="orcamento_center">
+            <legend class="orcamento">$:form.informacoes_complementares.description</legend>
+            $:form.informacoes_complementares.render()
+        </fieldset>
+        <div class="orcamento">
+            <span class="required">*</span><span class="required_message">Campos de Preenchimento Obrigatório.</span>
+        </div>
+        <div class="orcamento">
+            <label class="orcamento" style="width:200px;">Código de verificação:</label>
+            <span id="txtCaptchaDiv"> </span>
+            <input type="hidden" id="txtCaptcha" />
+            <input type="text"
+                   name="txtInput"
+                   id="txtInput"
+                   class="orcamento"
+                   style="width:100px;background-color; red;"
+                   size="10"
+                   tabindex="49" />
+        </div>
+        <div class="orcamento">
+            <button id="limpar"
+                    class="orcamento"
+                    type="reset"
+                    tabindex="50"
+                    title="Limpar o formulário.">Limpar</button>
+            <button id="enviar"
+                    class="orcamento"
+                    type="submit"
+                    onclick="return valida_orcamento();"
+                    tabindex="51"
+                    title="Enviar Orçamento">Enviar</button>
+        </div>
+    </form>
+</div>
+<script type="text/javascript">
+    function onload() { generateCode(); }
+    window.onload+=onload();
+</script>

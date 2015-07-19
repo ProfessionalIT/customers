@@ -1,0 +1,37 @@
+$def with (destaques)
+
+$var title:  Escola de Educação Infantil Bambino Camponês - Creche, Maternal e Educação Pré em Canoas/RS..
+$var full_description: Últimas Notícias.
+$var keywords_tags: notícias, novidades, eventos, acontecimentos
+
+$if destaques:
+    <h2 class="title_shadow margin_left_adjusts">Últimas Notícias</h2>
+    $for publicacao in destaques:
+        <div class="row bg_white">
+            <div class="col-xs-12 paragraf" >
+                <h3>$:publicacao.titulo</h3>
+                $if publicacao.thumb_publicacao:
+                    <img src="$:publicacao.thumb_publicacao" alt="Foto para $:publicacao.titulo" title="$:publicacao.titulo" class="news_thumb" />
+                $:publicacao.intro
+                <p class="lead">
+                    <button class="btn btn-default" onclick="return location.href='$:publicacao.slug'" title="Ler mais sobre a noticia $:publicacao.titulo.">Ler mais</button>
+                </p>
+                <!--
+                <p class="pull-right">
+                    $for word in publicacao.palavras_chaves.split(','):
+                        <span class="label label-default"><a href="/tag/$:word">$:word</a></span> 
+                </p>
+                -->
+                <ul class="list-inline">
+                    <li>Publicado em: <a href="#">$:publicacao.data_publicacao</a></li>
+                    <!--
+                    <li><a href="#"><i class="glyphicon glyphicon-comment"></i> 2 Comments</a></li>
+                    <li><a href="#"><i class="glyphicon glyphicon-share"></i> 14 Shares</a></li>
+                    -->
+                </ul>
+            </div>
+        </div>
+        <hr>
+$else:
+    <h2 class="title_shadow margin_left_adjusts">Sem Notícias</h2>
+    <p>Novas publicações em breve.</p>
