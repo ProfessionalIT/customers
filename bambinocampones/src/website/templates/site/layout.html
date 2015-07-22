@@ -38,6 +38,7 @@ $def with (vars, content)
         <![endif]-->
 
         <link href="$:vars['static_url']css/styles.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" media="screen" href="http://media.bambinocampones.com.br/css/widget_calendar.css" />
 
         <script type="text/javascript">var _siteRoot='layout.html',_root='layout.html';</script>
         <script type="text/javascript" src="$:vars['static_url']javascript/jquery-1.3.2.min.js"></script>
@@ -300,46 +301,132 @@ $def with (vars, content)
                 <div class="panel panel-default">
                     <div class="panel-heading">Calendário</div>
                     <div class="panel-body">
-                        Sed ac orci quis tortor imperdiet venenatis. Duis elementum auctor accumsan. 
-                    Aliquam in felis sit amet augue.
+                        <div class="toplinks" id="widget_calendario">
+                            <div id="calendarPanel" class="table-responsive">
+                                <form name="calForm" id="calForm">
+                                    <table class="table" border="1">
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <table class="table">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td align="left">
+                                                                    <select name="selMonth" onchange="changeCal();">
+                                                                        <option value="0">Janeiro</option>
+                                                                        <option value="1">Fevereiro</option>
+                                                                        <option value="2">Março</option>
+                                                                        <option value="3">Abril</option>
+                                                                        <option value="4">Maio</option>
+                                                                        <option value="5">Junho</option>
+                                                                        <option value="6" selected="">Julho</option>
+                                                                        <option value="7">Agosto</option>
+                                                                        <option value="8">Setembro</option>
+                                                                        <option value="9">Outubro</option>
+                                                                        <option value="10">Novembro</option>
+                                                                        <option value="11">Dezembro</option>
+                                                                    </select>
+                                                                </td>
+                                                                <td align="right">
+                                                                    <select name="selYear" onchange="changeCal();">
+                                                                        <option value="2013">2013</option>
+                                                                        <option value="2014">2014</option><option value="2015" selected="">2015</option><option value="2016">2016</option><option value="2017">2017</option></select></td></tr></tbody></table></td></tr><tr><td><table border="0"><tbody><tr><td align="center"><span class="label">Dom</span></td><td align="center"><span class="label">Seg</span></td><td align="center"><span class="label">Ter</span></td><td align="center"><span class="label">Qua</span></td><td align="center"><span class="label">Qui</span></td><td align="center"><span class="label">Sex</span></td><td align="center"><span class="label">Sab</span></td></tr><tr><td align="center"><span id="sp0" class="c3" style="background: none;">28</span></td><td align="center"><span id="sp1" class="c3" style="background: none;">29</span></td><td align="center"><span id="sp2" class="c3" style="background: none;">30</span></td><td align="center"><span id="sp3" class="c1" style="background: none;">1</span></td><td align="center"><span id="sp4" class="c1" style="background: none;">2</span></td><td align="center"><span id="sp5" class="c1" style="background: none;">3</span></td><td align="center"><span id="sp6" class="c2" style="background: none;">4</span></td></tr><tr><td align="center"><span id="sp7" class="c2" style="background: none;">5</span></td><td align="center"><span id="sp8" class="c1" style="background: none;">6</span></td><td align="center"><span id="sp9" class="c1" style="background: none;">7</span></td><td align="center"><span id="sp10" class="c1" style="background: none;">8</span></td><td align="center"><span id="sp11" class="c1" style="background: none;">9</span></td><td align="center"><span id="sp12" class="c1" style="background: none;">10</span></td><td align="center"><span id="sp13" class="c2" style="background: none;">11</span></td></tr><tr><td align="center"><span id="sp14" class="c2" style="background: none;">12</span></td><td align="center"><span id="sp15" class="c1" style="background: none;">13</span></td><td align="center"><span id="sp16" class="c1" style="background: none;">14</span></td><td align="center"><span id="sp17" class="c1" style="background: none;">15</span></td><td align="center"><span id="sp18" class="c1" style="background: none;">16</span></td><td align="center"><span id="sp19" class="c1" style="background: none;">17</span></td><td align="center"><span id="sp20" class="c2" style="background: none;">18</span></td></tr><tr><td align="center"><span id="sp21" class="c2" style="background: none rgb(238, 238, 238);">19</span></td><td align="center"><span id="sp22" class="c1" style="background: url(http://media.bambinocampones.com.br/images/evento_bkp.png);">20</span></td><td align="center"><span id="sp23" class="c1" style="background: none;">21</span></td><td align="center"><span id="sp24" class="c1" style="background: none;">22</span></td><td align="center"><span id="sp25" class="c1" style="background: none;">23</span></td><td align="center"><span id="sp26" class="c1" style="background: none;">24</span></td><td align="center"><span id="sp27" class="c2" style="background: none;">25</span></td></tr><tr><td align="center"><span id="sp28" class="c2" style="background: url(http://media.bambinocampones.com.br/images/evento_bkp.png);">26</span></td><td align="center"><span id="sp29" class="c1" style="background: none;">27</span></td><td align="center"><span id="sp30" class="c1" style="background: none;">28</span></td><td align="center"><span id="sp31" class="c1" style="background: none;">29</span></td><td align="center"><span id="sp32" class="c1" style="background: none;">30</span></td><td align="center"><span id="sp33" class="c1" style="background: none;">31</span></td><td align="center"><span id="sp34" class="c3" style="background: none;">1</span></td></tr><tr><td align="center"><span id="sp35" class="c3" style="background: none;">2</span></td><td align="center"><span id="sp36" class="c3" style="background: none;">3</span></td><td align="center"><span id="sp37" class="c3" style="background: none;">4</span></td><td align="center"><span id="sp38" class="c3" style="background: none;">5</span></td><td align="center"><span id="sp39" class="c3" style="background: none;">6</span></td><td align="center"><span id="sp40" class="c3" style="background: none;">7</span></td><td align="center"><span id="sp41" class="c3" style="background: none;">8</span></td></tr></tbody></table></td></tr></tbody></table></form></div>
+                            <div id="eventsDescriptions"><img src="http://media.bambinocampones.com.br/images/evento_bkp.png" class="activity_bkg"> 20/7 - Dia do Amigo<br><img src="http://media.bambinocampones.com.br/images/evento_bkp.png" class="activity_bkg"> 26/7 - Dia dos Avós<br></div>
+                            <div id="events_types">
+                                <h5>Onde:</h5>
+                                <table class="table">
+                                    <tbody><tr>
+                                        <td style="width: 78px;"><img src="http://media.bambinocampones.com.br/images/evento_bkp.png" class="activity_bkg"> Evento</td>
+                                        <td style="width: 70px;"><img src="http://media.bambinocampones.com.br/images/festa_bkp.png" class="activity_bkg"> Festa</td>
+                                        <td style="width: 70px;"><img src="http://media.bambinocampones.com.br/images/feriado_bkp.png" class="activity_bkg"> Feriado</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 78px;"><img src="http://media.bambinocampones.com.br/images/recesso_bkp.png" class="activity_bkg"> Recesso</td>
+                                        <td style="width: 70px;"><img src="http://media.bambinocampones.com.br/images/ponte_bkp.png" class="activity_bkg"> Ponte</td>
+                                        <td></td>
+                                    </tr>
+                                </tbody></table>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <hr>
                 <div class="panel panel-default">
                     <div class="panel-heading">Cardápio</div>
                     <div class="panel-body">
-                        Sed ac orci quis tortor imperdiet venenatis. Duis elementum auctor accumsan. 
-                    Aliquam in felis sit amet augue.
+                        <a href="/cardapio" title="Cardápio mensal">
+                            <img src="http://media.bambinocampones.com.br/images/comida.jpg" alt="" title="" style="width:100%;" />
+                        </a>
+                        <span style="text-indent: 20px;display:block;margin-top: 10px;">Temos também a opção de lanche feito na escola. Maiores informações, Fale com a direção.</span>
                     </div>
                 </div>
                 <hr>
                 <div class="panel panel-default">
                     <div class="panel-heading">Lista de Material</div>
-                    <div class="panel-body">Content here..</div>
+                    <div class="panel-body">
+                        <ul style="padding: 1% 7%;">
+                            <li style="padding-bottom: 5px;">
+                                <a href="http://media.bambinocampones.com.br/images/material_escolar/bercario_pre_maternal_2015.pdf" title="" target="_blank">Berçário e Pré-Maternal</a>
+                            </li>
+                            <li style="padding-bottom: 5px;">
+                                <a href="http://media.bambinocampones.com.br/images/material_escolar/maternal_1_2015.pdf" title="" target="_blank">Maternal I</a>
+                            </li>
+                            <li style="padding-bottom: 5px;">
+                                <a href="http://media.bambinocampones.com.br/images/material_escolar/maternal_2_2015.pdf" title="" target="_blank">Maternal II</a>
+                            </li>
+                            <li style="padding-bottom: 5px;">
+                                <a href="http://media.bambinocampones.com.br/images/material_escolar/jardim_1_e_2_2015.pdf" title="" target="_blank">Jardim A e B</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
                 <hr>
                 <div class="panel panel-default">
                     <div class="panel-heading">Dicas</div>
-                    <div class="panel-body">Content here..</div>
+                    <div class="panel-body">
+                        <ul class="lista_downloads" style="padding: 1% 7%;">
+                            <li><a href="http://media.bambinocampones.com.br/arquivos/bambino.pdf" title="Apresentação sobre a Bambino.">Quem ama educa</a></li>
+                        </ul>
+                        Dicas educacionais de renomados autores.
+                    </div>
                 </div>
                 <hr>
                 <div class="panel panel-default">
                     <div class="panel-heading">Galerias</div>
-                    <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis pharetra varius quam sit amet vulputate. 
-                    Quisque mauris augue, molestie tincidunt condimentum vitae, gravida a libero. Aenean sit amet felis 
-                    dolor, in sagittis nisi. Sed ac orci quis tortor imperdiet venenatis. Duis elementum auctor accumsan. 
-                    Aliquam in felis sit amet augue.
+                    <div class="panel-body">
+                        <span style="display:block; font-weight: bold;margin-bottom: 5px;">Fotos:</span>
+                        <p style="text-align: justify; text-indent: 20px; margin-top: 5px;">Últimas fotos publicadas em nossos álbuns:</p>
+                        <img src="https://lh4.googleusercontent.com/-_KkP6iDzFGo/U8qQFB8ZfaI/AAAAAAAAELI/r8hCS0jcr2g/w800-h533-no/GEDC9472.png" alt="Fotos Diversas Junho de 2014. - Junho/2014" title="Album de fotos Diversas Junho de 2014. - Junho/2014" width="100%">
+                        <button class="btn btn-xs pull-right" style="margin-top: 5px;">Ver mais</button>
+                        <span style="display:block; font-weight: bold;margin-top: 20px;">Vídeos:</span>
+                        <p style="text-align: justify; text-indent: 20px; margin-top: 5px;">Últimos vídeos publicados em nosso canal:</p>
+                        <img src="https://lh4.googleusercontent.com/-_KkP6iDzFGo/U8qQFB8ZfaI/AAAAAAAAELI/r8hCS0jcr2g/w800-h533-no/GEDC9472.png" alt="Fotos Diversas Junho de 2014. - Junho/2014" title="Album de fotos Diversas Junho de 2014. - Junho/2014" width="100%">
+                        <button class="btn btn-xs pull-right" style="margin-top: 5px;">Ver mais</button>
                     </div>
                 </div>
                 <hr>
                 <div class="panel panel-default">
                     <div class="panel-heading">Material de Apoio</div>
-                    <div class="panel-body">Content here..</div>
+                    <div class="panel-body">
+                        <ul class="lista_downloads" style="padding: 1% 7%;">
+                            <li><a href="http://media.bambinocampones.com.br/arquivos/bambino.pdf" title="Apresentação sobre a Bambino.">Como não mimar demais seu bebê.</a></li>
+                            <li><a href="http://media.bambinocampones.com.br/arquivos/brincar.pdf" title="Apresentação sobre a Bambino.">O Brincar enquanto função mental.</a></li>
+                            <li style="margim-bottom: 20px;padding-bottom: 10px;"><a href="http://media.bambinocampones.com.br/arquivos/culpa.pdf" title="Apresentação sobre a Bambino.">O Fim da Culpa.</a></li>
+                            <span style="font-size: 13px;">Ob: Uma cortesia da nossa psicóloga Maria Elizabete.</span>
+                        </ul>
+                    </div>
                 </div>
                 <hr>
                 <div class="panel panel-default">
                     <div class="panel-heading">Downloads</div>
-                    <div class="panel-body">Content here..</div>
+                    <div class="panel-body">
+                        <ul class="lista_downloads"  style="padding: 1% 7%;">
+                            <li><a href="/download-musicas" title="Download de músicas.">Músicas</a></li>
+                            <li><a href="/download-videos" title="Download de vídeos.">Vídeos</a></li>
+                            <li><a href="/download-papeis-de-parede" title="Download de papéis de parede.">Papéis de Parede</a></li>
+                            <li><a href="/download-desenhos" title="Download de desenhos para pintar.">Desenhos p/ Pintar</a></li>
+                        </ul>
+                    </div>
                 </div>
                 <hr>
             </div><!--/left-->
@@ -391,7 +478,10 @@ $def with (vars, content)
                 <hr>
                 <div class="panel panel-default">
                     <div class="panel-heading">Depoímentos</div>
-                    <div class="panel-body">Depoímentos de pais, fornecedores e parceiros da Bambino.</div>
+                    <div class="panel-body">
+                        <img src="http://media.bambinocampones.com.br/images/depoimentos.png" alt="ícone dos depoimentos" title="Deixe seu depoimento:" style="width: 100%;margin: 0px auto;padding: 5px 15px;">
+                        Depoímentos de pais, fornecedores e parceiros da Bambino.
+                    </div>
                 </div>
                 <hr>
                 <div class="panel panel-default">
@@ -431,6 +521,7 @@ $def with (vars, content)
         <!-- script references -->
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
         <script src="$:vars['static_url']javascript/bootstrap.min.js"></script>
+        <script type="text/javascript" src="http://media.bambinocampones.com.br/javascript/widget_calendar.js"></script>
         <script type="text/javascript">
             jQuery(document).ready(function(){
                 var itemMenu = document.getElementById("$:vars['active_menu']");
@@ -438,6 +529,7 @@ $def with (vars, content)
                 itemMenu.className = 'menulink selected';
                 itemMenuFooter.className = 'menulink selected_ft';
             });
+            window.onload+=writeCalendar();
         </script>
     </footer>
     </body>
