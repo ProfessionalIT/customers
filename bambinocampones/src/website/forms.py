@@ -731,7 +731,7 @@ def getPublicacaoForm(record_id=None):
     form_fields.append(form.Textbox('thumb_publicacao',
                                     form.notnull,
                                     size="60",
-                                    maxlength="250",
+                                    maxlength="1000",
                                     title="Thumb da Publicação.",
                                     description='URL Thumb:'))
     form_fields.append(form.Dropdown('slug_galeria',

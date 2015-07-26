@@ -9,7 +9,7 @@ $if destaques:
     $for publicacao in destaques:
         <div class="row bg_white">
             <div class="col-xs-12 paragraf" >
-                <h3>$:publicacao.titulo</h3>
+                <h3 class="news_title">$:publicacao.titulo</h3>
                 $if publicacao.thumb_publicacao:
                     <img src="$:publicacao.thumb_publicacao" alt="Foto para $:publicacao.titulo" title="$:publicacao.titulo" class="news_thumb" />
                 $:publicacao.intro

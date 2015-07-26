@@ -32,6 +32,8 @@ class Calendario(models.Model):
     data_agendamento = models.DateTimeField(u'Data do Agendamento',
                                            default=datetime.datetime.now())
 
+    def __unicode__(self):
+        return self.titulo
 
 class Cardapio(models.Model):
     """
@@ -147,6 +149,9 @@ class Galeria(models.Model):
     permite_comentario = models.BooleanField(u'Permite Comentário',
                                              default=False)
 
+    def __unicode__(self):
+        return self.titulo
+
 
 class GaleriaResource(models.Model):
     """
@@ -216,6 +221,9 @@ class Publicacao(models.Model):
                                              default=False)
     rascunho = models.BooleanField(u'Rascunho', default=True)
 
+    def __unicode__(self):
+        return self.titulo
+
 
 class Pagina(models.Model):
     """
@@ -239,6 +247,9 @@ class Pagina(models.Model):
                                              default=False)
     rascunho = models.BooleanField(u'Rascunho',
                                    default=True)
+
+    def __unicode__(self):
+        return self.titulo
 
 
 class Menu(models.Model):
@@ -277,6 +288,9 @@ class Menu(models.Model):
     rascunho = models.BooleanField(u'Rascunho',
                                    default=True)
 
+    def __unicode__(self):
+        return self.titulo
+
 
 class Depoimento(models.Model):
     """
@@ -304,6 +318,8 @@ class Professor(models.Model):
                             max_length=200,
                             unique=True)
 
+    def __unicode__(self):
+        return self.nome
 
 class Servico(models.Model):
     """
@@ -333,6 +349,9 @@ class Servico(models.Model):
     observacoes =models.TextField(u'Observações',
                                   blank=False,
                                   null=False)
+
+    def __unicode__(self):
+        return self.titulo
 
 
 class MaterialEscolar(models.Model):
@@ -394,6 +413,9 @@ class ConteudoDownload(models.Model):
                                   null=False,
                                   blank=False)
 
+    def __unicode__(self):
+        return self.titulo
+
 
 class Recomendacao(models.Model):
     """
@@ -423,6 +445,9 @@ class Recomendacao(models.Model):
     destaque = models.BooleanField(u'Destaque',
                                    default=False)
 
+    def __unicode__(self):
+        return self.descricao
+
 
 class Parametro(models.Model):
     valor = models.CharField(u'Valor',
@@ -430,3 +455,34 @@ class Parametro(models.Model):
                               null=False,
                               blank=False)
 
+
+class Banner(models.Model):
+    """
+    Banners
+    """
+    titulo = models.CharField(u'Titulo',
+                              max_length=200,
+                              null=False,
+                              blank=False)
+    slug = models.SlugField(u'Slug',
+                            max_length=200,
+                            unique=True)
+    descricao = models.CharField(u'Descrição',
+                              max_length=200,
+                              null=False,
+                              blank=False)
+    url_resource = models.CharField(u'Link/URL',
+                                    max_length=200,
+                                    null=True,
+                                    blank=True)
+    upload_resource = models.FileField('Arquivo',
+                                       upload_to = u'banners',
+                                       null=True,
+                                       blank=True)
+    action_resource = models.CharField(u'Ação ao Clicar',
+                                       max_length=200,
+                                       null=True,
+                                       blank=True)
+
+    def __unicode__(self):
+        return self.titulo
