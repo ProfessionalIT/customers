@@ -17,40 +17,49 @@ function maxDays(mm, yyyy){
 function getEventByMonthYear(par_month, par_year){
     // F-Festa; E-Evento;
     if (par_month==0){
-        var arrEventos = new Array('12/01/2012;E;Inicio Ano Letivo');
+        var arrEventos = new Array('5/01/2015;E;Volta as aulas.');
         return arrEventos;
     } else if (par_month==1){
-        var arrEventos = new Array('03/02/2012;F;Aniversário da Escola', '17/02/2012;F;Baile de Carnaval', '20/02/2012;P;(Ponte)', '21/02/2012;N;Carnaval');
+        var arrEventos = new Array('02/02/2015;F;Nossa Senhora dos Navegantes','03/02/2015;F;Aniversário da Escola', '16/02/2015;P;Ponte Carnaval', '17/02/2015;N;Carnaval');
         return arrEventos;
     } else if (par_month==2){
-        var arrEventos = new Array('8/3/2012;E;Dia Internacional da Mulher');
+        var arrEventos = new Array('06/3/2015;E;Reunião com os Pais', '13/3/2015;E;Reunião com os Pais');
         return arrEventos;
     } else if (par_month==3){
-        var arrEventos = new Array('06/04/2012;N;Paixão de Cristo', '21/04/2012;N;Tiradentes');
+        var arrEventos = new Array('03/04/2015;N;Sexta-Feira da Paixão', '05/04/2015;N;Páscoa', '21/04/2015;N;Tiradentes');
         return arrEventos;
     } else if (par_month==4){
-        var arrEventos = new Array('01/05/2012;N;Dia do Trabalho', '11/05/2012;E;Homenagem as Mães');
+        var arrEventos = new Array('01/05/2015;N;Dia do Trabalhor', '10/05/2015;E;Dia das Mães');
         return arrEventos;
     } else if (par_month==5){
-        var arrEventos = new Array('07/06/2012;N;Corpus Christi', '22/06/2012;F;Festa Junina');
+        var arrEventos = new Array('04/06/2015;N;Corpus Christi', '26/06/2015;F;Festa Junina');
         return arrEventos;
     } else if (par_month==6){
-        var arrEventos = new Array();
+        var arrEventos = new Array('20/07/2015;E;Dia do Amigo', '26/07/2015;E;Dia dos Avós');
         return arrEventos;
     } else if (par_month==7){
-        var arrEventos = new Array('10/8/2012;E;Homenagem aos Pais');
+        var arrEventos = new Array('09/8/2015;E;Dia dos Pais');
         return arrEventos;
     } else if (par_month==8){
-        var arrEventos = new Array('07/9/2012;N;Independência do Brasil', '20/9/2012;N;Revolução Farroupilha', '21/9/2012;P;(Ponte)');
+        var arrEventos = new Array('07/9/2015;N;Independência do Brasil', '20/9/2015;N;Revolução Farroupilha');
         return arrEventos;
     } else if (par_month==9){
-        var arrEventos = new Array('12/10/2012;N;Nossa Sra Aparecida');
+        var arrEventos = new Array('12/10/2015;N;Dia das crianças', '15/10/2015;N;Dia do Professor');
         return arrEventos;
     } else if (par_month==10){
-        var arrEventos = new Array('03/11/2013;E;Formatura Dança Gaúcha', '29/11/2013;E;Formatura Jardim B');
+        var arrEventos = new Array('02/11/2015;N;Finados', '15/11/2015;N;Proclamação da República', '20/11/2015;E;Dia da Consciência Negra');
         return arrEventos;
     } else if (par_month==11){
-        var arrEventos = new Array('14/12/2013;E;Festa de Natal');
+        var arrEventos = new Array('04/12/2015;E;Formatura Jardim Nível II.',
+                                   '21/12/2015;R;Recesso Fim de Ano.',
+                                   '22/12/2015;R;Recesso Fim de Ano.',
+                                   '23/12/2015;R;Recesso Fim de Ano.',
+                                   '24/12/2015;R;Recesso Fim de Ano.',
+                                   '28/12/2015;R;Recesso Fim de Ano.',
+                                   '29/12/2015;R;Recesso Fim de Ano.',
+                                   '30/12/2015;R;Recesso Fim de Ano.',
+                                   '31/12/2015;R;Recesso Fim de Ano.',
+                                   '25/12/2015;N;Feriado de Natal.');
         return arrEventos;
     } else {
         var arrEventos = new Array();
@@ -71,7 +80,7 @@ function writeCalendar(){
     var arrD = new Array("Dom","Seg","Ter","Qua","Qui","Sex","Sab");
     var html_content = "";
     html_content = "<form name='calForm' id='calForm'>";
-    html_content += "<table border='1' bgcolor='#ffffff' style='float:left;margin-bottom: 10px;'>";
+    html_content += "<table border='1' bgcolor='#ffffff' style='margin-bottom: 10px;width: 100%;' class='table'>";
     html_content += "<tr><td>";
     html_content += "<table width='100%'><tr>";
     html_content += "<td align='left'>";
@@ -99,7 +108,7 @@ function writeCalendar(){
     html_content += "</tr></table>";
     html_content += "</td></tr>";
     html_content += "<tr><td>";
-    html_content += "<table border='0'>";
+    html_content += "<table border='0' style='width: 100%;'>";
     html_content += "<tr>";
     for (ii=0;ii<=6;ii++){
         html_content += "<td align='center'><span class='label'>" + arrD[ii] + "</span></td>";
