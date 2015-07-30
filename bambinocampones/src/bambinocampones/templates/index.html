@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block title %} Catálogo de Filmes {% endblock %}
+
+{% block content %}
+
+$if destaques:
+    <h2 class="title_shadow margin_left_adjusts"><img src="/static/images/noticias.png" class="mural_icon">Últimas Notícias</h2>
+    {% for filme in filmes %}
+    $for publicacao in destaques:
+        <div class="row bg_white">
+            <div class="col-xs-12 paragraf" >
+                <h3 class="news_title">$:publicacao.titulo</h3>
+                $if publicacao.thumb_publicacao:
+                    <img src="$:publicacao.thumb_publicacao" alt="Foto para $:publicacao.titulo" title="$:publicacao.titulo" class="news_thumb" />
+                $:publicacao.intro
+                <p class="lead">
+                    <button class="btn btn-default" onclick="return location.href='$:publicacao.slug'" title="Ler mais sobre a noticia $:publicacao.titulo.">Ler mais</button>
+                </p>
+                <!--
+                <p class="pull-right">
+                    $for word in publicacao.palavras_chaves.split(','):
+                        <span class="label label-default"><a href="/tag/$:word">$:word</a></span> 
+                </p>
+                -->
+                <ul class="list-inline">
+                    <li>Publicado em: <a href="#">$:publicacao.data_publicacao</a></li>
+                    <!--
+                    <li><a href="#"><i class="glyphicon glyphicon-comment"></i> 2 Comments</a></li>
+                    <li><a href="#"><i class="glyphicon glyphicon-share"></i> 14 Shares</a></li>
+                    -->
+                </ul>
+            </div>
+        </div>
+        <hr>
+    {% endfor %}
+$else:
+    <h2 class="title_shadow margin_left_adjusts">Sem Notícias</h2>
+    <p>Novas publicações em breve.</p>
+
+{% endblock %}
