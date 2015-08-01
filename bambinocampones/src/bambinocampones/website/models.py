@@ -10,13 +10,11 @@ class Calendario(models.Model):
     """
     Calendário de atividades: Evento, Recesso, Festa, Feriado e Ponte.
     """
-    TIPO_CALENDARIO = (
-                        (u'E', u'Evento'),
-                        (u'R', u'Recesso'),
-                        (u'D', u'Festa'),
-                        (u'F', u'Feriado'),
-                        (u'P', u'Ponte'),
-    )
+    TIPO_CALENDARIO = ((u'E', u'Evento'),
+                       (u'R', u'Recesso'),
+                       (u'F', u'Festa'),
+                       (u'N', u'Feriado'),
+                       (u'P', u'Ponte'),)
 
     titulo = models.CharField(u'Titulo',
                               max_length=200,
@@ -30,42 +28,41 @@ class Calendario(models.Model):
                             choices=TIPO_CALENDARIO,
                             default=u'E')
     data_agendamento = models.DateTimeField(u'Data do Agendamento',
-                                           default=datetime.datetime.now())
+                                            default=datetime.datetime.now())
 
     def __unicode__(self):
         return self.titulo
+
+    @models.permalink
+    def get_absolute_url(self):
+        return 'calendario', [str(self.slug)]
+
 
 class Cardapio(models.Model):
     """
     Cardápio Mensal de refeições.
     """
-    TIPO_CARDAPIO = (
-            (u'1', u'Berçário 1'),
-            (u'2', u'Berçário 2'),
-            (u'3', u'Crianças Maiores de 1 ano'),
-    )
+    TIPO_CARDAPIO = ((u'1', u'Berçário 1'),
+                     (u'2', u'Berçário 2'),
+                     (u'3', u'Crianças Maiores de 1 ano'),)
 
-    MES_CARDAPIO = (
-            (u'01', u'Janeiro'),
-            (u'02', u'Fevereiro'),
-            (u'03', u'Março'),
-            (u'04', u'Abril'),
-            (u'05', u'Maio'),
-            (u'06', u'Junho'),
-            (u'07', u'Julho'),
-            (u'08', u'Agosto'),
-            (u'09', u'Setembro'),
-            (u'10', u'Outubro'),
-            (u'11', u'Novembro'),
-            (u'12', u'Dezembro'),
-    )
+    MES_CARDAPIO = ((u'01', u'Janeiro'),
+                    (u'02', u'Fevereiro'),
+                    (u'03', u'Março'),
+                    (u'04', u'Abril'),
+                    (u'05', u'Maio'),
+                    (u'06', u'Junho'),
+                    (u'07', u'Julho'),
+                    (u'08', u'Agosto'),
+                    (u'09', u'Setembro'),
+                    (u'10', u'Outubro'),
+                    (u'11', u'Novembro'),
+                    (u'12', u'Dezembro'),)
 
     MES_ATUAL = datetime.datetime.now().month
 
-    ANO_CARDAPIO = (
-            (u'2013', u'2013'),
-            (u'2014', u'2014'),
-    )
+    ANO_CARDAPIO = ((u'2013', u'2013'),
+                    (u'2014', u'2014'),)
 
     ANO_ATUAL = datetime.datetime.now().year
 
@@ -82,7 +79,7 @@ class Cardapio(models.Model):
                            choices=ANO_CARDAPIO,
                            default=str(ANO_ATUAL))
     cardapio_file = models.FileField('Cardápio',
-                               upload_to = 'cardapios',
+                                     upload_to='cardapios',
                                      null=False,
                                      blank=False)
 
@@ -92,34 +89,28 @@ class Galeria(models.Model):
     Galeria de Fotos e/ou Vídeos.
     tipo, titulo, slug, mes, ano, destaqe, descricao
     """
-    MES_GALERIA = (
-            (u'01', u'Janeiro'),
-            (u'02', u'Fevereiro'),
-            (u'03', u'Março'),
-            (u'04', u'Abril'),
-            (u'05', u'Maio'),
-            (u'06', u'Junho'),
-            (u'07', u'Julho'),
-            (u'08', u'Agosto'),
-            (u'09', u'Setembro'),
-            (u'10', u'Outubro'),
-            (u'11', u'Novembro'),
-            (u'12', u'Dezembro'),
-    )
+    MES_GALERIA = ((u'01', u'Janeiro'),
+                   (u'02', u'Fevereiro'),
+                   (u'03', u'Março'),
+                   (u'04', u'Abril'),
+                   (u'05', u'Maio'),
+                   (u'06', u'Junho'),
+                   (u'07', u'Julho'),
+                   (u'08', u'Agosto'),
+                   (u'09', u'Setembro'),
+                   (u'10', u'Outubro'),
+                   (u'11', u'Novembro'),
+                   (u'12', u'Dezembro'),)
 
     MES_ATUAL = datetime.datetime.now().month
 
-    ANO_GALERIA = (
-            (u'2013', u'2013'),
-            (u'2014', u'2014'),
-    )
+    ANO_GALERIA = ((u'2013', u'2013'),
+                   (u'2014', u'2014'),)
 
     ANO_ATUAL = datetime.datetime.now().year
 
-    TIPO_GALERIA = (
-            (u'F', u'Foto'),
-            (u'V', u'Vídeo'),
-    )
+    TIPO_GALERIA = ((u'F', u'Foto'),
+                    (u'V', u'Vídeo'),)
 
     titulo = models.CharField(u'Titulo',
                               max_length=200,
@@ -129,13 +120,13 @@ class Galeria(models.Model):
                             max_length=200,
                             unique=True)
     tipo = models.CharField(u'Tipo Galeria',
-                           max_length=1,
-                           choices=TIPO_GALERIA,
-                           default=u'F')
+                            max_length=1,
+                            choices=TIPO_GALERIA,
+                            default=u'F')
     descricao = models.CharField(u'Descrição',
-                              max_length=200,
-                              null=False,
-                              blank=False)
+                                 max_length=200,
+                                 null=False,
+                                 blank=False)
     mes = models.CharField(u'Mês',
                            max_length=2,
                            choices=MES_GALERIA,
@@ -152,6 +143,10 @@ class Galeria(models.Model):
     def __unicode__(self):
         return self.titulo
 
+    @models.permalink
+    def get_absolute_url(self):
+        return 'galeria', [str(self.slug)]
+
 
 class GaleriaResource(models.Model):
     """
@@ -163,7 +158,7 @@ class GaleriaResource(models.Model):
                                     null=True,
                                     blank=True)
     upload_resource = models.FileField('Arquivo',
-                                       upload_to = u'galerias',
+                                       upload_to='galerias',
                                        null=True,
                                        blank=True)
     action_resource = models.CharField(u'Ação ao Clicar',
@@ -177,11 +172,9 @@ class Publicacao(models.Model):
     Publicação de conteúdo dinâmico:
     Dicas, Avisos, Diário Online
     """
-    TIPO_PUBLICACAO = (
-            ('A', 'Aviso'),
-            ('D', 'Dicas'),
-            ('N', 'Diário Online'),
-    )
+    TIPO_PUBLICACAO = (('A', 'Aviso'),
+                       ('D', 'Dicas'),
+                       ('N', 'Diário Online'),)
 
     titulo = models.CharField(u'Titulo',
                               max_length=200,
@@ -200,12 +193,12 @@ class Publicacao(models.Model):
                                        null=False,
                                        blank=False)
     tipos = models.CharField(u'Tipos',
-                            max_length=1,
-                            choices=TIPO_PUBLICACAO,
-                            default=u'1')
+                             max_length=1,
+                             choices=TIPO_PUBLICACAO,
+                             default=u'1')
     introducao = models.TextField(u'Introdução',
-                                 blank=False,
-                                 null=False)
+                                  blank=False,
+                                  null=False)
     completa = models.TextField(u'Conteúdo',
                                 blank=False,
                                 null=False)
@@ -223,6 +216,10 @@ class Publicacao(models.Model):
 
     def __unicode__(self):
         return self.titulo
+
+    @models.permalink
+    def get_absolute_url(self):
+        return 'publicacao', [str(self.slug)]
 
 
 class Pagina(models.Model):
@@ -250,6 +247,10 @@ class Pagina(models.Model):
 
     def __unicode__(self):
         return self.titulo
+
+    @models.permalink
+    def get_absolute_url(self):
+        return 'pagina', [str(self.slug)]
 
 
 class Menu(models.Model):
@@ -291,6 +292,10 @@ class Menu(models.Model):
     def __unicode__(self):
         return self.titulo
 
+    @models.permalink
+    def get_absolute_url(self):
+        return 'menu', [str(self.slug)]
+
 
 class Depoimento(models.Model):
     """
@@ -301,9 +306,9 @@ class Depoimento(models.Model):
                                 blank=False,
                                 null=False)
     autor = models.CharField(u'Autor',
-                              max_length=200,
-                              null=False,
-                              blank=False)
+                             max_length=200,
+                             null=False,
+                             blank=False)
 
 
 class Professor(models.Model):
@@ -311,15 +316,20 @@ class Professor(models.Model):
     Professores da Escola.
     """
     nome = models.CharField(u'Nome',
-                             max_length=200,
-                             null=False,
-                             blank=False)
+                            max_length=200,
+                            null=False,
+                            blank=False)
     slug = models.SlugField(u'Slug',
                             max_length=200,
                             unique=True)
 
     def __unicode__(self):
         return self.nome
+
+    @models.permalink
+    def get_absolute_url(self):
+        return 'professor', [str(self.slug)]
+
 
 class Servico(models.Model):
     """
@@ -346,12 +356,16 @@ class Servico(models.Model):
     rotina_diaria = models.TextField(u'Rotina Diária',
                                      blank=False,
                                      null=False)
-    observacoes =models.TextField(u'Observações',
-                                  blank=False,
-                                  null=False)
+    observacoes = models.TextField(u'Observações',
+                                   blank=False,
+                                   null=False)
 
     def __unicode__(self):
         return self.titulo
+
+    @models.permalink
+    def get_absolute_url(self):
+        return 'servico', [str(self.slug)]
 
 
 class MaterialEscolar(models.Model):
@@ -359,10 +373,8 @@ class MaterialEscolar(models.Model):
     Material escolar utilizado no ano letivo.
     tipo, miniatura, anexo, ano_letivo
     """
-    ANO_LETIVO = (
-            (u'2013', u'2013'),
-            (u'2014', u'2014'),
-    )
+    ANO_LETIVO = ((u'2013', u'2013'),
+                  (u'2014', u'2014'),)
 
     ANO_ATUAL = datetime.datetime.now().year
 
@@ -375,7 +387,7 @@ class MaterialEscolar(models.Model):
     miniatura = models.ImageField(u'Miniatura',
                                   upload_to=u'material_escolar')
     anexo_file = models.FileField('Anexo',
-                                  upload_to = u'material_escolar',
+                                  upload_to=u'material_escolar',
                                   null=False,
                                   blank=False)
 
@@ -385,11 +397,10 @@ class ConteudoDownload(models.Model):
     Conteúdos para download:
     Músicas, Papéis de Parede, Desenhos para pintar, Material de Apoio.
     """
-    TIPO_UPLOAD = (
-            (u'1', u'Música'),
-            (u'2', u'Papél de Parede'),
-            (u'3', u'Desenho para Pintar'),
-            (u'4', u'Material de Apoio'),)
+    TIPO_UPLOAD = ((u'1', u'Música'),
+                   (u'2', u'Papél de Parede'),
+                   (u'3', u'Desenho para Pintar'),
+                   (u'4', u'Material de Apoio'),)
 
     titulo = models.CharField(u'Titulo',
                               max_length=200,
@@ -399,9 +410,9 @@ class ConteudoDownload(models.Model):
                             max_length=200,
                             unique=True)
     descricao = models.CharField(u'Descrição',
-                              max_length=200,
-                              null=False,
-                              blank=False)
+                                 max_length=200,
+                                 null=False,
+                                 blank=False)
     tipo = models.CharField(u'Tipo',
                             max_length=1,
                             choices=TIPO_UPLOAD,
@@ -409,37 +420,40 @@ class ConteudoDownload(models.Model):
     miniatura = models.ImageField(u'Miniatura',
                                   upload_to=u'downloads')
     conteudo_file = models.FileField('Arquivo',
-                                  upload_to = u'downloads',
-                                  null=False,
-                                  blank=False)
+                                     upload_to=u'downloads',
+                                     null=False,
+                                     blank=False)
 
     def __unicode__(self):
         return self.titulo
+
+    @models.permalink
+    def get_absolute_url(self):
+        return 'conteudo_download', [str(self.slug)]
 
 
 class Recomendacao(models.Model):
     """
     Recomendações de leitura, vídeo, música, texto, links e etc.
     """
-    TIPO_RECOMENDACAO = (
-            (u'1', u'Livro'),
-            (u'2', u'Vídeo'),
-            (u'3', u'Música'),
-            (u'4', u'Texto'),
-            (u'5', u'Link'),)
+    TIPO_RECOMENDACAO = ((u'1', u'Livro'),
+                         (u'2', u'Vídeo'),
+                         (u'3', u'Música'),
+                         (u'4', u'Texto'),
+                         (u'5', u'Link'),)
 
     tipo = models.CharField(u'Tipo',
                             max_length=1,
                             choices=TIPO_RECOMENDACAO,
                             default=u'1')
     descricao = models.CharField(u'Descrição',
-                              max_length=200,
-                              null=False,
-                              blank=False)
+                                 max_length=200,
+                                 null=False,
+                                 blank=False)
     acao_link = models.CharField(u'Ação Link',
-                              max_length=200,
-                              null=True,
-                              blank=True)
+                                 max_length=200,
+                                 null=True,
+                                 blank=True)
     miniatura = models.ImageField(u'Miniatura',
                                   upload_to=u'imagens')
     destaque = models.BooleanField(u'Destaque',
@@ -451,9 +465,9 @@ class Recomendacao(models.Model):
 
 class Parametro(models.Model):
     valor = models.CharField(u'Valor',
-                              max_length=200,
-                              null=False,
-                              blank=False)
+                             max_length=200,
+                             null=False,
+                             blank=False)
 
 
 class Banner(models.Model):
@@ -468,21 +482,27 @@ class Banner(models.Model):
                             max_length=200,
                             unique=True)
     descricao = models.CharField(u'Descrição',
-                              max_length=200,
-                              null=False,
-                              blank=False)
+                                 max_length=255,
+                                 null=False,
+                                 blank=False)
     url_resource = models.CharField(u'Link/URL',
                                     max_length=200,
                                     null=True,
                                     blank=True)
     upload_resource = models.FileField('Arquivo',
-                                       upload_to = u'banners',
+                                       upload_to=u'banners',
                                        null=True,
                                        blank=True)
     action_resource = models.CharField(u'Ação ao Clicar',
                                        max_length=200,
                                        null=True,
                                        blank=True)
+    ativo = models.BooleanField(u'Banner ativo',
+                                default=False)
 
     def __unicode__(self):
         return self.titulo
+
+    @models.permalink
+    def get_absolute_url(self):
+        return 'banner', [str(self.slug)]

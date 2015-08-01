@@ -1,0 +1,74 @@
+* { font-family: Ubuntu, Arial; font-size: 12px; margin: 0px; padding: 0px; }
+body { background: #fe9854 url('../images/background.png') repeat-x left top; }
+#header { background: url('../images/header_bkg.png') no-repeat left top; height: 180px; margin: 0px auto; width: 1000px; margin: 05px auto; ;}
+#header img { margin-left: 20px; margin-top: 15px; position: absolute; }
+#header #logo { margin: 0px auto; margin-left: 150px; margin-top: 05px; }
+#top_menu { background: url('../images/menu_bkg.png') no-repeat left top; height: 40px; margin: 0px auto; text-align: center; width: 1000px; margin: 05px auto; }
+#top_menu ul { display: block; float: left; height: 31px; list-style: none; text-align: center; padding-left: 07px; width: 100%; vertical-align:middle; }
+#top_menu ul li { background: url('../images/menu_item_bkg.png') top left no-repeat; display: block; float: left; height: 31px; width: 118px; margin-left: 05px; margin-top: 05px; padding-top: 06px;  }
+#top_menu ul li:hover { background: url('../images/menu_item.png') top left no-repeat; }
+#top_menu ul li a { color: #fff; font-family: Ubuntu; font-weight: bold; font-size: 16px; text-decoration: none; margin-top: 06px; padding-bottom: 05px; }
+#search_panel { background: url('../images/search_bkg.png') no-repeat left top; height: 50px; margin: 5px auto; padding-top: 0px; text-align: center; width: 1000px; }
+#search_panel input { border: 01px solid #275c98; height: 20px; margin-right: 05px; } 
+#search_panel button { background-color: #fff; border: 01px solid #275c98; font-weight: bold; padding: 02px 05px; } 
+#search_panel h2 { margin-bottom: 03px; margin-right: 05px; margin-left: 10px; float:left; }
+#search_panel a { background-color: #814D0C; color: white; font-weight: bold; margin: 0px 02px; padding: 2px 05px; text-decoration: none; }
+#search_panel a:hover { background-color: #F3DAA4; color: #fff; }
+#search_panel_form { display:table; float: right; margin-left: 05px; margin-top: 12px; padding: 05px 0px 05px 0px; text-align: center; width: 405px; } 
+#letter_panel { float: left; padding: 05px 0px 5px 05px; width: 580px; }
+#letter_panel h2 { margin-bottom: 03px; margin-right: 05px; display: block; text-align:left; margin-right: 450px;}
+#letter_panel a { background: url('../images/letter.png') no-repeat left top; color: white; font-weight: bold; margin:0px; padding: 0px; height: 20px; width: 20px; text-decoration: none; display: inline-block; padding-right: 02px; padding-top: 03px;}
+#letter_panel a:hover { background: url('../images/letter_over.png') no-repeat left top;  }
+#top { background: url('../images/top_bkg.png') no-repeat left top; height: 35px; margin: 5px auto; padding-top: 5px; width: 1000px; }
+#content { background-color: none; margin: 5px auto; text-align: center; width: 1000px; }
+@media screen and (-webkit-min-device-pixel-ratio:0) { #content { width: 1000px; } }
+#content #left_content { background-color: #f9f9f9; height: 2100px; min-height: 2150px; float:left; text-align: center; width: 180px; /*background: url('left_bkg.png') no-repeat left top;*/ }
+#content #left_content ul { list-style: none; width: 140px; }
+#content #left_content ul li { padding: 1px 0px 2px 5px; margin: 0px; margin-left: 05px; border-bottom: 1px solid #E5E5E5;}
+#content #left_content ul li a { color: blue; text-decoration: none; font-size: 13px;  }
+#content #left_content ul li a:hover { color: #d45500; text-decoration: underline; }
+#content #left_content h1, #content #left_content ul, #content #left_content li { margin-left: 03px; margin-top: 02px; text-align: left; }
+#content #left_content h1 { font-size: 16px; text-align: left; margin-left: 10px; margin-bottom: 05px; margin-top: 10px; }
+#content #center_content { background-color: #f9f9f9; height: 2150px; float: left; width: 630px; margin-right: 05px; margin-left: 05px; /*background: url('content_bkg.png') no-repeat left top;*/ }
+#content #center_content h3 { float: left; font-size: 16px; margin-top: 10px; text-align: left; margin-left: 10px; margin-bottom: 10px; }
+#content #center_content fieldset { background-color: white; border: 1px solid #eee; font-size: 11px; margin: 0px auto; margin-bottom: 5px; padding: 1px 2px 10px 2px; width: 93.5%; }
+#content #center_content fieldset legend { color: #000; font-weight: bold; padding: 3px 2px; text-align:left; }
+#content #center_content fieldset select option { margin: 0px; padding: 0px; }
+#content #center_content table { margin: 0px auto; text-align: center; width: 100%; }
+#content #center_content tr { border: 01px solid blue; text-align: center;  }
+#content #center_content td { border: 0px solid red; text-align: center; padding-bottom: 10px; padding-top: 10px;}
+#content #center_content table img { background-color: #fff; border: 01px solid #ccc; padding: 03px; }
+#content #center_content #table_cursos { width: 95%; }
+#content #center_content #table_cursos tr { height: 160px; text-align: left; }
+#content #center_content #table_cursos td { height: 140px; text-align: center; vertical-align: top; width: 200px; background-color: white; border: 01px solid #eee;}
+#content #center_content #table_cursos td span { padding: 0px 10px;}
+#content #center_content #table_cursos td img { height: 91px; margin: 0px auto; text-align: center; }
+#content #right_content { background-color: #f9f9f9; height: 2150px; float: right; text-align: center; max-width: 180px; min-width: 180px; width: 180px; /*background: url('left_bkg.png') no-repeat right top;*/ }
+#content #right_content a { color: #d45500; text-decoration: none; }
+#content #right_content a:hover { color: #275c98; text-decoration: underline; }
+#content #right_content #tag_cloud { display:inline; margin:0px auto; width: 180px; }
+#content #right_content #tag_cloud a { margin: 0px; }
+#content #right_content h6 { font-size: 13px; margin: 10px 0px 05px 0px; }
+#content #right_content ul { list-style: none; }
+#footer { background: url('../images/footer_bkg.png') no-repeat left top; clear: both; height: 150px; text-align: center; margin: 5px auto; width: 1000px; }
+#footer p { color: white; padding-top: 10px; }
+#footer #go_topo { float: right; margin-right: 05px; }
+.separator { clear: both; height: 03px; }
+.where { color: #aa4400; font-size: 16px; font-weight: bold; }
+.total_curso { float: right; font-size: 14px; margin-top: 11px; margin-right: 20px; font-weight:bold; }
+.padding_right_filter { padding-right: 2px; }
+.padding_filter { padding-left: 3px; padding-right: 2px; }
+.modalidade_style { font-size: 11px; width: 85px; }
+.certificado_apostila_style { width: 60px; }
+.button_style { margin-left: 5px; padding: 1px 2px; }
+.name_course { color: #aa4400; display: block; font-size: 15px; font-weight: bold; padding: 0px 5px; text-align: center; }
+.description_course { display: block; font-size: 12px; padding: 5px 10px 1px 10px; text-align: justify; text-indent: 40px; }
+.fazer_curso { color: #275c98; display: block; font-size: 13px; font-weight: bold; margin-bottom: 10px; margin-top: 10px; text-decoration: none; text-align: center; }
+.lupinha { border: none !important; height: 15px !important; padding: 0px !important; width: 17px; } 
+a.fazer_curso:hover { color: #aa4400; text-decoration: underline; }
+.additional_info_link { color: #aa4400; text-decoration: none; }
+a.additional_info_link:hover { color: #275c98; text-decoration: underline; }
+.banner_vertical { margin: 0px auto; margin-top: 10px; text-align: center; }
+.additional_information { color: #000; display: block; font-size: 12px; text-align: left; }
+.additional_information_bold { font-size: 12px; font-weight: bold; }
+.veja_tambem_links { display:block; font-size: 13px; padding-bottom:02px; }

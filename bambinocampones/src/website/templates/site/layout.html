@@ -1,10 +1,8 @@
+$def with (vars, content)
 <!DOCTYPE html>
-
-{% load staticfiles %}
-
 <html lang="pt-br">
     <head>
-        <title>{% block title %} {% endblock %}</title>
+        <title>$content.title</title>
         <meta http-equiv="content-type" content="text/html; charset=UTF-8">
         <meta charset="utf-8">
         <meta name="generator" content="VI/VIM" />
@@ -33,23 +31,21 @@
         <link rel="home" title="Escola de Educação Infantil Bambino Camponês - Creche, Maternal e Educação Pré em Canoas/RS." href="/" />
         <link rel="search" title="Pesquisa no site da Escola de Educação Infantil Bambino Camponês - Creche, Maternal e Educação Pré em Canoas/RS." href="/search/" />
         <link rel="bookmark" href="#index" title="Escola de Educação Infantil Bambino Camponês - Creche, Maternal e Educação Pré em Canoas/RS." />
-        
-        <!--link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css"-->
-        
-        <link rel="stylesheet" href="{% static 'css/reset.css' %}">  
+
         <link href="$:vars['static_url']css/bootstrap.min.css" rel="stylesheet">
         <!--[if lt IE 9]>
             <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
         <![endif]-->
 
         <link href="$:vars['static_url']css/styles.css" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" media="screen" href="$:vars['static_url']css/widget_calendar.css" />
+        <link rel="stylesheet" type="text/css" media="screen" href="http://media.bambinocampones.com.br/css/widget_calendar.css" />
 
         <script type="text/javascript">var _siteRoot='layout.html',_root='layout.html';</script>
         <script type="text/javascript" src="$:vars['static_url']javascript/jquery-1.3.2.min.js"></script>
         <script type="text/javascript" src="$:vars['static_url']javascript/jquery.easing.1.3.js"></script>
         <script type="text/javascript" src="$:vars['static_url']javascript/scripts.js"></script>
         <script type="text/javascript" src="$:vars['static_url']javascript/util.js"></script>
+
     </head>
     <body>
     <header>
@@ -292,52 +288,8 @@
                         <img src="/static/images/news.png" class="mural_icon" />Mural de Recados
                     </h2>
                     <!-- Aqui vai vir do Admin os compromisso do diário online que forem relativos a esta semana -->
-                    <div id="myCarousel" class="carousel slide" data-ride="carousel" style="box-shadow: 1px 2px 6px rgba(0, 0, 0, 0.5); -moz-box-shadow: 1px 2px 6px rgba(0, 0, 0, 0.5); -webkit-box-shadow: 1px 2px 6px rgba(0, 0, 0, 0.5);"> 
-                    <!--div id="myCarousel" class="carousel slide" data-ride="carousel" style="background-color: #fff; padding: 3px; border: 01px solid #ccc;"--> 
-                    <!-- Indicators -->
-                        <ol class="carousel-indicators">
-                            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                            <li data-target="#myCarousel" data-slide-to="1"></li>
-                            <li data-target="#myCarousel" data-slide-to="2"></li>
-                        </ol>
-                        <div class="carousel-inner" >
-                            <div class="item active">
-                                <img src="http://lorempixel.com/1200/600/sports" style="width:100%" alt="First slide">
-                                <div class="container">
-                                    <div class="carousel-caption">
-                                        <h1>Festa da Indenpendêcia na Bambino</h1>
-                                        <p>A escola Bambino Camponês vai promover uma festa comemorativa ao 07 de Setembro...</p>
-                                        <p><a class="btn btn-lg btn-primary" href="#" role="button">Ver mais</a></p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <img src="http://lorempixel.com/1200/600/people" style="width:100%" data-src="" alt="Second    slide">
-                                <div class="container">
-                                    <div class="carousel-caption">
-                                        <h1>Aviso Urgente</h1>
-                                        <p>Texto do aviso urgente.</p>
-                                        <p><a class="btn btn-lg btn-primary" href="#" role="button">Ver mais</a></p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <img src="http://lorempixel.com/1200/600/abstract" style="width:100%" data-src="" alt="Third slide">
-                                <div class="container">
-                                    <div class="carousel-caption">
-                                        <h1>Participe da Campanha</h1>
-                                        <p>Estamos lançando a campanha do agasalho 2015.</p>
-                                        <p><a class="btn btn-lg btn-primary" href="#" role="button">Ver mais</a></p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-                            <span class="glyphicon glyphicon-chevron-left"></span>
-                        </a>
-                        <a class="right carousel-control" href="#myCarousel" data-slide="next">
-                            <span class="glyphicon glyphicon-chevron-right"></span>
-                        </a>
+                    <div class="slide_panel">
+                        <img src="/static/images/banner_central.jpg" alt="" title="" />
                     </div>
                 </div>
             </div>
@@ -345,7 +297,7 @@
         <div class="container-fluid">
             <!--left-->
             <div class="col-sm-3">
-                <h2 class="title_shadow"><img src="/static/images/utilidades.png" class="mural_icon">Utilidades</h2>
+                <h2 class="title_shadow">Utilidades</h2>
                 <div class="panel panel-default">
                     <div class="panel-heading">Calendário</div>
                     <div class="panel-body">
@@ -356,7 +308,7 @@
                                         <tbody>
                                             <tr>
                                                 <td>
-                                                    <table>
+                                                    <table class="table">
                                                         <tbody>
                                                             <tr>
                                                                 <td align="left">
@@ -377,188 +329,8 @@
                                                                 </td>
                                                                 <td align="right">
                                                                     <select name="selYear" onchange="changeCal();">
-                                                                        <option value="2015" selected="">2015</option>
-                                                                        <option value="2016">2016</option>
-                                                                        <option value="2017">2017</option>
-                                                                    </select>
-                                                                </td>
-                                                            </tr>
-                                                        </tbody>
-                                                    </table>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <table border="0">
-                                                        <tbody>
-                                                            <tr>
-                                                                <td align="center">
-                                                                    <span class="label">Dom</span>
-                                                                </td>
-                                                                <td align="center">
-                                                                    <span class="label">Seg</span>
-                                                                </td>
-                                                                <td align="center">
-                                                                    <span class="label">Ter</span>
-                                                                </td>
-                                                                <td align="center">
-                                                                    <span class="label">Qua</span>
-                                                                </td>
-                                                                <td align="center">
-                                                                    <span class="label">Qui</span>
-                                                                </td>
-                                                                <td align="center">
-                                                                    <span class="label">Sex</span>
-                                                                </td>
-                                                                <td align="center">
-                                                                    <span class="label">Sab</span>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                            <td align="center">
-                                                                <span id="sp0" class="c3" style="background: none;">28</span>
-                                                            </td>
-                                                            <td align="center">
-                                                                <span id="sp1" class="c3" style="background: none;">29</span><
-                                                            /td>
-                                                            <td align="center">
-                                                                <span id="sp2" class="c3" style="background: none;">30</span>
-                                                            </td>
-                                                            <td align="center">
-                                                                <span id="sp3" class="c1" style="background: none;">1</span>
-                                                            </td>
-                                                            <td align="center">
-                                                                <span id="sp4" class="c1" style="background: none;">2</span>
-                                                            </td>
-                                                            <td align="center">
-                                                                <span id="sp5" class="c1" style="background: none;">3</span>
-                                                            </td>
-                                                            <td align="center">
-                                                                <span id="sp6" class="c2" style="background: none;">4</span>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td align="center">
-                                                                <span id="sp7" class="c2" style="background: none;">5</span>
-                                                            </td>
-                                                            <td align="center">
-                                                                <span id="sp8" class="c1" style="background: none;">6</span>
-                                                            </td>
-                                                            <td align="center">
-                                                                <span id="sp9" class="c1" style="background: none;">7</span>
-                                                            </td>
-                                                            <td align="center">
-                                                                <span id="sp10" class="c1" style="background: none;">8</span>
-                                                            </td>
-                                                            <td align="center">
-                                                                <span id="sp11" class="c1" style="background: none;">9</span>
-                                                            </td>
-                                                            <td align="center">
-                                                                <span id="sp12" class="c1" style="background: none;">10</span>
-                                                            </td>
-                                                            <td align="center">
-                                                                <span id="sp13" class="c2" style="background: none;">11</span>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td align="center">
-                                                                <span id="sp14" class="c2" style="background: none;">12</span>
-                                                            </td>
-                                                            <td align="center">
-                                                                <span id="sp15" class="c1" style="background: none;">13</span>
-                                                            </td>
-                                                            <td align="center">
-                                                                <span id="sp16" class="c1" style="background: none;">14</span>
-                                                            </td>
-                                                            <td align="center">
-                                                                <span id="sp17" class="c1" style="background: none;">15</span>
-                                                            </td>
-                                                            <td align="center">
-                                                                <span id="sp18" class="c1" style="background: none;">16</span>
-                                                            </td>
-                                                            <td align="center">
-                                                                <span id="sp19" class="c1" style="background: none;">17</span>
-                                                            </td>
-                                                            <td align="center">
-                                                                <span id="sp20" class="c2" style="background: none;">18</span>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td align="center">
-                                                                <span id="sp21" class="c2" style="background: none rgb(238, 238, 238);">19</span>
-                                                            </td>
-                                                            <td align="center">
-                                                                <span id="sp22" class="c1" style="background: url(http://media.bambinocampones.com.br/images/evento_bkp.png);">20</span>
-                                                            </td>
-                                                            <td align="center">
-                                                                <span id="sp23" class="c1" style="background: none;">21</span>
-                                                            </td>
-                                                            <td align="center">
-                                                                <span id="sp24" class="c1" style="background: none;">22</span>
-                                                            </td>
-                                                            <td align="center">
-                                                                <span id="sp25" class="c1" style="background: none;">23</span>
-                                                            </td>
-                                                            <td align="center">
-                                                                <span id="sp26" class="c1" style="background: none;">24</span>
-                                                            </td>
-                                                            <td align="center">
-                                                                <span id="sp27" class="c2" style="background: none;">25</span>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td align="center">
-                                                                <span id="sp28" class="c2" style="background: url(http://media.bambinocampones.com.br/images/evento_bkp.png);">26</span>
-                                                            </td>
-                                                            <td align="center">
-                                                                <span id="sp29" class="c1" style="background: none;">27</span>
-                                                            </td>
-                                                            <td align="center">
-                                                                <span id="sp30" class="c1" style="background: none;">28</span>
-                                                            </td>
-                                                            <td align="center">
-                                                                <span id="sp31" class="c1" style="background: none;">29</span>
-                                                            </td>
-                                                            <td align="center">
-                                                                <span id="sp32" class="c1" style="background: none;">30</span>
-                                                            </td>
-                                                            <td align="center">
-                                                                <span id="sp33" class="c1" style="background: none;">31</span>
-                                                            </td>
-                                                            <td align="center">
-                                                                <span id="sp34" class="c3" style="background: none;">1</span>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td align="center">
-                                                                <span id="sp35" class="c3" style="background: none;">2</span>
-                                                            </td>
-                                                            <td align="center">
-                                                                <span id="sp36" class="c3" style="background: none;">3</span>
-                                                            </td>
-                                                            <td align="center">
-                                                                <span id="sp37" class="c3" style="background: none;">4</span>
-                                                            </td>
-                                                            <td align="center">
-                                                                <span id="sp38" class="c3" style="background: none;">5</span>
-                                                            </td>
-                                                            <td align="center">
-                                                                <span id="sp39" class="c3" style="background: none;">6</span>
-                                                            </td>
-                                                            <td align="center">
-                                                                <span id="sp40" class="c3" style="background: none;">7</span>
-                                                            </td>
-                                                            <td align="center">
-                                                                <span id="sp41" class="c3" style="background: none;">8</span>
-                                                            </td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </form></div>
+                                                                        <option value="2013">2013</option>
+                                                                        <option value="2014">2014</option><option value="2015" selected="">2015</option><option value="2016">2016</option><option value="2017">2017</option></select></td></tr></tbody></table></td></tr><tr><td><table border="0"><tbody><tr><td align="center"><span class="label">Dom</span></td><td align="center"><span class="label">Seg</span></td><td align="center"><span class="label">Ter</span></td><td align="center"><span class="label">Qua</span></td><td align="center"><span class="label">Qui</span></td><td align="center"><span class="label">Sex</span></td><td align="center"><span class="label">Sab</span></td></tr><tr><td align="center"><span id="sp0" class="c3" style="background: none;">28</span></td><td align="center"><span id="sp1" class="c3" style="background: none;">29</span></td><td align="center"><span id="sp2" class="c3" style="background: none;">30</span></td><td align="center"><span id="sp3" class="c1" style="background: none;">1</span></td><td align="center"><span id="sp4" class="c1" style="background: none;">2</span></td><td align="center"><span id="sp5" class="c1" style="background: none;">3</span></td><td align="center"><span id="sp6" class="c2" style="background: none;">4</span></td></tr><tr><td align="center"><span id="sp7" class="c2" style="background: none;">5</span></td><td align="center"><span id="sp8" class="c1" style="background: none;">6</span></td><td align="center"><span id="sp9" class="c1" style="background: none;">7</span></td><td align="center"><span id="sp10" class="c1" style="background: none;">8</span></td><td align="center"><span id="sp11" class="c1" style="background: none;">9</span></td><td align="center"><span id="sp12" class="c1" style="background: none;">10</span></td><td align="center"><span id="sp13" class="c2" style="background: none;">11</span></td></tr><tr><td align="center"><span id="sp14" class="c2" style="background: none;">12</span></td><td align="center"><span id="sp15" class="c1" style="background: none;">13</span></td><td align="center"><span id="sp16" class="c1" style="background: none;">14</span></td><td align="center"><span id="sp17" class="c1" style="background: none;">15</span></td><td align="center"><span id="sp18" class="c1" style="background: none;">16</span></td><td align="center"><span id="sp19" class="c1" style="background: none;">17</span></td><td align="center"><span id="sp20" class="c2" style="background: none;">18</span></td></tr><tr><td align="center"><span id="sp21" class="c2" style="background: none rgb(238, 238, 238);">19</span></td><td align="center"><span id="sp22" class="c1" style="background: url(http://media.bambinocampones.com.br/images/evento_bkp.png);">20</span></td><td align="center"><span id="sp23" class="c1" style="background: none;">21</span></td><td align="center"><span id="sp24" class="c1" style="background: none;">22</span></td><td align="center"><span id="sp25" class="c1" style="background: none;">23</span></td><td align="center"><span id="sp26" class="c1" style="background: none;">24</span></td><td align="center"><span id="sp27" class="c2" style="background: none;">25</span></td></tr><tr><td align="center"><span id="sp28" class="c2" style="background: url(http://media.bambinocampones.com.br/images/evento_bkp.png);">26</span></td><td align="center"><span id="sp29" class="c1" style="background: none;">27</span></td><td align="center"><span id="sp30" class="c1" style="background: none;">28</span></td><td align="center"><span id="sp31" class="c1" style="background: none;">29</span></td><td align="center"><span id="sp32" class="c1" style="background: none;">30</span></td><td align="center"><span id="sp33" class="c1" style="background: none;">31</span></td><td align="center"><span id="sp34" class="c3" style="background: none;">1</span></td></tr><tr><td align="center"><span id="sp35" class="c3" style="background: none;">2</span></td><td align="center"><span id="sp36" class="c3" style="background: none;">3</span></td><td align="center"><span id="sp37" class="c3" style="background: none;">4</span></td><td align="center"><span id="sp38" class="c3" style="background: none;">5</span></td><td align="center"><span id="sp39" class="c3" style="background: none;">6</span></td><td align="center"><span id="sp40" class="c3" style="background: none;">7</span></td><td align="center"><span id="sp41" class="c3" style="background: none;">8</span></td></tr></tbody></table></td></tr></tbody></table></form></div>
                             <div id="eventsDescriptions"><img src="http://media.bambinocampones.com.br/images/evento_bkp.png" class="activity_bkg"> 20/7 - Dia do Amigo<br><img src="http://media.bambinocampones.com.br/images/evento_bkp.png" class="activity_bkg"> 26/7 - Dia dos Avós<br></div>
                             <div id="events_types">
                                 <h5>Onde:</h5>
@@ -566,7 +338,7 @@
                                     <tbody><tr>
                                         <td style="width: 78px;"><img src="http://media.bambinocampones.com.br/images/evento_bkp.png" class="activity_bkg"> Evento</td>
                                         <td style="width: 70px;"><img src="http://media.bambinocampones.com.br/images/festa_bkp.png" class="activity_bkg"> Festa</td>
-                                        <td style="width: 78px;"><img src="http://media.bambinocampones.com.br/images/feriado_bkp.png" class="activity_bkg"> Feriado</td>
+                                        <td style="width: 70px;"><img src="http://media.bambinocampones.com.br/images/feriado_bkp.png" class="activity_bkg"> Feriado</td>
                                     </tr>
                                     <tr>
                                         <td style="width: 78px;"><img src="http://media.bambinocampones.com.br/images/recesso_bkp.png" class="activity_bkg"> Recesso</td>
@@ -586,18 +358,12 @@
                             <img src="http://media.bambinocampones.com.br/images/comida.jpg" alt="" title="" style="width:100%;" />
                         </a>
                         <span style="text-indent: 20px;display:block;margin-top: 10px;">Temos também a opção de lanche feito na escola. Maiores informações, Fale com a direção.</span>
-                        <a href="/cardapio" role="button" class="btn btn-default btn-xs pull-right" style="margin-top: 5px;">Ver mais</a>
                     </div>
                 </div>
                 <hr>
                 <div class="panel panel-default">
                     <div class="panel-heading">Lista de Material</div>
                     <div class="panel-body">
-						<a href="/material-escolar" title="Lista de material por turma.">
-							<img src="/static/images/lista_material.png" style="width:100%" data-src="" alt="Third slide">
-						</a>
-                        <span style="text-indent: 20px;display:block;margin-top: 10px;text-align:justify;">Verifique a lista de material necessária para este ano letivo de 2015.</span>
-                        <h4>Turmas:</h4>
                         <ul style="padding: 1% 7%;">
                             <li style="padding-bottom: 5px;">
                                 <a href="http://media.bambinocampones.com.br/images/material_escolar/bercario_pre_maternal_2015.pdf" title="" target="_blank">Berçário e Pré-Maternal</a>
@@ -618,16 +384,10 @@
                 <div class="panel panel-default">
                     <div class="panel-heading">Dicas</div>
                     <div class="panel-body">
-                        <a href="/material-escolar" title="Lista de material por turma.">
-                            <img src="/static/images/dicas.png" style="width:100%" data-src="" alt="Third slide">
-                        </a>
-                        <span style="text-indent: 20px;display:block;margin-top: 10px;text-align:justify;">Confira as dicas educacionais de renomados autores.</span>
-                        <h4>Últimas dicas:</h4>
                         <ul class="lista_downloads" style="padding: 1% 7%;">
                             <li><a href="http://media.bambinocampones.com.br/arquivos/bambino.pdf" title="Apresentação sobre a Bambino.">Quem ama educa</a></li>
                         </ul>
-                        
-                        <a href="/dicas" role="button" class="btn btn-default btn-xs pull-right" style="margin-top: 5px;">Ver mais</a>
+                        Dicas educacionais de renomados autores.
                     </div>
                 </div>
                 <hr>
@@ -637,46 +397,35 @@
                         <span style="display:block; font-weight: bold;margin-bottom: 5px;">Fotos:</span>
                         <p style="text-align: justify; text-indent: 20px; margin-top: 5px;">Últimas fotos publicadas em nossos álbuns:</p>
                         <img src="https://lh4.googleusercontent.com/-_KkP6iDzFGo/U8qQFB8ZfaI/AAAAAAAAELI/r8hCS0jcr2g/w800-h533-no/GEDC9472.png" alt="Fotos Diversas Junho de 2014. - Junho/2014" title="Album de fotos Diversas Junho de 2014. - Junho/2014" width="100%">
-                        <a href="/fotos" role="button" class="btn btn-default btn-xs pull-right" style="margin-top: 5px;">Ver mais</a>
+                        <button class="btn btn-xs pull-right" style="margin-top: 5px;">Ver mais</button>
                         <span style="display:block; font-weight: bold;margin-top: 20px;">Vídeos:</span>
                         <p style="text-align: justify; text-indent: 20px; margin-top: 5px;">Últimos vídeos publicados em nosso canal:</p>
-                        <img src="/static/images/videos.png" alt="Fotos Diversas Junho de 2014. - Junho/2014" title="Album de fotos Diversas Junho de 2014. - Junho/2014" width="100%">
-                        <a href="/videos" role="button" class="btn btn-default btn-xs pull-right" style="margin-top: 5px;">Ver mais</a>
+                        <img src="https://lh4.googleusercontent.com/-_KkP6iDzFGo/U8qQFB8ZfaI/AAAAAAAAELI/r8hCS0jcr2g/w800-h533-no/GEDC9472.png" alt="Fotos Diversas Junho de 2014. - Junho/2014" title="Album de fotos Diversas Junho de 2014. - Junho/2014" width="100%">
+                        <button class="btn btn-xs pull-right" style="margin-top: 5px;">Ver mais</button>
                     </div>
                 </div>
                 <hr>
                 <div class="panel panel-default">
                     <div class="panel-heading">Material de Apoio</div>
                     <div class="panel-body">
-						<a href="/cardapio" title="Cardápio mensal">
-                            <img src="/static/images/material_apoio.png" style="width:100%" data-src="" alt="Third slide">
-                        </a>
-                        <span style="text-indent: 20px;display:block;margin-top: 10px;">Material educacional de apoio, uma cortesia da nossa psicóloga Maria Elizabete.</span>
-                        <h4>Últimas publicações:</h4>
                         <ul class="lista_downloads" style="padding: 1% 7%;">
                             <li><a href="http://media.bambinocampones.com.br/arquivos/bambino.pdf" title="Apresentação sobre a Bambino.">Como não mimar demais seu bebê.</a></li>
                             <li><a href="http://media.bambinocampones.com.br/arquivos/brincar.pdf" title="Apresentação sobre a Bambino.">O Brincar enquanto função mental.</a></li>
                             <li style="margim-bottom: 20px;padding-bottom: 10px;"><a href="http://media.bambinocampones.com.br/arquivos/culpa.pdf" title="Apresentação sobre a Bambino.">O Fim da Culpa.</a></li>
-                            
+                            <span style="font-size: 13px;">Ob: Uma cortesia da nossa psicóloga Maria Elizabete.</span>
                         </ul>
-                        <a href="/material-apoio" role="button" class="btn btn-default btn-xs pull-right" style="margin-top: 5px;">Ver mais</a>
                     </div>
                 </div>
                 <hr>
                 <div class="panel panel-default">
                     <div class="panel-heading">Downloads</div>
                     <div class="panel-body">
-						<a href="/cardapio" title="Cardápio mensal">
-                            <img src="/static/images/downloads.png" style="width:100%" data-src="" alt="Third slide">
-                        </a>
-                        <span style="text-indent: 20px;display:block;margin-top: 10px;">Selecione o tipo de download para a listagem completa: </span>
                         <ul class="lista_downloads"  style="padding: 1% 7%;">
                             <li><a href="/download-musicas" title="Download de músicas.">Músicas</a></li>
                             <li><a href="/download-videos" title="Download de vídeos.">Vídeos</a></li>
                             <li><a href="/download-papeis-de-parede" title="Download de papéis de parede.">Papéis de Parede</a></li>
                             <li><a href="/download-desenhos" title="Download de desenhos para pintar.">Desenhos p/ Pintar</a></li>
                         </ul>
-                        <a href="/downloads" role="button" class="btn btn-default btn-xs pull-right" style="margin-top: 5px;">Ver mais</a>
                     </div>
                 </div>
                 <hr>
@@ -684,18 +433,13 @@
             <!--center-->
             <div class="col-sm-6">
                 $:content
-		{% block content %} {% endblock %}
-            </div>
-            <!--/center-->
+            </div><!--/center-->
             <!--right-->
             <div class="col-sm-3">
-                <h2 class="title_shadow"><img src="/static/images/informacoes.png" class="mural_icon">Informações</h2>
+                <h2 class="title_shadow">Informações</h2>
                 <div class="panel panel-default">
                     <div class="panel-heading">Nossa Escola</div>
                     <div class="panel-body">
-						<a href="/cardapio" title="Cardápio mensal">
-                            <img src="/static/images/escola.png" style="width:100%" data-src="" alt="Third slide">
-                        </a>
                         <p class="historia">Nossa história começou em 1999, com a necessidade de um local adequado para deixar meu filho, na época com 3 (três) anos...<a href="#" class="more">Ver mais</a></p>
                         <p></p>
                         <h5>Saiba mais:</h5>
@@ -711,10 +455,6 @@
                 <div class="panel panel-default">
                     <div class="panel-heading">Nossos Serviços</div>
                     <div class="panel-body">
-						<a href="/cardapio" title="Cardápio mensal">
-                            <img src="/static/images/servicos.jpg" style="width:100%" data-src="" alt="Third slide">
-                        </a>
-                        <span style="text-indent: 20px;display:block;margin-top: 10px;">Conheça os serviços oferecidos pela nossa escola: </span>
                         <ul>
                             <li><a href="$:vars['context_path']/bercario" title="Berçario.">Berçario</a></li>
                             <li><a href="$:vars['context_path']/pre-maternal" title="Pré-Maternal.">Pré-Maternal</a></li>
@@ -733,8 +473,6 @@
                         <img src="http://media.bambinocampones.com.br/images/selo_2014_small.png"
                              title="Selo responsabilidade Social."
                              alt="Ícone do Selo" />
-                        <span style="text-indent: 20px;display:block;margin-top: 10px;">A Bambino é uma empresa comprometida com as causas sociais.</span>
-                        <a href="/responsabilidade-social" role="button" class="btn btn-default btn-xs pull-right" style="margin-top: 5px;">Ver mais</a>
                     </div>
                 </div>
                 <hr>
@@ -742,15 +480,7 @@
                     <div class="panel-heading">Depoímentos</div>
                     <div class="panel-body">
                         <img src="http://media.bambinocampones.com.br/images/depoimentos.png" alt="ícone dos depoimentos" title="Deixe seu depoimento:" style="width: 100%;margin: 0px auto;padding: 5px 15px;">
-                        <span style="text-indent: 20px;display:block;margin-top: 10px;">Depoímentos de pais, fornecedores e parceiros da Bambino.</span>
-                        <h4>Últimos depoímentos:</h4>
-                        <ul class="lista_downloads" style="padding: 1% 7%;">
-                            <li><a href="http://media.bambinocampones.com.br/arquivos/bambino.pdf" title="Apresentação sobre a Bambino.">Pai do João: "A escola...".</a></li>
-                            <li><a href="http://media.bambinocampones.com.br/arquivos/brincar.pdf" title="Apresentação sobre a Bambino.">Pai da Maria: "Na Bambino.."..</a></li>
-                            <li style="margim-bottom: 20px;padding-bottom: 10px;"><a href="http://media.bambinocampones.com.br/arquivos/culpa.pdf" title="Apresentação sobre a Bambino.">Anônimo: "Parabéns pela....".</a></li>
-                            
-                        </ul>
-                        <a href="/depoimentos" role="button" class="btn btn-default btn-xs pull-right" style="margin-top: 5px;">Ver mais</a>
+                        Depoímentos de pais, fornecedores e parceiros da Bambino.
                     </div>
                 </div>
                 <hr>
@@ -791,7 +521,7 @@
         <!-- script references -->
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
         <script src="$:vars['static_url']javascript/bootstrap.min.js"></script>
-        <script type="text/javascript" src="$:vars['static_url']javascript/widget_calendar.js"></script>
+        <script type="text/javascript" src="http://media.bambinocampones.com.br/javascript/widget_calendar.js"></script>
         <script type="text/javascript">
             jQuery(document).ready(function(){
                 var itemMenu = document.getElementById("$:vars['active_menu']");

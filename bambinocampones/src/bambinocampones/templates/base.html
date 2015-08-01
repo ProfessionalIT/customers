@@ -31,10 +31,9 @@
         <link rel="home" title="Escola de Educação Infantil Bambino Camponês - Creche, Maternal e Educação Pré em Canoas/RS." href="/" />
         <link rel="search" title="Pesquisa no site da Escola de Educação Infantil Bambino Camponês - Creche, Maternal e Educação Pré em Canoas/RS." href="/search/" />
         <link rel="bookmark" href="#index" title="Escola de Educação Infantil Bambino Camponês - Creche, Maternal e Educação Pré em Canoas/RS." />
-        
         <!--link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css"-->
-        
-	<link rel="stylesheet" href="{% static 'css/reset.css' %}">
+
+        <link rel="stylesheet" href="{% static 'css/reset.css' %}">
         <link href="$:vars['static_url']css/bootstrap.min.css" rel="stylesheet">
         <!--[if lt IE 9]>
             <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -291,7 +290,6 @@
                     </h2>
                     <!-- Aqui vai vir do Admin os compromisso do diário online que forem relativos a esta semana -->
                     <div id="myCarousel" class="carousel slide" data-ride="carousel" style="box-shadow: 1px 2px 6px rgba(0, 0, 0, 0.5); -moz-box-shadow: 1px 2px 6px rgba(0, 0, 0, 0.5); -webkit-box-shadow: 1px 2px 6px rgba(0, 0, 0, 0.5);"> 
-                    <!--div id="myCarousel" class="carousel slide" data-ride="carousel" style="background-color: #fff; padding: 3px; border: 01px solid #ccc;"--> 
                     <!-- Indicators -->
                         <ol class="carousel-indicators">
                             <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -417,8 +415,8 @@
                                                                 <span id="sp0" class="c3" style="background: none;">28</span>
                                                             </td>
                                                             <td align="center">
-                                                                <span id="sp1" class="c3" style="background: none;">29</span><
-                                                            /td>
+                                                                <span id="sp1" class="c3" style="background: none;">29</span>
+                                                            </td>
                                                             <td align="center">
                                                                 <span id="sp2" class="c3" style="background: none;">30</span>
                                                             </td>
@@ -561,17 +559,19 @@
                             <div id="events_types">
                                 <h5>Onde:</h5>
                                 <table class="table">
-                                    <tbody><tr>
-                                        <td style="width: 78px;"><img src="http://media.bambinocampones.com.br/images/evento_bkp.png" class="activity_bkg"> Evento</td>
-                                        <td style="width: 70px;"><img src="http://media.bambinocampones.com.br/images/festa_bkp.png" class="activity_bkg"> Festa</td>
-                                        <td style="width: 78px;"><img src="http://media.bambinocampones.com.br/images/feriado_bkp.png" class="activity_bkg"> Feriado</td>
-                                    </tr>
-                                    <tr>
-                                        <td style="width: 78px;"><img src="http://media.bambinocampones.com.br/images/recesso_bkp.png" class="activity_bkg"> Recesso</td>
-                                        <td style="width: 70px;"><img src="http://media.bambinocampones.com.br/images/ponte_bkp.png" class="activity_bkg"> Ponte</td>
-                                        <td></td>
-                                    </tr>
-                                </tbody></table>
+                                    <tbody>
+                                        <tr>
+                                            <td style="width: 78px;"><img src="http://media.bambinocampones.com.br/images/evento_bkp.png" class="activity_bkg"> Evento</td>
+                                            <td style="width: 70px;"><img src="http://media.bambinocampones.com.br/images/festa_bkp.png" class="activity_bkg"> Festa</td>
+                                            <td style="width: 78px;"><img src="http://media.bambinocampones.com.br/images/feriado_bkp.png" class="activity_bkg"> Feriado</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="width: 78px;"><img src="http://media.bambinocampones.com.br/images/recesso_bkp.png" class="activity_bkg"> Recesso</td>
+                                            <td style="width: 70px;"><img src="http://media.bambinocampones.com.br/images/ponte_bkp.png" class="activity_bkg"> Ponte</td>
+                                            <td></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
                             </div>
                         </div>
                     </div>
@@ -591,9 +591,9 @@
                 <div class="panel panel-default">
                     <div class="panel-heading">Lista de Material</div>
                     <div class="panel-body">
-						<a href="/material-escolar" title="Lista de material por turma.">
-							<img src="/static/images/lista_material.png" style="width:100%" data-src="" alt="Third slide">
-						</a>
+                        <a href="/material-escolar" title="Lista de material por turma.">
+                            <img src="/static/images/lista_material.png" style="width:100%" data-src="" alt="Third slide">
+                        </a>
                         <span style="text-indent: 20px;display:block;margin-top: 10px;text-align:justify;">Verifique a lista de material necessária para este ano letivo de 2015.</span>
                         <h4>Turmas:</h4>
                         <ul style="padding: 1% 7%;">
@@ -624,7 +624,6 @@
                         <ul class="lista_downloads" style="padding: 1% 7%;">
                             <li><a href="http://media.bambinocampones.com.br/arquivos/bambino.pdf" title="Apresentação sobre a Bambino.">Quem ama educa</a></li>
                         </ul>
-                        
                         <a href="/dicas" role="button" class="btn btn-default btn-xs pull-right" style="margin-top: 5px;">Ver mais</a>
                     </div>
                 </div>
@@ -646,7 +645,7 @@
                 <div class="panel panel-default">
                     <div class="panel-heading">Material de Apoio</div>
                     <div class="panel-body">
-						<a href="/cardapio" title="Cardápio mensal">
+                        <a href="/cardapio" title="Cardápio mensal">
                             <img src="/static/images/material_apoio.png" style="width:100%" data-src="" alt="Third slide">
                         </a>
                         <span style="text-indent: 20px;display:block;margin-top: 10px;">Material educacional de apoio, uma cortesia da nossa psicóloga Maria Elizabete.</span>
@@ -655,7 +654,6 @@
                             <li><a href="http://media.bambinocampones.com.br/arquivos/bambino.pdf" title="Apresentação sobre a Bambino.">Como não mimar demais seu bebê.</a></li>
                             <li><a href="http://media.bambinocampones.com.br/arquivos/brincar.pdf" title="Apresentação sobre a Bambino.">O Brincar enquanto função mental.</a></li>
                             <li style="margim-bottom: 20px;padding-bottom: 10px;"><a href="http://media.bambinocampones.com.br/arquivos/culpa.pdf" title="Apresentação sobre a Bambino.">O Fim da Culpa.</a></li>
-                            
                         </ul>
                         <a href="/material-apoio" role="button" class="btn btn-default btn-xs pull-right" style="margin-top: 5px;">Ver mais</a>
                     </div>
@@ -664,7 +662,7 @@
                 <div class="panel panel-default">
                     <div class="panel-heading">Downloads</div>
                     <div class="panel-body">
-						<a href="/cardapio" title="Cardápio mensal">
+                        <a href="/cardapio" title="Cardápio mensal">
                             <img src="/static/images/downloads.png" style="width:100%" data-src="" alt="Third slide">
                         </a>
                         <span style="text-indent: 20px;display:block;margin-top: 10px;">Selecione o tipo de download para a listagem completa: </span>
@@ -681,16 +679,16 @@
             </div><!--/left-->
             <!--center-->
             <div class="col-sm-6">
-		{% block content %} {% endblock %}
+                {% block content %} {% endblock %}
             </div>
-	    <!--/center-->
+            <!--/center-->
             <!--right-->
             <div class="col-sm-3">
                 <h2 class="title_shadow"><img src="/static/images/informacoes.png" class="mural_icon">Informações</h2>
                 <div class="panel panel-default">
                     <div class="panel-heading">Nossa Escola</div>
                     <div class="panel-body">
-						<a href="/cardapio" title="Cardápio mensal">
+                        <a href="/cardapio" title="Cardápio mensal">
                             <img src="/static/images/escola.png" style="width:100%" data-src="" alt="Third slide">
                         </a>
                         <p class="historia">Nossa história começou em 1999, com a necessidade de um local adequado para deixar meu filho, na época com 3 (três) anos...<a href="#" class="more">Ver mais</a></p>
@@ -708,7 +706,7 @@
                 <div class="panel panel-default">
                     <div class="panel-heading">Nossos Serviços</div>
                     <div class="panel-body">
-						<a href="/cardapio" title="Cardápio mensal">
+                        <a href="/cardapio" title="Cardápio mensal">
                             <img src="/static/images/servicos.jpg" style="width:100%" data-src="" alt="Third slide">
                         </a>
                         <span style="text-indent: 20px;display:block;margin-top: 10px;">Conheça os serviços oferecidos pela nossa escola: </span>
@@ -745,7 +743,6 @@
                             <li><a href="http://media.bambinocampones.com.br/arquivos/bambino.pdf" title="Apresentação sobre a Bambino.">Pai do João: "A escola...".</a></li>
                             <li><a href="http://media.bambinocampones.com.br/arquivos/brincar.pdf" title="Apresentação sobre a Bambino.">Pai da Maria: "Na Bambino.."..</a></li>
                             <li style="margim-bottom: 20px;padding-bottom: 10px;"><a href="http://media.bambinocampones.com.br/arquivos/culpa.pdf" title="Apresentação sobre a Bambino.">Anônimo: "Parabéns pela....".</a></li>
-                            
                         </ul>
                         <a href="/depoimentos" role="button" class="btn btn-default btn-xs pull-right" style="margin-top: 5px;">Ver mais</a>
                     </div>
