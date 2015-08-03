@@ -207,7 +207,6 @@ function changeCal(){
     }
     for (ii=0;ii<=41;ii++){
         try {
-            //eval("sp"+ii).style.backgroundColor = "#FFFFFF";
             document.getElementById("sp"+ii).style.backgroundColor = "#FFFFFF";
         } catch(err) {
             document.getElementById("sp"+ii).style.backgroundColor = "#FFFFFF";
@@ -217,25 +216,18 @@ function changeCal(){
     obj_events = document.getElementById('eventsDescriptions');
     obj_events.innerHTML='';
     for (ii=0;ii<=41;ii++){
-        //eval("sp"+ii).style.background='None';
         document.getElementById("sp"+ii).style.background = "None";
         if (((ii<7)&&(arrN[ii]>20))||((ii>27)&&(arrN[ii]<20))){
-            //eval("sp"+ii).innerHTML = arrN[ii];
             document.getElementById("sp"+ii).innerHTML = arrN[ii];
-            //eval("sp"+ii).className = "c3";
             document.getElementById("sp"+ii).className = "c3";
         } else {
-            //eval("sp"+ii).innerHTML = arrN[ii];
             document.getElementById("sp"+ii).innerHTML = arrN[ii];
             if ((dCount==0)||(dCount==6)){
-                //eval("sp"+ii).className = "c2";
                 document.getElementById("sp"+ii).className = "c2";
             } else {
-                //eval("sp"+ii).className = "c1";
                 document.getElementById("sp"+ii).className = "c1";
             }
             if ((arrN[ii]==dd)&&(mm==currM)&&(yyyy==currY)){
-                //eval("sp"+ii).style.backgroundColor="#eeeeee";
                 document.getElementById("sp"+ii).style.backgroundColor="#eeeeee";
             }
             if (arrEventos.length==0) {
@@ -255,23 +247,18 @@ function changeCal(){
                     if ((arrN[ii]==xxDia)&&(xxMes==currM+1)&&(xxAno==currY)) {
                         if (xxTipo=='F'){
                             xxSpan = "<img src='/static/images/festa_bkp.png' class='activity_bkg' />";
-                            //eval("sp"+ii).style.background="url('/static/images/festa_bkp.png')";
                             document.getElementById("sp"+ii).style.background="url('/static/images/festa_bkp.png')";
                         } else if (xxTipo=='E'){
                             xxSpan = "<img src='/static/images/evento_bkp.png' class='activity_bkg' />";
-                            //eval("sp"+ii).style.background="url('/static/images/evento_bkp.png')";
                             document.getElementById("sp"+ii).style.background="url('/static/images/evento_bkp.png')";
                         } else if (xxTipo=='N'){
                             xxSpan = "<img src='/static/images/feriado_bkp.png' class='activity_bkg' />";
-                            //eval("sp"+ii).style.background="url('/static/images/feriado_bkp.png')";
                             document.getElementById("sp"+ii).style.background="url('/static/images/feriado_bkp.png')";
                         } else if (xxTipo=='P'){
                             xxSpan = "<img src='/static/images/ponte_bkp.png' class='activity_bkg' />";
-                            //eval("sp"+ii).style.background="url('/static/images/ponte_bkp.png')";
                             document.getElementById("sp"+ii).style.background="url('/static/images/ponte_bkp.png')";
                         } else if (xxTipo=='R'){
                             xxSpan = "<img src='/static/images/recesso_bkp.png' class='activity_bkg' />";
-                            //eval("sp"+ii).style.background="url('/static/images/recesso_bkp.png')";
                             document.getElementById("sp"+ii).style.background="url('/static/images/recesso_bkp.png')";
                         }
                         obj_events.innerHTML+=xxSpan + ' ' + xxDia + '/' + xxMes + ' - ' + xxDescr + '</br>';

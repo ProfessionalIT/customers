@@ -233,6 +233,10 @@ class Pagina(models.Model):
     slug = models.SlugField(u'Slug',
                             max_length=200,
                             unique=True)
+    descricao = models.CharField(u'Descrição',
+                                 max_length=200,
+                                 null=False,
+                                 blank=False)
     conteudo = models.TextField(u'Conteúdo',
                                 blank=False,
                                 null=False)

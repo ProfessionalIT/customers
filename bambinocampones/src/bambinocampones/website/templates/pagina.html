@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% block title %} {{ pagina.titulo }}. {% endblock %}
+
+{% block keywords %}{{ pagina.palavras_chaves }}{% endblock %}
+{% block description %}{{ pagina.descricao }}{% endblock %}
+
+{% block content %}
+
+{% if pagina.rascunho %}
+    <p> Página em Construção </p>
+{% else %}
+    {{ pagina.conteudo|safe }}
+{% endif %}
+
+{% endblock %}

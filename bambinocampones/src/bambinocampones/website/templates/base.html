@@ -2,7 +2,7 @@
 {% load staticfiles %}
 <html lang="pt-br">
     <head>
-        <title>{% block title %} {% endblock %}</title>
+        <title>Escola de Educação Infantil Bambino Camponês - Creche, Maternal e Educação Pré em Canoas/RS - {% block title %} {% endblock %}</title>
         <meta http-equiv="content-type" content="text/html; charset=UTF-8">
         <meta charset="utf-8">
         <meta name="generator" content="VI/VIM" />
@@ -11,9 +11,9 @@
         <meta name="copyright" content="Copyright (c) 2015 Escola de Educação Infantil Bambino Camponês - Creche, Maternal e Educação Pré em Canoas/RS. This site's design and html code is licensed under the terms of the GPLv3 or (at your option) any later version."/>
         <meta name="organization name" content="Escola de Educação Infantil Bambino Camponês - Creche, Maternal e Educação Pré em Canoas/RS." />
         <meta name="author" content="maxigenios.com.br - Genialidade em Soluções Tecnológicas."/>
-        <meta name="Description" content="$content.full_description" lang="pt-BR"/>
-        <meta name="Keywords" content="$content.keywords_tags" lang="pt-BR"/>
-        <meta name="rating" content="$content.keywords_tags"/>
+        <meta name="Description" content="{% block description %} Pagina inicial {% endblock %}" lang="pt-BR"/>
+        <meta name="Keywords" content="{% block keywords %} Pagina inicial {% endblock %}" lang="pt-BR"/>
+        <meta name="rating" content=""/>
         <meta name="robots" content="ALL"/>
         <meta name="googlebot" content="all" />
         <meta name="distribution" content="Global" />
@@ -72,7 +72,7 @@
                                title="Conheça a Bambino Camponês.">Escola<b class="caret"></b></a>
                             <ul class="dropdown-menu">
                                 <li>
-                                    <a href="/filosofia"
+                                    <a href="/empresa/filosofia"
                                        title="Conheça a filosofia de trabalho de nossa escola.">Filosofia</a>
                                 </li>
                                 <li>
