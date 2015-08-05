@@ -246,20 +246,20 @@ function changeCal(){
                     xxSpan='';
                     if ((arrN[ii]==xxDia)&&(xxMes==currM+1)&&(xxAno==currY)) {
                         if (xxTipo=='F'){
-                            xxSpan = "<img src='/static/images/festa_bkp.png' class='activity_bkg' />";
-                            document.getElementById("sp"+ii).style.background="url('/static/images/festa_bkp.png')";
+                            xxSpan = "<img src='http://static.bambino2015.webfactional.com/images/festa_bkp.png' class='activity_bkg' />";
+                            document.getElementById("sp"+ii).style.background="url('http://static.bambino2015.webfactional.com/images/festa_bkp.png')";
                         } else if (xxTipo=='E'){
-                            xxSpan = "<img src='/static/images/evento_bkp.png' class='activity_bkg' />";
-                            document.getElementById("sp"+ii).style.background="url('/static/images/evento_bkp.png')";
+                            xxSpan = "<img src='http://static.bambino2015.webfactional.com/images/evento_bkp.png' class='activity_bkg' />";
+                            document.getElementById("sp"+ii).style.background="url('http://static.bambino2015.webfactional.com/images/evento_bkp.png')";
                         } else if (xxTipo=='N'){
-                            xxSpan = "<img src='/static/images/feriado_bkp.png' class='activity_bkg' />";
-                            document.getElementById("sp"+ii).style.background="url('/static/images/feriado_bkp.png')";
+                            xxSpan = "<img src='http://static.bambino2015.webfactional.com/images/feriado_bkp.png' class='activity_bkg' />";
+                            document.getElementById("sp"+ii).style.background="url('http://static.bambino2015.webfactional.com/images/images/feriado_bkp.png')";
                         } else if (xxTipo=='P'){
-                            xxSpan = "<img src='/static/images/ponte_bkp.png' class='activity_bkg' />";
-                            document.getElementById("sp"+ii).style.background="url('/static/images/ponte_bkp.png')";
+                            xxSpan = "<img src='http://static.bambino2015.webfactional.com/images/images/ponte_bkp.png' class='activity_bkg' />";
+                            document.getElementById("sp"+ii).style.background="url('http://static.bambino2015.webfactional.com/images/images/ponte_bkp.png')";
                         } else if (xxTipo=='R'){
-                            xxSpan = "<img src='/static/images/recesso_bkp.png' class='activity_bkg' />";
-                            document.getElementById("sp"+ii).style.background="url('/static/images/recesso_bkp.png')";
+                            xxSpan = "<img src='http://static.bambino2015.webfactional.com/images/images/recesso_bkp.png' class='activity_bkg' />";
+                            document.getElementById("sp"+ii).style.background="url('http://static.bambino2015.webfactional.com/images/images/recesso_bkp.png')";
                         }
                         obj_events.innerHTML+=xxSpan + ' ' + xxDia + '/' + xxMes + ' - ' + xxDescr + '</br>';
                     }
