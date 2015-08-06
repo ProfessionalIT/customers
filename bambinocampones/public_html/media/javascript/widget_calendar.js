@@ -17,7 +17,14 @@ function maxDays(mm, yyyy){
 function getEventByMonthYear(par_month, par_year){
     // F-Festa; E-Evento;
     if (par_month==0){
-        var arrEventos = new Array('5/01/2015;E;Volta as aulas.');
+        var arrEventos = new Array('5/01/2015;E;Volta as aulas.',
+                                   '1/01/2016;N;Primeiro de Ano',
+                                   '4/01/2016;R;Recesso Fim de Ano.',
+                                   '5/01/2016;R;Recesso Fim de Ano.',
+                                   '6/01/2016;R;Recesso Fim de Ano.',
+                                   '7/01/2016;R;Recesso Fim de Ano.',
+                                   '8/01/2016;R;Recesso Fim de Ano.',
+                                   '11/01/2016;E;Retorno das aulas');
         return arrEventos;
     } else if (par_month==1){
         var arrEventos = new Array('02/02/2015;F;Nossa Senhora dos Navegantes','03/02/2015;F;Aniversário da Escola', '16/02/2015;P;Ponte Carnaval', '17/02/2015;N;Carnaval');
