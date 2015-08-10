@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% block title %} Cardápios. {% endblock %}
+
+{% block keywords %} cardápios, alimentação {% endblock %}
+{% block description %} Cardápios e informações nutricionais {% endblock %}
+
+{% block content %}
+
+{% if cardapios %}
+    <h2>Cardápios:</h2>
+    <img src="http://media.bambinocampones.com.br/images/comida.jpg" alt="" title="" style="width:100%;" />
+    <span style="text-indent: 20px;display:block;margin-top: 10px;">Temos também a opção de lanche feito na escola. Maiores informações, Fale com a direção.</span>
+    <ul>
+    {% for cardapio in cardapios %}
+        <li>
+            <strong>Turma:</strong> {{ cardapio.get_tipo }} - <strong>Ano:</strong> {{ cardapio.ano }} - <strong>Mês:</strong> {{ cardapio.get_mes }} - <strong>Cardápio:</strong> <a href="{{ MEDIA_URL }}{{ cardapio.cardapio_file }}" title="">Ver arquivo</a>
+        </li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p> Sem cardápios disponíveis no momento. </p>
+{% endif %}
+
+{% endblock %}

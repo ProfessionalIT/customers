@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% block title %} Avisos Importantes. {% endblock %}
+
+{% block keywords %} avisos, recados {% endblock %}
+{% block description %} Avisos importantes {% endblock %}
+
+{% block content %}
+
+{% if avisos %}
+    <h2 class="title_shadow margin_left_adjusts"><img src="{% static 'images/noticias.png' %}" class="mural_icon">Avisos Importantes</h2>
+    {% for aviso in avisos %}
+        <div class="row bg_white">
+            <div class="col-xs-12 paragraf" >
+                <h3 class="news_title">{{ aviso.titulo }}</h3>
+                {% if aviso.miniatura_aviso %}
+                    <img src="{{ MEDIA_URL }}{{ aviso.miniatura_aviso }}" alt="Foto para {{ aviso.titulo }}" title="{{ aviso.titulo }}" class="news_thumb" />
+                {% endif %}
+                <p>{{ aviso.introducao }}</p>
+                <p class="lead">
+                    <button class="btn btn-default" onclick="return location.href='{{ aviso.slug }}'" title="Ler mais sobre a noticia {{ aviso.titulo }}.">Ler mais</button>
+                </p>
+                <!--
+                <p class="pull-right">
+                    $for word in aviso.palavras_chaves.split(','):
+                        <span class="label label-default"><a href="/tag/$:word">$:word</a></span> 
+                </p>
+                -->
+                <ul class="list-inline">
+                    <li>Publicado em: <a href="#">{{ aviso.data_aviso }}</a></li>
+                    <!--
+                    <li><a href="#"><i class="glyphicon glyphicon-comment"></i> 2 Comments</a></li>
+                    <li><a href="#"><i class="glyphicon glyphicon-share"></i> 14 Shares</a></li>
+                    -->
+                </ul>
+            </div>
+        </div>
+        <hr>
+    {% endfor %}
+{% else %}
+    <h2 class="title_shadow margin_left_adjusts">Sem Avisos</h2>
+{% endif %}
+
+{% endblock %}

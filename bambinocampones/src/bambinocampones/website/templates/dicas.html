@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% block title %}{{ titulo }}. {% endblock %}
+
+{% block content %}
+
+{% if lista_dicas %}
+    <h2 class="title_shadow margin_left_adjusts"><img src="{% static 'images/noticias.png' %}" class="mural_icon">Últimas Dicas</h2>
+    {% for dica in lista_dicas %}
+        <div class="row bg_white">
+            <div class="col-xs-12 paragraf" >
+                <h3 class="news_title">{{ dica.titulo }}</h3>
+                {% if dica.miniatura_dica %}
+                    <img src="{{ MEDIA_URL }}{{ dica.miniatura_dica }}" alt="Foto para {{ dica.titulo }}" title="{{ dica.titulo }}" class="news_thumb" />
+                {% endif %}
+                <p>{{ dica.introducao }}</p>
+                <p class="lead">
+                    <button class="btn btn-default" onclick="return location.href='{{ dica.slug }}'" title="Ler mais sobre a noticia {{ dica.titulo }}.">Ler mais</button>
+                </p>
+                <!--
+                <p class="pull-right">
+                    $for word in dica.palavras_chaves.split(','):
+                        <span class="label label-default"><a href="/tag/$:word">$:word</a></span> 
+                </p>
+                -->
+                <ul class="list-inline">
+                    <li>Publicado em: <a href="#">{{ dica.data_dica }}</a></li>
+                    <!--
+                    <li><a href="#"><i class="glyphicon glyphicon-comment"></i> 2 Comments</a></li>
+                    <li><a href="#"><i class="glyphicon glyphicon-share"></i> 14 Shares</a></li>
+                    -->
+                </ul>
+            </div>
+        </div>
+        <hr>
+    {% endfor %}
+{% else %}
+    <h2 class="title_shadow margin_left_adjusts">Sem Dicas</h2>
+    <p>Novas publicações em breve.</p>
+{% endif %}
+{% endblock %}

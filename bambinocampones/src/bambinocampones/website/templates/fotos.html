@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% block title %}{{ titulo }}. {% endblock %}
+
+{% block content %}
+
+{% if lista_fotos %}
+    <h2 class="title_shadow margin_left_adjusts"><img src="{% static 'images/noticias.png' %}" class="mural_icon">Galeria de Fotos</h2>
+    <ul>
+    {% for foto in lista_fotos %}
+        <li>
+            <strong>Ano:</strong> {{ foto.ano }} - <strong>Mês:</strong> {{ foto.get_mes }} - <strong>Galeria:</strong> {{ foto.titulo }}
+            <br />
+            {% for recurso in foto.galeriaresource_set %}
+                <div>
+                {% if recurso.url_resource %}
+                    <a href="{{ recurso.action_resource }}" title=""><img src="{{ recurso.url_resource }}" alt="" title="" /></a>
+                {% else %}
+                    <a href="{{ recurso.action_resource }}" title=""><img src="{{ MEDIA_URL }}{{ recurso.upload_resource }}" alt="" title="" /></a>
+                {% endif %}
+                </div>
+            {% endfor %}
+        </li>
+    {% endfor %}
+</ul>
+{% else %}
+    <h2 class="title_shadow margin_left_adjusts">Sem fotos</h2>
+    <p>Novas publicações em breve.</p>
+{% endif %}
+{% endblock %}
