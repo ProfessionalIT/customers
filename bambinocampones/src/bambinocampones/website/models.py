@@ -62,7 +62,8 @@ class Cardapio(models.Model):
     MES_ATUAL = datetime.datetime.now().month
 
     ANO_CARDAPIO = ((u'2013', u'2013'),
-                    (u'2014', u'2014'),)
+                    (u'2014', u'2014'),
+                    (u'2015', u'2015'),)
 
     ANO_ATUAL = datetime.datetime.now().year
 
@@ -82,6 +83,14 @@ class Cardapio(models.Model):
                                      upload_to='cardapios',
                                      null=False,
                                      blank=False)
+
+    def get_tipo(self):
+        data  = dict(self.TIPO_CARDAPIO)
+        return data[self.tipo]
+
+    def get_mes(self):
+        data  = dict(self.MES_CARDAPIO)
+        return data[self.mes]
 
 
 class Galeria(models.Model):
@@ -140,6 +149,14 @@ class Galeria(models.Model):
     permite_comentario = models.BooleanField(u'Permite Comentário',
                                              default=False)
 
+    def get_tipo(self):
+        data  = dict(self.TIPO_GALERIA)
+        return data[self.tipo]
+
+    def get_mes(self):
+        data  = dict(self.MES_GALERIA)
+        return data[self.mes]
+
     def __unicode__(self):
         return self.titulo
 
@@ -174,7 +191,8 @@ class Publicacao(models.Model):
     """
     TIPO_PUBLICACAO = (('A', 'Aviso'),
                        ('D', 'Dicas'),
-                       ('N', 'Diário Online'),)
+                       ('N', 'Diário Online'),
+                       ('E', 'Eventos'),)
 
     titulo = models.CharField(u'Titulo',
                               max_length=200,
