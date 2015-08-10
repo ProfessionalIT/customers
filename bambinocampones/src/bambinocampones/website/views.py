@@ -63,7 +63,6 @@ def empresa(request, slug):
     depoimentos = models.Depoimento.objects.all()[0:5]
 
     pagina = models.Pagina.objects.get(slug=slug)
-    
     return render(request, 'pagina.html', {'banners': banners,
                                           'calendarios': calendarios,
                                           'dicas': dicas,
