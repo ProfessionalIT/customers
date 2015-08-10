@@ -93,7 +93,7 @@
                                 </li>
                                 <li>
                                     <a href="/depoimentos"
-                                       title="Depoímentos de Pais, Alunos e Colaboradores.">Depoímentos</a>
+                                       title="Depoimentos de Pais, Alunos e Colaboradores.">Depoimentos</a>
                                 </li>
                             </ul>
                         </li>
@@ -738,8 +738,8 @@
                     <div class="panel-heading">Depoímentos</div>
                     <div class="panel-body">
                         <img src="http://media.bambinocampones.com.br/images/depoimentos.png" alt="ícone dos depoimentos" title="Deixe seu depoimento:" style="width: 100%;margin: 0px auto;padding: 5px 15px;">
-                        <span style="text-indent: 20px;display:block;margin-top: 10px;">Depoímentos de pais, fornecedores e parceiros da Bambino.</span>
-                        <h4>Últimos depoímentos:</h4>
+                        <span style="text-indent: 20px;display:block;margin-top: 10px;">Depoimentos de pais, fornecedores e parceiros da Bambino.</span>
+                        <h4>Últimos depoimentos:</h4>
                         <ul class="lista_downloads" style="padding: 1% 7%;">
                             {% for depoimento in depoimentos %}
                                 <li><a href="{{ depoimento.id }}" title="{{ depoimento.conteudo }}">Autor: {{ depoimento.autor }}: "{% if depoimento.conteudo|length > 15 %}{{ depoimento.conteudo|truncatechars:15 }}...{% else %}{{ depoimento.conteudo }}{% endif %}"</a></li>
