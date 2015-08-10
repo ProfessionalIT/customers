@@ -1,1 +1,1 @@
-Site da Bambino
+Site da Bambino desenvolvido em Django.
