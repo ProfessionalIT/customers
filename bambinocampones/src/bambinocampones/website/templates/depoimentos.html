@@ -9,14 +9,13 @@
 
 {% if depoimentos %}
     <h2>Depoimentos:</h2>
-    <img src="http://media.bambinocampones.com.br/images/depoimentos.png" alt="ícone dos depoimentos" title="Deixe seu depoimento:" style="width: 100%;margin: 0px auto;padding: 5px 15px;">
     <span style="text-indent: 20px;display:block;margin-top: 10px;">Depoimentos de pais, fornecedores e parceiros da Bambino.</span>
     {% for depoimento in depoimentos %}
         <blockquote>"{{ depoimento.conteudo|safe }}"</blockquote>
         <p class="text-right"><strong>Autor: {{ depoimento.autor }}</strong></p>
     {% endfor %}
     <p>Te convidamos para deixar o seu depoimento também:</p>
-    <a href="/fazer-depoimento" role="button" class="btn btn-default btn-xs pull-right" style="margin-top: 5px;">Incluir Depoimento</a>
+    <a href="/fazer-depoimento" role="button" class="btn btn-default btn-xs pull-right" style="margin-top: 5px;" onclick="return false;">Incluir Depoimento</a>
 {% else %}
     <p> Sem depoimentos no momento. </p>
 {% endif %}

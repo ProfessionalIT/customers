@@ -15,7 +15,7 @@
                 {% endif %}
                 <p>{{ dica.introducao }}</p>
                 <p class="lead">
-                    <button class="btn btn-default" onclick="return location.href='{{ dica.slug }}'" title="Ler mais sobre a noticia {{ dica.titulo }}.">Ler mais</button>
+                    <button class="btn btn-default" onclick="return location.href='/dica/{{ dica.slug }}'" title="Ler mais sobre a dica {{ dica.titulo }}.">Ler mais</button>
                 </p>
                 <!--
                 <p class="pull-right">
@@ -24,7 +24,7 @@
                 </p>
                 -->
                 <ul class="list-inline">
-                    <li>Publicado em: <a href="#">{{ dica.data_dica }}</a></li>
+                    <li>Publicado em: <a href="#">{{ dica.data_publicacao }}</a></li>
                     <!--
                     <li><a href="#"><i class="glyphicon glyphicon-comment"></i> 2 Comments</a></li>
                     <li><a href="#"><i class="glyphicon glyphicon-share"></i> 14 Shares</a></li>

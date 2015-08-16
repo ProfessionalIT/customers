@@ -42,9 +42,10 @@ class Cardapio(models.Model):
     """
     Cardápio Mensal de refeições.
     """
-    TIPO_CARDAPIO = ((u'1', u'Berçário 1'),
-                     (u'2', u'Berçário 2'),
-                     (u'3', u'Crianças Maiores de 1 ano'),)
+    TIPO_CARDAPIO = ((u'1', u'Berçário 1 - Menores 06 meses'),
+                     (u'2', u'Berçário 1 - Maiores 06 meses'),
+                     (u'3', u'Berçário 2'),
+                     (u'4', u'Crianças Maiores de 1 ano'),)
 
     MES_CARDAPIO = ((u'01', u'Janeiro'),
                     (u'02', u'Fevereiro'),
@@ -61,9 +62,7 @@ class Cardapio(models.Model):
 
     MES_ATUAL = datetime.datetime.now().month
 
-    ANO_CARDAPIO = ((u'2013', u'2013'),
-                    (u'2014', u'2014'),
-                    (u'2015', u'2015'),)
+    ANO_CARDAPIO = ((u'2015', u'2015'),)
 
     ANO_ATUAL = datetime.datetime.now().year
 
@@ -85,11 +84,11 @@ class Cardapio(models.Model):
                                      blank=False)
 
     def get_tipo(self):
-        data  = dict(self.TIPO_CARDAPIO)
+        data = dict(self.TIPO_CARDAPIO)
         return data[self.tipo]
 
     def get_mes(self):
-        data  = dict(self.MES_CARDAPIO)
+        data = dict(self.MES_CARDAPIO)
         return data[self.mes]
 
 
@@ -150,15 +149,19 @@ class Galeria(models.Model):
                                              default=False)
 
     def get_tipo(self):
-        data  = dict(self.TIPO_GALERIA)
+        data = dict(self.TIPO_GALERIA)
         return data[self.tipo]
 
     def get_mes(self):
-        data  = dict(self.MES_GALERIA)
+        data = dict(self.MES_GALERIA)
         return data[self.mes]
 
     def __unicode__(self):
         return self.titulo
+
+    def get_thumb(self):
+        recurso = self.galeriaresource_set.filter()[:1].get()
+        return recurso
 
     @models.permalink
     def get_absolute_url(self):
@@ -231,6 +234,10 @@ class Publicacao(models.Model):
     permite_comentario = models.BooleanField(u'Permite Comentário',
                                              default=False)
     rascunho = models.BooleanField(u'Rascunho', default=True)
+
+    def get_tipo(self):
+        data = dict(self.TIPO_PUBLICACAO)
+        return data[self.tipos]
 
     def __unicode__(self):
         return self.titulo
@@ -480,6 +487,10 @@ class Recomendacao(models.Model):
                                   upload_to=u'imagens')
     destaque = models.BooleanField(u'Destaque',
                                    default=False)
+
+    def get_tipo(self):
+        data = dict(self.TIPO_RECOMENDACAO)
+        return data[self.tipo]
 
     def __unicode__(self):
         return self.descricao

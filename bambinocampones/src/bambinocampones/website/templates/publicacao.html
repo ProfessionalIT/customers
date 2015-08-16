@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% block title %}{{ publicacao.titulo }}. {% endblock %}
+
+{% block content %}
+<h2 class="title_shadow margin_left_adjusts"><img src="{% static 'images/noticias.png' %}" class="mural_icon">{{ publicacao.get_tipo }}</h2>
+<div class="row bg_white">
+    <div class="col-xs-12 paragraf" >
+        <h3 class="news_title">{{ publicacao.titulo }}</h3>
+        {% if publicacao.miniatura_publicacao %}
+            <img src="{{ MEDIA_URL }}{{ publicacao.miniatura_publicacao }}" alt="Foto para {{ publicacao.titulo }}" title="{{ publicacao.titulo }}" class="news_thumb" />
+        {% endif %}
+        <p>{{ publicacao.completa }}</p>
+        <!--
+        <p class="pull-right">
+            $for word in publicacao.palavras_chaves.split(','):
+                <span class="label label-default"><a href="/tag/$:word">$:word</a></span> 
+        </p>
+        -->
+        <ul class="list-inline">
+            <li>Publicado em: <a href="#">{{ publicacao.data_publicacao }}</a></li>
+            <!--
+            <li><a href="#"><i class="glyphicon glyphicon-comment"></i> 2 Comments</a></li>
+            <li><a href="#"><i class="glyphicon glyphicon-share"></i> 14 Shares</a></li>
+            -->
+        </ul>
+    </div>
+</div>
+<hr>
+{% endblock %}

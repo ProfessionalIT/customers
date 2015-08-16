@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="pt-br">
+    <head>
+        <title>Escola de Educação Infantil Bambino Camponês - Creche, Maternal e Educação Pré em Canoas/RS - {% block title %} {% endblock %}</title>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <meta charset="utf-8">
+        <meta name="generator" content="VI/VIM" />
+        <meta name="language" content="pt-br"/>
+        <meta name="country" content="Brazil"/>
+        <meta name="copyright" content="Copyright (c) 2015 Escola de Educação Infantil Bambino Camponês - Creche, Maternal e Educação Pré em Canoas/RS. This site's design and html code is licensed under the terms of the GPLv3 or (at your option) any later version."/>
+        <meta name="organization name" content="Escola de Educação Infantil Bambino Camponês - Creche, Maternal e Educação Pré em Canoas/RS." />
+        <meta name="author" content="maxigenios.com.br - Genialidade em Soluções Tecnológicas."/>
+        <meta name="Description" content="{% block description %} Pagina inicial {% endblock %}" lang="pt-BR"/>
+        <meta name="Keywords" content="{% block keywords %} Pagina inicial {% endblock %}" lang="pt-BR"/>
+        <meta name="rating" content=""/>
+        <meta name="robots" content="ALL"/>
+        <meta name="googlebot" content="all" />
+        <meta name="distribution" content="Global" />
+        <meta name="revisit-after" content="1 day" />
+
+        <!-- Ver -->
+        <meta name="google-site-verification" content="4_aezKu-nJBhNjQuEwJczVKct2D97hZVEacKZxtdPLU" />
+        <meta name="msvalidate.01" content="EAF3E41475E7C437B96E2013C6A9B043" />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <link rel="shortcut icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon" />
+        <link rel="canonical" href="http://www.bambinocampones.com.br" />
+        <link rel="author" title="Maxigênios - Genialidade em Soluções Tecnológicas." href="/bio.html" />
+        <link rel="copyright" title="Script license and terms of use" href="/jslibs/termsOfUse.html" />
+        <link rel="home" title="Escola de Educação Infantil Bambino Camponês - Creche, Maternal e Educação Pré em Canoas/RS." href="/" />
+        <link rel="search" title="Pesquisa no site da Escola de Educação Infantil Bambino Camponês - Creche, Maternal e Educação Pré em Canoas/RS." href="/search/" />
+        <link rel="bookmark" href="#index" title="Escola de Educação Infantil Bambino Camponês - Creche, Maternal e Educação Pré em Canoas/RS." />
+        <!--link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css"-->
+
+        <link href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+        <!--[if lt IE 9]>
+            <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+
+        <link href="{% static 'css/styles.css' %}" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" media="screen" href="{% static 'css/widget_calendar.css' %}" />
+
+        <script type="text/javascript">var _siteRoot='layout.html',_root='layout.html';</script>
+        <script type="text/javascript" src="{% static 'javascript/jquery-1.3.2.min.js' %}"></script>
+        <script type="text/javascript" src="{% static 'javascript/jquery.easing.1.3.js' %}"></script>
+        <script type="text/javascript" src="{% static 'javascript/scripts.js' %}"></script>
+        <script type="text/javascript" src="{% static 'javascript/util.js' %}"></script>
+    </head>
+    <body>
+    <header>
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="navbar-header">
+                <a class="navbar-brand"
+                   rel="home"
+                   href="/index"
+                   title="Bem Vindo à Bambino Camponês">Bambino Camponês</a>
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse">
+                    <div class="col-sm-12 col-md-8 col-lg-7">
+                    <ul class="nav navbar-nav">
+                        <li class="dropdown menu_escola">
+                            <a href="#"
+                               class="dropdown-toggle"
+                               data-toggle="dropdown"
+                               title="Conheça a Bambino Camponês.">Escola<b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="/empresa/filosofia"
+                                       title="Conheça a filosofia de trabalho de nossa escola.">Filosofia</a>
+                                </li>
+                                <li>
+                                    <a href="/empresa/nossa-historia"
+                                       title="Conheça a Nossa História.">Nossa História</a>
+                                </li>
+                                <li>
+                                   <a href="/empresa/nossa-equipe"
+                                      title="Conheça a Nossa Equipe.">Nossa Equipe</a>
+                                </li>
+                                <li>
+                                    <a href="/empresa/instalacoes"
+                                       title="Conheça Nossas Instalações.">Instalações</a>
+                                </li>
+                                <li>
+                                    <a href="/empresa/horarios"
+                                       title="Nossos Horários de Funcionamento.">Horários</a>
+                                </li>
+                                <li>
+                                    <a href="/depoimentos"
+                                       title="Depoimentos de Pais, Alunos e Colaboradores.">Depoimentos</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown menu_secretaria">
+                            <a href="#"
+                               class="dropdown-toggle"
+                               data-toggle="dropdown"
+                               title="Matrículas e Material Escolar.">Secretaria<b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="/matriculas"
+                                       title="Informações sobre Matrículas.">Matriculas</a>
+                                </li>
+                                <li>
+                                    <a href="/material-escolar"
+                                       title="Lista de Material Escolar para o ano vigente.">Material Escolar</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown menu_mural">
+                            <a href="#"
+                               class="dropdown-toggle"
+                               data-toggle="dropdown"
+                               title="Mural da Escola">Mural<b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="/cardapio"
+                                       title="Nosso Cardápio Mensal.">Cardápio</a>
+                                </li>
+                                <li>
+                                    <a href="/avisos-importantes"
+                                       title="Avisos Importantes.">Avisos Importantes</a>
+                                </li>
+                                <li>
+                                    <a href="/eventos"
+                                       title="Eventos Realizados.">Eventos</a>
+                                </li>
+                                <li>
+                                    <a href="/dicas"
+                                       title="Dicas úteis.">Dicas</a>
+                                </li>
+                                <li>
+                                    <a href="/galeria-fotos"
+                                       title="Galeria de Fotos.">Galeria de Fotos</a>
+                                </li>
+                                <li>
+                                    <a href="/galeria-videos"
+                                       title="Galeria de Vídeos">Galeria de Vídeos</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown menu_servicos">
+                            <a href="#"
+                               class="dropdown-toggle"
+                               data-toggle="dropdown"
+                               title="Nossos Serviços.">Serviços<b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="/servicos/proposta-pedagogica"
+                                       title="Nossa Proposta Pedagógica.">Proposta Pedagógica</a>
+                                </li>
+                                <li>
+                                    <a href="/servicos/bercario"
+                                       title="Informações sobre o Berçario.">Berçario</a>
+                                </li>
+                                <li>
+                                    <a href="/servicos/pre-maternal"
+                                       title="Informações sobre o Pré-Maternal.">Pré-Maternal</a>
+                                </li>
+                                <li>
+                                    <a href="/servicos/maternal-1"
+                                       title="Informações sobre o Maternal 1.">Maternal 1</a>
+                                </li>
+                                <li>
+                                    <a href="/servicos/maternal-2"
+                                       title="Informações sobre o Maternal 2.">Maternal 2</a>
+                                </li>
+                                <li>
+                                    <a href="/servicos/jardim-a"
+                                       title="Informações sobre o Jardim A.">Jardim A</a>
+                                </li>
+                                <li>
+                                    <a href="/servicos/jardim-b"
+                                       title="Informações sobre o Jardim B.">Jardim B</a>
+                                </li>
+                                <li>
+                                    <a href="/servicos/atividades-extras"
+                                       title="Informações sobre as Atividades Extras.">Atividades Extras</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown menu_downloads">
+                            <a href="#"
+                               class="dropdown-toggle"
+                               data-toggle="dropdown"
+                               title="Coisas legais para Download.">Downloads<b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="/downloads/musicas"
+                                       title="Músicas para Download.">Musicas</a>
+                                </li>
+                                <li>
+                                    <a href="/downloads/videos"
+                                       title="Vídeos para Download.">Videos</a>
+                                </li>
+                                <li>
+                                    <a href="/downloads/papeis-de-parede"
+                                       title="Papéis de Parede para Download.">Papeis de Parede</a>
+                                </li>
+                                <li>
+                                    <a href="/downloads/desenhos-para-pintar"
+                                       title="Desenhos para Pintar para Download.">Desenhos para Pintar</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown menu_contato">
+                            <a href="#"
+                               class="dropdown-toggle"
+                               data-toggle="dropdown"
+                               title="Entre em contato conosco.">Contato<b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="/contato/fale-conosco"
+                                       title="Deixe o seu recado.">Fale Conosco</a>
+                                </li>
+                                <li>
+                                    <a href="/contato/localizacao"
+                                       title="Como chegar até a Bambino Camponês.">Localização</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-sm-12 col-md-12 col-lg-3 pull-right">
+                    <form class="navbar-form" role="search">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Pesquisar no site" name="srch-term" id="srch-term">
+                        <div class="input-group-btn">
+                            <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+                        </div>
+                    </div>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <div class="row logo_area">
+                <div class="col-sm-6 text-center">
+                    <a href="/index"
+                       title="Bem Vindo à Bambino Camponês.">
+                       <img src="http://media.bambinocampones.com.br/images/logo.png"
+                            class="logotipo"
+                            alt="Logotipo da Bambino Camponês."
+                            title="Bem Vindo à Bambino Camponês."/>
+                    </a>
+                </div>
+                <div class="col-sm-6 text-center social_bar" class="margin_top_30" />
+                    <a href="#"
+                       title="Página no Facebook da Bambino Camponês.">
+                       <img src="{% static 'images/facebook.png' %}"
+                            class="margin_right_10"
+                            alt="Ícone do Facebook."
+                            title="Página no Facebook da Bambino Camponês." />
+                    </a>
+                    <a href="#"
+                       title="Página no Google + da Bambino Camponês.">
+                       <img src="{% static 'images/googleplus.png' %}"
+                            class="margin_right_10"
+                            alt="Ícone do Google +."
+                            title="Página no Google + da Bambino Camponês." />
+                    </a>
+                    <a href="#"
+                       title="Página no Twiiter da Bambino Camponês.">
+                       <img src="{% static 'images/twitter.png' %}"
+                            class="margin_right_10"
+                            alt="Ícone do Twiiter."
+                            title="Página no Twitter da Bambino Camponês." />
+                    </a>
+                    <a href="#"
+                       title="Canal do Youtube da Bambino Camponês.">
+                       <img src="{% static 'images/youtube.png' %}"
+                            alt="Ícone do Youtube."
+                            title="Canal do Youtube da Bambino Camponês." />
+                    </a>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-12 col-lg-12">
+                {% block content %} {% endblock %}
+            </div>
+        </div><!--/container-fluid-->
+    </main>
+    <footer>
+        <div class="container-fluid footer_panel">
+            <!--div class="row">
+                <ul>
+                    <li>
+                        <a href="#">Inicial</a>
+                    </li>
+                </ul>
+            </div -->
+            <div class="row">
+                <div class="col-lg-12 text-center footer_area">
+                    <p class="copyright text-muted">Todos os direitos reservados à Escola de Educação Infantil - Bambino Camponês.</p>
+                    <p class="copyright text-muted">Endereço: Rua Irmão Florêncio, nº 151 - Bairro Harmonia - Canoas - RS - Brasil</p>
+                    <p class="copyright text-muted">CEP: 92310-490</p>
+                    <p class="copyright text-muted">Telefone: (51) 3031-3240</p>
+                    <p class="copyright text-muted">Desenvolvido por: <a href="http://www.maxigenios.com.br"
+                                                                         title="Maxigênios - Genialidade em Soluções Tecnológicas.">Maxigênios - Genialidade em Soluções Tecnológicas.</a>
+                </div>
+            </div>
+        </div>
+        <!-- script references -->
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+        <script src="{% static 'javascript/bootstrap.min.js' %}"></script>
+        <script type="text/javascript" src="{% static 'javascript/widget_calendar.js' %}"></script>
+        <script type="text/javascript">
+            window.onload+=writeCalendar('{{ calendarios|safe }}');
+        </script>
+    </footer>
+    </body>
+</html>
+

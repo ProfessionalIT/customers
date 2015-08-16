@@ -31,7 +31,6 @@
         <link rel="home" title="Escola de Educação Infantil Bambino Camponês - Creche, Maternal e Educação Pré em Canoas/RS." href="/" />
         <link rel="search" title="Pesquisa no site da Escola de Educação Infantil Bambino Camponês - Creche, Maternal e Educação Pré em Canoas/RS." href="/search/" />
         <link rel="bookmark" href="#index" title="Escola de Educação Infantil Bambino Camponês - Creche, Maternal e Educação Pré em Canoas/RS." />
-        <!--link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css"-->
 
         <link href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
         <!--[if lt IE 9]>
@@ -569,10 +568,10 @@
                     <div class="panel-heading">Cardápio</div>
                     <div class="panel-body">
                         <a href="/cardapio" title="Cardápio mensal">
-                            <img src="http://media.bambinocampones.com.br/images/comida.jpg" alt="" title="" style="width:100%;" />
+                            <img src="http://media.bambinocampones.com.br/images/comida.jpg" alt="Banner do Cardápio." title="Cardápio mensal por turma." style="width:100%;" />
                         </a>
                         <span style="text-indent: 20px;display:block;margin-top: 10px;">Temos também a opção de lanche feito na escola. Maiores informações, Fale com a direção.</span>
-                        <a href="/cardapio" role="button" class="btn btn-default btn-xs pull-right" style="margin-top: 5px;">Ver mais</a>
+                        <a href="/cardapio" title="Cardápio mensal por turma." role="button" class="btn btn-default btn-xs pull-right" style="margin-top: 5px;">Ver mais</a>
                     </div>
                 </div>
                 <hr>
@@ -580,22 +579,22 @@
                     <div class="panel-heading">Lista de Material</div>
                     <div class="panel-body">
                         <a href="/material-escolar" title="Lista de material por turma.">
-                            <img src="{% static 'images/lista_material.png' %}" style="width:100%" data-src="" alt="Third slide">
+                            <img src="{% static 'images/lista_material.png' %}" style="width:100%" data-src="" alt="Banner do material escolar" title="Lista de Material Escolar no ano vigente.">
                         </a>
                         <span style="text-indent: 20px;display:block;margin-top: 10px;text-align:justify;">Verifique a lista de material necessária para este ano letivo de 2015.</span>
                         <h4>Turmas:</h4>
                         <ul style="padding: 1% 7%;">
                             <li style="padding-bottom: 5px;">
-                                <a href="http://media.bambinocampones.com.br/images/material_escolar/bercario_pre_maternal_2015.pdf" title="" target="_blank">Berçário e Pré-Maternal</a>
+                                <a href="http://media.bambinocampones.com.br/images/material_escolar/bercario_pre_maternal_2015.pdf" title="Lista de material escolar de 2015 para Berçário e Pré-Maternal." target="_blank">Berçário e Pré-Maternal</a>
                             </li>
                             <li style="padding-bottom: 5px;">
-                                <a href="http://media.bambinocampones.com.br/images/material_escolar/maternal_1_2015.pdf" title="" target="_blank">Maternal I</a>
+                                <a href="http://media.bambinocampones.com.br/images/material_escolar/maternal_1_2015.pdf" title="Lista de material escolar de 2015 para Maternal 1." target="_blank">Maternal I</a>
                             </li>
                             <li style="padding-bottom: 5px;">
-                                <a href="http://media.bambinocampones.com.br/images/material_escolar/maternal_2_2015.pdf" title="" target="_blank">Maternal II</a>
+                                <a href="http://media.bambinocampones.com.br/images/material_escolar/maternal_2_2015.pdf" title="Lista de material escolar de 2015 para Maternal 2." target="_blank">Maternal II</a>
                             </li>
                             <li style="padding-bottom: 5px;">
-                                <a href="http://media.bambinocampones.com.br/images/material_escolar/jardim_1_e_2_2015.pdf" title="" target="_blank">Jardim A e B</a>
+                                <a href="http://media.bambinocampones.com.br/images/material_escolar/jardim_1_e_2_2015.pdf" title="Lista de material escolar de 2015 para Jardim A e B." target="_blank">Jardim A e B</a>
                             </li>
                         </ul>
                     </div>
@@ -604,17 +603,17 @@
                 <div class="panel panel-default">
                     <div class="panel-heading">Dicas</div>
                     <div class="panel-body">
-                        <a href="/material-escolar" title="Lista de material por turma.">
-                            <img src="{% static 'images/dicas.png' %}" style="width:100%" data-src="" alt="Third slide">
+                        <a href="/dicas" title="Lista de Dicas Educacionais.">
+                            <img src="{% static 'images/dicas.png' %}" style="width:100%" data-src="" alt="Banner das Dicas" title="Lista de Dicas Educacionais." />
                         </a>
                         <span style="text-indent: 20px;display:block;margin-top: 10px;text-align:justify;">Confira as dicas educacionais de renomados autores.</span>
                         <h4>Últimas dicas:</h4>
                         <ul class="lista_downloads" style="padding: 1% 7%;">
                         {% for dica in dicas %}
-                            <li><a href="{{ dica.slug }}" title="{{ dica.titulo }}">{{ dica.titulo }}</a></li>
+                            <li><a href="/dica/{{ dica.slug }}" title="{{ dica.titulo }}">{{ dica.titulo }}</a></li>
                         {% endfor %}
                         </ul>
-                        <a href="/dicas" role="button" class="btn btn-default btn-xs pull-right" style="margin-top: 5px;">Ver mais</a>
+                        <a href="/dicas" role="button" title="Lista de Dicas Educacionais." class="btn btn-default btn-xs pull-right" style="margin-top: 5px;">Ver mais</a>
                     </div>
                 </div>
                 <hr>
@@ -630,7 +629,7 @@
                                 <img src="{{ MEDIA_URL }}{{ fotos.upload_resource }}" style="width:100%" alt="{{ fotos.titulo }}" title="{{ fotos.titulo }}" width="100%" />
                             {% endif %}
                         {% endif %}
-                        <a href="/fotos" role="button" class="btn btn-default btn-xs pull-right" style="margin-top: 5px;">Ver mais</a>
+                        <a href="/galeria-fotos" title="Galerias de Fotos da Bambino Camponês." role="button" class="btn btn-default btn-xs pull-right" style="margin-top: 5px;">Ver mais</a>
                         <span style="display:block; font-weight: bold;margin-top: 20px;">Vídeos:</span>
                         <p style="text-align: justify; text-indent: 20px; margin-top: 5px;">Últimos vídeos publicados em nosso canal:</p>
                         {% if videos.url_resource %}
@@ -640,41 +639,38 @@
                                 {{ videos.upload_resource|safe }}
                             {% endif %}
                         {% endif %}
-                        <a href="/videos" role="button" class="btn btn-default btn-xs pull-right" style="margin-top: 5px;">Ver mais</a>
+                        <a href="/galeria-videos" title="Galerias de Vídeos da Bambino Camponês." role="button" class="btn btn-default btn-xs pull-right" style="margin-top: 5px;">Ver mais</a>
                     </div>
                 </div>
                 <hr>
                 <div class="panel panel-default">
                     <div class="panel-heading">Material de Apoio</div>
                     <div class="panel-body">
-                        <a href="/cardapio" title="Cardápio mensal">
-                            <img src="{% static 'images/material_apoio.png' %}" style="width:100%" data-src="" alt="Third slide">
+                        <a href="/materiais-apoio" title="Lista de materiais de apoio educaional.">
+                            <img src="{% static 'images/material_apoio.png' %}" style="width:100%" data-src="" alt="Banner do Material de Apoio." title="Lista de materiais de apoio educacional." />
                         </a>
                         <span style="text-indent: 20px;display:block;margin-top: 10px;">Material educacional de apoio, uma cortesia da nossa psicóloga Maria Elizabete.</span>
                         <h4>Últimas publicações:</h4>
                         <ul class="lista_downloads" style="padding: 1% 7%;">
                              {% for material in material_apoio %}
-                                <li><a href="{{ material.acao_link }}" title="{{ material.descricao }}">{{ material.descricao }}</a></li>
+                                <li><a href="/materiais-apoio" title="{{ material.descricao }}">{{ material.descricao }}</a></li>
                              {% endfor %}
                         </ul>
-                        <a href="/material-apoio" role="button" class="btn btn-default btn-xs pull-right" style="margin-top: 5px;">Ver mais</a>
+                        <a href="/materiais-apoio" title="Lista de materiais de apoio educacional."role="button" class="btn btn-default btn-xs pull-right" style="margin-top: 5px;">Ver mais</a>
                     </div>
                 </div>
                 <hr>
                 <div class="panel panel-default">
                     <div class="panel-heading">Downloads</div>
                     <div class="panel-body">
-                        <a href="/cardapio" title="Cardápio mensal">
-                            <img src="{% static 'images/downloads.png' %}" style="width:100%" data-src="" alt="Third slide">
-                        </a>
+                        <img src="{% static 'images/downloads.png' %}" style="width:100%" data-src="" alt="Banner do Downloados" title="Downloads.">
                         <span style="text-indent: 20px;display:block;margin-top: 10px;">Selecione o tipo de download para a listagem completa: </span>
                         <ul class="lista_downloads"  style="padding: 1% 7%;">
-                            <li><a href="/download-musicas" title="Download de músicas.">Músicas</a></li>
-                            <li><a href="/download-videos" title="Download de vídeos.">Vídeos</a></li>
-                            <li><a href="/download-papeis-de-parede" title="Download de papéis de parede.">Papéis de Parede</a></li>
-                            <li><a href="/download-desenhos" title="Download de desenhos para pintar.">Desenhos p/ Pintar</a></li>
+                            <li><a href="/downloads/musicas" title="Download de músicas.">Músicas</a></li>
+                            <li><a href="/downloads/videos" title="Download de vídeos.">Vídeos</a></li>
+                            <li><a href="/downloads/papeis-de-parede" title="Download de papéis de parede.">Papéis de Parede</a></li>
+                            <li><a href="/downloads/desenhos-para-pintar" title="Download de desenhos para pintar.">Desenhos p/ Pintar</a></li>
                         </ul>
-                        <a href="/downloads" role="button" class="btn btn-default btn-xs pull-right" style="margin-top: 5px;">Ver mais</a>
                     </div>
                 </div>
                 <hr>
@@ -687,17 +683,17 @@
                 <div class="panel panel-default">
                     <div class="panel-heading">Nossa Escola</div>
                     <div class="panel-body">
-                        <a href="/cardapio" title="Cardápio mensal">
-                            <img src="{% static 'images/escola.png' %}" style="width:100%" data-src="" alt="Third slide">
+                        <a href="/empresa/nossa-historia" title="Conheça a história da Bambino Camponês.">
+                            <img src="{% static 'images/escola.png' %}" style="width:100%" data-src="" alt="Banner da escola" title="Conheça a história da Bambino Camponês." />
                         </a>
                         <p class="historia">Nossa história começou em 1999, com a necessidade de um local adequado para deixar meu filho, na época com 3 (três) anos...<a href="#" class="more">Ver mais</a></p>
                         <p></p>
                         <h5>Saiba mais:</h5>
                         <ul>
-                            <li><a href="/bercario" title="Berçario.">Conheça nossa estrutura.</a></li>
-                            <li><a href="/pre-maternal" title="Pré-Maternal.">Tur Virtual</a></li>
-                            <li><a href="/maternal-1" title="Maternal 1.">Localize no Mapa.</a></li>
-                            <li><a href="/maternal-2" title="Maternal 2.">Linhas de Ônibus</a></li>
+                            <li><a href="/empresa/instalacoes" title="Conheça nossas instalações.">Conheça nossa estrutura.</a></li>
+                            <li><a href="#/tur-virtual" title="Faça um tur virtual.">Tur Virtual</a></li>
+                            <li><a href="/contato/localizacao" title="Localize no mapa.">Localize no Mapa.</a></li>
+                            <li><a href="/contato/localizacao" title="Linhas de ônibus.">Linhas de Ônibus</a></li>
                         </ul>
                     </div>
                 </div>
@@ -705,18 +701,16 @@
                 <div class="panel panel-default">
                     <div class="panel-heading">Nossos Serviços</div>
                     <div class="panel-body">
-                        <a href="/cardapio" title="Cardápio mensal">
-                            <img src="{% static 'images/servicos.jpg' %}" style="width:100%" data-src="" alt="Third slide">
-                        </a>
+                        <img src="{% static 'images/servicos.jpg' %}" style="width:100%" data-src="" alt="Banner Serviços" title="Conheça nossos serviços." />
                         <span style="text-indent: 20px;display:block;margin-top: 10px;">Conheça os serviços oferecidos pela nossa escola: </span>
                         <ul>
-                            <li><a href="/bercario" title="Berçario.">Berçario</a></li>
-                            <li><a href="/pre-maternal" title="Pré-Maternal.">Pré-Maternal</a></li>
-                            <li><a href="/maternal-1" title="Maternal 1.">Maternal 1</a></li>
-                            <li><a href="/maternal-2" title="Maternal 2.">Maternal 2</a></li>
-                            <li><a href="/jardim-a" title="Jardim A">Jardim A</a></li>
-                            <li><a href="/jardim-b" title="Jardim B">Jardim B</a></li>
-                            <li><a href="/atividades-extras" title="Balet, Futebol, Inglês e Teatro." class="bottom">Atividades Extras</a></li>
+                            <li><a href="/servicos/bercario" title="Berçario.">Berçario</a></li>
+                            <li><a href="/servicos/pre-maternal" title="Pré-Maternal.">Pré-Maternal</a></li>
+                            <li><a href="/servicos/maternal-1" title="Maternal 1.">Maternal 1</a></li>
+                            <li><a href="/servicos/maternal-2" title="Maternal 2.">Maternal 2</a></li>
+                            <li><a href="/servicos/jardim-a" title="Jardim A">Jardim A</a></li>
+                            <li><a href="/servicos/jardim-b" title="Jardim B">Jardim B</a></li>
+                            <li><a href="/servicos/atividades-extras" title="Balet, Futebol, Inglês e Teatro." class="bottom">Atividades Extras</a></li>
                         </ul>
                     </div>
                 </div>
@@ -741,10 +735,10 @@
                         <h4>Últimos depoimentos:</h4>
                         <ul class="lista_downloads" style="padding: 1% 7%;">
                             {% for depoimento in depoimentos %}
-                                <li><a href="{{ depoimento.id }}" title="{{ depoimento.conteudo }}">Autor: {{ depoimento.autor }}: "{% if depoimento.conteudo|length > 15 %}{{ depoimento.conteudo|truncatechars:15 }}...{% else %}{{ depoimento.conteudo }}{% endif %}"</a></li>
+                                <li>Autor: {{ depoimento.autor }}: "{% if depoimento.conteudo|length > 35 %}{{ depoimento.conteudo|truncatechars:35 }}...{% else %}{{ depoimento.conteudo }}{% endif %}"</li>
                              {% endfor %}
                         </ul>
-                        <a href="/depoimentos" role="button" class="btn btn-default btn-xs pull-right" style="margin-top: 5px;">Ver mais</a>
+                        <a href="/depoimentos" title="Lista de depoimentos." role="button" class="btn btn-default btn-xs pull-right" style="margin-top: 5px;">Ver mais</a>
                     </div>
                 </div>
                 <hr>

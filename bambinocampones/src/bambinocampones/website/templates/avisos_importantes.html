@@ -18,7 +18,7 @@
                 {% endif %}
                 <p>{{ aviso.introducao }}</p>
                 <p class="lead">
-                    <button class="btn btn-default" onclick="return location.href='{{ aviso.slug }}'" title="Ler mais sobre a noticia {{ aviso.titulo }}.">Ler mais</button>
+                    <button class="btn btn-default" onclick="return location.href='/aviso/{{ aviso.slug }}'" title="Ler mais sobre o aviso {{ aviso.titulo }}.">Ler mais</button>
                 </p>
                 <!--
                 <p class="pull-right">

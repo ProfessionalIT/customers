@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% block title %}{{ titulo }}. {% endblock %}
+
+{% block content %}
+
+{% if lista_material_apoio %}
+    <h2 class="title_shadow margin_left_adjusts"><img src="{% static 'images/noticias.png' %}" class="mural_icon">Materiais de Apoio</h2>
+    {% for material in lista_material_apoio %}
+        <div class="row bg_white">
+            <div class="col-xs-12 paragraf" >
+                <h3 class="news_title">{{ material.descricao }}</h3>
+                {% if material.miniatura %}
+                    <img src="{{ MEDIA_URL }}{{ material.miniatura }}" alt="Foto para {{ material.descricao }}" title="{{ material.descricao }}" class="news_thumb" />
+                {% endif %}
+                <p>Tipo: {{ material.get_tipo }}</p>
+                {% if material.acao_link %}
+                    <p>Veja mais:  <a href="{{ material.acao_link }}" title="{{ material.descricao}}">{{ material.acao_link }}</a></p>
+                {% endif %}
+            </div>
+        </div>
+        <hr>
+    {% endfor %}
+{% else %}
+    <h2 class="title_shadow margin_left_adjusts">Sem Material</h2>
+    <p>Novas publicações em breve.</p>
+{% endif %}
+{% endblock %}

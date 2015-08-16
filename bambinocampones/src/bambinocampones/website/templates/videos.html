@@ -5,24 +5,24 @@
 {% block content %}
 
 {% if lista_videos %}
-    <h2 class="title_shadow margin_left_adjusts"><img src="{% static 'images/noticias.png' %}" class="mural_icon">Galeria de videos</h2>
-    <ul>
+    <h2 class="title_shadow margin_left_adjusts"><img src="{% static 'images/noticias.png' %}" class="mural_icon">Galeria de Vídeos</h2>
+    <ul style="list-style: none;">
     {% for video in lista_videos %}
-        <li>
-            <strong>Ano:</strong> {{ video.ano }} - <strong>Mês:</strong> {{ video.get_mes }} - <strong>Galeria:</strong> {{ video.titulo }}
-            <br />
-            {% for recurso in video.galeriaresource_set %}
-                <div>
-                {% if recurso.url_resource %}
-                    <a href="{{ recurso.action_resource }}" title=""><img src="{{ recurso.url_resource }}" alt="" title="" /></a>
+        <li style="margin-top: 05px;">
+            <a href="/video/{{ video.slug }}" title="videos da galeria {{ video.titulo }}">
+                {% if video.get_thumb.url_resource %}
+                    {{ video.get_thumb.url_resource|safe }}
                 {% else %}
-                    <a href="{{ recurso.action_resource }}" title=""><img src="{{ MEDIA_URL }}{{ recurso.upload_resource }}" alt="" title="" /></a>
+                    {% if video.get_thumb.upload_resource %}
+                        {{ video.get_thumb.upload_resource|safe }}
+                    {% endif %}
                 {% endif %}
-                </div>
-            {% endfor %}
+                <p style="width: 100%; text-align:center;"><strong>Nome: {{ video.titulo }}</p>
+                <p style="width: 100%; text-align:center;"><strong>Ano:</strong> {{ video.ano }} - <strong>Mês:</strong> {{ video.get_mes }}</p>
+            </a>
         </li>
     {% endfor %}
-</ul>
+    </ul>
 {% else %}
     <h2 class="title_shadow margin_left_adjusts">Sem videos</h2>
     <p>Novas publicações em breve.</p>

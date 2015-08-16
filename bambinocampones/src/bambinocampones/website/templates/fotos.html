@@ -6,23 +6,21 @@
 
 {% if lista_fotos %}
     <h2 class="title_shadow margin_left_adjusts"><img src="{% static 'images/noticias.png' %}" class="mural_icon">Galeria de Fotos</h2>
-    <ul>
+    <ul style="list-style: none;">
     {% for foto in lista_fotos %}
-        <li>
-            <strong>Ano:</strong> {{ foto.ano }} - <strong>Mês:</strong> {{ foto.get_mes }} - <strong>Galeria:</strong> {{ foto.titulo }}
-            <br />
-            {% for recurso in foto.galeriaresource_set %}
-                <div>
-                {% if recurso.url_resource %}
-                    <a href="{{ recurso.action_resource }}" title=""><img src="{{ recurso.url_resource }}" alt="" title="" /></a>
-                {% else %}
-                    <a href="{{ recurso.action_resource }}" title=""><img src="{{ MEDIA_URL }}{{ recurso.upload_resource }}" alt="" title="" /></a>
-                {% endif %}
-                </div>
-            {% endfor %}
+        <li style="margin-top: 05px;">
+            <a href="/foto/{{ foto.slug }}" title="Fotos da galeria {{ foto.titulo }}">
+            {% if foto.get_thumb.upload_resource %}
+                <img src="{{ MEDIA_URL }}{{ foto.get_thumb.upload_resource }}" alt="Thumb da galeria {{ foto.titulo }}" title="Fotos da galeria {{ foto.titulo }}" style="display:block;margin: 0px auto; margin-bottom: 03px;" />
+            {% else %}
+                <img src="{{ foto.get_thumb.url_resource }}" alt="Thumb da galeria {{ foto.titulo }}" title="Fotos da galeria {{ foto.titulo }}" style="display:block; margin: 0px auto; margin-bottom: 03px;" />
+            {% endif %}
+            <p style="width: 100%; text-align:center;"><strong>Nome: {{ foto.titulo }}</p>
+            <p style="width: 100%; text-align:center;"><strong>Ano:</strong> {{ foto.ano }} - <strong>Mês:</strong> {{ foto.get_mes }}</p>
+            </a>
         </li>
     {% endfor %}
-</ul>
+    </ul>
 {% else %}
     <h2 class="title_shadow margin_left_adjusts">Sem fotos</h2>
     <p>Novas publicações em breve.</p>
