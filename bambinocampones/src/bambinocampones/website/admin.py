@@ -1,4 +1,6 @@
 from django.contrib import admin
+from django import forms
+from ckeditor.widgets import CKEditorWidget
 from website.models import (Banner,
                             Calendario,
                             Cardapio,
@@ -27,12 +29,30 @@ class GaleriaAdmin(admin.ModelAdmin):
     prepopulated_fields = {"slug": ("titulo",)}
 
 
+class PublicacaoAdminForm(forms.ModelForm):
+    introducao = forms.CharField(widget=CKEditorWidget())
+    completa = forms.CharField(widget=CKEditorWidget())
+
+    class Meta:
+        model = Publicacao
+
+
 class PublicacaoAdmin(admin.ModelAdmin):
     prepopulated_fields = {"slug": ("titulo",)}
+    form = PublicacaoAdminForm
+
+
+class PaginaAdminForm(forms.ModelForm):
+    conteudo = forms.CharField(widget=CKEditorWidget())
+
+    class Meta:
+        model = Pagina
 
 
 class PaginaAdmin(admin.ModelAdmin):
+    list_display = ('titulo', 'descricao', 'palavras_chaves',)
     prepopulated_fields = {"slug": ("titulo",)}
+    form = PaginaAdminForm
 
 
 class MenuAdmin(admin.ModelAdmin):

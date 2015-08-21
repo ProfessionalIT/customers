@@ -7,7 +7,9 @@ from django.contrib import admin
 admin.autodiscover()
 
 urlpatterns = patterns('',
+                       url(r'^ckeditor/', include('ckeditor.urls')),
                        url(r'^admin/', include(admin.site.urls)),
+                       url(r'^grappelli/', include('grappelli.urls')),
                        url(r'', include('website.urls')),
                        ) + static(settings.MEDIA_URL,
                                   document_root=settings.MEDIA_ROOT)

@@ -1,3 +1,5 @@
+var dados_globais;
+
 function maxDays(mm, yyyy){
     var mDay;
     if((mm == 3) || (mm == 5) || (mm == 8) || (mm == 10)){
@@ -15,58 +17,93 @@ function maxDays(mm, yyyy){
     return mDay;
 }
 function getEventByMonthYear(par_month, par_year){
-    // F-Festa; E-Evento;
+
+    var evtJan = new Array();
+    var evtFev = new Array();
+    var evtMar = new Array();
+    var evtAbr = new Array();
+    var evtMai = new Array();
+    var evtJun = new Array();
+    var evtJul = new Array();
+    var evtAgo = new Array();
+    var evtSet = new Array();
+    var evtOut = new Array();
+    var evtNov = new Array();
+    var evtDez = new Array();
+
+    var obj = eval(dados_globais);
+
+    var evento = "";
+
+    for (var i = 0; i < obj.length; i++) {
+
+        dt_evento = new Date(obj[i].fields.data_agendamento);
+        mes_evento = dt_evento.getMonth() + 1;
+        data_evento = dt_evento.getDate() + "/" + mes_evento + "/" + dt_evento.getFullYear();
+        tipo_evento = obj[i].fields.tipo;
+        titulo_evento = obj[i].fields.titulo;
+
+        evento = data_evento + ";" + tipo_evento + ";" + titulo_evento;
+
+        if (mes_evento==1) {
+            evtJan.push(evento);
+        } else if (mes_evento==2) {
+            evtFev.push(evento);
+        } else if (mes_evento==3) {
+            evtMar.push(evento);
+        } else if (mes_evento==4) {
+            evtAbr.push(evento);
+        } else if (mes_evento==5) {
+            evtMai.push(evento);
+        } else if (mes_evento==6) {
+            evtJun.push(evento);
+        } else if (mes_evento==7) {
+            evtJul.push(evento);
+        } else if (mes_evento==8) {
+            evtAgo.push(evento);
+        } else if (mes_evento==9) {
+            evtSet.push(evento);
+        } else if (mes_evento==10) {
+            evtOut.push(evento);
+        } else if (mes_evento==11) {
+            evtNov.push(evento);
+        } else if (mes_evento==12) {
+            evtDez.push(evento);
+        }
+    }
+
     if (par_month==0){
-        var arrEventos = new Array('5/01/2015;E;Volta as aulas.');
-        return arrEventos;
+        return evtJan;
     } else if (par_month==1){
-        var arrEventos = new Array('02/02/2015;F;Nossa Senhora dos Navegantes','03/02/2015;F;Aniversário da Escola', '16/02/2015;P;Ponte Carnaval', '17/02/2015;N;Carnaval');
-        return arrEventos;
+        return evtFev;
     } else if (par_month==2){
-        var arrEventos = new Array('06/3/2015;E;Reunião com os Pais', '13/3/2015;E;Reunião com os Pais');
-        return arrEventos;
+        return evtMar;
     } else if (par_month==3){
-        var arrEventos = new Array('03/04/2015;N;Sexta-Feira da Paixão', '05/04/2015;N;Páscoa', '21/04/2015;N;Tiradentes');
-        return arrEventos;
+        return evtAbr;
     } else if (par_month==4){
-        var arrEventos = new Array('01/05/2015;N;Dia do Trabalhor', '10/05/2015;E;Dia das Mães');
-        return arrEventos;
+        return evtMai;
     } else if (par_month==5){
-        var arrEventos = new Array('04/06/2015;N;Corpus Christi', '26/06/2015;F;Festa Junina');
-        return arrEventos;
+        return evtJun;
     } else if (par_month==6){
-        var arrEventos = new Array('20/07/2015;E;Dia do Amigo', '26/07/2015;E;Dia dos Avós');
-        return arrEventos;
+        return evtJul;
     } else if (par_month==7){
-        var arrEventos = new Array('09/8/2015;E;Dia dos Pais');
-        return arrEventos;
+        return evtAgo;
     } else if (par_month==8){
-        var arrEventos = new Array('07/9/2015;N;Independência do Brasil', '20/9/2015;N;Revolução Farroupilha');
-        return arrEventos;
+        return evtSet;
     } else if (par_month==9){
-        var arrEventos = new Array('12/10/2015;N;Dia das crianças', '15/10/2015;N;Dia do Professor');
-        return arrEventos;
+        return evtOut;
     } else if (par_month==10){
-        var arrEventos = new Array('02/11/2015;N;Finados', '15/11/2015;N;Proclamação da República', '20/11/2015;E;Dia da Consciência Negra');
-        return arrEventos;
+        return evtNov;
     } else if (par_month==11){
-        var arrEventos = new Array('04/12/2015;E;Formatura Jardim Nível II.',
-                                   '21/12/2015;R;Recesso Fim de Ano.',
-                                   '22/12/2015;R;Recesso Fim de Ano.',
-                                   '23/12/2015;R;Recesso Fim de Ano.',
-                                   '24/12/2015;R;Recesso Fim de Ano.',
-                                   '28/12/2015;R;Recesso Fim de Ano.',
-                                   '29/12/2015;R;Recesso Fim de Ano.',
-                                   '30/12/2015;R;Recesso Fim de Ano.',
-                                   '31/12/2015;R;Recesso Fim de Ano.',
-                                   '25/12/2015;N;Feriado de Natal.');
-        return arrEventos;
+        return evtDez;
     } else {
         var arrEventos = new Array();
         return arrEventos;
     }
 }
-function writeCalendar(){
+
+function writeCalendar(data){
+    dados_globais = data;
     var now = new Date;
     var dd = now.getDate();
     var mm = now.getMonth();
@@ -80,7 +117,7 @@ function writeCalendar(){
     var arrD = new Array("Dom","Seg","Ter","Qua","Qui","Sex","Sab");
     var html_content = "";
     html_content = "<form name='calForm' id='calForm'>";
-    html_content += "<table border='1' bgcolor='#ffffff' style='float:left;margin-bottom: 10px;'>";
+    html_content += "<table border='1' bgcolor='#ffffff' style='margin-bottom: 10px;width: 100%;' class='table'>";
     html_content += "<tr><td>";
     html_content += "<table width='100%'><tr>";
     html_content += "<td align='left'>";
@@ -108,7 +145,7 @@ function writeCalendar(){
     html_content += "</tr></table>";
     html_content += "</td></tr>";
     html_content += "<tr><td>";
-    html_content += "<table border='0'>";
+    html_content += "<table border='0' style='width: 100%;'>";
     html_content += "<tr>";
     for (ii=0;ii<=6;ii++){
         html_content += "<td align='center'><span class='label'>" + arrD[ii] + "</span></td>";
@@ -170,7 +207,6 @@ function changeCal(){
     }
     for (ii=0;ii<=41;ii++){
         try {
-            //eval("sp"+ii).style.backgroundColor = "#FFFFFF";
             document.getElementById("sp"+ii).style.backgroundColor = "#FFFFFF";
         } catch(err) {
             document.getElementById("sp"+ii).style.backgroundColor = "#FFFFFF";
@@ -180,25 +216,18 @@ function changeCal(){
     obj_events = document.getElementById('eventsDescriptions');
     obj_events.innerHTML='';
     for (ii=0;ii<=41;ii++){
-        //eval("sp"+ii).style.background='None';
         document.getElementById("sp"+ii).style.background = "None";
         if (((ii<7)&&(arrN[ii]>20))||((ii>27)&&(arrN[ii]<20))){
-            //eval("sp"+ii).innerHTML = arrN[ii];
             document.getElementById("sp"+ii).innerHTML = arrN[ii];
-            //eval("sp"+ii).className = "c3";
             document.getElementById("sp"+ii).className = "c3";
         } else {
-            //eval("sp"+ii).innerHTML = arrN[ii];
             document.getElementById("sp"+ii).innerHTML = arrN[ii];
             if ((dCount==0)||(dCount==6)){
-                //eval("sp"+ii).className = "c2";
                 document.getElementById("sp"+ii).className = "c2";
             } else {
-                //eval("sp"+ii).className = "c1";
                 document.getElementById("sp"+ii).className = "c1";
             }
             if ((arrN[ii]==dd)&&(mm==currM)&&(yyyy==currY)){
-                //eval("sp"+ii).style.backgroundColor="#eeeeee";
                 document.getElementById("sp"+ii).style.backgroundColor="#eeeeee";
             }
             if (arrEventos.length==0) {
@@ -217,25 +246,20 @@ function changeCal(){
                     xxSpan='';
                     if ((arrN[ii]==xxDia)&&(xxMes==currM+1)&&(xxAno==currY)) {
                         if (xxTipo=='F'){
-                            xxSpan = "<img src='http://media.bambinocampones.com.br/images/festa_bkp.png' class='activity_bkg' />";
-                            //eval("sp"+ii).style.background="url('http://media.bambinocampones.com.br/images/festa_bkp.png')";
-                            document.getElementById("sp"+ii).style.background="url('http://media.bambinocampones.com.br/images/festa_bkp.png')";
+                            xxSpan = "<img src='http://static.bambino2015.webfactional.com/images/festa_bkp.png' class='activity_bkg' />";
+                            document.getElementById("sp"+ii).style.background="url('http://static.bambino2015.webfactional.com/images/festa_bkp.png')";
                         } else if (xxTipo=='E'){
-                            xxSpan = "<img src='http://media.bambinocampones.com.br/images/evento_bkp.png' class='activity_bkg' />";
-                            //eval("sp"+ii).style.background="url('http://media.bambinocampones.com.br/images/evento_bkp.png')";
-                            document.getElementById("sp"+ii).style.background="url('http://media.bambinocampones.com.br/images/evento_bkp.png')";
+                            xxSpan = "<img src='http://static.bambino2015.webfactional.com/images/evento_bkp.png' class='activity_bkg' />";
+                            document.getElementById("sp"+ii).style.background="url('http://static.bambino2015.webfactional.com/images/evento_bkp.png')";
                         } else if (xxTipo=='N'){
-                            xxSpan = "<img src='http://media.bambinocampones.com.br/images/feriado_bkp.png' class='activity_bkg' />";
-                            //eval("sp"+ii).style.background="url('http://media.bambinocampones.com.br/images/feriado_bkp.png')";
-                            document.getElementById("sp"+ii).style.background="url('http://media.bambinocampones.com.br/images/feriado_bkp.png')";
+                            xxSpan = "<img src='http://static.bambino2015.webfactional.com/images/feriado_bkp.png' class='activity_bkg' />";
+                            document.getElementById("sp"+ii).style.background="url('http://static.bambino2015.webfactional.com/images/images/feriado_bkp.png')";
                         } else if (xxTipo=='P'){
-                            xxSpan = "<img src='http://media.bambinocampones.com.br/images/ponte_bkp.png' class='activity_bkg' />";
-                            //eval("sp"+ii).style.background="url('http://media.bambinocampones.com.br/images/ponte_bkp.png')";
-                            document.getElementById("sp"+ii).style.background="url('http://media.bambinocampones.com.br/images/ponte_bkp.png')";
+                            xxSpan = "<img src='http://static.bambino2015.webfactional.com/images/images/ponte_bkp.png' class='activity_bkg' />";
+                            document.getElementById("sp"+ii).style.background="url('http://static.bambino2015.webfactional.com/images/images/ponte_bkp.png')";
                         } else if (xxTipo=='R'){
-                            xxSpan = "<img src='http://media.bambinocampones.com.br/images/recesso_bkp.png' class='activity_bkg' />";
-                            //eval("sp"+ii).style.background="url('http://media.bambinocampones.com.br/images/recesso_bkp.png')";
-                            document.getElementById("sp"+ii).style.background="url('http://media.bambinocampones.com.br/images/recesso_bkp.png')";
+                            xxSpan = "<img src='http://static.bambino2015.webfactional.com/images/images/recesso_bkp.png' class='activity_bkg' />";
+                            document.getElementById("sp"+ii).style.background="url('http://static.bambino2015.webfactional.com/images/images/recesso_bkp.png')";
                         }
                         obj_events.innerHTML+=xxSpan + ' ' + xxDia + '/' + xxMes + ' - ' + xxDescr + '</br>';
                     }

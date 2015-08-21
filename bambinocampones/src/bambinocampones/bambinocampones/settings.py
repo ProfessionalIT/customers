@@ -56,6 +56,8 @@ USE_TZ = True
 
 MEDIA_ROOT = os.path.join(PROJECT_ROOT, 'uploads')
 
+CKEDITOR_UPLOAD_PATH = MEDIA_ROOT
+
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash.
 # Examples: "http://example.com/media/", "http://media.example.com/"
@@ -96,6 +98,12 @@ TEMPLATE_LOADERS = (
 #     'django.template.loaders.eggs.Loader',
 )
 
+TEMPLATE_CONTEXT_PROCESSORS = (
+    'django.contrib.auth.context_processors.auth',
+    'django.core.context_processors.request',
+)
+
+
 MIDDLEWARE_CLASSES = (
     'django.middleware.common.CommonMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -105,6 +113,9 @@ MIDDLEWARE_CLASSES = (
     # Uncomment the next line for simple clickjacking protection:
     # 'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
+CKEDITOR_UPLOAD_PATH = "uploads/"
+CKEDITOR_IMAGE_BACKEND = "pillow"
+CKEDITOR_JQUERY_URL = '//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js'
 
 ROOT_URLCONF = 'bambinocampones.urls'
 
@@ -118,6 +129,8 @@ TEMPLATE_DIRS = (
 )
 
 INSTALLED_APPS = (
+    'ckeditor',
+    'grappelli',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
@@ -161,3 +174,5 @@ LOGGING = {
         },
     }
 }
+GRAPPELLI_ADMIN_TITLE = 'Admin do Site da Bambino'
+

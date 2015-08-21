@@ -1,10 +1,12 @@
-Ä}q(Uwebsite]U>website.migrations.0003_auto__del_field_galeria_foi_importante]qU	MigrationqaUshutil]q(UcopyfileqUignore_patternsqUcopytreeqUget_archive_formatsqUcopyfileobjq	Uregister_archive_formatq
-UcopymodeqUmake_archiveqUmoveqUunregister_archive_formatqUrmtreeqUErrorqUcopyqU	ExecErrorqUcopy2qUSpecialFileErrorqUcopystatqUWindowsErrorqeUbambinocampones.urls]qUurlpatternsqaUwebsite.tests]qU
-SimpleTestqaUmanage]Uwebsite.admin]q(UProfessorAdminqU	MenuAdminqUPaginaAdminqUPublicacaoAdminqUConteudoDownloadAdminq UCalendarioAdminq!UBannerAdminq"UGaleriaAdminq#UServicoAdminq$eUwebsite.migrations.0001_initial]q%haUdatetime]q&(U	timedeltaq'UMAXYEARq(Udateq)Udatetime_CAPIq*Utzinfoq+Utimeq,UMINYEARq-Udatetimeq.eUwebsite.views]q/(Uempresaq0Uhistoriaq1Uindexq2eUbambinocampones]Uwebsite.migrations]Ubambinocampones.settings]q3(UMANAGERSq4U	DATABASESq5USITE_IDq6UROOT_URLCONFq7ULANGUAGE_CODEq8UUSE_I18Nq9U
-SECRET_KEYq:UMIDDLEWARE_CLASSESq;USESSION_SERIALIZERq<USTATIC_ROOTq=U	TIME_ZONEq>UTEMPLATE_LOADERSq?UWSGI_APPLICATIONq@UALLOWED_HOSTSqAUTEMPLATE_DIRSqBUPROJECT_ROOTqCULOGGINGqDUSTATICFILES_FINDERSqEU
-STATIC_URLqFUUSE_L10NqGUDEBUGqHUUSE_TZqIUINSTALLED_APPSqJU
-MEDIA_ROOTqKUSTATICFILES_DIRSqLUADMINSqMUTEMPLATE_DEBUGqNU	MEDIA_URLqOeUbambinocampones.wsgi]qPUapplicationqQaUwebsite.models]qR(UMaterialEscolarqSU
-DepoimentoqTUMenuqUU	ProfessorqVUGaleriaqWU
-PublicacaoqXU	ParametroqYUGaleriaResourceqZURecomendacaoq[U
-Calendarioq\UPaginaq]UBannerq^UCardapioq_UServicoq`UConteudoDownloadqaeUos]qb(Upopen4qcUexecleqdUpopen3qeUSEEK_CURqfUspawnlpqgUexeclpqhUenvironqiUspawnvpqjUspawnlqkUexecvpqlUmakedirsqmUlinesepqnUP_WAITqoUspawnvqpUspawnveqqUexecvpeqrUunsetenvqsUSEEK_SETqtUgetenvquUpopen2qvUwalkqwUspawnleqxUexeclqyUnameqzUSEEK_ENDq{Uspawnlpeq|U	P_NOWAITOq}UP_NOWAITq~U
-removedirsqUrenamesqÄUspawnvpeqÅUexeclpeqÇeUwebsite.urls]qÉhaU>website.migrations.0002_auto__add_field_galeria_foi_importante]qÑhau.
+Ä}q(Uwebsite]U>website.migrations.0003_auto__del_field_galeria_foi_importante]qU	MigrationqaUwebsite.models]q(UMaterialEscolarqU
+DepoimentoqUMenuqU	ProfessorqUGaleriaq	U
+Publicacaoq
+U	ParametroqUGaleriaResourceqURecomendacaoqU
+CalendarioqUPaginaqUBannerqUCardapioqUServicoqUConteudoDownloadqeUbambinocampones.urls]qUurlpatternsqaUwebsite.tests]qU
+SimpleTestqaU>website.migrations.0002_auto__add_field_galeria_foi_importante]qhaUmanage]Uwebsite.admin]q(UProfessorAdminqUPublicacaoAdminqUConteudoDownloadAdminqU	MenuAdminqUCalendarioAdminqUPaginaAdminqUBannerAdminq UGaleriaAdminq!UPaginaAdminFormq"UPublicacaoAdminFormq#UServicoAdminq$eUdatetime]q%(U	timedeltaq&UMAXYEARq'Udateq(Udatetime_CAPIq)Utzinfoq*Utimeq+UMINYEARq,Udatetimeq-eUwebsite.views]q.(Uempresaq/U
+publicacaoq0Uavisos_importantesq1Uvideoq2Umaterial_escolarq3Ucontatoq4Uindexq5Uservicosq6Ueventosq7Ufotoq8U
+matriculasq9U	downloadsq:Ugalerias_videoq;Udicasq<Uresponsabilidade_socialq=Udepoimentosq>Umateriais_apoioq?Umaterial_apoioq@Ugalerias_fotoqAUcardapioqBeUwebsite.migrations.0001_initial]qChaUwebsite.migrations]Ubambinocampones.settings]qD(UMANAGERSqEU	DATABASESqFUSITE_IDqGUROOT_URLCONFqHULANGUAGE_CODEqIUUSE_I18NqJU
+SECRET_KEYqKUTEMPLATE_LOADERSqLUMIDDLEWARE_CLASSESqMUSESSION_SERIALIZERqNUSTATIC_ROOTqOUCKEDITOR_JQUERY_URLqPU	TIME_ZONEqQUCKEDITOR_UPLOAD_PATHqRUCKEDITOR_IMAGE_BACKENDqSUWSGI_APPLICATIONqTUALLOWED_HOSTSqUUTEMPLATE_DIRSqVUPROJECT_ROOTqWULOGGINGqXUSTATICFILES_FINDERSqYU
+STATIC_URLqZUUSE_L10Nq[UDEBUGq\UUSE_TZq]UINSTALLED_APPSq^U
+MEDIA_ROOTq_USTATICFILES_DIRSq`UADMINSqaUTEMPLATE_DEBUGqbUTEMPLATE_CONTEXT_PROCESSORSqcU	MEDIA_URLqdeUbambinocampones.wsgi]qeUapplicationqfaUshutil]qg(UcopyfileqhUignore_patternsqiUcopytreeqjUget_archive_formatsqkUcopyfileobjqlUregister_archive_formatqmUcopymodeqnUmake_archiveqoUmoveqpUunregister_archive_formatqqUrmtreeqrUErrorqsUcopyqtU	ExecErrorquUcopy2qvUSpecialFileErrorqwUcopystatqxUWindowsErrorqyeUos]qz(Upopen4q{Uexecleq|Upopen3q}USEEK_CURq~UspawnlpqUexeclpqÄUenvironqÅUspawnvpqÇUspawnlqÉUexecvpqÑUmakedirsqÖUlinesepqÜUP_WAITqáUspawnvqàUspawnveqâUexecvpeqäUunsetenvqãUSEEK_SETqåUgetenvqçUpopen2qéUwalkqèUspawnleqêUexeclqëUnameqíUSEEK_ENDqìUspawnlpeqîU	P_NOWAITOqïUP_NOWAITqñU
+removedirsqóUrenamesqòUspawnvpeqôUexeclpeqöeUwebsite.urls]qõhaUbambinocampones]u.
