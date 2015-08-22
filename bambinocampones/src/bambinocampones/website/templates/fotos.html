@@ -6,21 +6,22 @@
 
 {% if lista_fotos %}
     <h2 class="title_shadow margin_left_adjusts"><img src="{% static 'images/noticias.png' %}" class="mural_icon">Galeria de Fotos</h2>
-    <ul style="list-style: none;">
+    <p>Aqui estão as últimas galerias de fotos de eventos, acontecimentos e atividades da Bambino Camponês</p>
+    <div class="row">
     {% for foto in lista_fotos %}
-        <li style="margin-top: 05px;">
+        <div class="col-sm-12">
             <a href="/foto/{{ foto.slug }}" title="Fotos da galeria {{ foto.titulo }}">
             {% if foto.get_thumb.upload_resource %}
-                <img src="{{ MEDIA_URL }}{{ foto.get_thumb.upload_resource }}" alt="Thumb da galeria {{ foto.titulo }}" title="Fotos da galeria {{ foto.titulo }}" style="display:block;margin: 0px auto; margin-bottom: 03px;" />
+                <img src="{{ MEDIA_URL }}{{ foto.get_thumb.upload_resource }}" alt="Thumb da galeria {{ foto.titulo }}" title="Fotos da galeria {{ foto.titulo }}" style="display:block;margin: 0px auto; margin-bottom: 03px; width: 50%; padding:03px; background-color: white;" />
             {% else %}
                 <img src="{{ foto.get_thumb.url_resource }}" alt="Thumb da galeria {{ foto.titulo }}" title="Fotos da galeria {{ foto.titulo }}" style="display:block; margin: 0px auto; margin-bottom: 03px;" />
             {% endif %}
             <p style="width: 100%; text-align:center;"><strong>Nome: {{ foto.titulo }}</p>
             <p style="width: 100%; text-align:center;"><strong>Ano:</strong> {{ foto.ano }} - <strong>Mês:</strong> {{ foto.get_mes }}</p>
             </a>
-        </li>
+        </div>
     {% endfor %}
-    </ul>
+</div>
 {% else %}
     <h2 class="title_shadow margin_left_adjusts">Sem fotos</h2>
     <p>Novas publicações em breve.</p>

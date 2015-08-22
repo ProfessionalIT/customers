@@ -8,10 +8,10 @@
     <h2 class="title_shadow margin_left_adjusts"><img src="{% static 'images/noticias.png' %}" class="mural_icon">{{ titulo }}</h2>
     {% for recurso in recursos %}
         <div class="row bg_white">
-            <div class="col-xs-12 paragraf" >
+            <div class="col-xs-12 col-sm-12" style="padding: 10px;" >
                 {% if recurso.url_resource %}
                     {% if recurso.galeria.tipo == 'F' %}
-                        <img src="{{ MEDIA_URL }}{{ recurso.url_resource }}" alt="Banner para {{ recurso.galeria.titulo }}" title=" Foto da Galeria {{ recurso.galeria.titulo }}" />
+                        <img src="{{ MEDIA_URL }}{{ recurso.url_resource }}" alt="Banner para {{ recurso.galeria.titulo }}" title=" Foto da Galeria {{ recurso.galeria.titulo }}" style="width: 100%;" />
                     {% else %}
                         {{ recurso.url_resource|safe }}
                     {% endif %}
@@ -19,7 +19,7 @@
                 {% else %}
                     {% if recurso.upload_resource %}
                         {% if recurso.galeria.tipo == 'F' %}
-                            <img src="{{ MEDIA_URL }}{{ recurso.upload_resource }}" alt="Banner para {{ recurso.galeria.titulo }}" title=" Foto da Galeria {{ recurso.galeria.titulo }}" />
+                            <img src="{{ MEDIA_URL }}{{ recurso.upload_resource }}" alt="Banner para {{ recurso.galeria.titulo }}" title=" Foto da Galeria {{ recurso.galeria.titulo }}" style="width: 100%;"/>
                         {% else %}
                             {{ recurso.upload_resource|safe }}
                         {% endif %}
@@ -27,7 +27,6 @@
                 {% endif %}
             </div>
         </div>
-        <hr>
     {% endfor %}
 {% endif %}
 {% endblock %}

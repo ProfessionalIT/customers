@@ -10,7 +10,7 @@
         {% if publicacao.miniatura_publicacao %}
             <img src="{{ MEDIA_URL }}{{ publicacao.miniatura_publicacao }}" alt="Foto para {{ publicacao.titulo }}" title="{{ publicacao.titulo }}" class="news_thumb" />
         {% endif %}
-        <p>{{ publicacao.completa }}</p>
+        <p>{{ publicacao.completa|safe }}</p>
         <!--
         <p class="pull-right">
             $for word in publicacao.palavras_chaves.split(','):
@@ -18,7 +18,7 @@
         </p>
         -->
         <ul class="list-inline">
-            <li>Publicado em: <a href="#">{{ publicacao.data_publicacao }}</a></li>
+            <li>Publicado em: <a href="#">{{ publicacao.data_hora }}</a></li>
             <!--
             <li><a href="#"><i class="glyphicon glyphicon-comment"></i> 2 Comments</a></li>
             <li><a href="#"><i class="glyphicon glyphicon-share"></i> 14 Shares</a></li>

@@ -112,8 +112,9 @@ class Galeria(models.Model):
 
     MES_ATUAL = datetime.datetime.now().month
 
-    ANO_GALERIA = ((u'2013', u'2013'),
-                   (u'2014', u'2014'),)
+    ANO_GALERIA = ((u'2015', u'2015'),
+                   (u'2014', u'2014'),
+                   (u'2013', u'2013'),)
 
     ANO_ATUAL = datetime.datetime.now().year
 

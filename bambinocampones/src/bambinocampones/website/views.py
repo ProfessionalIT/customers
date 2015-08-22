@@ -22,7 +22,7 @@ def index(request):
     destaques = models.Publicacao.objects.filter(tipos=u'N',
                                                  rascunho=False,
                                                  destaque=True).\
-        order_by('-data_publicacao')[0:10]
+        order_by('-data_hora')[0:10]
 
     return render(request, 'index.html', {'banners': banners,
                                           'calendarios': calendarios,
@@ -365,6 +365,8 @@ def material_apoio(request, slug):
                                                'material_apoio': material_apoio,
                                                'depoimentos': depoimentos,
                                                'publicacao': publicacao})
+
+
 def galerias_foto(request):
     banners = models.Banner.objects.filter(ativo=True)
     calendarios = serializers.serialize('json', models.Calendario.objects.all())
@@ -380,7 +382,8 @@ def galerias_foto(request):
         galeriaresource_set.filter()[:1].get()
     material_apoio = models.Recomendacao.objects.filter(destaque=True)
     depoimentos = models.Depoimento.objects.all()[0:5]
-    lista_fotos = models.Galeria.objects.filter(tipo=u'F')
+    lista_fotos = models.Galeria.objects.filter(tipo=u'F').order_by('-ano',
+                                                                    '-mes')
 
     return render(request, 'fotos.html', {'banners': banners,
                                           'calendarios': calendarios,
@@ -413,13 +416,13 @@ def foto(request, slug):
     fotos = galeria.galeriaresource_set.all()
     return render(request, 'recursos.html', {'banners': banners,
                                              'calendarios': calendarios,
-                                              'dicas': dicas,
-                                              'fotos': fotos,
-                                              'videos': videos,
-                                              'material_apoio': material_apoio,
-                                              'depoimentos': depoimentos,
-                                              'titulo': galeria.titulo,
-                                              'recursos': fotos})
+                                             'dicas': dicas,
+                                             'fotos': fotos,
+                                             'videos': videos,
+                                             'material_apoio': material_apoio,
+                                             'depoimentos': depoimentos,
+                                             'titulo': galeria.titulo,
+                                             'recursos': fotos})
 
 
 def galerias_video(request):

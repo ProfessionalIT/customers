@@ -13,9 +13,9 @@
                 {% if publicacao.miniatura_publicacao %}
                     <img src="{{ MEDIA_URL }}{{ publicacao.miniatura_publicacao }}" alt="Foto para {{ publicacao.titulo }}" title="{{ publicacao.titulo }}" class="news_thumb" />
                 {% endif %}
-                <p>{{ publicacao.introducao }}</p>
+                <p>{{ publicacao.introducao|safe }}</p>
                 <p class="lead">
-                    <button class="btn btn-default" onclick="return location.href='{{ publicacao.slug }}'" title="Ler mais sobre a noticia {{ publicacao.titulo }}.">Ler mais</button>
+                    <button class="btn btn-default" onclick="return location.href='/publicacao/{{ publicacao.slug }}'" title="Ler mais sobre a noticia {{ publicacao.titulo }}.">Ler mais</button>
                 </p>
                 <!--
                 <p class="pull-right">
@@ -24,7 +24,7 @@
                 </p>
                 -->
                 <ul class="list-inline">
-                    <li>Publicado em: <a href="#">{{ publicacao.data_publicacao }}</a></li>
+                    <li>Publicado em: <a href="#">{{ publicacao.data_hora }}</a></li>
                     <!--
                     <li><a href="#"><i class="glyphicon glyphicon-comment"></i> 2 Comments</a></li>
                     <li><a href="#"><i class="glyphicon glyphicon-share"></i> 14 Shares</a></li>
