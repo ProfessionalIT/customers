@@ -181,3 +181,10 @@ p.lead { text-indent: 0px !important; }
         margin-top: 2%;
     }
 }
+
+.inner_content p {
+    text-align: justify;
+    text-indent: 40px;
+    margin-top: 10px;
+    font-size: 15px;
+}

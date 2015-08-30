@@ -38,7 +38,7 @@ CREATE TABLE "website_galeria" (
     "permite_comentario" bool NOT NULL
 );
 INSERT INTO "website_galeria" VALUES(2,'Video Galeria','video-galeria','V','Galeria de Video','08','2014',1,0);
-INSERT INTO "website_galeria" VALUES(3,'Semana pedagógica','semana-pedagogica','F','Semana pedagógica de Julho/2015 na Bambino Camponês','07','2015',1,0);
+INSERT INTO "website_galeria" VALUES(3,'Semana de Férias pedagógica','semana-pedagogica','F','Semana pedagógica de Julho/2015 na Bambino Camponês','07','2015',1,0);
 INSERT INTO "website_galeria" VALUES(4,'Dia dos Pais','dia-dos-pais','F','Galeria de Fotos dos Dias dos Pais de 2015','08','2015',1,0);
 CREATE TABLE "website_galeriaresource" (
     "id" integer NOT NULL PRIMARY KEY AUTOINCREMENT,
@@ -304,7 +304,7 @@ INSERT INTO "auth_permission" VALUES(66,'Can delete banner',22,'delete_banner');
 CREATE TABLE "auth_group" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "name" varchar(80) NOT NULL UNIQUE);
 CREATE TABLE "auth_group_permissions" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "group_id" integer NOT NULL REFERENCES "auth_group" ("id"), "permission_id" integer NOT NULL REFERENCES "auth_permission" ("id"), UNIQUE ("group_id", "permission_id"));
 CREATE TABLE "auth_user" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "password" varchar(128) NOT NULL, "last_login" datetime NOT NULL, "is_superuser" bool NOT NULL, "username" varchar(30) NOT NULL UNIQUE, "first_name" varchar(30) NOT NULL, "last_name" varchar(30) NOT NULL, "email" varchar(75) NOT NULL, "is_staff" bool NOT NULL, "is_active" bool NOT NULL, "date_joined" datetime NOT NULL);
-INSERT INTO "auth_user" VALUES(1,'pbkdf2_sha256$15000$WJ4Kl7K58tps$12n3vo1yvt3LyagOkWLiSYStx2CYuEvfrIiMUVoqZbM=','2015-08-21 00:49:56.200315',1,'admin','','','admin@admin.com.br',1,1,'2015-07-26 12:32:05.939172');
+INSERT INTO "auth_user" VALUES(1,'pbkdf2_sha256$15000$WJ4Kl7K58tps$12n3vo1yvt3LyagOkWLiSYStx2CYuEvfrIiMUVoqZbM=','2015-08-29 01:15:30.575737',1,'admin','','','admin@admin.com.br',1,1,'2015-07-26 12:32:05.939172');
 CREATE TABLE "auth_user_groups" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "user_id" integer NOT NULL REFERENCES "auth_user" ("id"), "group_id" integer NOT NULL REFERENCES "auth_group" ("id"), UNIQUE ("user_id", "group_id"));
 CREATE TABLE "auth_user_user_permissions" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "user_id" integer NOT NULL REFERENCES "auth_user" ("id"), "permission_id" integer NOT NULL REFERENCES "auth_permission" ("id"), UNIQUE ("user_id", "permission_id"));
 CREATE TABLE "django_admin_log" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "action_time" datetime NOT NULL, "object_id" text NULL, "object_repr" varchar(200) NOT NULL, "action_flag" smallint unsigned NOT NULL, "change_message" text NOT NULL, "content_type_id" integer NULL REFERENCES "django_content_type" ("id"), "user_id" integer NOT NULL REFERENCES "auth_user" ("id"));
@@ -441,6 +441,27 @@ INSERT INTO "django_admin_log" VALUES(130,'2015-08-22 15:03:36.728804','18','Gal
 INSERT INTO "django_admin_log" VALUES(131,'2015-08-22 15:03:49.175834','19','GaleriaResource object',1,'',11,1);
 INSERT INTO "django_admin_log" VALUES(132,'2015-08-22 15:03:54.934681','20','GaleriaResource object',1,'',11,1);
 INSERT INTO "django_admin_log" VALUES(133,'2015-08-22 15:04:04.055204','21','GaleriaResource object',1,'',11,1);
+INSERT INTO "django_admin_log" VALUES(134,'2015-08-29 01:15:42.499467','23','Responsabilidade Social',2,'Modificado conteudo.',13,1);
+INSERT INTO "django_admin_log" VALUES(135,'2015-08-29 21:14:24.136587','5','Nossa História',2,'Modificado conteudo.',13,1);
+INSERT INTO "django_admin_log" VALUES(136,'2015-08-29 21:16:36.710127','5','Nossa História',2,'Modificado conteudo.',13,1);
+INSERT INTO "django_admin_log" VALUES(137,'2015-08-29 21:19:05.807220','5','Nossa História',2,'Modificado conteudo.',13,1);
+INSERT INTO "django_admin_log" VALUES(138,'2015-08-29 21:19:43.683979','5','Nossa História',2,'Modificado conteudo.',13,1);
+INSERT INTO "django_admin_log" VALUES(139,'2015-08-29 21:20:37.109437','5','Nossa História',2,'Modificado conteudo.',13,1);
+INSERT INTO "django_admin_log" VALUES(140,'2015-08-29 21:21:21.214114','5','Nossa História',2,'Modificado conteudo.',13,1);
+INSERT INTO "django_admin_log" VALUES(141,'2015-08-29 22:22:49.001643','5','Nossa História',2,'Modificado conteudo.',13,1);
+INSERT INTO "django_admin_log" VALUES(142,'2015-08-29 22:25:29.191237','5','Nossa História',2,'Modificado conteudo.',13,1);
+INSERT INTO "django_admin_log" VALUES(143,'2015-08-29 22:25:59.254081','5','Nossa História',2,'Modificado conteudo.',13,1);
+INSERT INTO "django_admin_log" VALUES(144,'2015-08-29 22:26:40.671379','5','Nossa História',2,'Modificado conteudo.',13,1);
+INSERT INTO "django_admin_log" VALUES(145,'2015-08-29 22:27:10.407069','5','Nossa História',2,'Modificado conteudo.',13,1);
+INSERT INTO "django_admin_log" VALUES(146,'2015-08-29 22:27:37.871580','5','Nossa História',2,'Modificado conteudo.',13,1);
+INSERT INTO "django_admin_log" VALUES(147,'2015-08-29 22:30:20.465921','5','Nossa História',2,'Modificado conteudo.',13,1);
+INSERT INTO "django_admin_log" VALUES(148,'2015-08-29 22:31:31.417951','5','Nossa História',2,'Modificado conteudo.',13,1);
+INSERT INTO "django_admin_log" VALUES(149,'2015-08-29 22:32:28.741636','5','Nossa História',2,'Modificado conteudo.',13,1);
+INSERT INTO "django_admin_log" VALUES(150,'2015-08-29 22:34:36.675672','3','Semana de Férias pedagógica',2,'Modificado titulo.',10,1);
+INSERT INTO "django_admin_log" VALUES(151,'2015-08-29 22:53:17.068631','5','Nossa História',2,'Modificado conteudo.',13,1);
+INSERT INTO "django_admin_log" VALUES(152,'2015-08-29 22:54:20.882332','5','Nossa História',2,'Modificado conteudo.',13,1);
+INSERT INTO "django_admin_log" VALUES(153,'2015-08-29 22:57:47.931705','21','Fale Conosco',2,'Modificado conteudo.',13,1);
+INSERT INTO "django_admin_log" VALUES(154,'2015-08-29 22:59:09.852673','21','Fale Conosco',2,'Modificado conteudo.',13,1);
 CREATE TABLE "django_session" ("session_key" varchar(40) NOT NULL PRIMARY KEY, "session_data" text NOT NULL, "expire_date" datetime NOT NULL);
 INSERT INTO "django_session" VALUES('yuerpeoywi62jjqu9sy2564ku8eeual6','NGY3NTBjZmU3ZTMwMzI0YzQzYTJlYjAzYWQzOTVjMGE3NDYwMGVhMjp7Il9hdXRoX3VzZXJfaGFzaCI6ImQ5NjljNzY4Nzk1NDYyNGM4Mzc5ZGIwOTlhOTJhY2UzZWJiNGVmYzUiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOjF9','2015-08-09 12:32:27.143755');
 INSERT INTO "django_session" VALUES('7lwlqjgwdmbydt9s1xwqa7a1fpg9mm4z','NGY3NTBjZmU3ZTMwMzI0YzQzYTJlYjAzYWQzOTVjMGE3NDYwMGVhMjp7Il9hdXRoX3VzZXJfaGFzaCI6ImQ5NjljNzY4Nzk1NDYyNGM4Mzc5ZGIwOTlhOTJhY2UzZWJiNGVmYzUiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOjF9','2015-08-13 16:20:09.758915');
@@ -450,6 +471,7 @@ INSERT INTO "django_session" VALUES('ehp1zh14kovzu963wy88fgn6xy27a614','NGY3NTBj
 INSERT INTO "django_session" VALUES('x6ve1j7wvb2reoh7vykrykcbjozpwg09','NGY3NTBjZmU3ZTMwMzI0YzQzYTJlYjAzYWQzOTVjMGE3NDYwMGVhMjp7Il9hdXRoX3VzZXJfaGFzaCI6ImQ5NjljNzY4Nzk1NDYyNGM4Mzc5ZGIwOTlhOTJhY2UzZWJiNGVmYzUiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOjF9','2015-08-24 20:45:06.203641');
 INSERT INTO "django_session" VALUES('xsjgxh9fa6t01nt2s2hv2pcyf692mxru','NGY3NTBjZmU3ZTMwMzI0YzQzYTJlYjAzYWQzOTVjMGE3NDYwMGVhMjp7Il9hdXRoX3VzZXJfaGFzaCI6ImQ5NjljNzY4Nzk1NDYyNGM4Mzc5ZGIwOTlhOTJhY2UzZWJiNGVmYzUiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOjF9','2015-08-30 17:39:57.543473');
 INSERT INTO "django_session" VALUES('l1llmyjxb301h799ul7e2khz8io6caeu','ZTQ1M2U0MTY5YzRjNDgzMmEwYzA0ODk1YzdmYjVmYjBiZWY4NDU5YTp7Il9hdXRoX3VzZXJfaGFzaCI6ImQ5NjljNzY4Nzk1NDYyNGM4Mzc5ZGIwOTlhOTJhY2UzZWJiNGVmYzUiLCJfbWVzc2FnZXMiOiJbW1wiX19qc29uX21lc3NhZ2VcIiwwLDI1LFwicHVibGljYWNhbyBcXFwiQSBCYW1iaW5vIENhbXBvblxcdTAwZWFzIGxhblxcdTAwZTdhIG5vdm8gc2l0ZVxcXCI6IG1vZGlmaWNhZG8gY29tIHN1Y2Vzc28uXCJdLFtcIl9fanNvbl9tZXNzYWdlXCIsMCwyNSxcImdhbGVyaWEgXFxcIlNlbWFuYSBwZWRhZ1xcdTAwZjNnaWNhXFxcIjogYWRpY2lvbmFkbyBjb20gc3VjZXNzby5cIl0sW1wiX19qc29uX21lc3NhZ2VcIiwwLDI1LFwiZ2FsZXJpYSByZXNvdXJjZSBcXFwiR2FsZXJpYVJlc291cmNlIG9iamVjdFxcXCIgYWRpY2lvbmFkbyBjb20gc3VjZXNzby4gVm9jXFx1MDBlYSBwb2RlIGFkaWNpb25hciB1bSBvdXRybyBnYWxlcmlhIHJlc291cmNlIGFiYWl4by5cIl0sW1wiX19qc29uX21lc3NhZ2VcIiwwLDI1LFwiZ2FsZXJpYSByZXNvdXJjZSBcXFwiR2FsZXJpYVJlc291cmNlIG9iamVjdFxcXCI6IGFkaWNpb25hZG8gY29tIHN1Y2Vzc28uXCJdLFtcIl9fanNvbl9tZXNzYWdlXCIsMCwyNSxcImdhbGVyaWEgXFxcIlRlc3RlIGRlIEdhbGVyaWFcXFwiOiBleGNsdVxcdTAwZWRkbyBjb20gc3VjZXNzby5cIl0sW1wiX19qc29uX21lc3NhZ2VcIiwwLDI1LFwiZ2FsZXJpYSByZXNvdXJjZSBcXFwiR2FsZXJpYVJlc291cmNlIG9iamVjdFxcXCIgYWRpY2lvbmFkbyBjb20gc3VjZXNzby4gVm9jXFx1MDBlYSBwb2RlIGFkaWNpb25hciB1bSBvdXRybyBnYWxlcmlhIHJlc291cmNlIGFiYWl4by5cIl0sW1wiX19qc29uX21lc3NhZ2VcIiwwLDI1LFwiZ2FsZXJpYSByZXNvdXJjZSBcXFwiR2FsZXJpYVJlc291cmNlIG9iamVjdFxcXCIgYWRpY2lvbmFkbyBjb20gc3VjZXNzby4gVm9jXFx1MDBlYSBwb2RlIGFkaWNpb25hciB1bSBvdXRybyBnYWxlcmlhIHJlc291cmNlIGFiYWl4by5cIl0sW1wiX19qc29uX21lc3NhZ2VcIiwwLDI1LFwiZ2FsZXJpYSByZXNvdXJjZSBcXFwiR2FsZXJpYVJlc291cmNlIG9iamVjdFxcXCIgYWRpY2lvbmFkbyBjb20gc3VjZXNzby4gVm9jXFx1MDBlYSBwb2RlIGFkaWNpb25hciB1bSBvdXRybyBnYWxlcmlhIHJlc291cmNlIGFiYWl4by5cIl0sW1wiX19qc29uX21lc3NhZ2VcIiwwLDI1LFwiZ2FsZXJpYSByZXNvdXJjZSBcXFwiR2FsZXJpYVJlc291cmNlIG9iamVjdFxcXCIgYWRpY2lvbmFkbyBjb20gc3VjZXNzby4gVm9jXFx1MDBlYSBwb2RlIGFkaWNpb25hciB1bSBvdXRybyBnYWxlcmlhIHJlc291cmNlIGFiYWl4by5cIl0sW1wiX19qc29uX21lc3NhZ2VcIiwwLDI1LFwiZ2FsZXJpYSByZXNvdXJjZSBcXFwiR2FsZXJpYVJlc291cmNlIG9iamVjdFxcXCIgYWRpY2lvbmFkbyBjb20gc3VjZXNzby4gVm9jXFx1MDBlYSBwb2RlIGFkaWNpb25hciB1bSBvdXRybyBnYWxlcmlhIHJlc291cmNlIGFiYWl4by5cIl0sW1wiX19qc29uX21lc3NhZ2VcIiwwLDI1LFwiZ2FsZXJpYSByZXNvdXJjZSBcXFwiR2FsZXJpYVJlc291cmNlIG9iamVjdFxcXCIgYWRpY2lvbmFkbyBjb20gc3VjZXNzby4gVm9jXFx1MDBlYSBwb2RlIGFkaWNpb25hciB1bSBvdXRybyBnYWxlcmlhIHJlc291cmNlIGFiYWl4by5cIl0sW1wiX19qc29uX21lc3NhZ2VcIiwwLDI1LFwiZ2FsZXJpYSByZXNvdXJjZSBcXFwiR2FsZXJpYVJlc291cmNlIG9iamVjdFxcXCI6IGFkaWNpb25hZG8gY29tIHN1Y2Vzc28uXCJdLFtcIl9fanNvbl9tZXNzYWdlXCIsMCwyNSxcImdhbGVyaWEgXFxcIkRpYSBkb3MgUGFpc1xcXCI6IGFkaWNpb25hZG8gY29tIHN1Y2Vzc28uXCJdLFtcIl9fanNvbl9tZXNzYWdlXCIsMCwyNSxcImdhbGVyaWEgcmVzb3VyY2UgXFxcIkdhbGVyaWFSZXNvdXJjZSBvYmplY3RcXFwiIGFkaWNpb25hZG8gY29tIHN1Y2Vzc28uIFZvY1xcdTAwZWEgcG9kZSBhZGljaW9uYXIgdW0gb3V0cm8gZ2FsZXJpYSByZXNvdXJjZSBhYmFpeG8uXCJdLFtcIl9fanNvbl9tZXNzYWdlXCIsMCwyNSxcImdhbGVyaWEgcmVzb3VyY2UgXFxcIkdhbGVyaWFSZXNvdXJjZSBvYmplY3RcXFwiIGFkaWNpb25hZG8gY29tIHN1Y2Vzc28uIFZvY1xcdTAwZWEgcG9kZSBhZGljaW9uYXIgdW0gb3V0cm8gZ2FsZXJpYSByZXNvdXJjZSBhYmFpeG8uXCJdLFtcIl9fanNvbl9tZXNzYWdlXCIsMCwyNSxcImdhbGVyaWEgcmVzb3VyY2UgXFxcIkdhbGVyaWFSZXNvdXJjZSBvYmplY3RcXFwiIGFkaWNpb25hZG8gY29tIHN1Y2Vzc28uIFZvY1xcdTAwZWEgcG9kZSBhZGljaW9uYXIgdW0gb3V0cm8gZ2FsZXJpYSByZXNvdXJjZSBhYmFpeG8uXCJdLFtcIl9fanNvbl9tZXNzYWdlXCIsMCwyNSxcImdhbGVyaWEgcmVzb3VyY2UgXFxcIkdhbGVyaWFSZXNvdXJjZSBvYmplY3RcXFwiIGFkaWNpb25hZG8gY29tIHN1Y2Vzc28uIFZvY1xcdTAwZWEgcG9kZSBhZGljaW9uYXIgdW0gb3V0cm8gZ2FsZXJpYSByZXNvdXJjZSBhYmFpeG8uXCJdLFtcIl9fanNvbl9tZXNzYWdlXCIsMCwyNSxcImdhbGVyaWEgcmVzb3VyY2UgXFxcIkdhbGVyaWFSZXNvdXJjZSBvYmplY3RcXFwiIGFkaWNpb25hZG8gY29tIHN1Y2Vzc28uIFZvY1xcdTAwZWEgcG9kZSBhZGljaW9uYXIgdW0gb3V0cm8gZ2FsZXJpYSByZXNvdXJjZSBhYmFpeG8uXCJdLFtcIl9fanNvbl9tZXNzYWdlXCIsMCwyNSxcImdhbGVyaWEgcmVzb3VyY2UgXFxcIkdhbGVyaWFSZXNvdXJjZSBvYmplY3RcXFwiIGFkaWNpb25hZG8gY29tIHN1Y2Vzc28uIFZvY1xcdTAwZWEgcG9kZSBhZGljaW9uYXIgdW0gb3V0cm8gZ2FsZXJpYSByZXNvdXJjZSBhYmFpeG8uXCJdLFtcIl9fanNvbl9tZXNzYWdlXCIsMCwyNSxcImdhbGVyaWEgcmVzb3VyY2UgXFxcIkdhbGVyaWFSZXNvdXJjZSBvYmplY3RcXFwiIGFkaWNpb25hZG8gY29tIHN1Y2Vzc28uIFZvY1xcdTAwZWEgcG9kZSBhZGljaW9uYXIgdW0gb3V0cm8gZ2FsZXJpYSByZXNvdXJjZSBhYmFpeG8uXCJdLFtcIl9fanNvbl9tZXNzYWdlXCIsMCwyNSxcImdhbGVyaWEgcmVzb3VyY2UgXFxcIkdhbGVyaWFSZXNvdXJjZSBvYmplY3RcXFwiIGFkaWNpb25hZG8gY29tIHN1Y2Vzc28uIFZvY1xcdTAwZWEgcG9kZSBhZGljaW9uYXIgdW0gb3V0cm8gZ2FsZXJpYSByZXNvdXJjZSBhYmFpeG8uXCJdLFtcIl9fanNvbl9tZXNzYWdlXCIsMCwyNSxcImdhbGVyaWEgcmVzb3VyY2UgXFxcIkdhbGVyaWFSZXNvdXJjZSBvYmplY3RcXFwiIGFkaWNpb25hZG8gY29tIHN1Y2Vzc28uIFZvY1xcdTAwZWEgcG9kZSBhZGljaW9uYXIgdW0gb3V0cm8gZ2FsZXJpYSByZXNvdXJjZSBhYmFpeG8uXCJdLFtcIl9fanNvbl9tZXNzYWdlXCIsMCwyNSxcImdhbGVyaWEgcmVzb3VyY2UgXFxcIkdhbGVyaWFSZXNvdXJjZSBvYmplY3RcXFwiOiBhZGljaW9uYWRvIGNvbSBzdWNlc3NvLlwiXV0iLCJfYXV0aF91c2VyX2lkIjoxLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCJ9','2015-09-05 15:04:04.189218');
+INSERT INTO "django_session" VALUES('m8piccatyyarx6r5622g5gqotjmdrc9w','NTMzOTQ3MGUyYjlkMjViYWUyM2E3MDZiNzM1YmU0NTkzM2FiMDEzYjp7Il9hdXRoX3VzZXJfYmFja2VuZCI6ImRqYW5nby5jb250cmliLmF1dGguYmFja2VuZHMuTW9kZWxCYWNrZW5kIiwiX2F1dGhfdXNlcl9oYXNoIjoiZDk2OWM3Njg3OTU0NjI0YzgzNzlkYjA5OWE5MmFjZTNlYmI0ZWZjNSIsIl9hdXRoX3VzZXJfaWQiOjEsIl9tZXNzYWdlcyI6IltbXCJfX2pzb25fbWVzc2FnZVwiLDAsMjUsXCJwYWdpbmEgXFxcIk5vc3NhIEhpc3RcXHUwMGYzcmlhXFxcIiBtb2RpZmljYWRvIGNvbSBzdWNlc3NvLiBWb2NcXHUwMGVhIHBvZGUgZWRpdFxcdTAwZTEtbG8gbm92YW1lbnRlIGFiYWl4by5cIl0sW1wiX19qc29uX21lc3NhZ2VcIiwwLDI1LFwicGFnaW5hIFxcXCJOb3NzYSBIaXN0XFx1MDBmM3JpYVxcXCI6IG1vZGlmaWNhZG8gY29tIHN1Y2Vzc28uXCJdLFtcIl9fanNvbl9tZXNzYWdlXCIsMCwyNSxcImdhbGVyaWEgXFxcIlNlbWFuYSBkZSBGXFx1MDBlOXJpYXMgcGVkYWdcXHUwMGYzZ2ljYVxcXCI6IG1vZGlmaWNhZG8gY29tIHN1Y2Vzc28uXCJdLFtcIl9fanNvbl9tZXNzYWdlXCIsMCwyNSxcInBhZ2luYSBcXFwiTm9zc2EgSGlzdFxcdTAwZjNyaWFcXFwiOiBtb2RpZmljYWRvIGNvbSBzdWNlc3NvLlwiXSxbXCJfX2pzb25fbWVzc2FnZVwiLDAsMjUsXCJwYWdpbmEgXFxcIk5vc3NhIEhpc3RcXHUwMGYzcmlhXFxcIiBtb2RpZmljYWRvIGNvbSBzdWNlc3NvLiBWb2NcXHUwMGVhIHBvZGUgZWRpdFxcdTAwZTEtbG8gbm92YW1lbnRlIGFiYWl4by5cIl0sW1wiX19qc29uX21lc3NhZ2VcIiwwLDI1LFwicGFnaW5hIFxcXCJGYWxlIENvbm9zY29cXFwiIG1vZGlmaWNhZG8gY29tIHN1Y2Vzc28uIFZvY1xcdTAwZWEgcG9kZSBlZGl0XFx1MDBlMS1sbyBub3ZhbWVudGUgYWJhaXhvLlwiXSxbXCJfX2pzb25fbWVzc2FnZVwiLDAsMjUsXCJwYWdpbmEgXFxcIkZhbGUgQ29ub3Njb1xcXCIgbW9kaWZpY2FkbyBjb20gc3VjZXNzby4gVm9jXFx1MDBlYSBwb2RlIGVkaXRcXHUwMGUxLWxvIG5vdmFtZW50ZSBhYmFpeG8uXCJdXSJ9','2015-09-12 22:59:09.972496');
 CREATE TABLE "django_site" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "domain" varchar(100) NOT NULL, "name" varchar(50) NOT NULL);
 INSERT INTO "django_site" VALUES(1,'127.0.0.1:8000','127.0.0.1:8000');
 CREATE TABLE "website_banner" (
@@ -536,54 +558,80 @@ INSERT INTO "website_pagina" VALUES(4,'Instalações','instalacoes','<h2><span s
 <li>Pracinha com diversos brinquedos por faixa etária e um amplo espaço para realização de atividades ao ar livre.</li>
 </ul>
 <p style="text-align: justify;text-indent:40px;margin-top: 05px;">Convidamos a todos interessados para conhecer nossas instalações que anualmente passa por constantes modificações para um atendimento adequado a nossa sociedade.</p>','instalações, infra-estrutura',0,0,'instalações da Bambino Campones');
-INSERT INTO "website_pagina" VALUES(5,'Nossa História','nossa-historia','<h2><span style="color:red;">Nossa História</h2>
+INSERT INTO "website_pagina" VALUES(5,'Nossa História','nossa-historia','<h2><span style="color:red">Nossa Hist&oacute;ria</span></h2>
 
-<p style="text-align: justify;text-indent:40px;margin-top: 05px;">Nossa 
-história começou em 1999, com a necessidade de um local adequado para 
-deixar meu filho, na época com 3 (três) anos. Sem encontrar nada que 
-eu entendesse como um local ideal, resolvi convidar minha irmã para 
-cuidarmos de algumas crianças em casa, e ela aceitou. Fizemos as 
-devidas mudanças na casa em que eu morava, para isso tive que me 
-mudar. A casa na época era de nosso pai. Começamos a trabalhar no dia 
-03/02/1999 com uma criança, que era meu filho, ao final da primeira 
-semana estávamos com 3 (três), um menino e duas meninas. Ao término 
-do primeiro ano já contávamos com 11 (onze) crianças sob nosso 
-cuidado. Fizemos nosso primeiro passeio ao jardim zoológico em outubro 
-do mesmo ano em homenagem a semana da criança. Na volta do passeio todos participaram da primeira noite do pijama com direito a banho, janta, ceia, brincadeiras e ao acordarem foi servido um belo café da manhã. Festejamos nosso primeiro Natal com a montagem de uma árvore feita de filtros de papel, colocada no refeitório e saudamos a vinda de papai Noel com nossos bambinos a sua volta, a festa foi linda.</p>
-<p style="text-align: justify;text-indent:40px;margin-top: 05px;">No 
-ano de 2000 (dois mil), a escola foi assaltada, sendo levados, os 
-uniformes das crianças e professores, merenda, mantimentos para as 
-refeições, aparelhos eletroeletrônicos, material didático e 
-pedagógico. Recuperamos quase tudo através de uma Festa Junina 
-realizada pela comunidade. Tivemos a contribuição de cada família, 
-da escola ou não. Fechamos a rua e nos divertimos muito. Com o aumento 
-da procura, fizemos a primeira ampliação térrea. Passaram-se poucos 
-anos, e precisamos novamente ampliar. Neste momento fizemos o primeiro 
-andar. Por um período de 6 (seis) anos, atendemos a crianças 
-conveniadas da prefeitura municipal de Canoas. Desde 2008 (dois mil e 
-oito) somos autorizadas e credenciadas pelo Conselho Municipal de 
-Educação. Novamente nos faltou espaço. Para onde ir? Fomos para o 
-lado, pátio vizinho, com mais 4 (quatro) salas de aula, banheiro e pátio. Atendemos, hoje, 95 (noventa e cinco) crianças. Nosso corpo docente é composto por 16 (dezesseis) profissionais com titulação, se não concluída em curso, exigida por lei, pedagoga, nutricionista, capoeirista e professora de ballet. Todas as salas são bem arejadas e recebem a luz solar.</p>
-<p style="text-align: justify;text-indent:40px;margin-top: 05px;">Hoje 
-nossa escola conta com uma estrutura física de 354 (trezentos e 
-cinquenta e quatro) m², sendo dividida em 10 (dez) salas, um refeitório, 5 (cinco) banheiros, áreas de circulação, cozinha e pracinha.</p>
-<p style="text-align: justify;text-indent:40px;margin-top: 05px;">Somos 
-muito felizes e realizadas, compramos nossos próprios imóveis, 
-inclusive o da empresa, sempre trabalhamos com muito amor e dedicação, por isso nossa 
-empresa é uma empresa de sucesso. Nossas festas de Natal hoje reúnem em média
-450 (quatrocentos e cinquenta) pessoas. Agradecemos a nosso pai pelo inicio de tudo
-isso, pois durante 7 (sete) anos nos apoiou e cedeu-nos o imóvel para trabalharmos,
-onde hoje é a cede de nossa empresa. Temos muito a agradecer a Deus que mesmo em
-momentos muito difíceis, nunca nos deixou esmorecer.</p>
-    <p style="text-align: justify;text-indent:40px;margin-top: 05px;">“As manas”, como somos conhecidas hoje em nosso mercado de trabalho, só tem
-a agradecer a confiança de todos os pais, que deixam conosco seu bem mais precioso.
-Crianças de 04 (quatro) meses até 06 (seis) anos, que ficam sob nosso cuidado diário
-e saem para seus compromissos com a certeza de que amamos a todos com se fossem
-verdadeiramente nossos filhos.</p>
-    <p style="text-align: justify;text-indent:40px;margin-top: 05px;">Para nós isto é um verdadeiro sucesso, pois fomos criadas na lavoura junto com
-nossos pais e mais 3 (três) irmãos, somos de família muito humilde, mas que nunca teve
-medo de trabalhar e ser feliz.</p>
-    <p style="text-align: justify;text-indent:40px;margin-top: 05px;">Este é o resumo de nossa história, <strong>ontem um sonho, hoje uma realidade.</strong></p>','história',0,0,'Conheça a História da Bambino Camponês.');
+<p>Nossa hist&oacute;ria come&ccedil;ou em 1999, com a necessidade de um local adequado para deixar meu filho, na &eacute;poca com 3 (tr&ecirc;s) anos. Sem encontrar nada que eu entendesse como um local ideal, resolvi convidar minha irm&atilde; para cuidarmos de algumas crian&ccedil;as em casa, e ela aceitou. Fizemos as devidas mudan&ccedil;as na casa em que eu morava, para isso tive que me mudar. A casa na &eacute;poca era de nosso pai. Come&ccedil;amos a trabalhar no dia 03/02/1999 com uma crian&ccedil;a, que era meu filho, ao final da primeira semana est&aacute;vamos com 3 (tr&ecirc;s), um menino e duas meninas. Ao t&eacute;rmino do primeiro ano j&aacute; cont&aacute;vamos com 11 (onze) crian&ccedil;as sob nosso cuidado. Fizemos nosso primeiro passeio ao jardim zool&oacute;gico em outubro do mesmo ano em homenagem a semana da crian&ccedil;a. Na volta do passeio todos participaram da primeira noite do pijama com direito a banho, janta, ceia, brincadeiras e ao acordarem foi servido um belo caf&eacute; da manh&atilde;. Festejamos nosso primeiro Natal com a montagem de uma &aacute;rvore feita de filtros de papel, colocada no refeit&oacute;rio e saudamos a vinda de papai Noel com nossos bambinos a sua volta, a festa foi linda.</p>
+
+<p>No ano de 2000 (dois mil), a escola foi assaltada, sendo levados, os uniformes das crian&ccedil;as e professores, merenda, mantimentos para as refei&ccedil;&otilde;es, aparelhos eletroeletr&ocirc;nicos, material did&aacute;tico e pedag&oacute;gico. Recuperamos quase tudo atrav&eacute;s de uma Festa Junina realizada pela comunidade. Tivemos a contribui&ccedil;&atilde;o de cada fam&iacute;lia, da escola ou n&atilde;o. Fechamos a rua e nos divertimos muito. Com o aumento da procura, fizemos a primeira amplia&ccedil;&atilde;o t&eacute;rrea. Passaram-se poucos anos, e precisamos novamente ampliar. Neste momento fizemos o primeiro andar. Por um per&iacute;odo de 6 (seis) anos, atendemos a crian&ccedil;as conveniadas da prefeitura municipal de Canoas. Desde 2008 (dois mil e oito) somos autorizadas e credenciadas pelo Conselho Municipal de Educa&ccedil;&atilde;o. Novamente nos faltou espa&ccedil;o. Para onde ir? Fomos para o lado, p&aacute;tio vizinho, com mais 4 (quatro) salas de aula, banheiro e p&aacute;tio. Atendemos, hoje, 95 (noventa e cinco) crian&ccedil;as. Nosso corpo docente &eacute; composto por 16 (dezesseis) profissionais com titula&ccedil;&atilde;o, se n&atilde;o conclu&iacute;da em curso, exigida por lei, pedagoga, nutricionista, capoeirista e professora de ballet. Todas as salas s&atilde;o bem arejadas e recebem a luz solar.</p>
+
+<p>Hoje nossa escola conta com uma estrutura f&iacute;sica de 354 (trezentos e cinquenta e quatro) m&sup2;, sendo dividida em 10 (dez) salas, um refeit&oacute;rio, 5 (cinco) banheiros, &aacute;reas de circula&ccedil;&atilde;o, cozinha e pracinha.</p>
+
+<p>Somos muito felizes e realizadas, compramos nossos pr&oacute;prios im&oacute;veis, inclusive o da empresa, sempre trabalhamos com muito amor e dedica&ccedil;&atilde;o, por isso nossa empresa &eacute; uma empresa de sucesso. Nossas festas de Natal hoje re&uacute;nem em m&eacute;dia 450 (quatrocentos e cinquenta) pessoas. Agradecemos a nosso pai pelo inicio de tudo isso, pois durante 7 (sete) anos nos apoiou e cedeu-nos o im&oacute;vel para trabalharmos, onde hoje &eacute; a cede de nossa empresa. Temos muito a agradecer a Deus que mesmo em momentos muito dif&iacute;ceis, nunca nos deixou esmorecer.</p>
+
+<p>&ldquo;As manas&rdquo;, como somos conhecidas hoje em nosso mercado de trabalho, s&oacute; tem a agradecer a confian&ccedil;a de todos os pais, que deixam conosco seu bem mais precioso. Crian&ccedil;as de 04 (quatro) meses at&eacute; 06 (seis) anos, que ficam sob nosso cuidado di&aacute;rio e saem para seus compromissos com a certeza de que amamos a todos com se fossem verdadeiramente nossos filhos.</p>
+
+<p>Para n&oacute;s isto &eacute; um verdadeiro sucesso, pois fomos criadas na lavoura junto com nossos pais e mais 3 (tr&ecirc;s) irm&atilde;os, somos de fam&iacute;lia muito humilde, mas que nunca teve medo de trabalhar e ser feliz.</p>
+
+<p>Este &eacute; o resumo de nossa hist&oacute;ria, <strong>ontem um sonho, hoje uma realidade.</strong></p>
+
+<p>&nbsp;</p>
+
+<h4><strong>Algumas fotos da nossa hist&oacute;ria:</strong></h4>
+
+<p>&nbsp;</p>
+
+<p><strong>Primeira foto da Bambino Campon&ecirc;s</strong></p>
+
+<p><strong><img alt="Primeira foto da Bambino" src="/static/images/historia/001.jpg" style="background-color:white; border:01px solid #ccc; height:100%; padding:5px; width:100%" /></strong></p>
+
+<p>&nbsp;</p>
+
+<p><strong>Primeira formatura da Bambino Campon&ecirc;s</strong></p>
+
+<p><strong><img alt="Primeira formatura da Bambino" src="/static/images/historia/002.jpg" style="background-color:white; border:01px solid #ccc; height:100%; padding:5px; width:100%" /></strong></p>
+
+<p>&nbsp;</p>
+
+<p><strong>Primeiro Natal da Bambino Campon&ecirc;s</strong></p>
+
+<p><strong><img alt="Primeiro natal da Bambino" src="/static/images/historia/003.jpg" style="background-color:white; border:01px solid #ccc; height:100%; padding:5px; width:100%" /></strong></p>
+
+<p>&nbsp;</p>
+
+<p><strong>Primeira Noite do Pijama da Bambino Campon&ecirc;s</strong></p>
+
+<p><strong><img alt="Primeira noite do Pijama da Bambino" src="/static/images/historia/004.jpg" style="background-color:white; border:01px solid #ccc; height:100%; padding:5px; width:100%" /></strong></p>
+
+<p>&nbsp;</p>
+
+<p><strong>Primeiro passeio no Zoo da Bambino Campon&ecirc;s</strong></p>
+
+<p><strong><img alt="Primeiro passeio no Zoo do Pijama da Bambino" src="/static/images/historia/005.jpg" style="background-color:white; border:01px solid #ccc; height:100%; padding:5px; width:100%" /></strong></p>
+
+<p>&nbsp;</p>
+
+<p><strong>Primeira pra&ccedil;a da Bambino Campon&ecirc;s</strong></p>
+
+<p><strong><img alt="Primeira praça da Bambino" src="/static/images/historia/006.jpg" style="background-color:white; border:01px solid #ccc; height:100%; padding:5px; width:100%" /></strong></p>
+
+<p>&nbsp;</p>
+
+<p><strong>Segunda pra&ccedil;a da Bambino Campon&ecirc;s</strong></p>
+
+<p><strong><img alt="Segunda praça da Bambino" src="/static/images/historia/007.jpg" style="background-color:white; border:01px solid #ccc; height:100%; padding:5px; width:100%" /></strong></p>
+
+<p>&nbsp;</p>
+
+<p><strong>Antigas instala&ccedil;&otilde;es da Bambino Campon&ecirc;s</strong></p>
+
+<p><strong><img alt="Antigas instalações da Bambino" src="/static/images/historia/008.jpg" style="background-color:white; border:01px solid #ccc; height:100%; padding:5px; width:100%" /></strong></p>
+
+<p>&nbsp;</p>
+
+<p><strong>Constru&ccedil;&atilde;o da pracinha da Bambino Campon&ecirc;s</strong></p>
+
+<p><strong><img alt="Construção da pracinha da Bambino" src="/static/images/historia/009.jpg" style="background-color:white; border:01px solid #ccc; height:100%; padding:5px; width:100%" /></strong></p>
+','história',0,0,'Conheça a História da Bambino Camponês.');
 INSERT INTO "website_pagina" VALUES(6,'Horários','horarios','<h2><span style="color:red;">Horários de Funcionamento</h2>
 <h4 style="color: red; margin-top:35px;height: 10px !important;">Horário de entrada:</h4>
     <p style="display:block;width:100%;"><span style="font-weight:bold;">Turno da manhã:</span> <span style="font-weight:bold;color:black;">até</span> às <span style="font-weight:bold;color:black;">10h45min</span></p>
@@ -1014,23 +1062,10 @@ INSERT INTO "website_pagina" VALUES(19,'Papeis de Parede','papeis-de-parede','<h
 ','downloads, papéis de parede',0,0,'Downloads de Papéis de Parede');
 INSERT INTO "website_pagina" VALUES(20,'Desenhos para Pintar','desenhos-para-pintar','<h2><span style="color:red;">Download de Desenhos para Pintar</h2>
 <p style="text-align: justify;text-indent:40px;margin-top: 05px;">Página em Construção</p>','downloads, desenhos para pintar',0,0,'Downloads de Desenhos para Pintar');
-INSERT INTO "website_pagina" VALUES(21,'Fale Conosco','fale-conosco','<h2><span style="color:red;">Fale Conosco</h2>
-<p>Deixe o seu recado que em breve entraremos em contato.</p>
-    <p>&nbsp;</p>
-    <p>&nbsp;</p>
-    <div class="contato">
-      <form id="contato_form" action="/fale-conosco" method="post" onsubmit="return valida_contato();">
-          <span>Nome:</span>
-          <input id="nome" title="Informe o seu nome." name="nome" type="text" size="50">
-          <span>Telefone:</span>
-          <input id="telefone" title="Informe o seu telefone." name="telefone" type="text" size="50">
-          <span>E-mail:</span>
-          <input id="email" title="Informe o seu e-mail." name="email" type="text" size="50">
-          <span>Mensagem:</span>
-          <textarea id="mensagem" title="Deixe sua mensagem." cols="40" rows="10" name="mensagem"></textarea>
-          <button style="width: 120px;" onclick="return valida_contato();" type="submit">Enviar</button>
-      </form>
-    </div>','fale conosco, contato',0,0,'Entre em contato com a Bambino.');
+INSERT INTO "website_pagina" VALUES(21,'Fale Conosco','fale-conosco','<h2><span style="color:red">Fale Conosco</span></h2>
+
+<p><span style="color:red">em constru&ccedil;&atilde;o.</span></p>
+','fale conosco, contato',0,0,'Entre em contato com a Bambino.');
 INSERT INTO "website_pagina" VALUES(22,'Localização','localizacao','<h2><span style="color:red;">Localização</h2>
 <div align="center">
         <iframe width="100%" height="400px" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com.br/maps?q=Rua+Irm%C3%A3o+Flor%C3%AAncio,+n%C2%BA+151+-+Bairro+Harmonia+-+Canoas+-+RS+-+Brasil&amp;client=ubuntu&amp;channel=cs&amp;ie=UTF8&amp;hq=&amp;hnear=R.+Irm%C3%A3o+Flor%C3%AAncio,+151+-+Harmonia,+Canoas+-+Rio+Grande+do+Sul,+92310-490&amp;t=m&amp;ll=-29.901303,-51.193542&amp;spn=0.035715,0.054932&amp;z=14&amp;iwloc=A&amp;output=embed"></iframe><br><small><a href="https://maps.google.com.br/maps?q=Rua+Irm%C3%A3o+Flor%C3%AAncio,+n%C2%BA+151+-+Bairro+Harmonia+-+Canoas+-+RS+-+Brasil&amp;client=ubuntu&amp;channel=cs&amp;ie=UTF8&amp;hq=&amp;hnear=R.+Irm%C3%A3o+Flor%C3%AAncio,+151+-+Harmonia,+Canoas+-+Rio+Grande+do+Sul,+92310-490&amp;t=m&amp;ll=-29.901303,-51.193542&amp;spn=0.035715,0.054932&amp;z=14&amp;iwloc=A&amp;source=embed" style="color:#0000FF;text-align:left">Exibir mapa ampliado</a></small>
@@ -1038,8 +1073,16 @@ INSERT INTO "website_pagina" VALUES(22,'Localização','localizacao','<h2><span 
         <br>
         <a href="https://maps.google.com.br/maps?q=Rua+Irm%C3%A3o+Flor%C3%AAncio,+n%C2%BA+151+-+Bairro+Harmonia+-+Canoas+-+RS+-+Brasil&amp;client=ubuntu&amp;channel=cs&amp;ie=UTF-8&amp;ei=w05SUfPrHsny0wH7lYFQ&amp;ved=0CAsQ_AUoAg" target="_blank" title="Exibir mapa ampliado." style="font-size:20px;">Exibir mapa no Google Maps</a>
     </div>','localização, mapa',0,0,'Localize a Bambino Camponês');
-INSERT INTO "website_pagina" VALUES(23,'Responsabilidade Social','responsabilidade-social','<h2><span style="color:red;">Responsabilidade Social</h2>
-<p style="text-align: justify;text-indent:40px;margin-top: 05px;">Página em construção.</p>','responsabilidade social',0,0,'Responsabilidade Social');
+INSERT INTO "website_pagina" VALUES(23,'Responsabilidade Social','responsabilidade-social','<h2><span style="color:red">Responsabilidade Social</span></h2>
+
+<p>A E.E.I. Bambino Campon&ecirc;s tem como um dos valores a Responsabilidade Social. Desta forma, nosso objetivo &eacute; se comprometer com causas sociais, atrav&eacute;s de campanhas e projetos junto com as nossas crian&ccedil;as e a nossa sociedade.</p>
+
+<p>Desenvolvemos ao longo do ano campanhas para que possamos ajudar a resolver problemas sociais e, al&eacute;m disso, nas turmas temos diversos projetos que ensinam nossas crian&ccedil;as a import&acirc;ncia de se preocupar com a quest&atilde;o social e ambiental.</p>
+
+<p>Portanto, envolvemos tanto nossos colaboradores quanto nossos alunos a colaborarem com comportamentos e a&ccedil;&otilde;es em diferentes causas e atividades que promovam aprendizados e melhorias tanto no aspecto interno da Escola quanto no &acirc;mbito externo de uma sociedade com redu&ccedil;&atilde;o de impactos negativos no meio ambiente e na comunidade.</p>
+
+<p>Contamos, assim, com a uni&atilde;o de todas as for&ccedil;as para fazermos a diferen&ccedil;a com a sociedade e o meio ambiente.&nbsp;&nbsp;Al&eacute;m de incentivarmos este princ&iacute;pio internamente, aceitamos tamb&eacute;m a participa&ccedil;&atilde;o e contribui&ccedil;&atilde;o maior da comunidade e parceiros para um bem maior de causas socioambientais.</p>
+','responsabilidade social',0,0,'Responsabilidade Social');
 DELETE FROM sqlite_sequence;
 INSERT INTO "sqlite_sequence" VALUES('django_content_type',22);
 INSERT INTO "sqlite_sequence" VALUES('django_migrations',5);
@@ -1047,7 +1090,7 @@ INSERT INTO "sqlite_sequence" VALUES('auth_permission',66);
 INSERT INTO "sqlite_sequence" VALUES('django_site',1);
 INSERT INTO "sqlite_sequence" VALUES('auth_user',1);
 INSERT INTO "sqlite_sequence" VALUES('website_publicacao',5);
-INSERT INTO "sqlite_sequence" VALUES('django_admin_log',133);
+INSERT INTO "sqlite_sequence" VALUES('django_admin_log',154);
 INSERT INTO "sqlite_sequence" VALUES('website_calendario',5);
 INSERT INTO "sqlite_sequence" VALUES('website_cardapio',1);
 INSERT INTO "sqlite_sequence" VALUES('website_conteudodownload',1);
