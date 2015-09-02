@@ -293,3 +293,21 @@ function valida_orcamento(){
     obj_form.submit();
     return true;
 }
+
+
+function validaMenuAcesso(){
+    retorno = false;
+    valor = 'bambino2015';
+    var validation = prompt("Informe a senha de acesso:");
+    if (validation != null) {
+        if (validation == valor){
+            retorno = true;
+        } else {
+            alert("Senha inválida !.");
+        }
+    } else {
+        alert("Senha Não infomada !.");
+    }
+    return retorno;
+}
+

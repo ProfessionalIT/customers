@@ -61,7 +61,7 @@ body {
 /* end customizations of navbar */
 
 .logotipo {
-    width: 100%;
+    width: 70%;
 }
 
 .margin_top_30 {
@@ -175,6 +175,9 @@ p.lead { text-indent: 0px !important; }
         margin-top: 15%;
         margin-bottom: 5%;
     }
+}
+.social_bar {
+    margin-top: 2%;
 }
 @media screen and (min-width: 200px) and (max-width: 767px){
     .social_bar {

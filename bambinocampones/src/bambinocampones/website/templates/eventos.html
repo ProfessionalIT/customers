@@ -5,17 +5,17 @@
 {% block content %}
 
 {% if eventos %}
-    <h2 class="title_shadow margin_left_adjusts"><img src="{% static 'images/noticias.png' %}" class="mural_icon">Últimas Notícias</h2>
+    <h2 class="title_shadow margin_left_adjusts"><img src="{% static 'images/noticias.png' %}" class="mural_icon">Últimos Eventos</h2>
     {% for evento in eventos %}
         <div class="row bg_white">
             <div class="col-xs-12 paragraf" >
-                <h3 class="news_title">{{ evento.titulo }}</h3>
-                {% if evento.miniatura_evento %}
-                    <img src="{{ MEDIA_URL }}{{ evento.miniatura_evento }}" alt="Foto para {{ evento.titulo }}" title="{{ evento.titulo }}" class="news_thumb" />
+                <h3 class="news_title"><a href="/evento/{{ evento.slug }}">{{ evento.titulo }}</a></h3>
+                {% if evento.miniatura_publicacao %}
+                    <img src="{{ MEDIA_URL }}{{ evento.miniatura_publicacao }}" alt="Foto para {{ evento.titulo }}" title="{{ evento.titulo }}" class="news_thumb" />
                 {% endif %}
-                <p>{{ evento.introducao }}</p>
+                <p>{{ evento.introducao|safe }}</p>
                 <p class="lead">
-                    <button class="btn btn-default" onclick="return location.href='{{ evento.slug }}'" title="Ler mais sobre a noticia {{ evento.titulo }}.">Ler mais</button>
+                    <button class="btn btn-default" onclick="return location.href='/evento/{{ evento.slug }}'" title="Ler mais sobre o evento {{ evento.titulo }}.">Ler mais</button>
                 </p>
                 <!--
                 <p class="pull-right">
@@ -24,7 +24,7 @@
                 </p>
                 -->
                 <ul class="list-inline">
-                    <li>Publicado em: <a href="#">{{ evento.data_evento }}</a></li>
+                    <li>Publicado em: <a href="#">{{ evento.data_publicacao }}</a></li>
                     <!--
                     <li><a href="#"><i class="glyphicon glyphicon-comment"></i> 2 Comments</a></li>
                     <li><a href="#"><i class="glyphicon glyphicon-share"></i> 14 Shares</a></li>
@@ -35,7 +35,7 @@
         <hr>
     {% endfor %}
 {% else %}
-    <h2 class="title_shadow margin_left_adjusts">Sem Notícias</h2>
+    <h2 class="title_shadow margin_left_adjusts">Sem Eventos</h2>
     <p>Novas publicações em breve.</p>
 {% endif %}
 {% endblock %}
