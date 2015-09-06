@@ -8,9 +8,41 @@
     <div class="col-xs-12 paragraf" >
         <h3 class="news_title">{{ publicacao.titulo }}</h3>
         {% if publicacao.miniatura_publicacao %}
-            <img src="{{ MEDIA_URL }}{{ publicacao.miniatura_publicacao }}" alt="Foto para {{ publicacao.titulo }}" title="{{ publicacao.titulo }}" class="news_thumb" />
+            <img src="{{ MEDIA_URL }}{{ publicacao.miniatura_publicacao }}" alt="Foto para {{ publicacao.titulo }}" title="{{ publicacao.titulo }}" class="news_thumb" style="box-shadow: 02px 02px 10px 0px;"/>
         {% endif %}
         <p>{{ publicacao.completa|safe }}</p>
+        {% if publicacao.galeria %}
+            {% if publicacao.galeria.tipo == 'F' %}
+                <h4>Seguem as fotos:</h4>
+            {% else %}
+                <h4>Segue(m) o(s) vídeo(s):</h4>
+            {% endif %}
+            {% for recurso in publicacao.galeria.get_resources %}
+                <div class="row bg_white">
+                    <div class="col-xs-12 col-sm-12" style="padding: 10px;" >
+                        {% if recurso.url_resource %}
+                            {% if recurso.galeria.tipo == 'F' %}
+                                <a href="{{ MEDIA_URL }}{{ recurso.url_resource }}" target="_blank">
+                                    <img src="{{ MEDIA_URL }}{{ recurso.url_resource }}" alt="Banner para {{ recurso.galeria.titulo }}" title=" Foto da Galeria {{ recurso.galeria.titulo }}" style="width: 100%;box-shadow: 02px 02px 10px 0px;" />
+                                </a>
+                            {% else %}
+                                {{ recurso.url_resource|safe }}
+                            {% endif %}
+                        {% else %}
+                            {% if recurso.upload_resource %}
+                                {% if recurso.galeria.tipo == 'F' %}
+                                    <a href="{{ MEDIA_URL }}{{ recurso.upload_resource }}" target="_blank">
+                                        <img src="{{ MEDIA_URL }}{{ recurso.upload_resource }}" alt="Banner para {{ recurso.galeria.titulo }}" title=" Foto da Galeria {{ recurso.galeria.titulo }}" style="width: 100%;box-shadow: 02px 02px 10px 0px;"/>
+                                    </a>
+                                {% else %}
+                                    {{ recurso.upload_resource|safe }}
+                                {% endif %}
+                            {% endif %}
+                        {% endif %}
+                    </div>
+                </div>
+            {% endfor %}
+        {% endif %}
         <!--
         <p class="pull-right">
             $for word in publicacao.palavras_chaves.split(','):

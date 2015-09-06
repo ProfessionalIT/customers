@@ -25,8 +25,13 @@ class CalendarioAdmin(admin.ModelAdmin):
     prepopulated_fields = {"slug": ("titulo",)}
 
 
+class GaleriaResourceInline(admin.StackedInline):
+    model = GaleriaResource
+
+
 class GaleriaAdmin(admin.ModelAdmin):
     prepopulated_fields = {"slug": ("titulo",)}
+    inlines = [GaleriaResourceInline, ]
 
 
 class PublicacaoAdminForm(forms.ModelForm):
@@ -75,7 +80,6 @@ admin.site.register(Banner, BannerAdmin)
 admin.site.register(Calendario, CalendarioAdmin)
 admin.site.register(Cardapio)
 admin.site.register(Galeria, GaleriaAdmin)
-admin.site.register(GaleriaResource)
 admin.site.register(Publicacao, PublicacaoAdmin)
 admin.site.register(Pagina, PaginaAdmin)
 admin.site.register(Menu, MenuAdmin)

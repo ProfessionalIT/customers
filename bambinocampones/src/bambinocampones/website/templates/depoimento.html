@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% block title %} Depoímentos. {% endblock %}
+
+{% block keywords %} depoimentos, relatos {% endblock %}
+{% block description %} Depoimentos de pais, alunos, colaboradores e parceiros {% endblock %}
+
+
+{% block content %}
+    <style type="text/css">
+        #form_depoimento label {
+            vertical-align: top;
+            width: 15%;
+        }
+    </style>
+    <h2><span style="color: red;">Incluir depoímento</span></h2>
+    <form action="" method="post" id="form_depoimento">
+        {% csrf_token %}
+        {{ depoimento_form.as_p }}
+        <input type="submit" value="Enviar" />
+    </form>
+{% endblock %}

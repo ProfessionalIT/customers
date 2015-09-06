@@ -164,6 +164,9 @@ class Galeria(models.Model):
         recurso = self.galeriaresource_set.filter()[:1].get()
         return recurso
 
+    def get_resources(self):
+        return self.galeriaresource_set.all()
+
     @models.permalink
     def get_absolute_url(self):
         return 'galeria', [str(self.slug)]
@@ -186,6 +189,16 @@ class GaleriaResource(models.Model):
                                        max_length=200,
                                        null=True,
                                        blank=True)
+
+    class Meta:
+        verbose_name = u'Arquivo:'
+        verbose_name_plural = u'Arquivos'
+
+    def __unicode__(self):
+        if self.url_resource:
+            return " {} ".format(self.url_resource)
+        elif self.upload_resource:
+            return " {} ".format(self.upload_resource)
 
 
 class Publicacao(models.Model):
