@@ -1,0 +1,8 @@
+Django==1.8.2
+Pillow==2.9.0
+argparse==1.2.1
+-e git://github.com/hersonls/djamin.git@80223aee9628af3656247bd8e46018cc392596f2#egg=djamin-master
+django-extensions==1.5.5
+gunicorn==19.3.0
+six==1.9.0
+wsgiref==0.1.2
