@@ -1,0 +1,17 @@
+base.html:258:                       <img src="http://media.bambinocampones.com.br/images/logo.png"
+base.html:470:                                                                <span id="sp22" class="c1" style="background: url(http://media.bambinocampones.com.br/images/evento_bkp.png);">20</span>
+base.html:490:                                                                <span id="sp28" class="c2" style="background: url(http://media.bambinocampones.com.br/images/evento_bkp.png);">26</span>
+base.html:541:                            <div id="eventsDescriptions"><img src="http://media.bambinocampones.com.br/images/evento_bkp.png" class="activity_bkg"> 20/7 - Dia do Amigo<br><img src="http://media.bambinocampones.com.br/images/evento_bkp.png" class="activity_bkg"> 26/7 - Dia dos Avós<br></div>
+base.html:547:                                            <td style="width: 78px;"><img src="http://media.bambinocampones.com.br/images/evento_bkp.png" class="activity_bkg"> Evento</td>
+base.html:548:                                            <td style="width: 70px;"><img src="http://media.bambinocampones.com.br/images/festa_bkp.png" class="activity_bkg"> Festa</td>
+base.html:549:                                            <td style="width: 78px;"><img src="http://media.bambinocampones.com.br/images/feriado_bkp.png" class="activity_bkg"> Feriado</td>
+base.html:552:                                            <td style="width: 78px;"><img src="http://media.bambinocampones.com.br/images/recesso_bkp.png" class="activity_bkg"> Recesso</td>
+base.html:553:                                            <td style="width: 70px;"><img src="http://media.bambinocampones.com.br/images/ponte_bkp.png" class="activity_bkg"> Ponte</td>
+base.html:567:                            <img src="http://media.bambinocampones.com.br/images/comida.jpg" alt="Banner do Cardápio." title="Cardápio mensal por turma." style="width:100%;" />
+base.html:584:                                <a href="http://media.bambinocampones.com.br/images/material_escolar/bercario_pre_maternal_2015.pdf" title="Lista de material escolar de 2015 para Berçário e Pré-Maternal." target="_blank">Berçário e Pré-Maternal</a>
+base.html:587:                                <a href="http://media.bambinocampones.com.br/images/material_escolar/maternal_1_2015.pdf" title="Lista de material escolar de 2015 para Maternal 1." target="_blank">Maternal I</a>
+base.html:590:                                <a href="http://media.bambinocampones.com.br/images/material_escolar/maternal_2_2015.pdf" title="Lista de material escolar de 2015 para Maternal 2." target="_blank">Maternal II</a>
+base.html:593:                                <a href="http://media.bambinocampones.com.br/images/material_escolar/jardim_1_e_2_2015.pdf" title="Lista de material escolar de 2015 para Jardim A e B." target="_blank">Jardim A e B</a>
+base.html:729:                        <img src="http://media.bambinocampones.com.br/images/depoimentos.png" alt="ícone dos depoimentos" title="Deixe seu depoimento:" style="width: 100%;margin: 0px auto;padding: 5px 15px;">
+cardapios.html:12:    <img src="http://media.bambinocampones.com.br/images/comida.jpg" alt="" title="" style="width:100%;" />
+layout_2.html:254:                       <img src="http://media.bambinocampones.com.br/images/logo.png"
