@@ -40,6 +40,8 @@ CREATE TABLE "website_galeria" (
 INSERT INTO "website_galeria" VALUES(2,'Video Galeria','video-galeria','V','Galeria de Video','08','2014',1,0);
 INSERT INTO "website_galeria" VALUES(3,'Semana de Férias pedagógica','semana-pedagogica','F','Semana pedagógica de Julho/2015 na Bambino Camponês','07','2015',1,0);
 INSERT INTO "website_galeria" VALUES(4,'Dia dos Pais','dia-dos-pais','F','Galeria de Fotos dos Dias dos Pais de 2015','08','2015',1,0);
+INSERT INTO "website_galeria" VALUES(5,'Aula de culinária com os pequenos do Berçário II','aula-de-culinaria-com-os-pequenos-do-bercario-ii','F','Fotos da aula de culinária com os pequenos do berçário II','08','2015',1,0);
+INSERT INTO "website_galeria" VALUES(6,'Caminhada Cívica com Jardim I e II: nossas crianças fazendo a diferença','caminhada-civica-com-jardim-i-e-ii-nossas-criancas-fazendo-diferenca','F','Caminhada cívica de 2015','09','2015',1,0);
 CREATE TABLE "website_galeriaresource" (
     "id" integer NOT NULL PRIMARY KEY AUTOINCREMENT,
     "galeria_id" integer NOT NULL REFERENCES "website_galeria" ("id"),
@@ -67,6 +69,23 @@ INSERT INTO "website_galeriaresource" VALUES(18,4,'','galerias/IMG_5001.jpg','')
 INSERT INTO "website_galeriaresource" VALUES(19,4,'','galerias/IMG_5154.jpg','');
 INSERT INTO "website_galeriaresource" VALUES(20,4,'','galerias/IMG_5155.jpg','');
 INSERT INTO "website_galeriaresource" VALUES(21,4,'','galerias/IMG_5197.jpg','');
+INSERT INTO "website_galeriaresource" VALUES(32,5,'','galerias/aula_culinaria_bercario_ii_capa.jpg','#');
+INSERT INTO "website_galeriaresource" VALUES(33,5,'','galerias/aula_culinaria_bercario_ii_foto_08.jpg','#');
+INSERT INTO "website_galeriaresource" VALUES(34,5,'','galerias/aula_culinaria_bercario_ii_foto_07.jpg','#');
+INSERT INTO "website_galeriaresource" VALUES(35,5,'','galerias/aula_culinaria_bercario_ii_foto_06.jpg','#');
+INSERT INTO "website_galeriaresource" VALUES(36,5,'','galerias/aula_culinaria_bercario_ii_foto_05.jpg','#');
+INSERT INTO "website_galeriaresource" VALUES(37,5,'','galerias/aula_culinaria_bercario_ii_foto_04.jpg','#');
+INSERT INTO "website_galeriaresource" VALUES(38,5,'','galerias/aula_culinaria_bercario_ii_foto_03.jpg','#');
+INSERT INTO "website_galeriaresource" VALUES(39,5,'','galerias/aula_culinaria_bercario_ii_foto_02.jpg','#');
+INSERT INTO "website_galeriaresource" VALUES(40,5,'','galerias/aula_culinaria_bercario_ii_foto_01.jpg','#');
+INSERT INTO "website_galeriaresource" VALUES(41,6,'','galerias/caminhada_civica_foto_08.jpg','#');
+INSERT INTO "website_galeriaresource" VALUES(42,6,'','galerias/caminhada_civica_foto_07.jpg','#');
+INSERT INTO "website_galeriaresource" VALUES(43,6,'','galerias/caminhada_civica_foto_06.jpg','#');
+INSERT INTO "website_galeriaresource" VALUES(44,6,'','galerias/caminhada_civica_foto_05.jpg','#');
+INSERT INTO "website_galeriaresource" VALUES(45,6,'','galerias/caminhada_civica_foto_04.jpg','#');
+INSERT INTO "website_galeriaresource" VALUES(46,6,'','galerias/caminhada_civica_foto_03.jpg','#');
+INSERT INTO "website_galeriaresource" VALUES(47,6,'','galerias/caminhada_civica_foto_02.jpg','#');
+INSERT INTO "website_galeriaresource" VALUES(48,6,'','galerias/caminhada_civica_foto_01.jpg','#');
 CREATE TABLE "website_publicacao" (
     "id" integer NOT NULL PRIMARY KEY AUTOINCREMENT,
     "titulo" varchar(200) NOT NULL,
@@ -144,6 +163,73 @@ INSERT INTO "website_publicacao" VALUES(5,'Muita diversão e atividades especiai
 
 <p>Nossas crian&ccedil;as aproveitaram muito estes momentos e a anima&ccedil;&atilde;o foi garantida.&nbsp;</p>
 ','publicacao/Imagem_Sem._Ferias_Pedagogicas.JPG',NULL,1,0,0);
+INSERT INTO "website_publicacao" VALUES(6,'Aula de culinária com os pequenos do Berçário II','aula-de-culinaria-com-os-pequenos-do-bercario-ii','2015-09-05 20:00:00','2015-09-05 21:11:38.492131','aula, culinária, arte, berçário','N','<p>No dia 31 de agosto, nossa nutricionista Ver&ocirc;nica junto com a ajuda dos nossos mini chefs do Ber&ccedil;&aacute;rio II prepararam uma saborosa torta de bolacha com frutas para o lanche da tarde.<br />
+Nossos pequenos ficaram atentos as explica&ccedil;&otilde;es da nutricionista e participaram colocando os ingredientes para a prepara&ccedil;&atilde;o do prato do dia.<br />
+Al&eacute;m de participarem de todas as etapas, alguns mini chefs degustaram a saborosa torta de bolacha com frutas antes mesmo de ficar pronta colocando os dedinhos para pegar uma pequena prova do delicioso lanchinho.</p>
+
+<p><em>Parab&eacute;ns a nossa nutricionista, colaboradoras e aos nossos eficientes mini chefs do Ber&ccedil;&aacute;rio II.</em></p>
+','<p>No dia 31 de agosto, nossa nutricionista Ver&ocirc;nica junto com a ajuda dos nossos mini chefs do Ber&ccedil;&aacute;rio II prepararam uma saborosa torta de bolacha com frutas para o lanche da tarde.<br />
+Nossos pequenos ficaram atentos as explica&ccedil;&otilde;es da nutricionista e participaram colocando os ingredientes para a prepara&ccedil;&atilde;o do prato do dia.<br />
+Al&eacute;m de participarem de todas as etapas, alguns mini chefs degustaram a saborosa torta de bolacha com frutas antes mesmo de ficar pronta colocando os dedinhos para pegar uma pequena prova do delicioso lanchinho.</p>
+
+<p><em>Parab&eacute;ns a nossa nutricionista, colaboradoras e aos nossos eficientes mini chefs do Ber&ccedil;&aacute;rio II.</em></p>
+','publicacao/aula_culinaria_bercario_ii_capa.jpg',5,1,0,0);
+INSERT INTO "website_publicacao" VALUES(7,'Caminhada Cívica com Jardim I e II: nossas crianças fazendo a diferença','caminhada-civica-com-jardim-i-e-ii-nossas-criancas-fazendo-diferenca','2015-09-04 03:00:00','2015-09-05 23:36:21.778657','caminhada cívica, crianças','N','<p>Na tarde do dia 04 de setembro, nossas crian&ccedil;as do Jardim I e II participaram juntos com as suas professoras e a diretora Tia Salete da Caminhada C&iacute;vica em comemora&ccedil;&atilde;o ao Dia 7 de setembro.</p>
+
+<p><br />
+A Caminhada C&iacute;vica aconteceu nas quadras pr&oacute;ximas da Escola com a participa&ccedil;&atilde;o de algumas m&atilde;es de alunos.<br />
+Nossas crian&ccedil;as estavam vestidas com camisetas e faixas confeccionadas por elas mesmo na Escola e os seus rostinhos pintados de verde e amarelo.&nbsp;</p>
+
+<p><br />
+No decorrer da caminhada nossas crian&ccedil;as cantaram: &quot;Sou brasileiro com muito orgulho...&quot;, e levaram seus instrumentos, o qual chamou a aten&ccedil;&atilde;o de diversas pessoas na ruas, que pararam para prestigiar nossos pequenos.<br />
+Devemos cultivar o exemplo de patriotismo em nossas crian&ccedil;as, as quais ser&atilde;o o futuro do nosso pa&iacute;s.<br />
+Parab&eacute;ns as professoras e alunos das turmas do Jardim I e II.</p>
+','<p>Na tarde do dia 04 de setembro, nossas crian&ccedil;as do Jardim I e II participaram juntos com as suas professoras e a diretora Tia Salete da Caminhada C&iacute;vica em comemora&ccedil;&atilde;o ao Dia 7 de setembro.</p>
+
+<p><br />
+A Caminhada C&iacute;vica aconteceu nas quadras pr&oacute;ximas da Escola com a participa&ccedil;&atilde;o de algumas m&atilde;es de alunos.<br />
+Nossas crian&ccedil;as estavam vestidas com camisetas e faixas confeccionadas por elas mesmo na Escola e os seus rostinhos pintados de verde e amarelo.&nbsp;</p>
+
+<p><br />
+No decorrer da caminhada nossas crian&ccedil;as cantaram: &quot;Sou brasileiro com muito orgulho...&quot;, e levaram seus instrumentos, o qual chamou a aten&ccedil;&atilde;o de diversas pessoas na ruas, que pararam para prestigiar nossos pequenos.<br />
+Devemos cultivar o exemplo de patriotismo em nossas crian&ccedil;as, as quais ser&atilde;o o futuro do nosso pa&iacute;s.<br />
+Parab&eacute;ns as professoras e alunos das turmas do Jardim I e II.</p>
+','publicacao/caminhada_civica_2015.jpg',6,1,0,0);
+INSERT INTO "website_publicacao" VALUES(8,'Semana Farroupilha da Bambino Camponês ','semana-farroupilha-da-bambino-campones','2015-09-05 01:00:00','2015-09-06 00:12:59.846184','semana farroupilha','E','<p><strong>PROGRAMA&Ccedil;&Atilde;O SEMANA FARROUPILHA</strong></p>
+
+<p><strong>14/09:</strong>&nbsp;Trazer um item identificado das nossas tradi&ccedil;&otilde;es para exposi&ccedil;&atilde;o. Neste dia ser&aacute; montado o nosso CTG;</p>
+
+<p><strong>15/09:</strong>&nbsp;Desfile de Prendas e Pe&otilde;es;</p>
+
+<p><strong>16/09:</strong>&nbsp;Roda de chimarr&atilde;o;</p>
+
+<p><strong>17/09:</strong>&nbsp;Baile no CTG da Bambino Campon&ecirc;s. Trazer CD&rsquo;s de m&uacute;sicas tradicionalistas;</p>
+
+<p><strong>18/09:</strong>&nbsp;Churrasco e lanche coletivo.</p>
+
+<p>No&nbsp;<strong>dia 18/09</strong>&nbsp;as crian&ccedil;as do turno da tarde dever&atilde;o chegar &agrave; Escola entre&nbsp;<strong>10h30min e 11h.</strong></p>
+
+<p>Maiores informa&ccedil;&otilde;es na agenda do seu filho/sua filha.</p>
+
+<p><strong>As crian&ccedil;as podem vir pilchadas durante toda a semana.</strong></p>
+','<p><strong>PROGRAMA&Ccedil;&Atilde;O SEMANA FARROUPILHA</strong></p>
+
+<p><strong>14/09:</strong>&nbsp;Trazer um item identificado das nossas tradi&ccedil;&otilde;es para exposi&ccedil;&atilde;o. Neste dia ser&aacute; montado o nosso CTG;</p>
+
+<p><strong>15/09:</strong>&nbsp;Desfile de Prendas e Pe&otilde;es;</p>
+
+<p><strong>16/09:</strong>&nbsp;Roda de chimarr&atilde;o;</p>
+
+<p><strong>17/09:</strong>&nbsp;Baile no CTG da Bambino Campon&ecirc;s. Trazer CD&rsquo;s de m&uacute;sicas tradicionalistas;</p>
+
+<p><strong>18/09:</strong>&nbsp;Churrasco e lanche coletivo.</p>
+
+<p>No&nbsp;<strong>dia 18/09</strong>&nbsp;as crian&ccedil;as do turno da tarde dever&atilde;o chegar &agrave; Escola entre&nbsp;<strong>10h30min e 11h.</strong></p>
+
+<p>Maiores informa&ccedil;&otilde;es na agenda do seu filho/sua filha.</p>
+
+<p><strong>As crian&ccedil;as podem vir pilchadas durante toda a semana.</strong></p>
+','publicacao/RS_03.jpg',NULL,1,0,0);
 CREATE TABLE "website_menu" (
     "id" integer NOT NULL PRIMARY KEY AUTOINCREMENT,
     "titulo" varchar(200) NOT NULL,
@@ -304,7 +390,7 @@ INSERT INTO "auth_permission" VALUES(66,'Can delete banner',22,'delete_banner');
 CREATE TABLE "auth_group" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "name" varchar(80) NOT NULL UNIQUE);
 CREATE TABLE "auth_group_permissions" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "group_id" integer NOT NULL REFERENCES "auth_group" ("id"), "permission_id" integer NOT NULL REFERENCES "auth_permission" ("id"), UNIQUE ("group_id", "permission_id"));
 CREATE TABLE "auth_user" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "password" varchar(128) NOT NULL, "last_login" datetime NOT NULL, "is_superuser" bool NOT NULL, "username" varchar(30) NOT NULL UNIQUE, "first_name" varchar(30) NOT NULL, "last_name" varchar(30) NOT NULL, "email" varchar(75) NOT NULL, "is_staff" bool NOT NULL, "is_active" bool NOT NULL, "date_joined" datetime NOT NULL);
-INSERT INTO "auth_user" VALUES(1,'pbkdf2_sha256$15000$WJ4Kl7K58tps$12n3vo1yvt3LyagOkWLiSYStx2CYuEvfrIiMUVoqZbM=','2015-08-29 01:15:30.575737',1,'admin','','','admin@admin.com.br',1,1,'2015-07-26 12:32:05.939172');
+INSERT INTO "auth_user" VALUES(1,'pbkdf2_sha256$15000$WJ4Kl7K58tps$12n3vo1yvt3LyagOkWLiSYStx2CYuEvfrIiMUVoqZbM=','2015-09-05 21:02:01.508161',1,'admin','','','admin@admin.com.br',1,1,'2015-07-26 12:32:05.939172');
 CREATE TABLE "auth_user_groups" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "user_id" integer NOT NULL REFERENCES "auth_user" ("id"), "group_id" integer NOT NULL REFERENCES "auth_group" ("id"), UNIQUE ("user_id", "group_id"));
 CREATE TABLE "auth_user_user_permissions" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "user_id" integer NOT NULL REFERENCES "auth_user" ("id"), "permission_id" integer NOT NULL REFERENCES "auth_permission" ("id"), UNIQUE ("user_id", "permission_id"));
 CREATE TABLE "django_admin_log" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "action_time" datetime NOT NULL, "object_id" text NULL, "object_repr" varchar(200) NOT NULL, "action_flag" smallint unsigned NOT NULL, "change_message" text NOT NULL, "content_type_id" integer NULL REFERENCES "django_content_type" ("id"), "user_id" integer NOT NULL REFERENCES "auth_user" ("id"));
@@ -462,6 +548,43 @@ INSERT INTO "django_admin_log" VALUES(151,'2015-08-29 22:53:17.068631','5','Noss
 INSERT INTO "django_admin_log" VALUES(152,'2015-08-29 22:54:20.882332','5','Nossa História',2,'Modificado conteudo.',13,1);
 INSERT INTO "django_admin_log" VALUES(153,'2015-08-29 22:57:47.931705','21','Fale Conosco',2,'Modificado conteudo.',13,1);
 INSERT INTO "django_admin_log" VALUES(154,'2015-08-29 22:59:09.852673','21','Fale Conosco',2,'Modificado conteudo.',13,1);
+INSERT INTO "django_admin_log" VALUES(155,'2015-09-05 21:02:55.247626','5','Aula de culinária com os pequenos do Berçário II',1,'',10,1);
+INSERT INTO "django_admin_log" VALUES(156,'2015-09-05 21:07:30.389908','22','GaleriaResource object',1,'',11,1);
+INSERT INTO "django_admin_log" VALUES(157,'2015-09-05 21:07:40.412691','23','GaleriaResource object',1,'',11,1);
+INSERT INTO "django_admin_log" VALUES(158,'2015-09-05 21:08:00.923525','24','GaleriaResource object',1,'',11,1);
+INSERT INTO "django_admin_log" VALUES(159,'2015-09-05 21:08:09.841804','25','GaleriaResource object',1,'',11,1);
+INSERT INTO "django_admin_log" VALUES(160,'2015-09-05 21:08:20.294133','26','GaleriaResource object',1,'',11,1);
+INSERT INTO "django_admin_log" VALUES(161,'2015-09-05 21:08:31.946692','27','GaleriaResource object',1,'',11,1);
+INSERT INTO "django_admin_log" VALUES(162,'2015-09-05 21:08:41.040443','28','GaleriaResource object',1,'',11,1);
+INSERT INTO "django_admin_log" VALUES(163,'2015-09-05 21:08:49.371261','29','GaleriaResource object',1,'',11,1);
+INSERT INTO "django_admin_log" VALUES(164,'2015-09-05 21:08:57.412715','30','GaleriaResource object',1,'',11,1);
+INSERT INTO "django_admin_log" VALUES(165,'2015-09-05 21:09:06.666638','31','GaleriaResource object',1,'',11,1);
+INSERT INTO "django_admin_log" VALUES(166,'2015-09-05 21:11:38.518104','6','Aula de culinária com os pequenos do Berçário II',1,'',12,1);
+INSERT INTO "django_admin_log" VALUES(167,'2015-09-05 22:40:13.307251','5','Aula de culinária com os pequenos do Berçário II',2,'Deletado Arquivo: " galerias/aula_culinaria_capa.jpg ". Deletado Arquivo: " galerias/aula_culinaria_08.jpg ". Deletado Arquivo: " galerias/aula_culinaria_07.jpg ". Deletado Arquivo: " galerias/aula_culinaria_06.jpg ". Deletado Arquivo: " galerias/aula_culinaria_05.jpg ". Deletado Arquivo: " galerias/aula_culinaria_05_5vsXl9r.jpg ". Deletado Arquivo: " galerias/aula_culinaria_04.jpg ". Deletado Arquivo: " galerias/aula_culinaria_03.jpg ". Deletado Arquivo: " galerias/aula_culinaria_02.jpg ". Deletado Arquivo: " galerias/aula_culinaria_01.jpg ".',10,1);
+INSERT INTO "django_admin_log" VALUES(168,'2015-09-05 22:42:02.865914','5','Aula de culinária com os pequenos do Berçário II',2,'Adicionado Arquivo: " galerias/aula_culinaria_bercario_ii_capa.jpg " Adicionado Arquivo: " galerias/aula_culinaria_bercario_ii_foto_08.jpg " Adicionado Arquivo: " galerias/aula_culinaria_bercario_ii_foto_07.jpg " Adicionado Arquivo: " galerias/aula_culinaria_bercario_ii_foto_06.jpg " Adicionado Arquivo: " galerias/aula_culinaria_bercario_ii_foto_05.jpg " Adicionado Arquivo: " galerias/aula_culinaria_bercario_ii_foto_04.jpg " Adicionado Arquivo: " galerias/aula_culinaria_bercario_ii_foto_03.jpg " Adicionado Arquivo: " galerias/aula_culinaria_bercario_ii_foto_02.jpg " Adicionado Arquivo: " galerias/aula_culinaria_bercario_ii_foto_01.jpg "',10,1);
+INSERT INTO "django_admin_log" VALUES(169,'2015-09-05 22:42:31.688516','6','Aula de culinária com os pequenos do Berçário II',2,'Modificado miniatura_publicacao.',12,1);
+INSERT INTO "django_admin_log" VALUES(170,'2015-09-05 22:49:19.295396','4','Matrículas 2016',1,'',22,1);
+INSERT INTO "django_admin_log" VALUES(171,'2015-09-05 22:50:14.544768','4','Matrículas 2016',2,'Modificado url_resource e action_resource.',22,1);
+INSERT INTO "django_admin_log" VALUES(172,'2015-09-05 22:54:32.513851','5','Conheça a nossa escola',1,'',22,1);
+INSERT INTO "django_admin_log" VALUES(173,'2015-09-05 22:55:02.131625','2','Aviso Urgente',2,'Modificado ativo.',22,1);
+INSERT INTO "django_admin_log" VALUES(174,'2015-09-05 22:55:10.898789','1','Festa da Indenpendêcia na Bambino',2,'Modificado ativo.',22,1);
+INSERT INTO "django_admin_log" VALUES(175,'2015-09-05 22:59:22.027553','5','Conheça a nossa escola',2,'Modificado action_resource.',22,1);
+INSERT INTO "django_admin_log" VALUES(176,'2015-09-05 23:36:21.805893','7','Caminhada Cívica com Jardim I e II: nossas crianças fazendo a diferença',1,'',12,1);
+INSERT INTO "django_admin_log" VALUES(177,'2015-09-06 00:05:03.496178','6','Caminhada Cívica com Jardim I e II: nossas crianças fazendo a diferença',1,'',10,1);
+INSERT INTO "django_admin_log" VALUES(178,'2015-09-06 00:05:16.672939','7','Caminhada Cívica com Jardim I e II: nossas crianças fazendo a diferença',2,'Modificado galeria.',12,1);
+INSERT INTO "django_admin_log" VALUES(179,'2015-09-06 00:10:17.241025','6','Semana Farroupilha da Bambino Camponês',1,'',22,1);
+INSERT INTO "django_admin_log" VALUES(180,'2015-09-06 00:11:17.200955','6','Semana Farroupilha da Bambino Camponês',2,'Nenhum campo modificado.',22,1);
+INSERT INTO "django_admin_log" VALUES(181,'2015-09-06 00:12:59.873918','8','Semana Farroupilha da Bambino Camponês ',1,'',12,1);
+INSERT INTO "django_admin_log" VALUES(182,'2015-09-06 00:13:42.110463','6','Semana Farroupilha da Bambino Camponês',2,'Modificado action_resource.',22,1);
+INSERT INTO "django_admin_log" VALUES(183,'2015-09-06 00:20:20.929157','24','Uniforme',1,'',13,1);
+INSERT INTO "django_admin_log" VALUES(184,'2015-09-06 00:29:34.083812','4','Instalações',2,'Modificado conteudo.',13,1);
+INSERT INTO "django_admin_log" VALUES(185,'2015-09-06 00:31:32.602495','18','Vídeos',2,'Modificado conteudo.',13,1);
+INSERT INTO "django_admin_log" VALUES(186,'2015-09-06 00:32:49.553464','18','Vídeos',2,'Modificado conteudo.',13,1);
+INSERT INTO "django_admin_log" VALUES(187,'2015-09-06 00:33:55.629504','18','Vídeos',2,'Modificado conteudo.',13,1);
+INSERT INTO "django_admin_log" VALUES(188,'2015-09-06 00:35:29.947447','18','Vídeos',2,'Modificado conteudo.',13,1);
+INSERT INTO "django_admin_log" VALUES(189,'2015-09-06 01:55:57.582885','25','agradece depoímento',1,'',13,1);
+INSERT INTO "django_admin_log" VALUES(190,'2015-09-06 01:56:52.963948','2','Depoimento object',3,'',15,1);
+INSERT INTO "django_admin_log" VALUES(191,'2015-09-06 01:57:00.226452','3','Depoimento object',3,'',15,1);
 CREATE TABLE "django_session" ("session_key" varchar(40) NOT NULL PRIMARY KEY, "session_data" text NOT NULL, "expire_date" datetime NOT NULL);
 INSERT INTO "django_session" VALUES('yuerpeoywi62jjqu9sy2564ku8eeual6','NGY3NTBjZmU3ZTMwMzI0YzQzYTJlYjAzYWQzOTVjMGE3NDYwMGVhMjp7Il9hdXRoX3VzZXJfaGFzaCI6ImQ5NjljNzY4Nzk1NDYyNGM4Mzc5ZGIwOTlhOTJhY2UzZWJiNGVmYzUiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOjF9','2015-08-09 12:32:27.143755');
 INSERT INTO "django_session" VALUES('7lwlqjgwdmbydt9s1xwqa7a1fpg9mm4z','NGY3NTBjZmU3ZTMwMzI0YzQzYTJlYjAzYWQzOTVjMGE3NDYwMGVhMjp7Il9hdXRoX3VzZXJfaGFzaCI6ImQ5NjljNzY4Nzk1NDYyNGM4Mzc5ZGIwOTlhOTJhY2UzZWJiNGVmYzUiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOjF9','2015-08-13 16:20:09.758915');
@@ -472,6 +595,8 @@ INSERT INTO "django_session" VALUES('x6ve1j7wvb2reoh7vykrykcbjozpwg09','NGY3NTBj
 INSERT INTO "django_session" VALUES('xsjgxh9fa6t01nt2s2hv2pcyf692mxru','NGY3NTBjZmU3ZTMwMzI0YzQzYTJlYjAzYWQzOTVjMGE3NDYwMGVhMjp7Il9hdXRoX3VzZXJfaGFzaCI6ImQ5NjljNzY4Nzk1NDYyNGM4Mzc5ZGIwOTlhOTJhY2UzZWJiNGVmYzUiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOjF9','2015-08-30 17:39:57.543473');
 INSERT INTO "django_session" VALUES('l1llmyjxb301h799ul7e2khz8io6caeu','ZTQ1M2U0MTY5YzRjNDgzMmEwYzA0ODk1YzdmYjVmYjBiZWY4NDU5YTp7Il9hdXRoX3VzZXJfaGFzaCI6ImQ5NjljNzY4Nzk1NDYyNGM4Mzc5ZGIwOTlhOTJhY2UzZWJiNGVmYzUiLCJfbWVzc2FnZXMiOiJbW1wiX19qc29uX21lc3NhZ2VcIiwwLDI1LFwicHVibGljYWNhbyBcXFwiQSBCYW1iaW5vIENhbXBvblxcdTAwZWFzIGxhblxcdTAwZTdhIG5vdm8gc2l0ZVxcXCI6IG1vZGlmaWNhZG8gY29tIHN1Y2Vzc28uXCJdLFtcIl9fanNvbl9tZXNzYWdlXCIsMCwyNSxcImdhbGVyaWEgXFxcIlNlbWFuYSBwZWRhZ1xcdTAwZjNnaWNhXFxcIjogYWRpY2lvbmFkbyBjb20gc3VjZXNzby5cIl0sW1wiX19qc29uX21lc3NhZ2VcIiwwLDI1LFwiZ2FsZXJpYSByZXNvdXJjZSBcXFwiR2FsZXJpYVJlc291cmNlIG9iamVjdFxcXCIgYWRpY2lvbmFkbyBjb20gc3VjZXNzby4gVm9jXFx1MDBlYSBwb2RlIGFkaWNpb25hciB1bSBvdXRybyBnYWxlcmlhIHJlc291cmNlIGFiYWl4by5cIl0sW1wiX19qc29uX21lc3NhZ2VcIiwwLDI1LFwiZ2FsZXJpYSByZXNvdXJjZSBcXFwiR2FsZXJpYVJlc291cmNlIG9iamVjdFxcXCI6IGFkaWNpb25hZG8gY29tIHN1Y2Vzc28uXCJdLFtcIl9fanNvbl9tZXNzYWdlXCIsMCwyNSxcImdhbGVyaWEgXFxcIlRlc3RlIGRlIEdhbGVyaWFcXFwiOiBleGNsdVxcdTAwZWRkbyBjb20gc3VjZXNzby5cIl0sW1wiX19qc29uX21lc3NhZ2VcIiwwLDI1LFwiZ2FsZXJpYSByZXNvdXJjZSBcXFwiR2FsZXJpYVJlc291cmNlIG9iamVjdFxcXCIgYWRpY2lvbmFkbyBjb20gc3VjZXNzby4gVm9jXFx1MDBlYSBwb2RlIGFkaWNpb25hciB1bSBvdXRybyBnYWxlcmlhIHJlc291cmNlIGFiYWl4by5cIl0sW1wiX19qc29uX21lc3NhZ2VcIiwwLDI1LFwiZ2FsZXJpYSByZXNvdXJjZSBcXFwiR2FsZXJpYVJlc291cmNlIG9iamVjdFxcXCIgYWRpY2lvbmFkbyBjb20gc3VjZXNzby4gVm9jXFx1MDBlYSBwb2RlIGFkaWNpb25hciB1bSBvdXRybyBnYWxlcmlhIHJlc291cmNlIGFiYWl4by5cIl0sW1wiX19qc29uX21lc3NhZ2VcIiwwLDI1LFwiZ2FsZXJpYSByZXNvdXJjZSBcXFwiR2FsZXJpYVJlc291cmNlIG9iamVjdFxcXCIgYWRpY2lvbmFkbyBjb20gc3VjZXNzby4gVm9jXFx1MDBlYSBwb2RlIGFkaWNpb25hciB1bSBvdXRybyBnYWxlcmlhIHJlc291cmNlIGFiYWl4by5cIl0sW1wiX19qc29uX21lc3NhZ2VcIiwwLDI1LFwiZ2FsZXJpYSByZXNvdXJjZSBcXFwiR2FsZXJpYVJlc291cmNlIG9iamVjdFxcXCIgYWRpY2lvbmFkbyBjb20gc3VjZXNzby4gVm9jXFx1MDBlYSBwb2RlIGFkaWNpb25hciB1bSBvdXRybyBnYWxlcmlhIHJlc291cmNlIGFiYWl4by5cIl0sW1wiX19qc29uX21lc3NhZ2VcIiwwLDI1LFwiZ2FsZXJpYSByZXNvdXJjZSBcXFwiR2FsZXJpYVJlc291cmNlIG9iamVjdFxcXCIgYWRpY2lvbmFkbyBjb20gc3VjZXNzby4gVm9jXFx1MDBlYSBwb2RlIGFkaWNpb25hciB1bSBvdXRybyBnYWxlcmlhIHJlc291cmNlIGFiYWl4by5cIl0sW1wiX19qc29uX21lc3NhZ2VcIiwwLDI1LFwiZ2FsZXJpYSByZXNvdXJjZSBcXFwiR2FsZXJpYVJlc291cmNlIG9iamVjdFxcXCIgYWRpY2lvbmFkbyBjb20gc3VjZXNzby4gVm9jXFx1MDBlYSBwb2RlIGFkaWNpb25hciB1bSBvdXRybyBnYWxlcmlhIHJlc291cmNlIGFiYWl4by5cIl0sW1wiX19qc29uX21lc3NhZ2VcIiwwLDI1LFwiZ2FsZXJpYSByZXNvdXJjZSBcXFwiR2FsZXJpYVJlc291cmNlIG9iamVjdFxcXCI6IGFkaWNpb25hZG8gY29tIHN1Y2Vzc28uXCJdLFtcIl9fanNvbl9tZXNzYWdlXCIsMCwyNSxcImdhbGVyaWEgXFxcIkRpYSBkb3MgUGFpc1xcXCI6IGFkaWNpb25hZG8gY29tIHN1Y2Vzc28uXCJdLFtcIl9fanNvbl9tZXNzYWdlXCIsMCwyNSxcImdhbGVyaWEgcmVzb3VyY2UgXFxcIkdhbGVyaWFSZXNvdXJjZSBvYmplY3RcXFwiIGFkaWNpb25hZG8gY29tIHN1Y2Vzc28uIFZvY1xcdTAwZWEgcG9kZSBhZGljaW9uYXIgdW0gb3V0cm8gZ2FsZXJpYSByZXNvdXJjZSBhYmFpeG8uXCJdLFtcIl9fanNvbl9tZXNzYWdlXCIsMCwyNSxcImdhbGVyaWEgcmVzb3VyY2UgXFxcIkdhbGVyaWFSZXNvdXJjZSBvYmplY3RcXFwiIGFkaWNpb25hZG8gY29tIHN1Y2Vzc28uIFZvY1xcdTAwZWEgcG9kZSBhZGljaW9uYXIgdW0gb3V0cm8gZ2FsZXJpYSByZXNvdXJjZSBhYmFpeG8uXCJdLFtcIl9fanNvbl9tZXNzYWdlXCIsMCwyNSxcImdhbGVyaWEgcmVzb3VyY2UgXFxcIkdhbGVyaWFSZXNvdXJjZSBvYmplY3RcXFwiIGFkaWNpb25hZG8gY29tIHN1Y2Vzc28uIFZvY1xcdTAwZWEgcG9kZSBhZGljaW9uYXIgdW0gb3V0cm8gZ2FsZXJpYSByZXNvdXJjZSBhYmFpeG8uXCJdLFtcIl9fanNvbl9tZXNzYWdlXCIsMCwyNSxcImdhbGVyaWEgcmVzb3VyY2UgXFxcIkdhbGVyaWFSZXNvdXJjZSBvYmplY3RcXFwiIGFkaWNpb25hZG8gY29tIHN1Y2Vzc28uIFZvY1xcdTAwZWEgcG9kZSBhZGljaW9uYXIgdW0gb3V0cm8gZ2FsZXJpYSByZXNvdXJjZSBhYmFpeG8uXCJdLFtcIl9fanNvbl9tZXNzYWdlXCIsMCwyNSxcImdhbGVyaWEgcmVzb3VyY2UgXFxcIkdhbGVyaWFSZXNvdXJjZSBvYmplY3RcXFwiIGFkaWNpb25hZG8gY29tIHN1Y2Vzc28uIFZvY1xcdTAwZWEgcG9kZSBhZGljaW9uYXIgdW0gb3V0cm8gZ2FsZXJpYSByZXNvdXJjZSBhYmFpeG8uXCJdLFtcIl9fanNvbl9tZXNzYWdlXCIsMCwyNSxcImdhbGVyaWEgcmVzb3VyY2UgXFxcIkdhbGVyaWFSZXNvdXJjZSBvYmplY3RcXFwiIGFkaWNpb25hZG8gY29tIHN1Y2Vzc28uIFZvY1xcdTAwZWEgcG9kZSBhZGljaW9uYXIgdW0gb3V0cm8gZ2FsZXJpYSByZXNvdXJjZSBhYmFpeG8uXCJdLFtcIl9fanNvbl9tZXNzYWdlXCIsMCwyNSxcImdhbGVyaWEgcmVzb3VyY2UgXFxcIkdhbGVyaWFSZXNvdXJjZSBvYmplY3RcXFwiIGFkaWNpb25hZG8gY29tIHN1Y2Vzc28uIFZvY1xcdTAwZWEgcG9kZSBhZGljaW9uYXIgdW0gb3V0cm8gZ2FsZXJpYSByZXNvdXJjZSBhYmFpeG8uXCJdLFtcIl9fanNvbl9tZXNzYWdlXCIsMCwyNSxcImdhbGVyaWEgcmVzb3VyY2UgXFxcIkdhbGVyaWFSZXNvdXJjZSBvYmplY3RcXFwiIGFkaWNpb25hZG8gY29tIHN1Y2Vzc28uIFZvY1xcdTAwZWEgcG9kZSBhZGljaW9uYXIgdW0gb3V0cm8gZ2FsZXJpYSByZXNvdXJjZSBhYmFpeG8uXCJdLFtcIl9fanNvbl9tZXNzYWdlXCIsMCwyNSxcImdhbGVyaWEgcmVzb3VyY2UgXFxcIkdhbGVyaWFSZXNvdXJjZSBvYmplY3RcXFwiIGFkaWNpb25hZG8gY29tIHN1Y2Vzc28uIFZvY1xcdTAwZWEgcG9kZSBhZGljaW9uYXIgdW0gb3V0cm8gZ2FsZXJpYSByZXNvdXJjZSBhYmFpeG8uXCJdLFtcIl9fanNvbl9tZXNzYWdlXCIsMCwyNSxcImdhbGVyaWEgcmVzb3VyY2UgXFxcIkdhbGVyaWFSZXNvdXJjZSBvYmplY3RcXFwiOiBhZGljaW9uYWRvIGNvbSBzdWNlc3NvLlwiXV0iLCJfYXV0aF91c2VyX2lkIjoxLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCJ9','2015-09-05 15:04:04.189218');
 INSERT INTO "django_session" VALUES('m8piccatyyarx6r5622g5gqotjmdrc9w','NTMzOTQ3MGUyYjlkMjViYWUyM2E3MDZiNzM1YmU0NTkzM2FiMDEzYjp7Il9hdXRoX3VzZXJfYmFja2VuZCI6ImRqYW5nby5jb250cmliLmF1dGguYmFja2VuZHMuTW9kZWxCYWNrZW5kIiwiX2F1dGhfdXNlcl9oYXNoIjoiZDk2OWM3Njg3OTU0NjI0YzgzNzlkYjA5OWE5MmFjZTNlYmI0ZWZjNSIsIl9hdXRoX3VzZXJfaWQiOjEsIl9tZXNzYWdlcyI6IltbXCJfX2pzb25fbWVzc2FnZVwiLDAsMjUsXCJwYWdpbmEgXFxcIk5vc3NhIEhpc3RcXHUwMGYzcmlhXFxcIiBtb2RpZmljYWRvIGNvbSBzdWNlc3NvLiBWb2NcXHUwMGVhIHBvZGUgZWRpdFxcdTAwZTEtbG8gbm92YW1lbnRlIGFiYWl4by5cIl0sW1wiX19qc29uX21lc3NhZ2VcIiwwLDI1LFwicGFnaW5hIFxcXCJOb3NzYSBIaXN0XFx1MDBmM3JpYVxcXCI6IG1vZGlmaWNhZG8gY29tIHN1Y2Vzc28uXCJdLFtcIl9fanNvbl9tZXNzYWdlXCIsMCwyNSxcImdhbGVyaWEgXFxcIlNlbWFuYSBkZSBGXFx1MDBlOXJpYXMgcGVkYWdcXHUwMGYzZ2ljYVxcXCI6IG1vZGlmaWNhZG8gY29tIHN1Y2Vzc28uXCJdLFtcIl9fanNvbl9tZXNzYWdlXCIsMCwyNSxcInBhZ2luYSBcXFwiTm9zc2EgSGlzdFxcdTAwZjNyaWFcXFwiOiBtb2RpZmljYWRvIGNvbSBzdWNlc3NvLlwiXSxbXCJfX2pzb25fbWVzc2FnZVwiLDAsMjUsXCJwYWdpbmEgXFxcIk5vc3NhIEhpc3RcXHUwMGYzcmlhXFxcIiBtb2RpZmljYWRvIGNvbSBzdWNlc3NvLiBWb2NcXHUwMGVhIHBvZGUgZWRpdFxcdTAwZTEtbG8gbm92YW1lbnRlIGFiYWl4by5cIl0sW1wiX19qc29uX21lc3NhZ2VcIiwwLDI1LFwicGFnaW5hIFxcXCJGYWxlIENvbm9zY29cXFwiIG1vZGlmaWNhZG8gY29tIHN1Y2Vzc28uIFZvY1xcdTAwZWEgcG9kZSBlZGl0XFx1MDBlMS1sbyBub3ZhbWVudGUgYWJhaXhvLlwiXSxbXCJfX2pzb25fbWVzc2FnZVwiLDAsMjUsXCJwYWdpbmEgXFxcIkZhbGUgQ29ub3Njb1xcXCIgbW9kaWZpY2FkbyBjb20gc3VjZXNzby4gVm9jXFx1MDBlYSBwb2RlIGVkaXRcXHUwMGUxLWxvIG5vdmFtZW50ZSBhYmFpeG8uXCJdXSJ9','2015-09-12 22:59:09.972496');
+INSERT INTO "django_session" VALUES('lvj0gdm52bvkftyyzsphocgyietlf3ar','NGY3NTBjZmU3ZTMwMzI0YzQzYTJlYjAzYWQzOTVjMGE3NDYwMGVhMjp7Il9hdXRoX3VzZXJfaGFzaCI6ImQ5NjljNzY4Nzk1NDYyNGM4Mzc5ZGIwOTlhOTJhY2UzZWJiNGVmYzUiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOjF9','2015-09-16 18:49:05.118182');
+INSERT INTO "django_session" VALUES('bqbs3ag895aa8056wsd4v8ndmnwekx69','OTM0YTdhZGVmMWYxMWYwODZlMjA2YzcwNTYwYWIyMmIyM2FhYjc2MDp7Il9hdXRoX3VzZXJfaGFzaCI6ImQ5NjljNzY4Nzk1NDYyNGM4Mzc5ZGIwOTlhOTJhY2UzZWJiNGVmYzUiLCJfbWVzc2FnZXMiOiJbW1wiX19qc29uX21lc3NhZ2VcIiwwLDI1LFwicHVibGljYWNhbyBcXFwiQXVsYSBkZSBjdWxpblxcdTAwZTFyaWEgY29tIG9zIHBlcXVlbm9zIGRvIEJlclxcdTAwZTdcXHUwMGUxcmlvIElJXFxcIjogYWRpY2lvbmFkbyBjb20gc3VjZXNzby5cIl0sW1wiX19qc29uX21lc3NhZ2VcIiwwLDI1LFwiZ2FsZXJpYSBcXFwiQXVsYSBkZSBjdWxpblxcdTAwZTFyaWEgY29tIG9zIHBlcXVlbm9zIGRvIEJlclxcdTAwZTdcXHUwMGUxcmlvIElJXFxcIjogbW9kaWZpY2FkbyBjb20gc3VjZXNzby5cIl0sW1wiX19qc29uX21lc3NhZ2VcIiwwLDI1LFwiZ2FsZXJpYSBcXFwiQXVsYSBkZSBjdWxpblxcdTAwZTFyaWEgY29tIG9zIHBlcXVlbm9zIGRvIEJlclxcdTAwZTdcXHUwMGUxcmlvIElJXFxcIjogbW9kaWZpY2FkbyBjb20gc3VjZXNzby5cIl0sW1wiX19qc29uX21lc3NhZ2VcIiwwLDI1LFwicHVibGljYWNhbyBcXFwiQXVsYSBkZSBjdWxpblxcdTAwZTFyaWEgY29tIG9zIHBlcXVlbm9zIGRvIEJlclxcdTAwZTdcXHUwMGUxcmlvIElJXFxcIjogbW9kaWZpY2FkbyBjb20gc3VjZXNzby5cIl0sW1wiX19qc29uX21lc3NhZ2VcIiwwLDI1LFwiYmFubmVyIFxcXCJNYXRyXFx1MDBlZGN1bGFzIDIwMTZcXFwiOiBhZGljaW9uYWRvIGNvbSBzdWNlc3NvLlwiXSxbXCJfX2pzb25fbWVzc2FnZVwiLDAsMjUsXCJiYW5uZXIgXFxcIk1hdHJcXHUwMGVkY3VsYXMgMjAxNlxcXCI6IG1vZGlmaWNhZG8gY29tIHN1Y2Vzc28uXCJdLFtcIl9fanNvbl9tZXNzYWdlXCIsMCwyNSxcImJhbm5lciBcXFwiQ29uaGVcXHUwMGU3YSBhIG5vc3NhIGVzY29sYVxcXCI6IGFkaWNpb25hZG8gY29tIHN1Y2Vzc28uXCJdLFtcIl9fanNvbl9tZXNzYWdlXCIsMCwyNSxcImJhbm5lciBcXFwiQXZpc28gVXJnZW50ZVxcXCI6IG1vZGlmaWNhZG8gY29tIHN1Y2Vzc28uXCJdLFtcIl9fanNvbl9tZXNzYWdlXCIsMCwyNSxcImJhbm5lciBcXFwiRmVzdGEgZGEgSW5kZW5wZW5kXFx1MDBlYWNpYSBuYSBCYW1iaW5vXFxcIjogbW9kaWZpY2FkbyBjb20gc3VjZXNzby5cIl0sW1wiX19qc29uX21lc3NhZ2VcIiwwLDI1LFwiYmFubmVyIFxcXCJDb25oZVxcdTAwZTdhIGEgbm9zc2EgZXNjb2xhXFxcIjogbW9kaWZpY2FkbyBjb20gc3VjZXNzby5cIl0sW1wiX19qc29uX21lc3NhZ2VcIiwwLDI1LFwicHVibGljYWNhbyBcXFwiQ2FtaW5oYWRhIENcXHUwMGVkdmljYSBjb20gSmFyZGltIEkgZSBJSTogbm9zc2FzIGNyaWFuXFx1MDBlN2FzIGZhemVuZG8gYSBkaWZlcmVuXFx1MDBlN2FcXFwiOiBhZGljaW9uYWRvIGNvbSBzdWNlc3NvLlwiXSxbXCJfX2pzb25fbWVzc2FnZVwiLDAsMjUsXCJnYWxlcmlhIFxcXCJDYW1pbmhhZGEgQ1xcdTAwZWR2aWNhIGNvbSBKYXJkaW0gSSBlIElJOiBub3NzYXMgY3JpYW5cXHUwMGU3YXMgZmF6ZW5kbyBhIGRpZmVyZW5cXHUwMGU3YVxcXCI6IGFkaWNpb25hZG8gY29tIHN1Y2Vzc28uXCJdLFtcIl9fanNvbl9tZXNzYWdlXCIsMCwyNSxcInB1YmxpY2FjYW8gXFxcIkNhbWluaGFkYSBDXFx1MDBlZHZpY2EgY29tIEphcmRpbSBJIGUgSUk6IG5vc3NhcyBjcmlhblxcdTAwZTdhcyBmYXplbmRvIGEgZGlmZXJlblxcdTAwZTdhXFxcIjogbW9kaWZpY2FkbyBjb20gc3VjZXNzby5cIl0sW1wiX19qc29uX21lc3NhZ2VcIiwwLDI1LFwiYmFubmVyIFxcXCJTZW1hbmEgRmFycm91cGlsaGEgZGEgQmFtYmlubyBDYW1wb25cXHUwMGVhc1xcXCI6IGFkaWNpb25hZG8gY29tIHN1Y2Vzc28uIFZvY1xcdTAwZWEgcG9kZSBlZGl0YXIgbm92YW1lbnRlIGFiYWl4by5cIl0sW1wiX19qc29uX21lc3NhZ2VcIiwwLDI1LFwiYmFubmVyIFxcXCJTZW1hbmEgRmFycm91cGlsaGEgZGEgQmFtYmlubyBDYW1wb25cXHUwMGVhc1xcXCI6IG1vZGlmaWNhZG8gY29tIHN1Y2Vzc28uXCJdLFtcIl9fanNvbl9tZXNzYWdlXCIsMCwyNSxcInB1YmxpY2FjYW8gXFxcIlNlbWFuYSBGYXJyb3VwaWxoYSBkYSBCYW1iaW5vIENhbXBvblxcdTAwZWFzIFxcXCI6IGFkaWNpb25hZG8gY29tIHN1Y2Vzc28uXCJdLFtcIl9fanNvbl9tZXNzYWdlXCIsMCwyNSxcImJhbm5lciBcXFwiU2VtYW5hIEZhcnJvdXBpbGhhIGRhIEJhbWJpbm8gQ2FtcG9uXFx1MDBlYXNcXFwiOiBtb2RpZmljYWRvIGNvbSBzdWNlc3NvLlwiXSxbXCJfX2pzb25fbWVzc2FnZVwiLDAsMjUsXCJwYWdpbmEgXFxcIlVuaWZvcm1lXFxcIjogYWRpY2lvbmFkbyBjb20gc3VjZXNzby5cIl0sW1wiX19qc29uX21lc3NhZ2VcIiwwLDI1LFwicGFnaW5hIFxcXCJJbnN0YWxhXFx1MDBlN1xcdTAwZjVlc1xcXCI6IG1vZGlmaWNhZG8gY29tIHN1Y2Vzc28uXCJdLFtcIl9fanNvbl9tZXNzYWdlXCIsMCwyNSxcInBhZ2luYSBcXFwiVlxcdTAwZWRkZW9zXFxcIjogbW9kaWZpY2FkbyBjb20gc3VjZXNzby5cIl0sW1wiX19qc29uX21lc3NhZ2VcIiwwLDI1LFwicGFnaW5hIFxcXCJWXFx1MDBlZGRlb3NcXFwiIG1vZGlmaWNhZG8gY29tIHN1Y2Vzc28uIFZvY1xcdTAwZWEgcG9kZSBlZGl0XFx1MDBlMS1sbyBub3ZhbWVudGUgYWJhaXhvLlwiXSxbXCJfX2pzb25fbWVzc2FnZVwiLDAsMjUsXCJwYWdpbmEgXFxcIlZcXHUwMGVkZGVvc1xcXCIgbW9kaWZpY2FkbyBjb20gc3VjZXNzby4gVm9jXFx1MDBlYSBwb2RlIGVkaXRcXHUwMGUxLWxvIG5vdmFtZW50ZSBhYmFpeG8uXCJdLFtcIl9fanNvbl9tZXNzYWdlXCIsMCwyNSxcInBhZ2luYSBcXFwiVlxcdTAwZWRkZW9zXFxcIjogbW9kaWZpY2FkbyBjb20gc3VjZXNzby5cIl0sW1wiX19qc29uX21lc3NhZ2VcIiwwLDI1LFwicGFnaW5hIFxcXCJhZ3JhZGVjZSBkZXBvXFx1MDBlZG1lbnRvXFxcIjogYWRpY2lvbmFkbyBjb20gc3VjZXNzby5cIl0sW1wiX19qc29uX21lc3NhZ2VcIiwwLDI1LFwiZGVwb2ltZW50byBcXFwiRGVwb2ltZW50byBvYmplY3RcXFwiOiBleGNsdVxcdTAwZWRkbyBjb20gc3VjZXNzby5cIl0sW1wiX19qc29uX21lc3NhZ2VcIiwwLDI1LFwiZGVwb2ltZW50byBcXFwiRGVwb2ltZW50byBvYmplY3RcXFwiOiBleGNsdVxcdTAwZWRkbyBjb20gc3VjZXNzby5cIl1dIiwiX2F1dGhfdXNlcl9pZCI6MSwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQifQ==','2015-09-20 01:57:00.323714');
 CREATE TABLE "django_site" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "domain" varchar(100) NOT NULL, "name" varchar(50) NOT NULL);
 INSERT INTO "django_site" VALUES(1,'127.0.0.1:8000','127.0.0.1:8000');
 CREATE TABLE "website_banner" (
@@ -483,9 +608,12 @@ CREATE TABLE "website_banner" (
 	`upload_resource`	varchar(100),
 	`action_resource`	varchar(200)
 , `ativo` bool);
-INSERT INTO "website_banner" VALUES(1,'Festa da Indenpendêcia na Bambino','banner-do-leandro','A escola Bambino Camponês vai promover uma festa comemorativa ao 07 de Setembro...','http://lorempixel.com/1200/600/sports','banners/579311_633747976682282_1224046986_n.jpg','/publicacao/novo-site-da-bambino-campones',1);
-INSERT INTO "website_banner" VALUES(2,'Aviso Urgente','aviso-urgente','Texto do aviso urgente.','http://lorempixel.com/1200/600/people','','/avisos-importantes',1);
+INSERT INTO "website_banner" VALUES(1,'Festa da Indenpendêcia na Bambino','banner-do-leandro','A escola Bambino Camponês vai promover uma festa comemorativa ao 07 de Setembro...','http://lorempixel.com/1200/600/sports','banners/579311_633747976682282_1224046986_n.jpg','/publicacao/novo-site-da-bambino-campones',0);
+INSERT INTO "website_banner" VALUES(2,'Aviso Urgente','aviso-urgente','Texto do aviso urgente.','http://lorempixel.com/1200/600/people','','/avisos-importantes',0);
 INSERT INTO "website_banner" VALUES(3,'Participe da Campanha','participe-da-campanha','Estamos lançando a campanha do agasalho 2015.','http://lorempixel.com/1200/600/abstract','','publicacao/novo-site-da-bambino-campones',0);
+INSERT INTO "website_banner" VALUES(4,'Matrículas 2016','matriculas-2016','em breve','','banners/Mensagem_matriculas_banner.jpg','/matriculas',1);
+INSERT INTO "website_banner" VALUES(5,'Conheça a nossa escola','conheca-nossa-escola','Conheça a Bambino Camponês','','banners/olhar.jpg','/empresa/instalacoes',1);
+INSERT INTO "website_banner" VALUES(6,'Semana Farroupilha da Bambino Camponês','semana-farroupilha-da-bambino-campones','Semana Farroupilha da Bambino Camponês. Nossa Escola cultivando nossas tradições!','','banners/RS_02.jpg','/evento/semana-farroupilha-da-bambino-campones',1);
 CREATE TABLE "website_pagina" (
 	`id`	integer NOT NULL PRIMARY KEY AUTOINCREMENT,
 	`titulo`	varchar(200) NOT NULL,
@@ -547,17 +675,34 @@ Escola é composta por uma Equipe qualificada e, em constante atualização com 
 <li><strong>Financeiro:</strong> Alcindo;</li>
 <li><strong>Direção:</strong> Tia Mari e Tia Salete</li>
 </ul>','escola, equipe, trabalho',0,0,'Equipe de trabalho da Bambino Camponês');
-INSERT INTO "website_pagina" VALUES(4,'Instalações','instalacoes','<h2><span style="color:red;">Instalações</h2>
-<p style="text-align: justify;text-indent:40px;margin-top: 05px;">A E.E.I. Bambino Camponês funciona em amplo prédio, sediada na Rua Irmão Florêncio, 151, Bairro Harmonia, Canoas, com uma estrutura em constante melhoria para receber seus alunos, familiares e colaboradores.</p>
-<p style="text-align: justify;text-indent:40px;margin-top: 05px;">A Bambino Camponês é uma das referências de Escola Infantil na cidade de Canoas pela sua infraestrutura, o qual atualmente dispõe dos seguintes recursos:</p>
-<ul>
-<li>Prédio com dois pavimentos, totalizando em média 355 metros quadrados;</li>
-<li>Salas amplas, sendo algumas climatizadas, com recursos para a diversão e aconchego das nossas crianças (televisores, aparelhos de DVD, brinquedos, entre outros recursos);</li>
-<li>Sala múltipla para diversos fins pedagógicos, recreativos e atividades extras;</li>
-<li>Refeitório e uma cozinha equipada para a realização das saborosas e monitoradas refeições das nossas crianças e colaboradores;</li>
-<li>Pracinha com diversos brinquedos por faixa etária e um amplo espaço para realização de atividades ao ar livre.</li>
-</ul>
-<p style="text-align: justify;text-indent:40px;margin-top: 05px;">Convidamos a todos interessados para conhecer nossas instalações que anualmente passa por constantes modificações para um atendimento adequado a nossa sociedade.</p>','instalações, infra-estrutura',0,0,'instalações da Bambino Campones');
+INSERT INTO "website_pagina" VALUES(4,'Instalações','instalacoes','<h2><span style="color:red">Instala&ccedil;&otilde;es</span></h2>
+
+<p>A E.E.I. Bambino Campon&ecirc;s funciona em amplo pr&eacute;dio, sediada na Rua Irm&atilde;o Flor&ecirc;ncio, 151, Bairro Harmonia, Canoas, com uma estrutura em constante melhoria para receber seus alunos, familiares e colaboradores.</p>
+
+<p>A Bambino Campon&ecirc;s &eacute; uma das refer&ecirc;ncias de Escola Infantil na cidade de Canoas pela sua infraestrutura, o qual atualmente disp&otilde;e dos seguintes recursos:</p>
+
+<p>Pr&eacute;dio com dois pavimentos, totalizando em m&eacute;dia 355 metros quadrados;</p>
+
+<p>Salas amplas, sendo algumas climatizadas, com recursos para a divers&atilde;o e aconchego das nossas crian&ccedil;as (televisores, aparelhos de DVD, brinquedos, entre outros recursos);</p>
+
+<p>Sala m&uacute;ltipla para diversos fins pedag&oacute;gicos, recreativos e atividades extras;</p>
+
+<p>Refeit&oacute;rio e uma cozinha equipada para a realiza&ccedil;&atilde;o das saborosas e monitoradas refei&ccedil;&otilde;es das nossas crian&ccedil;as e colaboradores;</p>
+
+<p>Pracinha com diversos brinquedos por faixa et&aacute;ria e um amplo espa&ccedil;o para realiza&ccedil;&atilde;o de atividades ao ar livre.</p>
+
+<p>Convidamos a todos interessados para conhecer nossas instala&ccedil;&otilde;es que anualmente passa por constantes modifica&ccedil;&otilde;es para um atendimento adequado a nossa sociedade.</p>
+
+<p><strong>Algumas fotos:</strong></p>
+
+<p><img alt="" src="/media/uploads/2015/09/05/slide_01.jpg" style="height:396px; width:649px" /></p>
+
+<p><img alt="" src="/media/uploads/2015/09/05/slide_03.jpg" style="height:396px; width:649px" /></p>
+
+<p><img alt="" src="/media/uploads/2015/09/05/slide_04.jpg" style="height:396px; width:649px" /></p>
+
+<p><img alt="" src="/media/uploads/2015/09/05/slide_06.jpg" style="height:396px; width:649px" /></p>
+','instalações, infra-estrutura',0,0,'instalações da Bambino Campones');
 INSERT INTO "website_pagina" VALUES(5,'Nossa História','nossa-historia','<h2><span style="color:red">Nossa Hist&oacute;ria</span></h2>
 
 <p>Nossa hist&oacute;ria come&ccedil;ou em 1999, com a necessidade de um local adequado para deixar meu filho, na &eacute;poca com 3 (tr&ecirc;s) anos. Sem encontrar nada que eu entendesse como um local ideal, resolvi convidar minha irm&atilde; para cuidarmos de algumas crian&ccedil;as em casa, e ela aceitou. Fizemos as devidas mudan&ccedil;as na casa em que eu morava, para isso tive que me mudar. A casa na &eacute;poca era de nosso pai. Come&ccedil;amos a trabalhar no dia 03/02/1999 com uma crian&ccedil;a, que era meu filho, ao final da primeira semana est&aacute;vamos com 3 (tr&ecirc;s), um menino e duas meninas. Ao t&eacute;rmino do primeiro ano j&aacute; cont&aacute;vamos com 11 (onze) crian&ccedil;as sob nosso cuidado. Fizemos nosso primeiro passeio ao jardim zool&oacute;gico em outubro do mesmo ano em homenagem a semana da crian&ccedil;a. Na volta do passeio todos participaram da primeira noite do pijama com direito a banho, janta, ceia, brincadeiras e ao acordarem foi servido um belo caf&eacute; da manh&atilde;. Festejamos nosso primeiro Natal com a montagem de uma &aacute;rvore feita de filtros de papel, colocada no refeit&oacute;rio e saudamos a vinda de papai Noel com nossos bambinos a sua volta, a festa foi linda.</p>
@@ -1054,8 +1199,9 @@ INSERT INTO "website_pagina" VALUES(16,'Atividades Extras','atividades-extras','
 INSERT INTO "website_pagina" VALUES(17,'Músicas','musicas','<h2><span style="color:red;">Músicas para Download</h2>
 <p style="text-align: justify;text-indent:40px;margin-top: 05px;">Página em Construção</p>
 ','downloads, músicas',0,0,'Downloads de Músicas');
-INSERT INTO "website_pagina" VALUES(18,'Vídeos','videos','<h2><span style="color:red;">Download de Vídeos</h2>
-<p style="text-align: justify;text-indent:40px;margin-top: 05px;">Página em Construção</p>','downloads, vídeos',0,0,'Downloads de Vídeos');
+INSERT INTO "website_pagina" VALUES(18,'Vídeos','videos','<h2><span style="color:red">Download de V&iacute;deos</span></h2>
+
+<iframe width="640" height="360" src="https://www.youtube.com/embed/AJShCAPr4Zc" frameborder="0" allowfullscreen></iframe>','downloads, vídeos',0,0,'Downloads de Vídeos');
 INSERT INTO "website_pagina" VALUES(19,'Papeis de Parede','papeis-de-parede','<h2><span style="color:red">Download de Pap&eacute;is de Parede</span></h2>
 
 <p>P&aacute;gina em Constru&ccedil;&atilde;o em a<span style="color:#000080">z</span>ul</p>
@@ -1083,26 +1229,52 @@ INSERT INTO "website_pagina" VALUES(23,'Responsabilidade Social','responsabilida
 
 <p>Contamos, assim, com a uni&atilde;o de todas as for&ccedil;as para fazermos a diferen&ccedil;a com a sociedade e o meio ambiente.&nbsp;&nbsp;Al&eacute;m de incentivarmos este princ&iacute;pio internamente, aceitamos tamb&eacute;m a participa&ccedil;&atilde;o e contribui&ccedil;&atilde;o maior da comunidade e parceiros para um bem maior de causas socioambientais.</p>
 ','responsabilidade social',0,0,'Responsabilidade Social');
+INSERT INTO "website_pagina" VALUES(24,'Uniforme','uniforme','<p><strong>A import&acirc;ncia do uso do uniforme</strong></p>
+
+<p>Na nossa Escola de Educa&ccedil;&atilde;o Infantil Bambino Campon&ecirc;s&nbsp;<strong>o uso do uniforme &eacute; obrigat&oacute;rio e importante</strong>, j&aacute; que &eacute; a forma mais r&aacute;pida e correta de identificar o aluno dentro e fora da escola ao sair.</p>
+
+<p>Al&eacute;m de obrigat&oacute;rio e importante, o uso do uniforme tem v&aacute;rios benef&iacute;cios para as nossas crian&ccedil;as. Confira alguns deles abaixo:</p>
+
+<p>&Eacute; pr&aacute;tico e referencial;</p>
+
+<p>&Eacute; econ&ocirc;mico, evitando o desgaste de roupas no dia-a-dia;</p>
+
+<p>Equilibra as diferen&ccedil;as sociais dentro da Escola, ensinando aos pequenos que todos s&atilde;o iguais;</p>
+
+<p>Ensina disciplina, melhorando no aprendizado de normas e regras, os quais s&atilde;o essenciais para o desenvolvimento da crian&ccedil;a;</p>
+
+<p>&nbsp;Desenvolve no aluno um sentimento de pertencer a um grupo espec&iacute;fico.</p>
+
+<p>Portanto, como na Bambino Campon&ecirc;s temos o uso obrigat&oacute;rio, abaixo, informamos os dois locais que comercializam nossos uniformes:</p>
+
+<p><strong>MALHRIA DORACY:</strong>&nbsp;Rua Matias Velho, 226, Centro, Canoas. Fone:&nbsp;<a href="tel:51%203472.4793" target="_blank">51 3472.4793</a>;</p>
+
+<p><strong>MALHARIA E CONFEC&Ccedil;&Atilde;O ELO:</strong>&nbsp;Rua Silva Paes, 118, Centro, Canoas. Fone:&nbsp;<a href="tel:51%203472.7817" target="_blank">51 3472.7817</a>.</p>
+
+<p>Maiores informa&ccedil;&otilde;es junto a Dire&ccedil;&atilde;o da Escola.</p>
+','uniforme',0,0,'considerações sobre o uso do uniforme');
+INSERT INTO "website_pagina" VALUES(25,'agradece depoímento','agradece-depoimento','<p>Muito obrigado pelo seu depo&iacute;mento.</p>
+','agradecimento, depoimento',0,0,'Agradecimento do depoímento realiado');
 DELETE FROM sqlite_sequence;
 INSERT INTO "sqlite_sequence" VALUES('django_content_type',22);
 INSERT INTO "sqlite_sequence" VALUES('django_migrations',5);
 INSERT INTO "sqlite_sequence" VALUES('auth_permission',66);
 INSERT INTO "sqlite_sequence" VALUES('django_site',1);
 INSERT INTO "sqlite_sequence" VALUES('auth_user',1);
-INSERT INTO "sqlite_sequence" VALUES('website_publicacao',5);
-INSERT INTO "sqlite_sequence" VALUES('django_admin_log',154);
+INSERT INTO "sqlite_sequence" VALUES('website_publicacao',8);
+INSERT INTO "sqlite_sequence" VALUES('django_admin_log',191);
 INSERT INTO "sqlite_sequence" VALUES('website_calendario',5);
 INSERT INTO "sqlite_sequence" VALUES('website_cardapio',1);
 INSERT INTO "sqlite_sequence" VALUES('website_conteudodownload',1);
-INSERT INTO "sqlite_sequence" VALUES('website_depoimento',1);
-INSERT INTO "sqlite_sequence" VALUES('website_galeria',4);
-INSERT INTO "sqlite_sequence" VALUES('website_galeriaresource',21);
+INSERT INTO "sqlite_sequence" VALUES('website_depoimento',3);
+INSERT INTO "sqlite_sequence" VALUES('website_galeria',6);
+INSERT INTO "sqlite_sequence" VALUES('website_galeriaresource',48);
 INSERT INTO "sqlite_sequence" VALUES('website_menu',1);
 INSERT INTO "sqlite_sequence" VALUES('website_professor',1);
 INSERT INTO "sqlite_sequence" VALUES('website_recomendacao',1);
 INSERT INTO "sqlite_sequence" VALUES('website_servico',1);
-INSERT INTO "sqlite_sequence" VALUES('website_banner',3);
-INSERT INTO "sqlite_sequence" VALUES('website_pagina',23);
+INSERT INTO "sqlite_sequence" VALUES('website_banner',6);
+INSERT INTO "sqlite_sequence" VALUES('website_pagina',25);
 CREATE INDEX "website_galeriaresource_7f1b53df" ON "website_galeriaresource" ("galeria_id");
 CREATE INDEX "website_publicacao_7f1b53df" ON "website_publicacao" ("galeria_id");
 CREATE INDEX "website_menu_38aa5a4d" ON "website_menu" ("pagina_id");
