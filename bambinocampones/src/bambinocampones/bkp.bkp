@@ -25,7 +25,10 @@ CREATE TABLE "website_cardapio" (
     "ano" varchar(4) NOT NULL,
     "cardapio_file" varchar(100) NOT NULL
 );
-INSERT INTO "website_cardapio" VALUES(1,'1','08','2015','cardapios/250613_467146720013886_1775681694_n.jpg');
+INSERT INTO "website_cardapio" VALUES(2,'1','09','2015','cardapios/bercario_01a_set_2015.pdf');
+INSERT INTO "website_cardapio" VALUES(3,'2','09','2015','cardapios/bercario_01_set_2015.pdf');
+INSERT INTO "website_cardapio" VALUES(4,'3','09','2015','cardapios/bercario_02_set_2015.pdf');
+INSERT INTO "website_cardapio" VALUES(5,'4','09','2015','cardapios/maiores_set_2015.pdf');
 CREATE TABLE "website_galeria" (
     "id" integer NOT NULL PRIMARY KEY AUTOINCREMENT,
     "titulo" varchar(200) NOT NULL,
@@ -390,7 +393,7 @@ INSERT INTO "auth_permission" VALUES(66,'Can delete banner',22,'delete_banner');
 CREATE TABLE "auth_group" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "name" varchar(80) NOT NULL UNIQUE);
 CREATE TABLE "auth_group_permissions" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "group_id" integer NOT NULL REFERENCES "auth_group" ("id"), "permission_id" integer NOT NULL REFERENCES "auth_permission" ("id"), UNIQUE ("group_id", "permission_id"));
 CREATE TABLE "auth_user" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "password" varchar(128) NOT NULL, "last_login" datetime NOT NULL, "is_superuser" bool NOT NULL, "username" varchar(30) NOT NULL UNIQUE, "first_name" varchar(30) NOT NULL, "last_name" varchar(30) NOT NULL, "email" varchar(75) NOT NULL, "is_staff" bool NOT NULL, "is_active" bool NOT NULL, "date_joined" datetime NOT NULL);
-INSERT INTO "auth_user" VALUES(1,'pbkdf2_sha256$15000$WJ4Kl7K58tps$12n3vo1yvt3LyagOkWLiSYStx2CYuEvfrIiMUVoqZbM=','2015-09-05 21:02:01.508161',1,'admin','','','admin@admin.com.br',1,1,'2015-07-26 12:32:05.939172');
+INSERT INTO "auth_user" VALUES(1,'pbkdf2_sha256$15000$WJ4Kl7K58tps$12n3vo1yvt3LyagOkWLiSYStx2CYuEvfrIiMUVoqZbM=','2015-09-12 12:40:57.587628',1,'admin','','','admin@admin.com.br',1,1,'2015-07-26 12:32:05.939172');
 CREATE TABLE "auth_user_groups" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "user_id" integer NOT NULL REFERENCES "auth_user" ("id"), "group_id" integer NOT NULL REFERENCES "auth_group" ("id"), UNIQUE ("user_id", "group_id"));
 CREATE TABLE "auth_user_user_permissions" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "user_id" integer NOT NULL REFERENCES "auth_user" ("id"), "permission_id" integer NOT NULL REFERENCES "auth_permission" ("id"), UNIQUE ("user_id", "permission_id"));
 CREATE TABLE "django_admin_log" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "action_time" datetime NOT NULL, "object_id" text NULL, "object_repr" varchar(200) NOT NULL, "action_flag" smallint unsigned NOT NULL, "change_message" text NOT NULL, "content_type_id" integer NULL REFERENCES "django_content_type" ("id"), "user_id" integer NOT NULL REFERENCES "auth_user" ("id"));
@@ -585,6 +588,20 @@ INSERT INTO "django_admin_log" VALUES(188,'2015-09-06 00:35:29.947447','18','Ví
 INSERT INTO "django_admin_log" VALUES(189,'2015-09-06 01:55:57.582885','25','agradece depoímento',1,'',13,1);
 INSERT INTO "django_admin_log" VALUES(190,'2015-09-06 01:56:52.963948','2','Depoimento object',3,'',15,1);
 INSERT INTO "django_admin_log" VALUES(191,'2015-09-06 01:57:00.226452','3','Depoimento object',3,'',15,1);
+INSERT INTO "django_admin_log" VALUES(192,'2015-09-06 02:44:46.231678','5','Nossa História',2,'Modificado conteudo.',13,1);
+INSERT INTO "django_admin_log" VALUES(193,'2015-09-06 02:47:01.756134','5','Nossa História',2,'Modificado conteudo.',13,1);
+INSERT INTO "django_admin_log" VALUES(194,'2015-09-12 12:41:14.556910','4','Depoimento object',3,'',15,1);
+INSERT INTO "django_admin_log" VALUES(195,'2015-09-12 12:43:08.404984','4','Instalações',2,'Modificado conteudo.',13,1);
+INSERT INTO "django_admin_log" VALUES(196,'2015-09-12 12:45:29.261843','2','Cardapio object',1,'',9,1);
+INSERT INTO "django_admin_log" VALUES(197,'2015-09-12 12:45:46.738880','3','Cardapio object',1,'',9,1);
+INSERT INTO "django_admin_log" VALUES(198,'2015-09-12 12:45:59.404265','4','Cardapio object',1,'',9,1);
+INSERT INTO "django_admin_log" VALUES(199,'2015-09-12 12:46:16.441663','5','Cardapio object',1,'',9,1);
+INSERT INTO "django_admin_log" VALUES(200,'2015-09-12 12:46:35.447978','1','Cardapio object',3,'',9,1);
+INSERT INTO "django_admin_log" VALUES(201,'2015-09-12 13:17:15.223030','19','Papeis de Parede',2,'Modificado conteudo.',13,1);
+INSERT INTO "django_admin_log" VALUES(202,'2015-09-12 13:30:09.237619','19','Papeis de Parede',2,'Modificado conteudo.',13,1);
+INSERT INTO "django_admin_log" VALUES(203,'2015-09-12 13:31:13.095004','20','Desenhos para Pintar',2,'Modificado conteudo.',13,1);
+INSERT INTO "django_admin_log" VALUES(204,'2015-09-12 14:02:30.493410','20','Desenhos para Pintar',2,'Modificado conteudo.',13,1);
+INSERT INTO "django_admin_log" VALUES(205,'2015-09-12 14:27:12.539723','19','Papeis de Parede',2,'Modificado conteudo.',13,1);
 CREATE TABLE "django_session" ("session_key" varchar(40) NOT NULL PRIMARY KEY, "session_data" text NOT NULL, "expire_date" datetime NOT NULL);
 INSERT INTO "django_session" VALUES('yuerpeoywi62jjqu9sy2564ku8eeual6','NGY3NTBjZmU3ZTMwMzI0YzQzYTJlYjAzYWQzOTVjMGE3NDYwMGVhMjp7Il9hdXRoX3VzZXJfaGFzaCI6ImQ5NjljNzY4Nzk1NDYyNGM4Mzc5ZGIwOTlhOTJhY2UzZWJiNGVmYzUiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOjF9','2015-08-09 12:32:27.143755');
 INSERT INTO "django_session" VALUES('7lwlqjgwdmbydt9s1xwqa7a1fpg9mm4z','NGY3NTBjZmU3ZTMwMzI0YzQzYTJlYjAzYWQzOTVjMGE3NDYwMGVhMjp7Il9hdXRoX3VzZXJfaGFzaCI6ImQ5NjljNzY4Nzk1NDYyNGM4Mzc5ZGIwOTlhOTJhY2UzZWJiNGVmYzUiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOjF9','2015-08-13 16:20:09.758915');
@@ -597,6 +614,7 @@ INSERT INTO "django_session" VALUES('l1llmyjxb301h799ul7e2khz8io6caeu','ZTQ1M2U0
 INSERT INTO "django_session" VALUES('m8piccatyyarx6r5622g5gqotjmdrc9w','NTMzOTQ3MGUyYjlkMjViYWUyM2E3MDZiNzM1YmU0NTkzM2FiMDEzYjp7Il9hdXRoX3VzZXJfYmFja2VuZCI6ImRqYW5nby5jb250cmliLmF1dGguYmFja2VuZHMuTW9kZWxCYWNrZW5kIiwiX2F1dGhfdXNlcl9oYXNoIjoiZDk2OWM3Njg3OTU0NjI0YzgzNzlkYjA5OWE5MmFjZTNlYmI0ZWZjNSIsIl9hdXRoX3VzZXJfaWQiOjEsIl9tZXNzYWdlcyI6IltbXCJfX2pzb25fbWVzc2FnZVwiLDAsMjUsXCJwYWdpbmEgXFxcIk5vc3NhIEhpc3RcXHUwMGYzcmlhXFxcIiBtb2RpZmljYWRvIGNvbSBzdWNlc3NvLiBWb2NcXHUwMGVhIHBvZGUgZWRpdFxcdTAwZTEtbG8gbm92YW1lbnRlIGFiYWl4by5cIl0sW1wiX19qc29uX21lc3NhZ2VcIiwwLDI1LFwicGFnaW5hIFxcXCJOb3NzYSBIaXN0XFx1MDBmM3JpYVxcXCI6IG1vZGlmaWNhZG8gY29tIHN1Y2Vzc28uXCJdLFtcIl9fanNvbl9tZXNzYWdlXCIsMCwyNSxcImdhbGVyaWEgXFxcIlNlbWFuYSBkZSBGXFx1MDBlOXJpYXMgcGVkYWdcXHUwMGYzZ2ljYVxcXCI6IG1vZGlmaWNhZG8gY29tIHN1Y2Vzc28uXCJdLFtcIl9fanNvbl9tZXNzYWdlXCIsMCwyNSxcInBhZ2luYSBcXFwiTm9zc2EgSGlzdFxcdTAwZjNyaWFcXFwiOiBtb2RpZmljYWRvIGNvbSBzdWNlc3NvLlwiXSxbXCJfX2pzb25fbWVzc2FnZVwiLDAsMjUsXCJwYWdpbmEgXFxcIk5vc3NhIEhpc3RcXHUwMGYzcmlhXFxcIiBtb2RpZmljYWRvIGNvbSBzdWNlc3NvLiBWb2NcXHUwMGVhIHBvZGUgZWRpdFxcdTAwZTEtbG8gbm92YW1lbnRlIGFiYWl4by5cIl0sW1wiX19qc29uX21lc3NhZ2VcIiwwLDI1LFwicGFnaW5hIFxcXCJGYWxlIENvbm9zY29cXFwiIG1vZGlmaWNhZG8gY29tIHN1Y2Vzc28uIFZvY1xcdTAwZWEgcG9kZSBlZGl0XFx1MDBlMS1sbyBub3ZhbWVudGUgYWJhaXhvLlwiXSxbXCJfX2pzb25fbWVzc2FnZVwiLDAsMjUsXCJwYWdpbmEgXFxcIkZhbGUgQ29ub3Njb1xcXCIgbW9kaWZpY2FkbyBjb20gc3VjZXNzby4gVm9jXFx1MDBlYSBwb2RlIGVkaXRcXHUwMGUxLWxvIG5vdmFtZW50ZSBhYmFpeG8uXCJdXSJ9','2015-09-12 22:59:09.972496');
 INSERT INTO "django_session" VALUES('lvj0gdm52bvkftyyzsphocgyietlf3ar','NGY3NTBjZmU3ZTMwMzI0YzQzYTJlYjAzYWQzOTVjMGE3NDYwMGVhMjp7Il9hdXRoX3VzZXJfaGFzaCI6ImQ5NjljNzY4Nzk1NDYyNGM4Mzc5ZGIwOTlhOTJhY2UzZWJiNGVmYzUiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOjF9','2015-09-16 18:49:05.118182');
 INSERT INTO "django_session" VALUES('bqbs3ag895aa8056wsd4v8ndmnwekx69','OTM0YTdhZGVmMWYxMWYwODZlMjA2YzcwNTYwYWIyMmIyM2FhYjc2MDp7Il9hdXRoX3VzZXJfaGFzaCI6ImQ5NjljNzY4Nzk1NDYyNGM4Mzc5ZGIwOTlhOTJhY2UzZWJiNGVmYzUiLCJfbWVzc2FnZXMiOiJbW1wiX19qc29uX21lc3NhZ2VcIiwwLDI1LFwicHVibGljYWNhbyBcXFwiQXVsYSBkZSBjdWxpblxcdTAwZTFyaWEgY29tIG9zIHBlcXVlbm9zIGRvIEJlclxcdTAwZTdcXHUwMGUxcmlvIElJXFxcIjogYWRpY2lvbmFkbyBjb20gc3VjZXNzby5cIl0sW1wiX19qc29uX21lc3NhZ2VcIiwwLDI1LFwiZ2FsZXJpYSBcXFwiQXVsYSBkZSBjdWxpblxcdTAwZTFyaWEgY29tIG9zIHBlcXVlbm9zIGRvIEJlclxcdTAwZTdcXHUwMGUxcmlvIElJXFxcIjogbW9kaWZpY2FkbyBjb20gc3VjZXNzby5cIl0sW1wiX19qc29uX21lc3NhZ2VcIiwwLDI1LFwiZ2FsZXJpYSBcXFwiQXVsYSBkZSBjdWxpblxcdTAwZTFyaWEgY29tIG9zIHBlcXVlbm9zIGRvIEJlclxcdTAwZTdcXHUwMGUxcmlvIElJXFxcIjogbW9kaWZpY2FkbyBjb20gc3VjZXNzby5cIl0sW1wiX19qc29uX21lc3NhZ2VcIiwwLDI1LFwicHVibGljYWNhbyBcXFwiQXVsYSBkZSBjdWxpblxcdTAwZTFyaWEgY29tIG9zIHBlcXVlbm9zIGRvIEJlclxcdTAwZTdcXHUwMGUxcmlvIElJXFxcIjogbW9kaWZpY2FkbyBjb20gc3VjZXNzby5cIl0sW1wiX19qc29uX21lc3NhZ2VcIiwwLDI1LFwiYmFubmVyIFxcXCJNYXRyXFx1MDBlZGN1bGFzIDIwMTZcXFwiOiBhZGljaW9uYWRvIGNvbSBzdWNlc3NvLlwiXSxbXCJfX2pzb25fbWVzc2FnZVwiLDAsMjUsXCJiYW5uZXIgXFxcIk1hdHJcXHUwMGVkY3VsYXMgMjAxNlxcXCI6IG1vZGlmaWNhZG8gY29tIHN1Y2Vzc28uXCJdLFtcIl9fanNvbl9tZXNzYWdlXCIsMCwyNSxcImJhbm5lciBcXFwiQ29uaGVcXHUwMGU3YSBhIG5vc3NhIGVzY29sYVxcXCI6IGFkaWNpb25hZG8gY29tIHN1Y2Vzc28uXCJdLFtcIl9fanNvbl9tZXNzYWdlXCIsMCwyNSxcImJhbm5lciBcXFwiQXZpc28gVXJnZW50ZVxcXCI6IG1vZGlmaWNhZG8gY29tIHN1Y2Vzc28uXCJdLFtcIl9fanNvbl9tZXNzYWdlXCIsMCwyNSxcImJhbm5lciBcXFwiRmVzdGEgZGEgSW5kZW5wZW5kXFx1MDBlYWNpYSBuYSBCYW1iaW5vXFxcIjogbW9kaWZpY2FkbyBjb20gc3VjZXNzby5cIl0sW1wiX19qc29uX21lc3NhZ2VcIiwwLDI1LFwiYmFubmVyIFxcXCJDb25oZVxcdTAwZTdhIGEgbm9zc2EgZXNjb2xhXFxcIjogbW9kaWZpY2FkbyBjb20gc3VjZXNzby5cIl0sW1wiX19qc29uX21lc3NhZ2VcIiwwLDI1LFwicHVibGljYWNhbyBcXFwiQ2FtaW5oYWRhIENcXHUwMGVkdmljYSBjb20gSmFyZGltIEkgZSBJSTogbm9zc2FzIGNyaWFuXFx1MDBlN2FzIGZhemVuZG8gYSBkaWZlcmVuXFx1MDBlN2FcXFwiOiBhZGljaW9uYWRvIGNvbSBzdWNlc3NvLlwiXSxbXCJfX2pzb25fbWVzc2FnZVwiLDAsMjUsXCJnYWxlcmlhIFxcXCJDYW1pbmhhZGEgQ1xcdTAwZWR2aWNhIGNvbSBKYXJkaW0gSSBlIElJOiBub3NzYXMgY3JpYW5cXHUwMGU3YXMgZmF6ZW5kbyBhIGRpZmVyZW5cXHUwMGU3YVxcXCI6IGFkaWNpb25hZG8gY29tIHN1Y2Vzc28uXCJdLFtcIl9fanNvbl9tZXNzYWdlXCIsMCwyNSxcInB1YmxpY2FjYW8gXFxcIkNhbWluaGFkYSBDXFx1MDBlZHZpY2EgY29tIEphcmRpbSBJIGUgSUk6IG5vc3NhcyBjcmlhblxcdTAwZTdhcyBmYXplbmRvIGEgZGlmZXJlblxcdTAwZTdhXFxcIjogbW9kaWZpY2FkbyBjb20gc3VjZXNzby5cIl0sW1wiX19qc29uX21lc3NhZ2VcIiwwLDI1LFwiYmFubmVyIFxcXCJTZW1hbmEgRmFycm91cGlsaGEgZGEgQmFtYmlubyBDYW1wb25cXHUwMGVhc1xcXCI6IGFkaWNpb25hZG8gY29tIHN1Y2Vzc28uIFZvY1xcdTAwZWEgcG9kZSBlZGl0YXIgbm92YW1lbnRlIGFiYWl4by5cIl0sW1wiX19qc29uX21lc3NhZ2VcIiwwLDI1LFwiYmFubmVyIFxcXCJTZW1hbmEgRmFycm91cGlsaGEgZGEgQmFtYmlubyBDYW1wb25cXHUwMGVhc1xcXCI6IG1vZGlmaWNhZG8gY29tIHN1Y2Vzc28uXCJdLFtcIl9fanNvbl9tZXNzYWdlXCIsMCwyNSxcInB1YmxpY2FjYW8gXFxcIlNlbWFuYSBGYXJyb3VwaWxoYSBkYSBCYW1iaW5vIENhbXBvblxcdTAwZWFzIFxcXCI6IGFkaWNpb25hZG8gY29tIHN1Y2Vzc28uXCJdLFtcIl9fanNvbl9tZXNzYWdlXCIsMCwyNSxcImJhbm5lciBcXFwiU2VtYW5hIEZhcnJvdXBpbGhhIGRhIEJhbWJpbm8gQ2FtcG9uXFx1MDBlYXNcXFwiOiBtb2RpZmljYWRvIGNvbSBzdWNlc3NvLlwiXSxbXCJfX2pzb25fbWVzc2FnZVwiLDAsMjUsXCJwYWdpbmEgXFxcIlVuaWZvcm1lXFxcIjogYWRpY2lvbmFkbyBjb20gc3VjZXNzby5cIl0sW1wiX19qc29uX21lc3NhZ2VcIiwwLDI1LFwicGFnaW5hIFxcXCJJbnN0YWxhXFx1MDBlN1xcdTAwZjVlc1xcXCI6IG1vZGlmaWNhZG8gY29tIHN1Y2Vzc28uXCJdLFtcIl9fanNvbl9tZXNzYWdlXCIsMCwyNSxcInBhZ2luYSBcXFwiVlxcdTAwZWRkZW9zXFxcIjogbW9kaWZpY2FkbyBjb20gc3VjZXNzby5cIl0sW1wiX19qc29uX21lc3NhZ2VcIiwwLDI1LFwicGFnaW5hIFxcXCJWXFx1MDBlZGRlb3NcXFwiIG1vZGlmaWNhZG8gY29tIHN1Y2Vzc28uIFZvY1xcdTAwZWEgcG9kZSBlZGl0XFx1MDBlMS1sbyBub3ZhbWVudGUgYWJhaXhvLlwiXSxbXCJfX2pzb25fbWVzc2FnZVwiLDAsMjUsXCJwYWdpbmEgXFxcIlZcXHUwMGVkZGVvc1xcXCIgbW9kaWZpY2FkbyBjb20gc3VjZXNzby4gVm9jXFx1MDBlYSBwb2RlIGVkaXRcXHUwMGUxLWxvIG5vdmFtZW50ZSBhYmFpeG8uXCJdLFtcIl9fanNvbl9tZXNzYWdlXCIsMCwyNSxcInBhZ2luYSBcXFwiVlxcdTAwZWRkZW9zXFxcIjogbW9kaWZpY2FkbyBjb20gc3VjZXNzby5cIl0sW1wiX19qc29uX21lc3NhZ2VcIiwwLDI1LFwicGFnaW5hIFxcXCJhZ3JhZGVjZSBkZXBvXFx1MDBlZG1lbnRvXFxcIjogYWRpY2lvbmFkbyBjb20gc3VjZXNzby5cIl0sW1wiX19qc29uX21lc3NhZ2VcIiwwLDI1LFwiZGVwb2ltZW50byBcXFwiRGVwb2ltZW50byBvYmplY3RcXFwiOiBleGNsdVxcdTAwZWRkbyBjb20gc3VjZXNzby5cIl0sW1wiX19qc29uX21lc3NhZ2VcIiwwLDI1LFwiZGVwb2ltZW50byBcXFwiRGVwb2ltZW50byBvYmplY3RcXFwiOiBleGNsdVxcdTAwZWRkbyBjb20gc3VjZXNzby5cIl1dIiwiX2F1dGhfdXNlcl9pZCI6MSwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQifQ==','2015-09-20 01:57:00.323714');
+INSERT INTO "django_session" VALUES('xzi9107zqnh8tkvnl7quggfoer43uzca','ZWI1MWY0NGNiYTlmMDVkZjYyYjM5YmY5MmFmMDZmMjg3MjAwODcwYzp7Il9hdXRoX3VzZXJfYmFja2VuZCI6ImRqYW5nby5jb250cmliLmF1dGguYmFja2VuZHMuTW9kZWxCYWNrZW5kIiwiX2F1dGhfdXNlcl9oYXNoIjoiZDk2OWM3Njg3OTU0NjI0YzgzNzlkYjA5OWE5MmFjZTNlYmI0ZWZjNSIsIl9hdXRoX3VzZXJfaWQiOjEsIl9tZXNzYWdlcyI6IltbXCJfX2pzb25fbWVzc2FnZVwiLDAsMjUsXCJwYWdpbmEgXFxcIkRlc2VuaG9zIHBhcmEgUGludGFyXFxcIjogbW9kaWZpY2FkbyBjb20gc3VjZXNzby5cIl0sW1wiX19qc29uX21lc3NhZ2VcIiwwLDI1LFwicGFnaW5hIFxcXCJQYXBlaXMgZGUgUGFyZWRlXFxcIjogbW9kaWZpY2FkbyBjb20gc3VjZXNzby5cIl1dIn0=','2015-09-26 14:27:12.542732');
 CREATE TABLE "django_site" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "domain" varchar(100) NOT NULL, "name" varchar(50) NOT NULL);
 INSERT INTO "django_site" VALUES(1,'127.0.0.1:8000','127.0.0.1:8000');
 CREATE TABLE "website_banner" (
@@ -700,8 +718,6 @@ INSERT INTO "website_pagina" VALUES(4,'Instalações','instalacoes','<h2><span s
 <p><img alt="" src="/media/uploads/2015/09/05/slide_03.jpg" style="height:396px; width:649px" /></p>
 
 <p><img alt="" src="/media/uploads/2015/09/05/slide_04.jpg" style="height:396px; width:649px" /></p>
-
-<p><img alt="" src="/media/uploads/2015/09/05/slide_06.jpg" style="height:396px; width:649px" /></p>
 ','instalações, infra-estrutura',0,0,'instalações da Bambino Campones');
 INSERT INTO "website_pagina" VALUES(5,'Nossa História','nossa-historia','<h2><span style="color:red">Nossa Hist&oacute;ria</span></h2>
 
@@ -727,56 +743,55 @@ INSERT INTO "website_pagina" VALUES(5,'Nossa História','nossa-historia','<h2><s
 
 <p><strong>Primeira foto da Bambino Campon&ecirc;s</strong></p>
 
-<p><strong><img alt="Primeira foto da Bambino" src="/static/images/historia/001.jpg" style="background-color:white; border:01px solid #ccc; height:100%; padding:5px; width:100%" /></strong></p>
+<p><strong><img alt="Primeira foto da Bambino" src="http://static.bambino2015.webfactional.com/images/historia/001.jpg" style="background-color:white; border:01px solid #ccc; height:100%; padding:5px; width:100%" /></strong></p>
 
 <p>&nbsp;</p>
 
 <p><strong>Primeira formatura da Bambino Campon&ecirc;s</strong></p>
 
-<p><strong><img alt="Primeira formatura da Bambino" src="/static/images/historia/002.jpg" style="background-color:white; border:01px solid #ccc; height:100%; padding:5px; width:100%" /></strong></p>
+<p><strong><img alt="Primeira formatura da Bambino" src="http://static.bambino2015.webfactional.com/images/historia/002.jpg" style="background-color:white; border:01px solid #ccc; height:100%; padding:5px; width:100%" /></strong></p>
 
 <p>&nbsp;</p>
 
 <p><strong>Primeiro Natal da Bambino Campon&ecirc;s</strong></p>
 
-<p><strong><img alt="Primeiro natal da Bambino" src="/static/images/historia/003.jpg" style="background-color:white; border:01px solid #ccc; height:100%; padding:5px; width:100%" /></strong></p>
+<p><strong><img alt="Primeiro natal da Bambino" src="http://static.bambino2015.webfactional.com/images/historia/003.jpg" style="background-color:white; border:01px solid #ccc; height:100%; padding:5px; width:100%" /></strong></p>
 
 <p>&nbsp;</p>
 
 <p><strong>Primeira Noite do Pijama da Bambino Campon&ecirc;s</strong></p>
 
-<p><strong><img alt="Primeira noite do Pijama da Bambino" src="/static/images/historia/004.jpg" style="background-color:white; border:01px solid #ccc; height:100%; padding:5px; width:100%" /></strong></p>
+<p><strong><img alt="Primeira noite do Pijama da Bambino" src="http://static.bambino2015.webfactional.com/images/historia/004.jpg" style="background-color:white; border:01px solid #ccc; height:100%; padding:5px; width:100%" /></strong></p>
 
 <p>&nbsp;</p>
 
 <p><strong>Primeiro passeio no Zoo da Bambino Campon&ecirc;s</strong></p>
 
-<p><strong><img alt="Primeiro passeio no Zoo do Pijama da Bambino" src="/static/images/historia/005.jpg" style="background-color:white; border:01px solid #ccc; height:100%; padding:5px; width:100%" /></strong></p>
+<p><strong><img alt="Primeiro passeio no Zoo do Pijama da Bambino" src="http://static.bambino2015.webfactional.com/images/historia/005.jpg" style="background-color:white; border:01px solid #ccc; height:100%; padding:5px; width:100%" /></strong></p>
 
 <p>&nbsp;</p>
 
 <p><strong>Primeira pra&ccedil;a da Bambino Campon&ecirc;s</strong></p>
 
-<p><strong><img alt="Primeira praça da Bambino" src="/static/images/historia/006.jpg" style="background-color:white; border:01px solid #ccc; height:100%; padding:5px; width:100%" /></strong></p>
+<p><strong><img alt="Primeira praça da Bambino" src="http://static.bambino2015.webfactional.com/images/historia/006.jpg" style="background-color:white; border:01px solid #ccc; height:100%; padding:5px; width:100%" /></strong></p>
 
 <p>&nbsp;</p>
 
 <p><strong>Segunda pra&ccedil;a da Bambino Campon&ecirc;s</strong></p>
 
-<p><strong><img alt="Segunda praça da Bambino" src="/static/images/historia/007.jpg" style="background-color:white; border:01px solid #ccc; height:100%; padding:5px; width:100%" /></strong></p>
+<p><strong><img alt="Segunda praça da Bambino" src="http://static.bambino2015.webfactional.com/images/historia/007.jpg" style="background-color:white; border:01px solid #ccc; height:100%; padding:5px; width:100%" /></strong></p>
 
 <p>&nbsp;</p>
 
 <p><strong>Antigas instala&ccedil;&otilde;es da Bambino Campon&ecirc;s</strong></p>
 
-<p><strong><img alt="Antigas instalações da Bambino" src="/static/images/historia/008.jpg" style="background-color:white; border:01px solid #ccc; height:100%; padding:5px; width:100%" /></strong></p>
+<p><strong><img alt="Antigas instalações da Bambino" src="http://static.bambino2015.webfactional.com/images/historia/008.jpg" style="background-color:white; border:01px solid #ccc; height:100%; padding:5px; width:100%" /></strong></p>
 
 <p>&nbsp;</p>
 
 <p><strong>Constru&ccedil;&atilde;o da pracinha da Bambino Campon&ecirc;s</strong></p>
 
-<p><strong><img alt="Construção da pracinha da Bambino" src="/static/images/historia/009.jpg" style="background-color:white; border:01px solid #ccc; height:100%; padding:5px; width:100%" /></strong></p>
-','história',0,0,'Conheça a História da Bambino Camponês.');
+<p><strong><img alt="Construção da pracinha da Bambino" src="http://static.bambino2015.webfactional.com/images/historia/009.jpg" style="background-color:white; border:01px solid #ccc; height:100%; padding:5px; width:100%" /></strong></p>','história',0,0,'Conheça a História da Bambino Camponês.');
 INSERT INTO "website_pagina" VALUES(6,'Horários','horarios','<h2><span style="color:red;">Horários de Funcionamento</h2>
 <h4 style="color: red; margin-top:35px;height: 10px !important;">Horário de entrada:</h4>
     <p style="display:block;width:100%;"><span style="font-weight:bold;">Turno da manhã:</span> <span style="font-weight:bold;color:black;">até</span> às <span style="font-weight:bold;color:black;">10h45min</span></p>
@@ -1204,10 +1219,25 @@ INSERT INTO "website_pagina" VALUES(18,'Vídeos','videos','<h2><span style="colo
 <iframe width="640" height="360" src="https://www.youtube.com/embed/AJShCAPr4Zc" frameborder="0" allowfullscreen></iframe>','downloads, vídeos',0,0,'Downloads de Vídeos');
 INSERT INTO "website_pagina" VALUES(19,'Papeis de Parede','papeis-de-parede','<h2><span style="color:red">Download de Pap&eacute;is de Parede</span></h2>
 
-<p>P&aacute;gina em Constru&ccedil;&atilde;o em a<span style="color:#000080">z</span>ul</p>
+<p><img alt="" src="http://bambino2015.webfactional.com/media/2015/09/12/001.jpg" /></p>
+
+<p><img alt="" src="http://bambino2015.webfactional.com/media/2015/09/12/002.jpg" /></p>
+
+<p><img alt="" src="http://bambino2015.webfactional.com/media/2015/09/12/004.jpg" /></p>
+
+<p><img alt="" src="http://bambino2015.webfactional.com/media/2015/09/12/005.jpg" /></p>
+
+<p><img alt="" src="http://bambino2015.webfactional.com/media/2015/09/12/008.jpg" /></p>
+
+<p>&nbsp;</p>
 ','downloads, papéis de parede',0,0,'Downloads de Papéis de Parede');
-INSERT INTO "website_pagina" VALUES(20,'Desenhos para Pintar','desenhos-para-pintar','<h2><span style="color:red;">Download de Desenhos para Pintar</h2>
-<p style="text-align: justify;text-indent:40px;margin-top: 05px;">Página em Construção</p>','downloads, desenhos para pintar',0,0,'Downloads de Desenhos para Pintar');
+INSERT INTO "website_pagina" VALUES(20,'Desenhos para Pintar','desenhos-para-pintar','<h2><span style="color:red">Download de Desenhos para Pintar</span></h2>
+
+<p><img alt="" src="http://bambino2015.webfactional.com/media/2015/09/12/monica-prenda-semana-da-farroupilha.jpg" /><br />
+<img alt="" src="http://bambino2015.webfactional.com/media/2015/09/12/independencia.png" /><br />
+<img alt="" src="http://bambino2015.webfactional.com/media/2015/09/12/cebolinha-sul1.jpg" /><br />
+<img alt="" src="http://bambino2015.webfactional.com/media/2015/09/12/9-setembro_2006-2pb.png" /></p>
+','downloads, desenhos para pintar',0,0,'Downloads de Desenhos para Pintar');
 INSERT INTO "website_pagina" VALUES(21,'Fale Conosco','fale-conosco','<h2><span style="color:red">Fale Conosco</span></h2>
 
 <p><span style="color:red">em constru&ccedil;&atilde;o.</span></p>
@@ -1262,11 +1292,11 @@ INSERT INTO "sqlite_sequence" VALUES('auth_permission',66);
 INSERT INTO "sqlite_sequence" VALUES('django_site',1);
 INSERT INTO "sqlite_sequence" VALUES('auth_user',1);
 INSERT INTO "sqlite_sequence" VALUES('website_publicacao',8);
-INSERT INTO "sqlite_sequence" VALUES('django_admin_log',191);
+INSERT INTO "sqlite_sequence" VALUES('django_admin_log',205);
 INSERT INTO "sqlite_sequence" VALUES('website_calendario',5);
-INSERT INTO "sqlite_sequence" VALUES('website_cardapio',1);
+INSERT INTO "sqlite_sequence" VALUES('website_cardapio',5);
 INSERT INTO "sqlite_sequence" VALUES('website_conteudodownload',1);
-INSERT INTO "sqlite_sequence" VALUES('website_depoimento',3);
+INSERT INTO "sqlite_sequence" VALUES('website_depoimento',4);
 INSERT INTO "sqlite_sequence" VALUES('website_galeria',6);
 INSERT INTO "sqlite_sequence" VALUES('website_galeriaresource',48);
 INSERT INTO "sqlite_sequence" VALUES('website_menu',1);
