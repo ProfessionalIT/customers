@@ -1,0 +1,36 @@
+[ ANÁLISE DO SITE DA ENVELOPRINT ]
+
+    A) Problemas Técnicos:
+        - O site é hospedado no Google Apps e deveria ser hospedado numa hospedagem normal. (Webfaction)
+        - Deveria ter um sistema de Cache.
+        - Deveria ter um sistema de compactação de conteúdo.
+
+    B) Problemas Gerais:
+
+        01 - Site não é responsivo.
+            O site não adapta-se aos dispositivos como Tablets e Smartphones.
+            Ob: Utilizar Bootstrap e AngularJS.
+
+        02 - O site não tem um mecanismo de pesquisa.
+        03 - O site não tem um breadcrumbs.
+        04 - O site não tem log de acesso e Google Analytics.
+        05 - Cabeçalho é muito pequeno. Deveria ser mais alto.
+        06 - Fotos do Cabeçalho são muito ruim. Deveria ter fotos mais bonitas e também legendas, como o site da Fênix.
+        07 - Cor de fundo muito pesada.
+        08 - Fonte/Letra do site precisa ser melhor explorada e padronizada.
+        09 - Logo precisa ter uma sombra.
+        10 - Dois slides-show na página inicial.
+          Na página inicial deve ter apenas um slideshow e destaques como uma chamada, como dicas ou notícias.
+        11 - Integração com redes sociais.
+        12 - Botões de compartilhamento Facebook, Twitter, G+.
+              
+        13 - Ícones muitos grandes, deveriam ser menores e de melhor resolução. E faltando urls das redes.
+        14 - Página empresa muito pobre.
+        15 - Curiosidades muito pobre.
+        16 - Icones de produtos precisam de padronizados em tamanho e formato de exibição.
+        17 - Melhorar a página de detalhamento do produto, muito pobre hoje em dia.
+        18 - Concluir a página de Representantes com o mapa clicável.
+        19 - Colocar captcha na página de contato e melhorar o layout dela.
+        20 - Concluir página trabalhe conosco.
+        21 - Colocar validações e captcha na página orçamento e melhorar o layout dela.
+
