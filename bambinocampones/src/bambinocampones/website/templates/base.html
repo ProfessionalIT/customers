@@ -255,7 +255,7 @@
                 <div class="col-sm-12 text-center">
                     <a href="/index"
                        title="Bem Vindo à Bambino Camponês.">
-                       <img src="http://media.bambinocampones.com.br/images/logo.png"
+                       <img src="{% static 'images/logo.png' %}"
                             class="logotipo"
                             alt="Logotipo da Bambino Camponês."
                             title="Bem Vindo à Bambino Camponês."/>
@@ -467,7 +467,7 @@
                                                                 <span id="sp21" class="c2" style="background: none rgb(238, 238, 238);">19</span>
                                                             </td>
                                                             <td align="center">
-                                                                <span id="sp22" class="c1" style="background: url(http://media.bambinocampones.com.br/images/evento_bkp.png);">20</span>
+                                                                <span id="sp22" class="c1" style="background: url({% static 'images/evento_bkp.png' %};">20</span>
                                                             </td>
                                                             <td align="center">
                                                                 <span id="sp23" class="c1" style="background: none;">21</span>
@@ -487,7 +487,7 @@
                                                         </tr>
                                                         <tr>
                                                             <td align="center">
-                                                                <span id="sp28" class="c2" style="background: url(http://media.bambinocampones.com.br/images/evento_bkp.png);">26</span>
+                                                                <span id="sp28" class="c2" style="background: url({% static 'images/evento_bkp.png' %});">26</span>
                                                             </td>
                                                             <td align="center">
                                                                 <span id="sp29" class="c1" style="background: none;">27</span>
@@ -538,19 +538,19 @@
                                     </tbody>
                                 </table>
                             </form></div>
-                            <div id="eventsDescriptions"><img src="http://media.bambinocampones.com.br/images/evento_bkp.png" class="activity_bkg"> 20/7 - Dia do Amigo<br><img src="http://media.bambinocampones.com.br/images/evento_bkp.png" class="activity_bkg"> 26/7 - Dia dos Avós<br></div>
+                            <div id="eventsDescriptions"><img src="{% static 'images/evento_bkp.png' %}" class="activity_bkg"> 20/7 - Dia do Amigo<br><img src="http://media.bambinocampones.com.br/images/evento_bkp.png" class="activity_bkg"> 26/7 - Dia dos Avós<br></div>
                             <div id="events_types">
                                 <h5>Onde:</h5>
                                 <table class="table">
                                     <tbody>
                                         <tr>
-                                            <td style="width: 78px;"><img src="http://media.bambinocampones.com.br/images/evento_bkp.png" class="activity_bkg"> Evento</td>
-                                            <td style="width: 70px;"><img src="http://media.bambinocampones.com.br/images/festa_bkp.png" class="activity_bkg"> Festa</td>
-                                            <td style="width: 78px;"><img src="http://media.bambinocampones.com.br/images/feriado_bkp.png" class="activity_bkg"> Feriado</td>
+                                            <td style="width: 78px;"><img src="{% static 'images/evento_bkp.png' %}" class="activity_bkg"> Evento</td>
+                                            <td style="width: 70px;"><img src="{% static 'images/festa_bkp.png' %}" class="activity_bkg"> Festa</td>
+                                            <td style="width: 78px;"><img src="{% static 'images/feriado_bkp.png' %}" class="activity_bkg"> Feriado</td>
                                         </tr>
                                         <tr>
-                                            <td style="width: 78px;"><img src="http://media.bambinocampones.com.br/images/recesso_bkp.png" class="activity_bkg"> Recesso</td>
-                                            <td style="width: 70px;"><img src="http://media.bambinocampones.com.br/images/ponte_bkp.png" class="activity_bkg"> Ponte</td>
+                                            <td style="width: 78px;"><img src="{% static 'images/recesso_bkp.png' %}" class="activity_bkg"> Recesso</td>
+                                            <td style="width: 70px;"><img src="{% static 'images/ponte_bkp.png' %}" class="activity_bkg"> Ponte</td>
                                             <td></td>
                                         </tr>
                                     </tbody>
@@ -564,7 +564,7 @@
                     <div class="panel-heading">Cardápio</div>
                     <div class="panel-body">
                         <a href="/cardapio" title="Cardápio mensal">
-                            <img src="http://media.bambinocampones.com.br/images/comida.jpg" alt="Banner do Cardápio." title="Cardápio mensal por turma." style="width:100%;" />
+                            <img src="{% static 'images/comida.jpg' %}" alt="Banner do Cardápio." title="Cardápio mensal por turma." style="width:100%;" />
                         </a>
                         <span style="text-indent: 20px;display:block;margin-top: 10px;">Temos também a opção de lanche feito na escola. Maiores informações, Fale com a direção.</span>
                         <a href="/cardapio" title="Cardápio mensal por turma." role="button" class="btn btn-default btn-xs pull-right" style="margin-top: 5px;">Ver mais</a>
@@ -581,16 +581,16 @@
                         <h4>Turmas:</h4>
                         <ul style="padding: 1% 7%;">
                             <li style="padding-bottom: 5px;">
-                                <a href="http://media.bambinocampones.com.br/images/material_escolar/bercario_pre_maternal_2015.pdf" title="Lista de material escolar de 2015 para Berçário e Pré-Maternal." target="_blank">Berçário e Pré-Maternal</a>
+                                <a href="{% static 'images/material_escolar/bercario_pre_maternal_2015.pdf' %}" title="Lista de material escolar de 2015 para Berçário e Pré-Maternal." target="_blank">Berçário e Pré-Maternal</a>
                             </li>
                             <li style="padding-bottom: 5px;">
-                                <a href="http://media.bambinocampones.com.br/images/material_escolar/maternal_1_2015.pdf" title="Lista de material escolar de 2015 para Maternal 1." target="_blank">Maternal I</a>
+                                <a href="{% static 'images/material_escolar/maternal_1_2015.pdf' %}" title="Lista de material escolar de 2015 para Maternal 1." target="_blank">Maternal I</a>
                             </li>
                             <li style="padding-bottom: 5px;">
-                                <a href="http://media.bambinocampones.com.br/images/material_escolar/maternal_2_2015.pdf" title="Lista de material escolar de 2015 para Maternal 2." target="_blank">Maternal II</a>
+                                <a href="{% static 'images/material_escolar/maternal_2_2015.pdf' %}" title="Lista de material escolar de 2015 para Maternal 2." target="_blank">Maternal II</a>
                             </li>
                             <li style="padding-bottom: 5px;">
-                                <a href="http://media.bambinocampones.com.br/images/material_escolar/jardim_1_e_2_2015.pdf" title="Lista de material escolar de 2015 para Jardim A e B." target="_blank">Jardim A e B</a>
+                                <a href="{% static 'images/material_escolar/jardim_1_e_2_2015.pdf' %}" title="Lista de material escolar de 2015 para Jardim A e B." target="_blank">Jardim A e B</a>
                             </li>
                         </ul>
                     </div>
@@ -726,7 +726,7 @@
                 <div class="panel panel-default">
                     <div class="panel-heading">Depoimentos</div>
                     <div class="panel-body">
-                        <img src="http://media.bambinocampones.com.br/images/depoimentos.png" alt="ícone dos depoimentos" title="Deixe seu depoimento:" style="width: 100%;margin: 0px auto;padding: 5px 15px;">
+                        <img src="{% static 'images/depoimentos.png' %}" alt="ícone dos depoimentos" title="Deixe seu depoimento:" style="width: 100%;margin: 0px auto;padding: 5px 15px;">
                         <span style="text-indent: 20px;display:block;margin-top: 10px;">Depoimentos de pais, fornecedores e parceiros da Bambino.</span>
                         <h4>Últimos depoimentos:</h4>
                         <ul class="lista_downloads" style="padding: 1% 7%;">

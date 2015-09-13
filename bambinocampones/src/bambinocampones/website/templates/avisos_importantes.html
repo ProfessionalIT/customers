@@ -16,7 +16,7 @@
                 {% if aviso.miniatura_aviso %}
                     <img src="{{ MEDIA_URL }}{{ aviso.miniatura_aviso }}" alt="Foto para {{ aviso.titulo }}" title="{{ aviso.titulo }}" class="news_thumb" />
                 {% endif %}
-                <p>{{ aviso.introducao }}</p>
+                <p>{{ aviso.introducao|safe }}</p>
                 <p class="lead">
                     <button class="btn btn-default" onclick="return location.href='/aviso/{{ aviso.slug }}'" title="Ler mais sobre o aviso {{ aviso.titulo }}.">Ler mais</button>
                 </p>
