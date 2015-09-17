@@ -8,13 +8,15 @@
     <h2 class="title_shadow margin_left_adjusts"><img src="{% static 'images/noticias.png' %}" class="mural_icon">Galeria de Vídeos</h2>
     <ul style="list-style: none;">
     {% for video in lista_videos %}
-        <li style="margin-top: 05px;">
+        <li style="margin-top: 05px;text-align:center;">
             <a href="/video/{{ video.slug }}" title="videos da galeria {{ video.titulo }}">
                 {% if video.get_thumb.url_resource %}
                     {{ video.get_thumb.url_resource|safe }}
                 {% else %}
                     {% if video.get_thumb.upload_resource %}
-                        {{ video.get_thumb.upload_resource|safe }}
+                        <video controls width="65%" height="60%">
+                            <source src="{{ MEDIA_URL }}{{ video.get_thumb.upload_resource|safe }}" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+                        </video>
                     {% endif %}
                 {% endif %}
                 <p style="width: 100%; text-align:center;"><strong>Nome: {{ video.titulo }}</p>

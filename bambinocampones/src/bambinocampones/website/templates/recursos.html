@@ -21,7 +21,9 @@
                         {% if recurso.galeria.tipo == 'F' %}
                             <img src="{{ MEDIA_URL }}{{ recurso.upload_resource }}" alt="Banner para {{ recurso.galeria.titulo }}" title=" Foto da Galeria {{ recurso.galeria.titulo }}" style="width: 100%;"/>
                         {% else %}
-                            {{ recurso.upload_resource|safe }}
+                            <video controls width="100%" height="100%">
+                                <source src="{{ MEDIA_URL }}{{ recurso.upload_resource|safe }}" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+                            </video>
                         {% endif %}
                     {% endif %}
                 {% endif %}
