@@ -150,6 +150,7 @@
                                 </li>
                                 <li>
                                     <a href="/galeria-videos"
+                                       onclick="return validaMenuAcesso();"
                                        title="Galeria de Vídeos">Galeria de Vídeos</a>
                                 </li>
                             </ul>
@@ -261,6 +262,7 @@
                             title="Bem Vindo à Bambino Camponês."/>
                     </a>
                 </div>
+                <!--
                 <div class="col-sm-12 text-center social_bar" class="margin_top_30" />
                     <a href="https://www.facebook.com/profile.php?id=100005466045502"
                        title="Página no Facebook da Bambino Camponês.">
@@ -276,6 +278,7 @@
                             title="Canal do Youtube da Bambino Camponês." />
                     </a>
                 </div>
+                -->
             </div>
             <div class="row margin_top_20">
                 <div class="col-sm-12">
@@ -628,14 +631,8 @@
                         <a href="/galeria-fotos" onclick="return validaMenuAcesso();" title="Galerias de Fotos da Bambino Camponês." role="button" class="btn btn-default btn-xs pull-right" style="margin-top: 5px;">Ver mais</a>
                         <span style="display:block; font-weight: bold;margin-top: 20px;">Vídeos:</span>
                         <p style="text-align: justify; text-indent: 20px; margin-top: 5px;">Últimos vídeos publicados em nosso canal:</p>
-                        {% if videos.url_resource %}
-                            {{ videos.url_resource|safe }}
-                        {% else %}
-                            {% if videos.upload_resource %}
-                                {{ videos.upload_resource|safe }}
-                            {% endif %}
-                        {% endif %}
-                        <a href="/galeria-videos" title="Galerias de Vídeos da Bambino Camponês." role="button" class="btn btn-default btn-xs pull-right" style="margin-top: 5px;">Ver mais</a>
+                        <img src="{% static 'images/diferenciais.jpg' %}" style="width:100%" data-src="" alt="Banner dos Vídeos" title="Lista de Vídeos." />
+                        <a href="/galeria-videos" onclick="return validaMenuAcesso();" title="Galerias de Vídeos da Bambino Camponês." role="button" class="btn btn-default btn-xs pull-right" style="margin-top: 5px;">Ver mais</a>
                     </div>
                 </div>
                 <hr>

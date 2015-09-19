@@ -142,10 +142,12 @@
                                 </li>
                                 <li>
                                     <a href="/galeria-fotos"
-                                       title="Galeria de Fotos.">Galeria de Fotos</a>
+                                       title="Galeria de Fotos."
+                                       onclick="return validaMenuAcesso();">Galeria de Fotos</a>
                                 </li>
                                 <li>
                                     <a href="/galeria-videos"
+                                       onclick="return validaMenuAcesso();"
                                        title="Galeria de Vídeos">Galeria de Vídeos</a>
                                 </li>
                             </ul>
@@ -257,6 +259,7 @@
                             title="Bem Vindo à Bambino Camponês."/>
                     </a>
                 </div>
+                <!--
                 <div class="col-sm-12 text-center social_bar" class="margin_top_30" />
                     <a href="https://www.facebook.com/profile.php?id=100005466045502"
                        title="Página no Facebook da Bambino Camponês.">
@@ -272,6 +275,7 @@
                             title="Canal do Youtube da Bambino Camponês." />
                     </a>
                 </div>
+                -->
             </div>
             <div class="col-sm-12 col-md-12 col-lg-12 inner_content">
                 {% block content %} {% endblock %}
