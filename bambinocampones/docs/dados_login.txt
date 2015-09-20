@@ -16,6 +16,9 @@ ssh -o PubKeyAuthentication=no -l bambino2015 web477.webfaction.com
 ssh bambino2015@web477.webfaction.com
 pwd: Master11235813
 
+Registro.BR
+    usr: MAB2310
+    pwd: Master01
 
                                ID                           Album
 https://plus.google.com/u/5/photos/114234974624158272289/albums/5937741912538813793
