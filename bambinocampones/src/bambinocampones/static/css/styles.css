@@ -11,7 +11,7 @@ author: bootply.com
 body {
   padding-top: 70px;
   font-family: 'Comic Sans MS', 'Trebuchet MS', Arial;
-  background: url('../images/fundo_lapis.jpg') no-repeat;
+  background: url('../images/fundo_lapis.png') no-repeat;
   background-size: cover;
 }
 
