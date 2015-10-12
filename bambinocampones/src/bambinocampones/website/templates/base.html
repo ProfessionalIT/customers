@@ -309,7 +309,9 @@
                                     <div class="carousel-caption">
                                         <h1>{{ banner.titulo }}</h1>
                                         <p>{{ banner.descricao }}</p>
-                                        <p><a class="btn btn-lg btn-primary" href="{{ banner.action_resource }}" role="button">Ver mais</a></p>
+                                        {% if banner.action_resource != "#" %}
+                                            <p><a class="btn btn-lg btn-primary" href="{{ banner.action_resource }}" role="button">Ver mais</a></p>
+                                        {% endif %}
                                     </div>
                                 </div>
                             </div>
