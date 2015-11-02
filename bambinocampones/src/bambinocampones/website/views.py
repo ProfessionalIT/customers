@@ -378,7 +378,7 @@ def dicas(request):
     dicas = models.Publicacao.objects.filter(tipos=u'D',
                                              rascunho=False,
                                              destaque=True).\
-        order_by('-data_publicacao')[0:10]
+        order_by('data_publicacao')[0:10]
     fotos = models.Galeria.objects.filter(tipo=u'F',
                                           destaque=True)[0].\
         galeriaresource_set.filter()[:1].get()
