@@ -1,0 +1,78 @@
+{% extends "layout_2.html" %}
+{% load staticfiles %}
+{% block title %} {{ titulo }}. {% endblock %}
+
+{% block keywords %}contato{% endblock %}
+{% block description %}Fale conosco{% endblock %}
+
+{% block content %}
+
+<h2><span style="color:red">Fale Conosco</span></h2>
+
+{% if agradecimento %}
+    <h2>
+        <span style="color:green;background-color:white;text-align:center;font-weight:bold;width:100%;display:block;padding: 3px 0px">
+            {{ agradecimento }}
+        </span>
+    </h2>
+{% endif %}
+
+<p style="width:100%;text-align:center;margin-bottom:30px;margin-top:20px;">
+    Deixe seu recado que com certeza estaremos entrando em contato em breve.
+</p>
+
+<form action="/contato/fale-conosco" method="POST">
+    <input type='hidden' name='csrfmiddlewaretoken' value='{{ csrf_token }}' />
+    <table style="margin: 0px auto !important">
+        <tr style="display:block;margin-bottom:10px;">
+            <th style="width:100px;text-align:left">
+                <label for="nome">Nome:</label>
+            </th>
+            <td>
+                <input name="nome" title="Informe o seu nome." maxlenght="250" class="form-control" type="text" id="nome" size="60" required="required"  placeholder="Nome completo." />
+            </td>
+        </tr>
+        <tr style="display:block;margin-bottom:10px;">
+            <th style="width:100px;text-align:left">
+                <label for="telefone">Telefone:</label>
+            </th>
+            <td>
+                <input name="telefone" title="Informe o seu telefone." class="form-control" maxlenght="250" type="cel" id="telefone" size="60" required="required" placeholder="Informe seu telefone para contato." />
+            </td>
+        </tr>
+        <tr style="display:block;margin-bottom:10px;">
+            <th style="width:100px;text-align:left">
+                <label for="email">E-mail:</label>
+            </th>
+            <td>
+                <input name="email" title="Informe o seu E-mail." class="form-control" maxlenght="250" type="email" id="email" size="60" required="required" placeholder="Informe um e-mail válido." />
+            </td>
+        </tr>
+        <tr style="display:block;margin-bottom:10px;">
+            <th style="width:100px;text-align:left">
+                <label for="assunto">Assunto:</label>
+            </th>
+            <td>
+                <input name="assunto" title="Informe o Assunto." class="form-control" maxlenght="250" type="text" id="assunto" size="60" required="required" placeholder="Informe o motivo do contato." />
+            </td>
+        </tr>
+        <tr style="display:block;margin-bottom:10px;">
+            <th style="width:100px;text-align:left;vertical-align:top;">
+                <label for="mensagem_adicional">Mensagem:</label>
+            </th>
+            <td>
+                <textarea title="Inclua sua mensagem." rows="15" class="form-control" id="mensagem_adicional" name="mensagem_adicional" cols="51" required="required" placeholder="Deixe sua mensagem."></textarea>
+            </td>
+        </tr>
+        <tr style="display:block;margin-bottom:10px;">
+            <th style="width:100px;text-align:left">
+                <label for="Submit!"></label>
+            </th>
+            <td>
+                <button type="submit" id="Submit!" name="Submit!" class="btn btn-default btn-login">Enviar</button>
+            </td>
+        </tr>
+    </table>
+</form>
+
+{% endblock %}

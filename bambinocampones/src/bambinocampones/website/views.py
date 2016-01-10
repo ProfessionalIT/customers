@@ -1,6 +1,7 @@
 from django.core import serializers
 from django.http import HttpResponseRedirect
 from django.shortcuts import render
+from django.core.mail import send_mail
 
 from . import models
 from .forms import DepoimentoForm
@@ -695,13 +696,38 @@ def contato(request, slug):
         galeriaresource_set.filter()[:1].get()
     material_apoio = models.Recomendacao.objects.filter(destaque=True)
     depoimentos = models.Depoimento.objects.all()[0:5]
+    agradecimento = None
+    if request.POST:
+        from_address = 'bambino@bambinocampones.com.br'
+        nome = request.POST['nome']
+        telefone = request.POST['telefone']
+        email = request.POST['email']
+        assunto = request.POST['assunto']
+        messagem = request.POST['mensagem_adicional']
+        
+        complete_message = '''
+            A pessoa %(nome)s com o telefone %(telefone)s e o e-mail
+            %(email)s deixou o seguinte recado: %(messagem)s .
+        ''' % {'nome': nome,
+               'telefone': telefone,
+               'email': email,
+               'messagem': messagem}
+                
+        send_mail(assunto,
+                  complete_message,
+                  from_address,
+                  ['bambino@bambinocampones.com.br'],
+                  fail_silently=False)
+        agradecimento = 'Sua mensagem foi enviada com SUCESSO !'
 
-    pagina = models.Pagina.objects.get(slug=slug)
-    return render(request, 'pagina.html', {'banners': banners,
-                                           'calendarios': calendarios,
-                                           'dicas': dicas,
-                                           'fotos': fotos,
-                                           'videos': videos,
-                                           'material_apoio': material_apoio,
-                                           'depoimentos': depoimentos,
-                                           'pagina': pagina})
+    return render(request,
+                  'contato.html',
+                  {'banners': banners,
+                   'calendarios': calendarios,
+                   'dicas': dicas,
+                   'fotos': fotos,
+                   'videos': videos,
+                   'material_apoio': material_apoio,
+                   'depoimentos': depoimentos,
+                   'titulo': 'Deixe seu recado',
+                   'agradecimento': agradecimento})

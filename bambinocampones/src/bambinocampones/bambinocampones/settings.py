@@ -176,4 +176,8 @@ LOGGING = {
     }
 }
 GRAPPELLI_ADMIN_TITLE = 'Admin do Site da Bambino'
-
+# E-MAIL SETTINGS
+EMAIL_HOST = 'smtp.webfaction.com'
+EMAIL_HOST_USER = 'bambino'
+EMAIL_HOST_PASSWORD = '12131415'
+SERVER_EMAIL = 'bambino@bambinocampones.com.br'
